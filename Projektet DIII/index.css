@@ -1,0 +1,15 @@
+@font-face {
+    font-family: LM-medium;
+    src: url(./fonts/lemon-milk-font/LemonMilkMedium-mLZYV.otf);
+}
+
+@font-face {
+    font-family: MT-bold-italic;
+    src: url(./fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+}
+
+
+body {
+    margin: 0;
+}
+

@@ -1,0 +1,41 @@
+
+header {
+    background-color: rgba(0, 2, 20, 0.936);
+    font-family: LM-medium;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+#headerMiddle p {
+    font-size: 50px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+img {
+    height: 70px;
+    margin: 15px;
+    cursor: pointer;
+}
+
+#headerRight {
+    margin: 15px;
+}
+
+#login {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: MT-bold-italic;
+}
