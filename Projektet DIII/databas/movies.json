@@ -82,11 +82,11 @@
         },
         {
             "id": 11,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Star Wars: Episode I – The Phantom Menace",
+            "year": 1999,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 133,
+            "director": "George Lucas"
         },
         {
             "id": 12,
