@@ -242,83 +242,83 @@
         },
         {
             "id": 31,
-            "title": "Star Wars",
-            "year": 1,
-            "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "title": "Alien",
+            "year": 1979,
+            "poster": "/Users/lucas/Documents/GitHub/cinema_mediatech/Namnlös/DUIII---API---Project/Projektet DIII/images/posters/Alien.mpw.114883_480x.progressive.webp",
+            "run_time": 117,
+            "director": "Ridley Scott"
         },        
         {
             "id": 32,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "2001: a space odyssey",
+            "year": 1968,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 129,
+            "director": "Stanley Kubrick"
         },        
         {
             "id": 33,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Dune",
+            "year": 2021,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 155,
+            "director": "Denis Villeneuve"
         },        
         {
             "id": 34,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Alien 3",
+            "year": 1992,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 114,
+            "director": "David Fincher"
         },        
         {
             "id": 35,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Everything Everywhere All at Once",
+            "year": 2022,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 140,
+            "director": "Daniel Scheinert, Daniel Kwan"
         },        
         {
             "id": 36,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Furiosa: A Mad Max Saga",
+            "year": 2024,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 140,
+            "director": "George Miller"
         },        
         {
             "id": 37,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Kingdom of the Planet of the Apes",
+            "year": 2024,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 145,
+            "director": "Wes Ball"
         },        
         {
             "id": 38,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Godzilla x Kong: The New Empire",
+            "year": 2024,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 115,
+            "director": "Adam Wingard"
         },        
         {
             "id": 39,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Dune: Part II",
+            "year": 2024,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 167,
+            "director": "Denis Villeneuve"
         },        
         {
             "id": 40,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Avatar: The Way of Water",
+            "year": 2022,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 192,
+            "director": "James Cameron"
         }
 
     ]
