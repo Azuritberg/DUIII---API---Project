@@ -244,7 +244,7 @@
             "id": 31,
             "title": "Alien",
             "year": 1979,
-            "poster": "",
+            "poster": "../images/posters/Alien.jpg",
             "run_time": 117,
             "director": "Ridley Scott"
         },
@@ -252,7 +252,7 @@
             "id": 32,
             "title": "2001: a space odyssey",
             "year": 1968,
-            "poster": "",
+            "poster": "../images/posters/2001-a-space-odyssey.jpg",
             "run_time": 129,
             "director": "Stanley Kubrick"
         },
@@ -260,7 +260,7 @@
             "id": 33,
             "title": "Dune",
             "year": 2021,
-            "poster": "",
+            "poster": "../images/posters/Dune.jpg",
             "run_time": 155,
             "director": "Denis Villeneuve"
         },
@@ -268,7 +268,7 @@
             "id": 34,
             "title": "Alien 3",
             "year": 1992,
-            "poster": "",
+            "poster": "../images/posters/alien-3.jpg",
             "run_time": 114,
             "director": "David Fincher"
         },
@@ -276,7 +276,7 @@
             "id": 35,
             "title": "Everything Everywhere All at Once",
             "year": 2022,
-            "poster": "",
+            "poster": "../images/posters/everything-everywhere-all-at-once.jpg",
             "run_time": 140,
             "director": "Daniel Scheinert, Daniel Kwan"
         },
@@ -284,7 +284,7 @@
             "id": 36,
             "title": "Furiosa: A Mad Max Saga",
             "year": 2024,
-            "poster": "",
+            "poster": "../images/posters/furiosa-a-mad-max-saga.jpg",
             "run_time": 140,
             "director": "George Miller"
         },
@@ -292,7 +292,7 @@
             "id": 37,
             "title": "Kingdom of the Planet of the Apes",
             "year": 2024,
-            "poster": "",
+            "poster": "../images/posters/kingdom-of-the-planet-of-the-apes.jpg",
             "run_time": 145,
             "director": "Wes Ball"
         },
@@ -300,7 +300,7 @@
             "id": 38,
             "title": "Godzilla x Kong: The New Empire",
             "year": 2024,
-            "poster": "",
+            "poster": "../images/posters/godzilla-x-kong-the-new-empire.jpg",
             "run_time": 115,
             "director": "Adam Wingard"
         },
@@ -308,7 +308,7 @@
             "id": 39,
             "title": "Dune: Part II",
             "year": 2024,
-            "poster": "",
+            "poster": "../images/posters/dune-part-two.jpg",
             "run_time": 167,
             "director": "Denis Villeneuve"
         },
@@ -316,7 +316,7 @@
             "id": 40,
             "title": "Avatar: The Way of Water",
             "year": 2022,
-            "poster": "",
+            "poster": "../images/posters/avatar-the-way-of-water.jpg",
             "run_time": 192,
             "director": "James Cameron"
         }
