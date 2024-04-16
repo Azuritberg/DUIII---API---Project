@@ -202,43 +202,43 @@
         },        
         {
             "id": 26,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Ghostbusters - Spökligan",
+            "year": 1984,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 105,
+            "director": "Ivan Reitman"
         },
         {
             "id": 27,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Tron",
+            "year": 1982,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 96,
+            "director": "Steven Lisberger"
         },
         {
             "id": 28,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Blade Runner 2049",
+            "year": 2017,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 164,
+            "director": "Denis Villeneuve"
         },
         {
             "id": 29,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Tron: Legacy",
+            "year": 2010,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 125,
+            "director": "Joseph Kosinski"
         },
         {
             "id": 30,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "RoboCop",
+            "year": 1987,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 102,
+            "director": "Paul Verhoeven"
         },
         {
             "id": 31,
