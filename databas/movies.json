@@ -162,43 +162,43 @@
         },        
         {
             "id": 21,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Star Trek Into Darkness",
+            "year": 2013,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 132,
+            "director": "J.J. Abrams"
         },        
         {
             "id": 22,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Terminator: Dark Fate",
+            "year": 2019,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 128,
+            "director": "Tim Miller"
         },        
         {
             "id": 23,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Alien: Romulus",
+            "year":2024,
             "poster": "",
             "run_time": 120,
-            "director": "leo"
+            "director": "Fede Alvarez"
         },        
         {
             "id": 24,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Jurassic World 4",
+            "year": 2025,
             "poster": "",
             "run_time": 120,
-            "director": "leo"
+            "director": "Gareth Edwards"
         },        
         {
             "id": 25,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Matrix",
+            "year": 1999,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 136,
+            "director": "Lilly Wachowski & Lana Wachowski"
         },        
         {
             "id": 26,
