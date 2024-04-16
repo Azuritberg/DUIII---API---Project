@@ -2,27 +2,27 @@
     "MOVIES": [
         {
             "id": 1,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future",
+            "year": 1985,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 116,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 2,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future Part II",
+            "year": 1989,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 108,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 3,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future Part III",
+            "year": 1990,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 119,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 4,
@@ -55,7 +55,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 8,
             "title": "Star Wars",
@@ -63,7 +63,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 9,
             "title": "Star Wars",
@@ -71,7 +71,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 10,
             "title": "Star Wars",
@@ -79,7 +79,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 11,
             "title": "Star Wars",
@@ -87,7 +87,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 12,
             "title": "Star Wars",
@@ -95,7 +95,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 13,
             "title": "Star Wars",
@@ -103,7 +103,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 14,
             "title": "Star Wars",
@@ -111,7 +111,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 15,
             "title": "Star Wars",
@@ -119,7 +119,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 16,
             "title": "Star Wars",
@@ -127,7 +127,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 17,
             "title": "Star Wars",
@@ -135,7 +135,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 18,
             "title": "Star Wars",
@@ -143,7 +143,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 19,
             "title": "Star Wars",
@@ -151,7 +151,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 20,
             "title": "Star Wars",
@@ -159,7 +159,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 21,
             "title": "Star Wars",
@@ -167,7 +167,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 22,
             "title": "Star Wars",
@@ -175,7 +175,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 23,
             "title": "Star Wars",
@@ -183,7 +183,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 24,
             "title": "Star Wars",
@@ -191,7 +191,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 25,
             "title": "Star Wars",
@@ -199,7 +199,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 26,
             "title": "Star Wars",
@@ -215,7 +215,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 28,
             "title": "Star Wars",
@@ -223,7 +223,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 29,
             "title": "Star Wars",
@@ -231,7 +231,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 30,
             "title": "Star Wars",
@@ -247,7 +247,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 32,
             "title": "Star Wars",
@@ -255,7 +255,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 33,
             "title": "Star Wars",
@@ -263,7 +263,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 34,
             "title": "Star Wars",
@@ -271,7 +271,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 35,
             "title": "Star Wars",
@@ -279,7 +279,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 36,
             "title": "Star Wars",
@@ -287,7 +287,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 37,
             "title": "Star Wars",
@@ -295,7 +295,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 38,
             "title": "Star Wars",
@@ -303,7 +303,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 39,
             "title": "Star Wars",
@@ -311,7 +311,7 @@
             "poster": "",
             "run_time": 120,
             "director": "leo"
-        },        
+        },
         {
             "id": 40,
             "title": "Star Wars",
@@ -320,6 +320,5 @@
             "run_time": 120,
             "director": "leo"
         }
-
     ]
 }
