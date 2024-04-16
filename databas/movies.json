@@ -2,27 +2,27 @@
     "MOVIES": [
         {
             "id": 1,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future",
+            "year": 1985,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 116,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 2,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future Part II",
+            "year": 1989,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 108,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 3,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Back to the Future Part III",
+            "year": 1990,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 119,
+            "director": "Robert Zemeckis"
         },
         {
             "id": 4,
