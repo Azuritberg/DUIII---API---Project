@@ -26,11 +26,11 @@
         },
         {
             "id": 4,
-            "title": "2001: A Space Odyssey",
-            "year": 1968,
+            "title": "Interstellar",
+            "year": 2014,
             "poster": "",
-            "run_time": 149,
-            "director": "Stanley Kubrick"
+            "run_time": 169,
+            "director": "Christopher Nolan"
         },
         {
             "id": 5,
@@ -247,7 +247,7 @@
             "poster": "/Users/lucas/Documents/GitHub/cinema_mediatech/Namnlös/DUIII---API---Project/Projektet DIII/images/posters/Alien.mpw.114883_480x.progressive.webp",
             "run_time": 117,
             "director": "Ridley Scott"
-        },        
+        },
         {
             "id": 32,
             "title": "2001: a space odyssey",
@@ -255,7 +255,7 @@
             "poster": "",
             "run_time": 129,
             "director": "Stanley Kubrick"
-        },        
+        },
         {
             "id": 33,
             "title": "Dune",
@@ -263,7 +263,7 @@
             "poster": "",
             "run_time": 155,
             "director": "Denis Villeneuve"
-        },        
+        },
         {
             "id": 34,
             "title": "Alien 3",
@@ -271,7 +271,7 @@
             "poster": "",
             "run_time": 114,
             "director": "David Fincher"
-        },        
+        },
         {
             "id": 35,
             "title": "Everything Everywhere All at Once",
@@ -279,7 +279,7 @@
             "poster": "",
             "run_time": 140,
             "director": "Daniel Scheinert, Daniel Kwan"
-        },        
+        },
         {
             "id": 36,
             "title": "Furiosa: A Mad Max Saga",
@@ -287,7 +287,7 @@
             "poster": "",
             "run_time": 140,
             "director": "George Miller"
-        },        
+        },
         {
             "id": 37,
             "title": "Kingdom of the Planet of the Apes",
@@ -295,7 +295,7 @@
             "poster": "",
             "run_time": 145,
             "director": "Wes Ball"
-        },        
+        },
         {
             "id": 38,
             "title": "Godzilla x Kong: The New Empire",
@@ -303,7 +303,7 @@
             "poster": "",
             "run_time": 115,
             "director": "Adam Wingard"
-        },        
+        },
         {
             "id": 39,
             "title": "Dune: Part II",
@@ -311,7 +311,7 @@
             "poster": "",
             "run_time": 167,
             "director": "Denis Villeneuve"
-        },        
+        },
         {
             "id": 40,
             "title": "Avatar: The Way of Water",
