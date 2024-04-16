@@ -1,0 +1,324 @@
+{
+    "MOVIES": [
+        {
+            "id": 1,
+            "title": "Back to the Future",
+            "year": 1985,
+            "poster": "../images/posters/back-to-the-future.jpg",
+            "run_time": 116,
+            "director": "Robert Zemeckis"
+        },
+        {
+            "id": 2,
+            "title": "Back to the Future Part II",
+            "year": 1989,
+            "poster": "../images/posters/back-to-the-future-part2.jpg",
+            "run_time": 108,
+            "director": "Robert Zemeckis"
+        },
+        {
+            "id": 3,
+            "title": "Back to the Future Part III",
+            "year": 1990,
+            "poster": "../images/posters/back-to-the-future-part3.jpg",
+            "run_time": 119,
+            "director": "Robert Zemeckis"
+        },
+        {
+            "id": 4,
+            "title": "Interstellar",
+            "year": 2014,
+            "poster": "../images/posters/interstellar.jpg",
+            "run_time": 169,
+            "director": "Christopher Nolan"
+        },
+        {
+            "id": 5,
+            "title": "A Clockwork Orange",
+            "year": 1971,
+            "poster": "../images/posters/a-clockwork-orange.jpg",
+            "run_time": 137,
+            "director": "Stanley Kubrick"
+        },
+        {
+            "id": 6,
+            "title": "Inception",
+            "year": 2010,
+            "poster": "../images/posters/inception.jpg",
+            "run_time": 148,
+            "director": "Christopher Nolan"
+        },
+        {
+            "id": 7,
+            "title": "Godzilla Minus One",
+            "year": 2023,
+            "poster": "../images/posters/godzilla-minus-one.jpg",
+            "run_time": 125,
+            "director": "Takashi Yamazaki"
+        },
+        {
+            "id": 8,
+            "title": "Godzilla",
+            "year": 1954,
+            "poster": "../images/posters/godzilla1954.jpg",
+            "run_time": 96,
+            "director": "Ishiro Honda"
+        },
+        {
+            "id": 9,
+            "title": "Shin Godzilla",
+            "year": 2016,
+            "poster": "../images/posters/shin-godzilla.jpg",
+            "run_time": 120,
+            "director": "Hideaki Anno, Shinji Higuchi"
+        },
+        {
+            "id": 10,
+            "title": "Eternal Sunshine of the Spotless Mind",
+            "year": 2004,
+            "poster": "../images/posters/eternal-sunshine.jpg",
+            "run_time": 108,
+            "director": "Michel Gondry"
+        },
+        {
+            "id": 11,
+            "title": "Star Wars: Episode I – The Phantom Menace",
+            "year": 1999,
+            "poster": "",
+            "run_time": 133,
+            "director": "George Lucas"
+        },
+        {
+            "id": 12,
+            "title": "Star Wars: Episode II – Attack of the Clones",
+            "year": 2002,
+            "poster": "",
+            "run_time": 142,
+            "director": "George Lucas"
+        },
+        {
+            "id": 13,
+            "title": "Star Wars: Episode III – Revenge of the Sith",
+            "year": 2005,
+            "poster": "",
+            "run_time": 140,
+            "director": "George Lucas"
+        },
+        {
+            "id": 14,
+            "title": "Star Wars: Episode IV – A New Hope",
+            "year": 1977,
+            "poster": "",
+            "run_time": 121,
+            "director": "George Lucas"
+        },
+        {
+            "id": 15,
+            "title": "Star Wars: Episode V – The Empire Strikes Back",
+            "year": 1980,
+            "poster": "",
+            "run_time": 124,
+            "director": "Irvin Kershner"
+        },
+        {
+            "id": 16,
+            "title": "Star Wars: Episode VI – Return of the Jedi",
+            "year": 1983,
+            "poster": "",
+            "run_time": 132,
+            "director": "Richard Marquand"
+        },
+        {
+            "id": 17,
+            "title": "Star Wars: Episode VII – The Force Awakens",
+            "year": 2015,
+            "poster": "",
+            "run_time": 138,
+            "director": "J. J. Abrams"
+        },
+        {
+            "id": 18,
+            "title": "Star Wars: Episode VIII – The Last Jedi",
+            "year": 2017,
+            "poster": "",
+            "run_time": 152,
+            "director": "Rian Johnson"
+        },
+        {
+            "id": 19,
+            "title": "Star Wars: Episode IX – The Rise of Skywalker",
+            "year": 2019,
+            "poster": "",
+            "run_time": 142,
+            "director": "J. J. Abrams"
+        },
+        {
+            "id": 20,
+            "title": "Rogue One: A Star Wars Story",
+            "year": 2016,
+            "poster": "",
+            "run_time": 134,
+            "director": "Gareth Edwards"
+        },
+        {
+            "id": 21,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 22,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 23,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 24,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 25,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 26,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 27,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 28,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 29,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 30,
+            "title": "Star Wars",
+            "year": 1,
+            "poster": "",
+            "run_time": 120,
+            "director": "leo"
+        },
+        {
+            "id": 31,
+            "title": "Alien",
+            "year": 1979,
+            "poster": "",
+            "run_time": 117,
+            "director": "Ridley Scott"
+        },
+        {
+            "id": 32,
+            "title": "2001: a space odyssey",
+            "year": 1968,
+            "poster": "",
+            "run_time": 129,
+            "director": "Stanley Kubrick"
+        },
+        {
+            "id": 33,
+            "title": "Dune",
+            "year": 2021,
+            "poster": "",
+            "run_time": 155,
+            "director": "Denis Villeneuve"
+        },
+        {
+            "id": 34,
+            "title": "Alien 3",
+            "year": 1992,
+            "poster": "",
+            "run_time": 114,
+            "director": "David Fincher"
+        },
+        {
+            "id": 35,
+            "title": "Everything Everywhere All at Once",
+            "year": 2022,
+            "poster": "",
+            "run_time": 140,
+            "director": "Daniel Scheinert, Daniel Kwan"
+        },
+        {
+            "id": 36,
+            "title": "Furiosa: A Mad Max Saga",
+            "year": 2024,
+            "poster": "",
+            "run_time": 140,
+            "director": "George Miller"
+        },
+        {
+            "id": 37,
+            "title": "Kingdom of the Planet of the Apes",
+            "year": 2024,
+            "poster": "",
+            "run_time": 145,
+            "director": "Wes Ball"
+        },
+        {
+            "id": 38,
+            "title": "Godzilla x Kong: The New Empire",
+            "year": 2024,
+            "poster": "",
+            "run_time": 115,
+            "director": "Adam Wingard"
+        },
+        {
+            "id": 39,
+            "title": "Dune: Part II",
+            "year": 2024,
+            "poster": "",
+            "run_time": 167,
+            "director": "Denis Villeneuve"
+        },
+        {
+            "id": 40,
+            "title": "Avatar: The Way of Water",
+            "year": 2022,
+            "poster": "",
+            "run_time": 192,
+            "director": "James Cameron"
+        }
+    ]
+}
