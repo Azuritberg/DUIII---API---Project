@@ -4,7 +4,7 @@
             "id": 1,
             "title": "Back to the Future",
             "year": 1985,
-            "poster": "",
+            "poster": "../images/posters/back-to-the-future.jpg",
             "run_time": 116,
             "director": "Robert Zemeckis"
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "title": "Back to the Future Part II",
             "year": 1989,
-            "poster": "",
+            "poster": "../images/posters/back-to-the-future-part2.jpg",
             "run_time": 108,
             "director": "Robert Zemeckis"
         },
@@ -20,7 +20,7 @@
             "id": 3,
             "title": "Back to the Future Part III",
             "year": 1990,
-            "poster": "",
+            "poster": "../images/posters/back-to-the-future-part3.jpg",
             "run_time": 119,
             "director": "Robert Zemeckis"
         },
@@ -28,7 +28,7 @@
             "id": 4,
             "title": "Interstellar",
             "year": 2014,
-            "poster": "",
+            "poster": "../images/posters/interstellar.jpg",
             "run_time": 169,
             "director": "Christopher Nolan"
         },
@@ -36,7 +36,7 @@
             "id": 5,
             "title": "A Clockwork Orange",
             "year": 1971,
-            "poster": "",
+            "poster": "../images/posters/a-clockwork-orange.jpg",
             "run_time": 137,
             "director": "Stanley Kubrick"
         },
@@ -44,7 +44,7 @@
             "id": 6,
             "title": "Inception",
             "year": 2010,
-            "poster": "",
+            "poster": "../images/posters/inception.jpg",
             "run_time": 148,
             "director": "Christopher Nolan"
         },
@@ -52,7 +52,7 @@
             "id": 7,
             "title": "Godzilla Minus One",
             "year": 2023,
-            "poster": "",
+            "poster": "../images/posters/godzilla-minus-one.jpg",
             "run_time": 125,
             "director": "Takashi Yamazaki"
         },
@@ -60,7 +60,7 @@
             "id": 8,
             "title": "Godzilla",
             "year": 1954,
-            "poster": "",
+            "poster": "../images/posters/godzilla1954.jpg",
             "run_time": 96,
             "director": "Ishiro Honda"
         },
@@ -68,7 +68,7 @@
             "id": 9,
             "title": "Shin Godzilla",
             "year": 2016,
-            "poster": "",
+            "poster": "../images/posters/shin-godzilla.jpg",
             "run_time": 120,
             "director": "Hideaki Anno, Shinji Higuchi"
         },
@@ -76,7 +76,7 @@
             "id": 10,
             "title": "Eternal Sunshine of the Spotless Mind",
             "year": 2004,
-            "poster": "",
+            "poster": "../images/posters/eternal-sunshine.jpg",
             "run_time": 108,
             "director": "Michel Gondry"
         },
