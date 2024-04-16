@@ -26,59 +26,59 @@
         },
         {
             "id": 4,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "2001: A Space Odyssey",
+            "year": 1968,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 149,
+            "director": "Stanley Kubrick"
         },
         {
             "id": 5,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "A Clockwork Orange",
+            "year": 1971,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 137,
+            "director": "Stanley Kubrick"
         },
         {
             "id": 6,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Inception",
+            "year": 2010,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 148,
+            "director": "Christopher Nolan"
         },
         {
             "id": 7,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Godzilla Minus One",
+            "year": 2023,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 125,
+            "director": "Takashi Yamazaki"
         },
         {
             "id": 8,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Godzilla",
+            "year": 1954,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 96,
+            "director": "Ishiro Honda"
         },
         {
             "id": 9,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Shin Godzilla",
+            "year": 2016,
             "poster": "",
             "run_time": 120,
-            "director": "leo"
+            "director": "Hideaki Anno, Shinji Higuchi"
         },
         {
             "id": 10,
-            "title": "Star Wars",
-            "year": 1,
+            "title": "Eternal Sunshine of the Spotless Mind",
+            "year": 2004,
             "poster": "",
-            "run_time": 120,
-            "director": "leo"
+            "run_time": 108,
+            "director": "Michel Gondry"
         },
         {
             "id": 11,
