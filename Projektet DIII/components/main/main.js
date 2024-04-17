@@ -1,17 +1,24 @@
 function renderMain(parentID) {
+    let mainContainer = document.createElement("div");
+    mainContainer.id = "mainContainer"; 
+    parentID.append(mainContainer);
 
-    let main = document.createElement("div");
-    parentID.append(main);
-    main.id = "mainBox";
-    main.innerHTML = `
-        <div id="photo1"></div>
-        <div id="photo2"></div>
-        <div id="photo3"></div>
-        <div id="photo4"></div>
-        <div id="photo5"></div>
-        <div id="photo6"></div>
-        <div id="photo7"></div>
-        <div id="photo8"></div>
-        <div id="photo9"></div>
-        <div id="photo10"></div>`
-};
+    let pDom = document.createElement("p");
+    pDom.id = "infoText";
+    pDom.innerHTML = `Not sure what to watch tonight? <br> Don’t worry, we’ll help you out.`;
+    mainContainer.append(pDom);
+
+    let mainBox = document.createElement("div");
+    mainBox.id = "mainBox";
+    mainContainer.append(mainBox);
+    for (let i = 1; i <= 10; i++) {
+        let photoDiv = document.createElement("div");
+        photoDiv.id = "photo" + i;
+        mainBox.append(photoDiv);
+    }
+
+    let button = document.createElement("button");
+    button.id = "mainButton";
+    button.textContent = "Regenerate";
+    mainContainer.append(button);
+}
