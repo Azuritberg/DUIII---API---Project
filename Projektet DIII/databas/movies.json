@@ -84,7 +84,7 @@
             "id": 11,
             "title": "Star Wars: Episode I – The Phantom Menace",
             "year": 1999,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-1.jpg",
             "run_time": 133,
             "director": "George Lucas"
         },
@@ -92,7 +92,7 @@
             "id": 12,
             "title": "Star Wars: Episode II – Attack of the Clones",
             "year": 2002,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-2.jpg",
             "run_time": 142,
             "director": "George Lucas"
         },
@@ -100,7 +100,7 @@
             "id": 13,
             "title": "Star Wars: Episode III – Revenge of the Sith",
             "year": 2005,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-3.jpg",
             "run_time": 140,
             "director": "George Lucas"
         },
@@ -108,7 +108,7 @@
             "id": 14,
             "title": "Star Wars: Episode IV – A New Hope",
             "year": 1977,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-4.jpg",
             "run_time": 121,
             "director": "George Lucas"
         },
@@ -116,7 +116,7 @@
             "id": 15,
             "title": "Star Wars: Episode V – The Empire Strikes Back",
             "year": 1980,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-5.jpg",
             "run_time": 124,
             "director": "Irvin Kershner"
         },
@@ -124,7 +124,7 @@
             "id": 16,
             "title": "Star Wars: Episode VI – Return of the Jedi",
             "year": 1983,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-6.jpg",
             "run_time": 132,
             "director": "Richard Marquand"
         },
@@ -132,7 +132,7 @@
             "id": 17,
             "title": "Star Wars: Episode VII – The Force Awakens",
             "year": 2015,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-7.jpg",
             "run_time": 138,
             "director": "J. J. Abrams"
         },
@@ -140,7 +140,7 @@
             "id": 18,
             "title": "Star Wars: Episode VIII – The Last Jedi",
             "year": 2017,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-8.jpg",
             "run_time": 152,
             "director": "Rian Johnson"
         },
@@ -148,7 +148,7 @@
             "id": 19,
             "title": "Star Wars: Episode IX – The Rise of Skywalker",
             "year": 2019,
-            "poster": "",
+            "poster": "../images/posters/star-wars-episode-9.jpg",
             "run_time": 142,
             "director": "J. J. Abrams"
         },
@@ -156,7 +156,7 @@
             "id": 20,
             "title": "Rogue One: A Star Wars Story",
             "year": 2016,
-            "poster": "",
+            "poster": "../images/posters/rogue-one.jpg",
             "run_time": 134,
             "director": "Gareth Edwards"
         },
