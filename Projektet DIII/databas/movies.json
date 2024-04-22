@@ -164,7 +164,7 @@
             "id": 21,
             "title": "Star Trek Into Darkness",
             "year": 2013,
-            "poster": "",
+            "poster": "../images/posters/star-trek-into-darkness.jpg",
             "run_time": 132,
             "director": "J.J. Abrams"
         },        
@@ -172,7 +172,7 @@
             "id": 22,
             "title": "Terminator: Dark Fate",
             "year": 2019,
-            "poster": "",
+            "poster": "../images/posters/terminator-dark-fate.jpg",
             "run_time": 128,
             "director": "Tim Miller"
         },        
@@ -180,7 +180,7 @@
             "id": 23,
             "title": "Alien: Romulus",
             "year":2024,
-            "poster": "",
+            "poster": "../images/posters/alien-romulus.jpg",
             "run_time": 120,
             "director": "Fede Alvarez"
         },        
@@ -188,7 +188,7 @@
             "id": 24,
             "title": "Jurassic World 4",
             "year": 2025,
-            "poster": "",
+            "poster": "../images/posters/jurassic-world-4.jpg",
             "run_time": 120,
             "director": "Gareth Edwards"
         },        
@@ -196,23 +196,23 @@
             "id": 25,
             "title": "Matrix",
             "year": 1999,
-            "poster": "",
+            "poster": "../images/posters/matrix.jpg",
             "run_time": 136,
             "director": "Lilly Wachowski & Lana Wachowski"
         },        
         {
             "id": 26,
-            "title": "Ghostbusters - Spökligan",
-            "year": 1984,
-            "poster": "",
-            "run_time": 105,
-            "director": "Ivan Reitman"
+            "title": "Mad Max: Fury Road",
+            "year": 2015,
+            "poster": "../images/posters/mad-max-fury-road.jpg",
+            "run_time": 121,
+            "director": "George Miller"
         },
         {
             "id": 27,
             "title": "Tron",
             "year": 1982,
-            "poster": "",
+            "poster": "../images/posters/tron.jpg",
             "run_time": 96,
             "director": "Steven Lisberger"
         },
@@ -220,7 +220,7 @@
             "id": 28,
             "title": "Blade Runner 2049",
             "year": 2017,
-            "poster": "",
+            "poster": "../images/posters/blade-runner-2049.jpg",
             "run_time": 164,
             "director": "Denis Villeneuve"
         },
@@ -228,7 +228,7 @@
             "id": 29,
             "title": "Tron: Legacy",
             "year": 2010,
-            "poster": "",
+            "poster": "../images/posters/tron-legacy.jpg",
             "run_time": 125,
             "director": "Joseph Kosinski"
         },
@@ -236,7 +236,7 @@
             "id": 30,
             "title": "RoboCop",
             "year": 1987,
-            "poster": "",
+            "poster": "../images/posters/RoboCop.jpg",
             "run_time": 102,
             "director": "Paul Verhoeven"
         },
