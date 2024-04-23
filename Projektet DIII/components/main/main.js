@@ -12,6 +12,7 @@ async function renderMain(parentID, instanceData) {
     let mainBox = document.createElement("div");
     mainBox.id = "mainBox";
     mainContainer.append(mainBox);
+    
 
     for (let i = 1; i <= 10; i++) {
         let photoDiv = document.createElement("div");

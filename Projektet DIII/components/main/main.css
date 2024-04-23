@@ -12,7 +12,7 @@ body {
 }
 
 #mainBox {
-    height: 500px;
+    height: 600px;
     width: 1200px;
     background-color: rgba(178, 178, 178, 0.408);
     border: 2px solid white;
@@ -34,7 +34,8 @@ body {
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 40px;
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 45px;
     font-family: MT-bold-italic;
     font-size: 20px;
 }
@@ -62,4 +63,9 @@ body {
     width: calc(215px);
     border-radius: 10px;
     border: 2px solid whitesmoke;
+}
+
+.poster:hover {
+    opacity: 0.3;
+    cursor: pointer;
 }
