@@ -5,7 +5,7 @@ function renderHeader(parentID, instanceData) {
   header.id = "header";
   header.innerHTML = `
         <div id="headerLeft">
-          <img src="./icons/rocket-vit.png" alt="">
+          <img id="logo" src="./icons/rocket-vit.png" alt="">
         </div>
         <div id="headerMiddle">
             <p>The Random Universe.</p>

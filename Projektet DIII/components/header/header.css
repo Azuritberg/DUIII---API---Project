@@ -13,29 +13,37 @@ header {
 
 #headerMiddle p {
     font-size: 50px;
-    color: whitesmoke;
+    color: #F6F4F4;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px;
 }
 
-img {
+#logo {
     height: 70px;
     margin: 15px;
     cursor: pointer;
 }
+
+/* img {
+    height: 70px;
+    margin: 15px;
+    cursor: pointer;
+} */
 
 #headerRight {
     margin: 15px;
 }
 
 #login {
-    height: 30px;
-    width: 70px;
+    height: 35px;
+    width: 85px;
     border-radius: 10px;
     border: none;
     cursor: pointer;
     font-size: 20px;
     font-family: MT-bold-italic;
 }
+
+
