@@ -1,4 +1,4 @@
-function isNumberWithinRange(MOVIES) {
+function similarMovies(MOVIES) {
     let new_arr = []
 
     for (let i = 0; i < MOVIES.length; i++) {
@@ -14,4 +14,4 @@ function isNumberWithinRange(MOVIES) {
 // fetch("/databas/movies.json")
 //     .then(r => r.json())
 
-//     .then(r => isNumberWithinRange(r.MOVIES))
+//     .then(r => similarMovies(r.MOVIES))
