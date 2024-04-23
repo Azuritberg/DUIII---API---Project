@@ -22,3 +22,4 @@ function renderMain(parentID) {
     button.textContent = "Regenerate";
     mainContainer.append(button);
 }
+
