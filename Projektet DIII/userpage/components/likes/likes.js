@@ -8,7 +8,7 @@ function renderLikesContainer (parentID) {
         <div id="likes-main">
           <h2 calss="likes-title">Likes</h2>
         </div>
-        <div id="likes-middle">
+        <div id="likes-images">
             <img src="../images/poster/" alt="">  
         </div>
     `
