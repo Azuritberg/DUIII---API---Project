@@ -12,18 +12,31 @@ async function renderMain(parentID, instanceData) {
     let mainBox = document.createElement("div");
     mainBox.id = "mainBox";
     mainContainer.append(mainBox);
+
     for (let i = 1; i <= 10; i++) {
         let photoDiv = document.createElement("div");
         photoDiv.id = "photo" + i;
         let poster = document.createElement("img");
+        poster.classList.add("poster");
         photoDiv.append(poster);
-        let randomNumber = getRandomPoster(instanceData.MOVIES);
-        console.log(randomNumber);
-        poster.src = instanceData.MOVIES[randomNumber].poster;
+
+
         mainBox.append(photoDiv);
     }
 
+    console.log(getRandomPoster(instanceData.MOVIES));
+    let randomIndexes = getRandomPoster(instanceData.MOVIES);
 
+    for (let i = 0; i < randomIndexes.length; i++) {
+
+        let posterId = i + 1;
+        console.log(i + 1);
+        let posterContainer = document.getElementById("photo" + posterId);
+        console.log(posterContainer);
+        let poster = posterContainer.querySelector(".poster");
+
+        poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
+    }
 
     let button = document.createElement("button");
     button.id = "mainButton";
@@ -32,9 +45,13 @@ async function renderMain(parentID, instanceData) {
 }
 
 function getRandomPoster(movies) {
-    // console.log(movies);
-    const randomIndex = getRandomNumber(movies.length);
-    return randomIndex;
+    let randomNumbers = new Set();
+
+    while (randomNumbers.size < 10) {
+        randomNumbers.add(getRandomNumber(movies.length));
+    }
+
+    return Array.from(randomNumbers);
 }
 
 function getRandomNumber(max, min = 0) {
