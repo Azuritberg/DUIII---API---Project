@@ -184,7 +184,7 @@
             "id": 21,
             "title": "Star Trek Into Darkness",
             "year": 2013,
-            "poster": "../images/posters/star-trek-into-darkness.jpeg",
+            "poster": "../images/posters/start-trek.jpeg",
             "run_time": 132,
             "director": "J.J. Abrams",
             "info": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis. With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew."
@@ -193,7 +193,7 @@
             "id": 22,
             "title": "Terminator: Dark Fate",
             "year": 2019,
-            "poster": "../images/posters/terminator-dark-fate.jpeg",
+            "poster": "../images/posters/terminator-Dark -fate.jpeg",
             "run_time": 128,
             "director": "Tim Miller",
             "info": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
@@ -202,7 +202,7 @@
             "id": 23,
             "title": "Alien: Romulus",
             "year": 2024,
-            "poster": "../images/posters/alien-romulus.jpeg",
+            "poster": "../images/posters/alien4.jpeg",
             "run_time": 120,
             "director": "Fede Alvarez",
             "info": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe."
@@ -238,7 +238,7 @@
             "id": 27,
             "title": "Tron",
             "year": 1982,
-            "poster": "../images/posters/tron.jpeg",
+            "poster": "../images/posters/tron-1982.jpeg",
             "run_time": 96,
             "director": "Steven Lisberger",
             "info": "As Kevin Flynn searches for proof that he invented a hit video game, he is ‘digitalized’ by a laser and finds himself inside ‘The Grid’, where programs suffer under the tyrannical rule of the Master Control Program (MCP). With the help of a security program called ’TRON”, Flynn seeks to free The Grid from the MCP."

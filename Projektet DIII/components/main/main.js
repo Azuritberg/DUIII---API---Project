@@ -24,15 +24,15 @@ async function renderMain(parentID, instanceData) {
         mainBox.append(photoDiv);
     }
 
-    console.log(getRandomPoster(instanceData.MOVIES));
     let randomIndexes = getRandomPoster(instanceData.MOVIES);
-
+    console.log(randomIndexes);
     for (let i = 0; i < randomIndexes.length; i++) {
 
+        console.log(randomIndexes[i]);
         let posterId = i + 1;
-        console.log(i + 1);
+
         let posterContainer = document.getElementById("photo" + posterId);
-        console.log(posterContainer);
+
         let poster = posterContainer.querySelector(".poster");
 
         poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
