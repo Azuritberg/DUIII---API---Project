@@ -2,5 +2,5 @@
 
 const structureContainers = renderStructure();
 
-renderHeader(structureContainers.header);
-renderMain(structureContainers.main);
+// renderHeader(structureContainers.header);
+// renderMain(structureContainers.main);
