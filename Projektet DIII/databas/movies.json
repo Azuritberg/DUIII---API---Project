@@ -188,25 +188,25 @@
             "run_time": 132,
             "director": "J.J. Abrams",
             "info": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis. With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew."
-        },        
+        },
         {
             "id": 22,
             "title": "Terminator: Dark Fate",
             "year": 2019,
-            "poster": "../images/posters/terminator-dark-fate.jpg",
+            "poster": "../images/posters/Terminator- Dark Fate.jpeg",
             "run_time": 128,
             "director": "Tim Miller",
             "info": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
-        },        
+        },
         {
             "id": 23,
             "title": "Alien: Romulus",
-            "year":2024,
+            "year": 2024,
             "poster": "../images/posters/alien-romulus.jpg",
             "run_time": 120,
             "director": "Fede Alvarez",
             "info": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe."
-        },        
+        },
         {
             "id": 24,
             "title": "Jurassic World",
@@ -215,7 +215,7 @@
             "run_time": 120,
             "director": "Gareth Edwards",
             "info": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond."
-        },        
+        },
         {
             "id": 25,
             "title": "The Matrix",
@@ -224,7 +224,7 @@
             "run_time": 136,
             "director": "Lilly Wachowski & Lana Wachowski",
             "info": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
-        },        
+        },
         {
             "id": 26,
             "title": "Mad Max: Fury Road",
