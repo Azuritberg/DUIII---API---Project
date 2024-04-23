@@ -265,7 +265,7 @@
             "id": 30,
             "title": "RoboCop",
             "year": 1987,
-            "poster": "../images/posters/RoboCop.jpg",
+            "poster": "../images/posters/roboCop.jpg",
             "run_time": 102,
             "director": "Paul Verhoeven",
             "info": "In a dystopic and crime-ridden Detroit, a terminally wounded cop returns to the force as a powerful cyborg haunted by submerged memories."
@@ -274,7 +274,7 @@
             "id": 31,
             "title": "Alien",
             "year": 1979,
-            "poster": "../images/posters/Alien.jpg",
+            "poster": "../images/posters/alien.jpg",
             "run_time": 117,
             "director": "Ridley Scott",
             "info": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed."
@@ -292,7 +292,7 @@
             "id": 33,
             "title": "Dune",
             "year": 2021,
-            "poster": "../images/posters/Dune.jpg",
+            "poster": "../images/posters/dune.jpg",
             "run_time": 155,
             "director": "Denis Villeneuve",
             "info": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity’s greatest potential-only those who can conquer their fear will survive."
