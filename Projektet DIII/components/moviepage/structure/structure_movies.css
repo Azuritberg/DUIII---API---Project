@@ -43,6 +43,7 @@
 #bigPoster {
     height: 100%;
     width: 400px;
+    background-image: url(../../../images/posters/a-clockwork-orange.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
