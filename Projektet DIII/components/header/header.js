@@ -1,6 +1,5 @@
-function renderHeader(parentID, instanceData) {
+function renderHeader(parentID) {
 
-  console.log(instanceData);
   let header = document.createElement("div");
   parentID.append(header)
   header.id = "header";
@@ -18,13 +17,12 @@ function renderHeader(parentID, instanceData) {
     `;
 
   let userName = document.getElementById("userName");
-  userName.addEventListener("click", () => clearHtml(instanceData));
+
 }
 
-function clearHtml(event, instanceData) {
+// function clearHtml(event, instanceData) {
 
-  console.log(instanceData);
-  let mainPage = document.getElementById("mainPage");
-  mainPage.innerHTML = "";
-  renderMoviesPage("wrapper");
-}
+//   let mainPage = document.getElementById("mainPage");
+//   mainPage.innerHTML = "";
+//   renderMoviesPage("wrapper");
+// }
