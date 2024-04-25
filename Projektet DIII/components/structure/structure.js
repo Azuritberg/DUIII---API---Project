@@ -12,11 +12,11 @@ async function renderStructure() {
     const container = document.querySelector("#wrapper");
     container.innerHTML = `
     <header></header>
-    <main></main>
+    <main id="mainPage"></main>
     `;
 
     console.log(movie_resource);
-    renderHeader(document.querySelector("header"));
+    renderHeader(document.querySelector("header", movie_resource));
     renderMain(document.querySelector("main"), movie_resource);
     // return {
     //     header: container.querySelector("header"),
