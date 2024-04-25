@@ -1,6 +1,7 @@
 
-function renderMoviesPage(parentID) {
+function renderMoviesPage(parentID, instanceData) {
 
+    console.log(instanceData);
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.createElement("main");
     moviesContainer.id = "moviesContainer";
@@ -13,10 +14,10 @@ function renderMoviesPage(parentID) {
         </div>
         <div id="topRight">
             <div id="firstBox">
-                <h1 id="title">Blade Runner: 2049, 2017, Denis Villeneuve</h1>
+                <h1 id="title">${instanceData.title}</h1>
                 <img id="heart" src=""alt="">
             </div>
-            <p id="aboutMovie">Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what’s left of society into chaos. K’s discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years.</p>
+            <p id="aboutMovie">${instanceData.info}</p>
         </div> 
         <div id="bottomRight">
             <p id="info">Similar Movies</p>
@@ -48,7 +49,9 @@ function renderMoviesPage(parentID) {
             <input type="text" placeholder="Add Review" id="userTextInput">
         </div>
     </div>`;
-
+    let bigPoster = document.getElementById("bigPoster");
+    console.log(instanceData.poster)
+    bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
 }
 
 // renderMoviesPage("wrapper");
