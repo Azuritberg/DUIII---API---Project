@@ -1,5 +1,6 @@
 function renderHeader(parentID, instanceData) {
 
+  console.log(instanceData);
   let header = document.createElement("div");
   parentID.append(header)
   header.id = "header";
@@ -11,7 +12,19 @@ function renderHeader(parentID, instanceData) {
             <p>The Random Universe.</p>
         </div>
         <div id="headerRight">
+          <div id="userName">Username</div>
           <button id="login">Login</button>
         </div>
-    `
-};
+    `;
+
+  let userName = document.getElementById("userName");
+  userName.addEventListener("click", () => clearHtml(instanceData));
+}
+
+function clearHtml(event, instanceData) {
+
+  console.log(instanceData);
+  let mainPage = document.getElementById("mainPage");
+  mainPage.innerHTML = "";
+  renderMoviesPage("wrapper");
+}
