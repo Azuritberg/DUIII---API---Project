@@ -60,7 +60,7 @@ body {
 
 #likeContainer {
     background-color: #51545899;
-    border: 2px solid white;
+    border: 2px solid #F6F4F4;
     border-radius: 10px;
 }
 #likeMain {
@@ -79,7 +79,7 @@ body {
     padding: 40px;
 }
 #likedMovie {
-  border: 2px solid white;
+  border: 2px solid #F6F4F4;
   border-radius: 5px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ body {
 /* REVEWES */
 
 #reviewContainer {
-    border: 2px solid white;
+    border: 2px solid #F6F4F4;
     background-color: #51545899;;
     border-radius: 10px;
 
@@ -127,7 +127,7 @@ body {
 }
 
 #reviewHeader {
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid #F6F4F4;
     font-family: MT-medium;
 }
 

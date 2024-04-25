@@ -55,7 +55,7 @@
     width: 30%; /* Större bredd */
     min-height: 40%; /* Minsta höjd för att stödja mer innehåll */
     padding: 50px;
-    background: white;
+    background: #F6F4F4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     opacity: 0;
