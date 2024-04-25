@@ -12,7 +12,7 @@ async function renderMain(parentID, instanceData) {
     let mainBox = document.createElement("div");
     mainBox.id = "mainBox";
     mainContainer.append(mainBox);
-    
+
 
     for (let i = 1; i <= 10; i++) {
         let photoDiv = document.createElement("div");
@@ -26,23 +26,37 @@ async function renderMain(parentID, instanceData) {
     }
 
     let randomIndexes = getRandomPoster(instanceData.MOVIES);
-    console.log(randomIndexes);
-    for (let i = 0; i < randomIndexes.length; i++) {
+    generatePosters(randomIndexes, instanceData.MOVIES);
+    // for (let i = 0; i < randomIndexes.length; i++) {
 
-        console.log(randomIndexes[i]);
-        let posterId = i + 1;
+    //     let posterId = i + 1;
 
-        let posterContainer = document.getElementById("photo" + posterId);
+    //     let posterContainer = document.getElementById("photo" + posterId);
 
-        let poster = posterContainer.querySelector(".poster");
+    //     let poster = posterContainer.querySelector(".poster");
 
-        poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
-    }
+    //     poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
+    // }
 
     let button = document.createElement("button");
     button.id = "mainButton";
     button.textContent = "Regenerate";
     mainContainer.append(button);
+
+    button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
+}
+
+function generatePosters(randomIndexArray, instanceData) {
+
+    for (let i = 0; i < randomIndexArray.length; i++) {
+
+        let posterId = i + 1;
+        let posterContainer = document.getElementById("photo" + posterId);
+
+        let poster = posterContainer.querySelector(".poster");
+        console.log(poster);
+        poster.src = instanceData.MOVIES[randomIndexArray[i]].poster;
+    }
 }
 
 function getRandomPoster(movies) {
@@ -57,4 +71,10 @@ function getRandomPoster(movies) {
 
 function getRandomNumber(max, min = 0) {
     return min + Math.floor(max * Math.random());
+}
+
+function generateNewMovies(event, instanceData) {
+
+    let randomIndexes = getRandomPoster(instanceData.MOVIES);
+    console.log(randomIndexes);
 }
