@@ -39,34 +39,34 @@ async function renderMain(parentID, instanceData) {
 
         poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
 
-        let p = document.createElement("p")
+        // let p = document.createElement("p")
 
-        p.textContent = "(" + instanceData.MOVIES[randomIndexes[i]].title + ")";
+        // p.textContent = "(" + instanceData.MOVIES[randomIndexes[i]].title + ")";
 
-        posterContainer.appendChild(p)
-
-
-
-        poster.addEventListener("mouseout", function () {
-            poster.style.filter = '';
-            p.style.display = ""
+        // posterContainer.appendChild(p)
 
 
-        })
 
-        poster.addEventListener("mousedown", function () {
-            poster.style.filter = 'brightness(100%)';
-            p.style.display = "none"
-
-
-        })
-
-        poster.addEventListener("mouseup", function () {
-            poster.style.filter = 'brightness(50%)';
-            p.style.display = "inline"
+        // poster.addEventListener("mouseout", function () {
+        //     poster.style.filter = '';
+        //     p.style.display = ""
 
 
-        })
+        // })
+
+        // poster.addEventListener("mousedown", function () {
+        //     poster.style.filter = 'brightness(100%)';
+        //     p.style.display = "none"
+
+
+        // })
+
+        // poster.addEventListener("mouseup", function () {
+        //     poster.style.filter = 'brightness(50%)';
+        //     p.style.display = "inline"
+
+
+        // })
 
 
     }
