@@ -7,7 +7,7 @@ function renderUserPage(parentID, instanceData) {
 
     userContainer.innerHTML = `
     <div id="userContainer">
-        <h1 id="userName">User Name</h1>
+        <h1 id="userNamePage">User Name</h1>
         <div id="mainLikeReviweBox">
             <div id="likeContainer">
                 <div id="likeMain">
