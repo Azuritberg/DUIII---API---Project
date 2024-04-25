@@ -12,11 +12,12 @@ async function renderMain(parentID, instanceData) {
     let mainBox = document.createElement("div");
     mainBox.id = "mainBox";
     mainContainer.append(mainBox);
-    
+
 
     for (let i = 1; i <= 10; i++) {
         let photoDiv = document.createElement("div");
         photoDiv.id = "photo" + i;
+        photoDiv.classList.add("posterDiv")
         let poster = document.createElement("img");
         poster.classList.add("poster");
         photoDiv.append(poster);
@@ -37,6 +38,37 @@ async function renderMain(parentID, instanceData) {
         let poster = posterContainer.querySelector(".poster");
 
         poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
+
+        let p = document.createElement("p")
+
+        p.textContent = "(" + instanceData.MOVIES[randomIndexes[i]].title + ")";
+
+        posterContainer.appendChild(p)
+
+
+
+        poster.addEventListener("mouseout", function () {
+            poster.style.filter = '';
+            p.style.display = ""
+
+
+        })
+
+        poster.addEventListener("mousedown", function () {
+            poster.style.filter = 'brightness(100%)';
+            p.style.display = "none"
+
+
+        })
+
+        poster.addEventListener("mouseup", function () {
+            poster.style.filter = 'brightness(50%)';
+            p.style.display = "inline"
+
+
+        })
+
+
     }
 
     let button = document.createElement("button");
