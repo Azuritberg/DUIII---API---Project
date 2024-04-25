@@ -4,10 +4,10 @@ async function renderMain(parentID, instanceData) {
     mainContainer.id = "mainContainer";
     parentID.append(mainContainer);
 
-    let pDom = document.createElement("p");
-    pDom.id = "infoText";
-    pDom.innerHTML = `Not sure what to watch tonight? <br> Don’t worry, we’ll help you out.`;
-    mainContainer.append(pDom);
+    // let pDom = document.createElement("p");
+    // pDom.id = "infoText";
+    // pDom.innerHTML = `Not sure what to watch tonight? <br> Don’t worry, we’ll help you out.`;
+    // mainContainer.append(pDom);
 
     let mainBox = document.createElement("div");
     mainBox.id = "mainBox";
