@@ -1,6 +1,6 @@
 body {
     background-image: url(../../images/background/space-7709489_1920.jpg);
-    /* background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     object-fit: cover;
 }
 

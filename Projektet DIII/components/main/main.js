@@ -70,11 +70,26 @@ async function renderMain(parentID, instanceData) {
 
 
     }
+    generatePosters(randomIndexes, instanceData.MOVIES);
 
     let button = document.createElement("button");
     button.id = "mainButton";
     button.textContent = "Regenerate";
     mainContainer.append(button);
+
+    button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
+}
+
+function generatePosters(randomIndexArray, instanceData) {
+
+    for (let i = 0; i < randomIndexArray.length; i++) {
+
+        let posterId = i + 1;
+        let posterContainer = document.getElementById("photo" + posterId);
+
+        let moviePoster = posterContainer.querySelector(".poster");
+        moviePoster.src = instanceData[randomIndexArray[i]].poster;
+    }
 }
 
 function getRandomPoster(movies) {
@@ -89,4 +104,10 @@ function getRandomPoster(movies) {
 
 function getRandomNumber(max, min = 0) {
     return min + Math.floor(max * Math.random());
+}
+
+function generateNewMovies(event, instanceData) {
+
+    let randomIndexes = getRandomPoster(instanceData.MOVIES);
+    generatePosters(randomIndexes, instanceData.MOVIES);
 }
