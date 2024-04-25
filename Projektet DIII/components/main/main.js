@@ -58,3 +58,6 @@ function getRandomPoster(movies) {
 function getRandomNumber(max, min = 0) {
     return min + Math.floor(max * Math.random());
 }
+
+
+
