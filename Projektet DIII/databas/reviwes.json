@@ -1,0 +1,104 @@
+{
+    "REVIEWS": [ 
+        {
+            "movie_id": 1,
+            "user_id": 1,
+            "review": "all they know is be bisexual, eat hot chip and lie"
+        },
+        {
+            "movie_id": 2,
+            "user_id": 3,
+            "review": "COME ON"
+        },
+        {
+            "movie_id": 3,
+            "user_id": 4,
+            "review": "average day for wii sports players"
+        },
+        {
+            "movie_id": 25,
+            "user_id": 6,
+            "review": "do they need a fourth"
+        },
+        {
+            "movie_id": 322,
+            "user_id": 2,
+            "review": "the song with the monkeys was my favorite part"
+        },
+        {
+            "movie_id": 14,
+            "user_id": 4,
+            "review": "All I can say is that this is without doubt one of the boldest, most courageous things I’ve ever seen. Brutally honest and empathetic. Staggering level of vulnerability."
+        },
+        {
+            "movie_id": 24,
+            "user_id": 1,
+            "reviews": "I was like - Yeah this is fine I suppose at first and then the climax ended up being one of the most insane things I've ever witnessed. This guy's very good at pool!"
+        },
+        {
+           "movie_id": 23,
+            "user_id": 2,
+            "review": "Impressive that a movie in 2024 can still have a shot that makes me go oh wow damn how'd they get away with that?"
+        },
+        {
+            "movie_id": 33,
+            "user_id": 4,
+            "review": "Even more fucking perfect.Arguably, the best superhero sequel of all time because it scales down and goes even more human. Debatably, the best directed high budget sequel of all time."
+        },
+        {
+            "movie_id": 18,
+            "user_id": 2,
+            "review": "It's astounding how little promotion this has received. Raw, honesth umorous, and, above all, so important. An exceptionally nuanced look at confronting past traumas and dealing with the worst of the worst. Written and acted by the man whose true story it is, reliving the most unbelievably trying times of his life. Beautifully devastating show, which I simply couldn't recommend more."
+        },
+        {
+            "movie_id": 13,
+            "user_id": 2,
+            "review": "Can be a bit all over the place. Lots of fun to be had, some cool shit here and there. A bit messy and I don’t just mean the blood lololololololololololol.Enjoyable tho"
+        },
+        {
+            "movie_id": 10,
+            "user_id": 1,
+            "review": "A true motion picture. Undeniable comic book excellence. Previous review HERE! Thoughts still hold true, but amplified even more after seeing it on the big screen."
+        },
+        {
+            "movie_id": 35,
+            "user_id": 3,
+            "review": "It’s very rare that i see sexual violence against men / male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "movie_id": 5,
+            "user_id": 7,
+            "review": "That’s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "movie_id": 8,
+            "user_id": 1,
+            "review": "I’m very conflicted on this movie because it’s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "movie_id": 27,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara tá com a mão na pedra. se eu tivesse agarrada com você, não seriam 127 horas… eu ia arrebentar minha mão em 5 segundos ✨"
+        },
+        {
+            "movie_id": 30,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it’s only inevitable that they’ll soon occupy the same frame."
+        },
+        {
+            "movie_id": 23,
+            "user_id": 4,
+            "review": "Fourth big screen viewing—it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "movie_id": 16,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "movie_id": 18,
+            "user_id": 3,
+            "review": "No I’m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, “PIZZA TIME!” I love movies."
+        } 
+    ]
+}
