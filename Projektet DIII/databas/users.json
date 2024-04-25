@@ -4,25 +4,25 @@
             "user_id": 1,
             "username": "hampus",
             "password": "bkfries",
-            "liked_movies": [1, 2, 3, 4]
+            "liked_movies": []
         },
         {
             "user_id": 2,
             "username": "johannes",
             "password": "trumppinne",
-            "liked_movies": [1, 2, 3, 4]
+            "liked_movies": []
         },
         {
             "user_id": 3,
             "username": "lucas",
             "password": "waterloo",
-            "liked_movies": [1, 2, 3, 4]
+            "liked_movies": []
         },
         {
             "user_id": 4,
             "username": "bojana",
             "password": "bell",
-            "liked_movies": [1, 2, 3, 4]
+            "liked_movies": []
         }  
     ]
 }
