@@ -51,6 +51,6 @@ function renderMoviesPage(parentID) {
 
 }
 
-renderMoviesPage("wrapper");
+// renderMoviesPage("wrapper");
 
 
