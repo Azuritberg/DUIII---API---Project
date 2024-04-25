@@ -1,5 +1,5 @@
 {
-    "REVIEWS": [ 
+    "REVIEWS": [
         {
             "movie_id": 1,
             "user_id": 1,
@@ -36,7 +36,7 @@
             "reviews": "I was like - Yeah this is fine I suppose at first and then the climax ended up being one of the most insane things I've ever witnessed. This guy's very good at pool!"
         },
         {
-           "movie_id": 23,
+            "movie_id": 23,
             "user_id": 2,
             "review": "Impressive that a movie in 2024 can still have a shot that makes me go oh wow damn how'd they get away with that?"
         },
@@ -99,6 +99,6 @@
             "movie_id": 18,
             "user_id": 3,
             "review": "No I’m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, “PIZZA TIME!” I love movies."
-        } 
+        }
     ]
 }

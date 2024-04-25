@@ -9,14 +9,25 @@ const STATE = {
     reviews: []
 }
 
+async function renderApp() {
 
+    const movie_request = new Request("/databas/movies.json");
+    const movie_response = await fetch(movie_request);
+    const movie_resource = await movie_response.json();
+    STATE.movies = movie_resource;
+
+    let movies = State.GET(STATE.movies);
+    console.log(movies);
+    renderStructure(movies);
+}
+renderApp();
 
 //  PUBLIC CLONE
 
 const State = {
 
     GET(entity) {
-        const dataClone = JSON.parse(JSON.stringify(STATE));
+        const dataClone = JSON.parse(JSON.stringify(entity));
         return dataClone;
     },
     POST: async function (data) {

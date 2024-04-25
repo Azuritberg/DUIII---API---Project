@@ -33,7 +33,26 @@ async function renderMain(parentID, instanceData) {
     button.textContent = "Regenerate";
     mainContainer.append(button);
 
+    let moviePosters = document.querySelectorAll(".poster");
+    console.log(moviePosters);
     button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
+
+    for (let i = 0; i < moviePosters.length; i++) {
+        let id = moviePosters[i].id
+        moviePosters[i].addEventListener("click", (event) => clearHtml(event, instanceData));
+    }
+}
+
+function clearHtml(event, instanceData) {
+
+    let clickedMovie = event.target.id;
+    for (let i = 0; i < instanceData.MOVIES.length; i++) {
+        if (clickedMovie == instanceData.MOVIES[i].id) {
+            let mainPage = document.getElementById("mainPage");
+            mainPage.innerHTML = "";
+            renderMoviesPage("wrapper", instanceData.MOVIES[i]);
+        }
+    }
 }
 
 function generatePosters(randomIndexArray, instanceData) {
@@ -44,6 +63,7 @@ function generatePosters(randomIndexArray, instanceData) {
         let posterContainer = document.getElementById("photo" + posterId);
 
         let moviePoster = posterContainer.querySelector(".poster");
+        moviePoster.setAttribute("id", randomIndexArray[i] + 1);
         moviePoster.src = instanceData[randomIndexArray[i]].poster;
     }
 }
