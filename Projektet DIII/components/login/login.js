@@ -34,6 +34,10 @@ function renderHeader(parentID, instanceData) {
               <input type="text" placeholder="Username:" id="username"><br><br>
               <input type="text" placeholder="Password:" id="password"><br><br>
               <button id="logIn" type="submit">Login</button>
+              <div id="noAccount">
+                <p>Don't have an account?</p>
+                <button id="register">Register</button></p>
+              </div>
           </form>
       </div>
     `;

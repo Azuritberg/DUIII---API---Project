@@ -102,7 +102,8 @@
     height: 30px;
     border: 1px solid grey;
     border-radius: 20px;
-
+    font-family: MT-bold-italic;;
+    cursor: pointer;
 }
 
 #username, 
@@ -111,4 +112,24 @@
     width: 300px;
     border: 1px solid grey;
     border-radius: 20px;
+}
+
+#register {
+    border: none;
+    font-weight: bold;
+    background: white;
+    cursor: pointer;
+    font-family: MT-bold-italic;;
+}
+
+#register:hover {
+    border-bottom: 1px solid black;
+}
+
+#noAccount {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    font-family: MT-bold-italic;;
+    font-size: 14px;
 }
