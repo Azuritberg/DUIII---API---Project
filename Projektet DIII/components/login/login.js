@@ -17,7 +17,6 @@ function renderHeader(parentID, instanceData) {
         </div>
     `;
 
-  // Create modal and overlay
   let overlay = document.createElement("div");
   overlay.id = "overlay";
   overlay.classList.add("overlay");
@@ -26,7 +25,6 @@ function renderHeader(parentID, instanceData) {
   modal.id = "loginModal";
   modal.classList.add("modal");
 
-  // Set initial content for the modal
   modal.innerHTML = loginModalContent();
 
   document.body.appendChild(overlay);
@@ -36,7 +34,6 @@ function renderHeader(parentID, instanceData) {
 
   overlay.addEventListener('click', () => closeModal(modal));
 
-  // Handling modal content switches
   document.querySelector('#loginModal').addEventListener('click', event => {
       if (event.target.id === 'register') {
           changeModalContent(modal, 'registerButton');
