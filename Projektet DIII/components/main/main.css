@@ -49,6 +49,7 @@ body {
 }
 
 .poster {
+    position: relative;
     height: 260px;
     width: 230px;
     margin: 10px;
@@ -57,7 +58,6 @@ body {
     align-items: center;
     border: 2px solid #F6F4F4;
     border-radius: 5px;
-
 }
 
 .poster:hover {
@@ -85,14 +85,19 @@ body {
 
 .posterDiv>p {
     font-size: 20px;
-    position: relative;
-    top: -261px;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    top: 20%;
     bottom: 0px;
-    left: 100px;
+    left: 20px;
     right: 0px;
     display: none;
     color: #F6F4F4;
     margin: 0;
     padding: 0;
-
+    overflow: hidden;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }

@@ -41,11 +41,20 @@ async function renderMain(parentID, instanceData) {
 
         let p = document.createElement("p")
 
-        p.textContent = "tjena";
+        let text = ""
 
         posterContainer.appendChild(p)
 
-
+        poster.addEventListener("mouseover", function (event) {
+            let hoverId = event.target.id;
+            let hoverMoviePoster = document.querySelectorAll(".poster");
+            for (let i = 0; i < instanceData.length; i++) {
+                if (hoverId == instanceData[i].id) {
+                    text = instanceData[i].title;
+                    p.textContent = text;
+                }
+            }
+        })
 
         poster.addEventListener("mouseout", function () {
             poster.style.filter = '';
