@@ -17,12 +17,12 @@ function renderHeader(parentID) {
   `;
 
   let userName = document.getElementById("userName");
-  userName.addEventListener("click", function() {
+  userName.addEventListener("click", function () {
     clearContent(mainContainer);
   });
 
   let loginButton = document.getElementById("login");
-  loginButton.addEventListener("click", function() {
+  loginButton.addEventListener("click", function () {
     renderHeaderLogin(parentID);
   });
 
@@ -32,7 +32,7 @@ function renderHeader(parentID) {
 
 function clearContent(parentID, instanceData) {
   parentID.innerHTML = "";
-  renderUserPage("wrapper", instanceData); 
+  renderUserPage("mainContainer", instanceData);
 }
 
 
