@@ -52,6 +52,7 @@ function renderMoviesPage(parentID, instanceData) {
     let bigPoster = document.getElementById("bigPoster");
     console.log(instanceData.poster)
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
+    similarMovies(STATE.movies, instanceData)
 }
 
 // renderMoviesPage("wrapper");
