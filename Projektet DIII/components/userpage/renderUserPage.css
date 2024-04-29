@@ -28,6 +28,10 @@
 body {
     background-image: url(../../images/background/space-7709489_1920.jpg);
     color: whitesmoke;
+
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
     
 }
 
