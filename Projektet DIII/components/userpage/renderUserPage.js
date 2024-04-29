@@ -13,7 +13,12 @@ function renderUserPage(parentID, instanceData) {
                 <div id="likeMain">
                     <h2 class="likeTitle">Likes</h2>
                 </div>
-                <div id="likeMovieBox"></div>
+                <div id="likeMovieBox">
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                </div>
                 </div>
             
             <div id="reviewContainer">
