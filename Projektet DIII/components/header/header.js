@@ -20,7 +20,6 @@ function renderHeader(parentID) {
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
-
 }
 
 function getHome(event) {
