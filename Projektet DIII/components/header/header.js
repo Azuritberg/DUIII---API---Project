@@ -26,3 +26,6 @@ function renderHeader(parentID) {
 //   mainPage.innerHTML = "";
 //   renderMoviesPage("wrapper");
 // }
+
+
+
