@@ -15,7 +15,7 @@ function renderMoviesPage(parentID, instanceData) {
         <div id="topRight">
             <div id="firstBox">
                 <h1 id="title">${instanceData.title}</h1>
-                <img id="heart" src=""alt="">
+                <img id="heart" src="../icons/Black-Heart-4.png"alt="">
             </div>
             <p id="aboutMovie">${instanceData.info}</p>
         </div> 
