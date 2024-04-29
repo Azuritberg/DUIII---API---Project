@@ -18,6 +18,13 @@ function renderHeader(parentID) {
 
   let userName = document.getElementById("userName");
 
+  let homeButton = document.getElementById("logo");
+  homeButton.addEventListener("click", getHome);
+
+}
+
+function getHome(event) {
+  renderApp();
 }
 
 // function clearHtml(event, instanceData) {
