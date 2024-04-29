@@ -17,6 +17,8 @@ function renderHeader(parentID) {
     `;
 
   let userName = document.getElementById("userName");
+  let loginButton = document.getElementById("login");
+  loginButton.addEventListener("click", renderHeaderLogin(parentID));
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
@@ -25,13 +27,6 @@ function renderHeader(parentID) {
 function getHome(event) {
   renderApp();
 }
-
-// function clearHtml(event, instanceData) {
-
-//   let mainPage = document.getElementById("mainPage");
-//   mainPage.innerHTML = "";
-//   renderMoviesPage("wrapper");
-// }
 
 
 
