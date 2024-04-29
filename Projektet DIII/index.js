@@ -1,6 +1,6 @@
 "use strict";
 
-const structureContainers = renderStructure();
+// const structureContainers = renderStructure();
 
 // renderHeader(structureContainers.header);
 // renderMain(structureContainers.main);
