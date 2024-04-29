@@ -27,10 +27,10 @@ async function renderMain(parentID, instanceData) {
     }
 
     let randomIndexes = getRandomPoster(instanceData);
-    console.log(randomIndexes);
+
     for (let i = 0; i < randomIndexes.length; i++) {
 
-        console.log(randomIndexes[i]);
+
         let posterId = i + 1;
 
         let posterContainer = document.getElementById("photo" + posterId);
@@ -78,7 +78,7 @@ async function renderMain(parentID, instanceData) {
     mainContainer.append(button);
 
     let moviePosters = document.querySelectorAll(".poster");
-    console.log(moviePosters);
+
     button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
 
     for (let i = 0; i < moviePosters.length; i++) {
@@ -89,7 +89,9 @@ async function renderMain(parentID, instanceData) {
 
 function clearHtml(event, instanceData) {
 
+
     let clickedMovie = event.target.id;
+
     for (let i = 0; i < instanceData.length; i++) {
         if (clickedMovie == instanceData[i].id) {
             let mainPage = document.getElementById("mainPage");

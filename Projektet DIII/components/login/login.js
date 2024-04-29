@@ -1,6 +1,5 @@
-  
+
 function renderHeader(parentID, instanceData) {
-  console.log(instanceData);
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
@@ -35,11 +34,11 @@ function renderHeader(parentID, instanceData) {
   overlay.addEventListener('click', () => closeModal(modal));
 
   document.querySelector('#loginModal').addEventListener('click', event => {
-      if (event.target.id === 'register') {
-          changeModalContent(modal, 'registerButton');
-      } else if (event.target.id === 'logIn') {
-          changeModalContent(modal, 'logInButton');
-      }
+    if (event.target.id === 'register') {
+      changeModalContent(modal, 'registerButton');
+    } else if (event.target.id === 'logIn') {
+      changeModalContent(modal, 'logInButton');
+    }
   });
 }
 
@@ -81,9 +80,9 @@ function registerModalContent() {
 
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {
-      modal.innerHTML = loginModalContent();
+    modal.innerHTML = loginModalContent();
   } else if (type === 'registerButton') {
-      modal.innerHTML = registerModalContent();
+    modal.innerHTML = registerModalContent();
   }
 }
 

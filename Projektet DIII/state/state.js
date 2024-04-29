@@ -15,10 +15,10 @@ async function renderApp() {
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
     STATE.movies = movie_resource.MOVIES;
-    console.log(movie_resource.MOVIES);
+
 
     let movies = State.GET(STATE.movies);
-    console.log(movies);
+
     renderStructure(movies);
 }
 renderApp();
