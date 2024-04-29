@@ -1,6 +1,6 @@
 function renderUserPage(parentID, instanceData) {
 
-    const wrapper = document.getElementById(parentID);
+    let wrapper = document.getElementById(parentID);
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";
     wrapper.append(userContainer);
@@ -68,5 +68,3 @@ function renderUserPage(parentID, instanceData) {
 
 
 }
-
-

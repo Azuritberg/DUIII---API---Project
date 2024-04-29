@@ -22,7 +22,6 @@ async function renderMain(parentID, instanceData) {
         poster.classList.add("poster");
         photoDiv.append(poster);
 
-
         mainBox.append(photoDiv);
     }
 
