@@ -49,23 +49,17 @@ async function renderMain(parentID, instanceData) {
 
         poster.addEventListener("mouseout", function () {
             poster.style.filter = '';
-            p.style.display = ""
-
-
+            p.style.display = "";
         })
 
         poster.addEventListener("mousedown", function () {
             poster.style.filter = 'brightness(100%)';
-            p.style.display = "none"
-
-
+            p.style.display = "none";
         })
 
         poster.addEventListener("mouseup", function () {
             poster.style.filter = 'brightness(50%)';
-            p.style.display = "inline"
-
-
+            p.style.display = "inline";
         })
 
 
