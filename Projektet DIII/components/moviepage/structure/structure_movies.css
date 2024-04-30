@@ -86,20 +86,23 @@
     margin: 0px 30px 30px 0;
 }
 
-#smallPoster:hover {
+.smallPosters:hover {
     opacity: 0.5;
     cursor: pointer;
 }
 
 
-#smallPoster {
+.smallPosters {
     border: 2px solid #F6F4F4;
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 150px;
+
 }
+
+
 
 
 #title {

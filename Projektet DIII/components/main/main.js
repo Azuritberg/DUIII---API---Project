@@ -22,22 +22,21 @@ async function renderMain(parentID, instanceData) {
         poster.classList.add("poster");
         photoDiv.append(poster);
 
-
         mainBox.append(photoDiv);
     }
 
-    let randomIndexes = getRandomPoster(instanceData.MOVIES);
-    console.log(randomIndexes);
+    let randomIndexes = getRandomPoster(instanceData);
+
     for (let i = 0; i < randomIndexes.length; i++) {
 
-        console.log(randomIndexes[i]);
+
         let posterId = i + 1;
 
         let posterContainer = document.getElementById("photo" + posterId);
 
         let poster = posterContainer.querySelector(".poster");
 
-        poster.src = instanceData.MOVIES[randomIndexes[i]].poster;
+        poster.src = instanceData[randomIndexes[i]].poster;
 
         let p = document.createElement("p")
 
@@ -64,7 +63,7 @@ async function renderMain(parentID, instanceData) {
 
 
     }
-    generatePosters(randomIndexes, instanceData.MOVIES);
+    generatePosters(randomIndexes, instanceData);
 
     let button = document.createElement("button");
     button.id = "mainButton";
@@ -72,7 +71,7 @@ async function renderMain(parentID, instanceData) {
     mainContainer.append(button);
 
     let moviePosters = document.querySelectorAll(".poster");
-    console.log(moviePosters);
+
     button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
 
     for (let i = 0; i < moviePosters.length; i++) {
@@ -83,12 +82,14 @@ async function renderMain(parentID, instanceData) {
 
 function clearHtml(event, instanceData) {
 
+
     let clickedMovie = event.target.id;
-    for (let i = 0; i < instanceData.MOVIES.length; i++) {
-        if (clickedMovie == instanceData.MOVIES[i].id) {
+
+    for (let i = 0; i < instanceData.length; i++) {
+        if (clickedMovie == instanceData[i].id) {
             let mainPage = document.getElementById("mainPage");
             mainPage.innerHTML = "";
-            renderMoviesPage("wrapper", instanceData.MOVIES[i]);
+            renderMoviesPage("wrapper", instanceData[i]);
         }
     }
 }
@@ -122,6 +123,7 @@ function getRandomNumber(max, min = 0) {
 
 function generateNewMovies(event, instanceData) {
 
-    let randomIndexes = getRandomPoster(instanceData.MOVIES);
-    generatePosters(randomIndexes, instanceData.MOVIES);
+    let randomIndexes = getRandomPoster(instanceData);
+    generatePosters(randomIndexes, instanceData);
 }
+

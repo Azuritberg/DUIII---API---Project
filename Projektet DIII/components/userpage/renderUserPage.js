@@ -1,6 +1,6 @@
 function renderUserPage(parentID, instanceData) {
 
-    const wrapper = document.getElementById(parentID);
+    let wrapper = document.getElementById(parentID);
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";
     wrapper.append(userContainer);
@@ -14,11 +14,11 @@ function renderUserPage(parentID, instanceData) {
                     <h2 class="likeTitle">Likes</h2>
                 </div>
                 <div id="likeMovieBox">
-                        <div id="likedMovie">${instanceData.liked_movies}</div>
-                        <div id="likedMovie">${instanceData.liked_movies}</div>
-                        <div id="likedMovie">${instanceData.liked_movies}</div>
-                        <div id="likedMovie">${instanceData.liked_movies}</div>
-                    </div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                </div>
                 </div>
             
             <div id="reviewContainer">
