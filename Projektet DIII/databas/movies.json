@@ -65,12 +65,12 @@
         },
         {
             "id": 8,
-            "title": "Godzilla",
-            "year": 1954,
-            "poster": "../images/posters/godzilla1954.jpeg",
+            "title": "Solo: A Star Wars Story",
+            "year": 2018,
+            "poster": "../images/posters/solo.jpg",
             "run_time": 96,
-            "director": "Ishiro Honda",
-            "info": "Godzilla, a weapon of science, a great battle of wonder and terror! Japan is thrown into a panic after several ships explode and are sunk near Odo Island. An expedition to the island led by paleontologist Professor Kyohei Yemani soon discover something more devastating than imagined in the form of a 50 meter tall monster whom the natives call Gojira. Now the monster begins a rampage that threatens to destroy not only Japan, but the rest of the world as well."
+            "director": "Ron Howard",
+            "info": "Never tell him the odds. Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian. "
         },
         {
             "id": 9,

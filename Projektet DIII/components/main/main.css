@@ -72,8 +72,8 @@ body {
 
 .posterDiv:active {
 
-    /* padding: 1px 1px 1px 4px; */
-    /* overflow: hidden; */
+    padding: 1px 1px 1px 4px;
+    overflow: hidden;
 }
 
 .posterDiv>.poster:active {

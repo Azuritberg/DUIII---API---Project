@@ -1,9 +1,9 @@
 function similarMovies(MOVIES, movie) {
     let new_arr = [];
 
-    // Filtering movies with similar run_time
+    // Filtering movies with similar release date
     for (let i = 0; i < MOVIES.length; i++) {
-        if (Math.abs(MOVIES[i].run_time - movie.run_time) <= 10) {
+        if (Math.abs(MOVIES[i].year - movie.year) <= 10) {
             new_arr.push(MOVIES[i]);
 
 
