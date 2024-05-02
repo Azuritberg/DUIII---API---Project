@@ -18,7 +18,7 @@ function renderMoviesPage(parentID, instanceData) {
             <p id="aboutMovie">${instanceData.info}</p>
         </div> 
         <div id="bottomRight">
-            <p id="info">Movies with similar runtime</p>
+            <p id="info">Movies within 10 years</p>
             <p id="info">Reviews</p>
             <div id="simularMovies">
                 <div class="smallPosters" id="smallPoster0"></div>
