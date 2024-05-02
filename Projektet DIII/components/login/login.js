@@ -15,11 +15,7 @@ function renderHeaderLogin(parentID, instanceData) {
   document.body.appendChild(overlay);
   document.body.appendChild(modal);
 
-  //document.getElementById('login').addEventListener('click', () => openModal(modal));
-
-  document.getElementById('login').removeEventListener('click', () => openModal(modal));
   document.getElementById('login').addEventListener('click', () => openModal(modal));
-
 
   overlay.addEventListener('click', () => closeModal(modal));
 
