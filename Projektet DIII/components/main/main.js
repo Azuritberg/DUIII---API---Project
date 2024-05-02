@@ -51,7 +51,17 @@ async function renderMain(parentID, sameMovies = []) {
         posterDivs[i].appendChild(p)
     }
 
-    generatePosters(randomIndexes, movies);
+    let posterDivs = document.querySelectorAll(".posterDiv");
+    if (sameMovies.length === 0) {
+        generatePosters(randomIndexes, movies);
+    } else {
+        for (let i = 0; i < sameMovies.length; i++) {
+            let posterContainer = posterDivs[i];
+            posterContainer.setAttribute("id", sameMovies[i].id);
+            console.log(sameMovies[i].id);
+            posterContainer.style.backgroundImage = `url(${sameMovies[i].poster})`;
+        }
+    }
 
     let button = document.createElement("button");
     button.id = "mainButton";
@@ -94,7 +104,6 @@ function generatePosters(randomIndexArray, instanceData) {
         // let moviePoster = posterContainer.querySelector(".poster");
         posterContainer.setAttribute("id", randomIndexArray[i] + 1);
         posterContainer.style.backgroundImage = `url(${instanceData[randomIndexArray[i]].poster})`;
-        console.log(instanceData[randomIndexArray[i]].poster)
         // "url('path/to/your/image.jpg')"
         savedMovies.push(instanceData[randomIndexArray[i]]);
     }

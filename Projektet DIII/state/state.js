@@ -18,7 +18,7 @@ async function renderApp() {
 
     let movies = State.GET("movies");
     console.log(movies);
-    renderStructure(movies);
+    renderStructure();
 }
 renderApp();
 

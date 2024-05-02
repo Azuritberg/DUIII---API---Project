@@ -18,7 +18,7 @@ function renderHeader(parentID) {
 
   let userName = document.getElementById("userName");
   userName.addEventListener("click", function () {
-    clearContent(mainContainer);
+    clearContent("mainContainer");
   });
 
   // let loginButton = document.getElementById("login");
@@ -34,23 +34,20 @@ function renderHeader(parentID) {
   });
   renderHeaderLogin();
   // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
+  let homeButton = document.getElementById("logo");
+  console.log(homeButton);
+  homeButton.addEventListener("click", getHome);
 }
 
-
-// let homeButton = document.getElementById("logo");
-// console.log(homeButton);
-// homeButton.addEventListener("click", getHome);
-
-
 function clearContent(parentID, instanceData) {
-  parentID.innerHTML = "";
+  document.getElementById(parentID).innerHTML = "";
   renderUserPage("mainContainer", instanceData);
 }
 
 
 function getHome(event) {
   if (!document.querySelector("#mainBox")) {
-    document.getElementById("moviesContainer").remove();
+    document.getElementById("mainMovieBox").remove();
     renderMain(document.querySelector("main"), savedMovies);
   }
 }
