@@ -18,7 +18,7 @@ function renderHeader(parentID) {
 
   let userName = document.getElementById("userName");
   userName.addEventListener("click", function () {
-    clearContent("mainContainer");
+    clearContent("mainPage");
   });
 
   // let loginButton = document.getElementById("login");
@@ -41,14 +41,20 @@ function renderHeader(parentID) {
 
 function clearContent(parentID, instanceData) {
   document.getElementById(parentID).innerHTML = "";
-  renderUserPage("mainContainer", instanceData);
+  renderUserPage("mainPage", instanceData);
 }
 
 
 function getHome(event) {
+  console.log("hej");
   if (!document.querySelector("#mainBox")) {
-    document.getElementById("mainMovieBox").remove();
-    renderMain(document.querySelector("main"), savedMovies);
+    if (document.getElementById("mainMovieBox")) {
+      document.getElementById("mainMovieBox").remove();
+      renderMain(document.querySelector("main"), savedMovies);
+    } else {
+      document.getElementById("userContainer").remove();
+      renderMain(document.querySelector("main"), savedMovies);
+    }
   }
 }
 
