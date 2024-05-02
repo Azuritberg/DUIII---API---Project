@@ -27,14 +27,12 @@ function renderHeader(parentID) {
   // });
 
   let loginButton = document.getElementById("login");
-  //console.log("Login button:", loginButton);
   if (!loginButton.classList.contains('listener-added')) {
     loginButton.addEventListener("click", function () {
       console.log("parentID:", parentID); 
     renderHeaderLogin(parentID);
   });
   loginButton.classList.add('listener-added');
-  //console.log("Listener already added or button not found");
 }
 
 
