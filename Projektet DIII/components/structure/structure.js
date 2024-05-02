@@ -1,6 +1,5 @@
-async function renderStructure(instanceData) {
+async function renderStructure(movies) {
 
-    console.log(instanceData);
     // fetch(movie_request)
     //     .then(response => {
     //         console.log(response.json());
@@ -17,9 +16,8 @@ async function renderStructure(instanceData) {
     <main id="mainPage"></main>
     `;
 
-    console.log(await instanceData);
     renderHeader(document.querySelector("header"));
-    renderMain(document.querySelector("main"), instanceData);
+    renderMain(document.querySelector("main"), movies);
     // return {
     //     header: container.querySelector("header"),
     //     main: container.querySelector("main")

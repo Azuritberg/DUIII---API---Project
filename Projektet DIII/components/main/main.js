@@ -1,5 +1,10 @@
-async function renderMain(parentID, instanceData) {
+let savedMovies = [];
 
+async function renderMain(parentID, sameMovies = []) {
+
+    console.log(sameMovies);
+
+    let movies = State.GET("movies");
     let mainContainer = document.createElement("div");
     mainContainer.id = "mainContainer";
     parentID.append(mainContainer);
@@ -13,7 +18,6 @@ async function renderMain(parentID, instanceData) {
     mainBox.id = "mainBox";
     mainContainer.append(mainBox);
 
-
     for (let i = 1; i <= 10; i++) {
         let photoDiv = document.createElement("div");
         photoDiv.id = "photo" + i;
@@ -22,25 +26,23 @@ async function renderMain(parentID, instanceData) {
         poster.classList.add("poster");
         photoDiv.append(poster);
 
-
         mainBox.append(photoDiv);
     }
 
-    let randomIndexes = getRandomPoster(instanceData);
-    console.log(randomIndexes);
+    let randomIndexes = getRandomPoster(movies);
+
     for (let i = 0; i < randomIndexes.length; i++) {
 
-        console.log(randomIndexes[i]);
         let posterId = i + 1;
-
         let posterContainer = document.getElementById("photo" + posterId);
-
         let poster = posterContainer.querySelector(".poster");
 
-        poster.src = instanceData[randomIndexes[i]].poster;
-
+        if (sameMovies.length === 0) {
+            poster.src = movies[randomIndexes[i]].poster;
+        } else {
+            poster.src = sameMovies[i].poster;
+        }
         let p = document.createElement("p")
-
         let text = ""
 
         posterContainer.appendChild(p)
@@ -48,9 +50,9 @@ async function renderMain(parentID, instanceData) {
         poster.addEventListener("mouseover", function (event) {
             let hoverId = event.target.id;
             let hoverMoviePoster = document.querySelectorAll(".poster");
-            for (let i = 0; i < instanceData.length; i++) {
-                if (hoverId == instanceData[i].id) {
-                    text = instanceData[i].title;
+            for (let i = 0; i < movies.length; i++) {
+                if (hoverId == movies[i].id) {
+                    text = movies[i].title;
                     p.textContent = text;
                 }
             }
@@ -76,10 +78,11 @@ async function renderMain(parentID, instanceData) {
 
 
         })
-
-
     }
-    generatePosters(randomIndexes, instanceData);
+
+    if (sameMovies.length === 0) {
+        generatePosters(randomIndexes, movies);
+    }
 
     let button = document.createElement("button");
     button.id = "mainButton";
@@ -88,17 +91,18 @@ async function renderMain(parentID, instanceData) {
 
     let moviePosters = document.querySelectorAll(".poster");
     console.log(moviePosters);
-    button.addEventListener("click", (event) => generateNewMovies(event, instanceData));
+    button.addEventListener("click", () => regeneratePosters(movies));
 
     for (let i = 0; i < moviePosters.length; i++) {
         let id = moviePosters[i].id
-        moviePosters[i].addEventListener("click", (event) => clearHtml(event, instanceData));
+        moviePosters[i].addEventListener("click", (event) => clearHtml(event, movies));
     }
 }
 
 function clearHtml(event, instanceData) {
 
     let clickedMovie = event.target.id;
+    console.log(clickedMovie);
     for (let i = 0; i < instanceData.length; i++) {
         if (clickedMovie == instanceData[i].id) {
             let mainPage = document.getElementById("mainPage");
@@ -118,6 +122,7 @@ function generatePosters(randomIndexArray, instanceData) {
         let moviePoster = posterContainer.querySelector(".poster");
         moviePoster.setAttribute("id", randomIndexArray[i] + 1);
         moviePoster.src = instanceData[randomIndexArray[i]].poster;
+        savedMovies.push(instanceData[randomIndexArray[i]]);
     }
 }
 
@@ -135,9 +140,18 @@ function getRandomNumber(max, min = 0) {
     return min + Math.floor(max * Math.random());
 }
 
-function generateNewMovies(event, instanceData) {
+function regeneratePosters() {
 
-    let randomIndexes = getRandomPoster(instanceData);
-    generatePosters(randomIndexes, instanceData);
+    let newMovies = State.GET("movies");
+    console.log(newMovies);
+    let randomIndexes = getRandomPoster(newMovies);
+
+    savedMovies = [];
+    generatePosters(randomIndexes, newMovies);
 }
 
+// function generateNewMovies(event, instanceData) {
+
+//     let randomIndexes = getRandomPoster(instanceData);
+//     generatePosters(randomIndexes, instanceData);
+// }

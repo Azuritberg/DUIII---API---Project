@@ -25,9 +25,34 @@ function renderHeader(parentID) {
 
 }
 
+// function getHome(event) {
+//   renderApp();
+// }
+
 function getHome(event) {
-  renderApp();
+  if (!document.querySelector("#mainBox")) {
+    document.getElementById("moviesContainer").remove();
+    renderMain(document.querySelector("main"), savedMovies);
+  }
 }
 
+// function sameMoviesMain(savedMovies) {
 
+//   for (let i = 0; i < savedMovies.length; i++) {
+//     let posterId = i + 1;
+//     let photoDiv = document.createElement("div");
+//     photoDiv.id = "photo" + posterId;
+//     photoDiv.classList.add("posterDiv")
+//     let poster = document.createElement("img");
+//     poster.classList.add("poster");
+//     photoDiv.append(poster);
 
+//     mainBox.append(photoDiv);
+
+//     let moviePoster = photoDiv.querySelector(".poster");
+//     moviePoster.setAttribute("id", savedMovies[i].id);
+//     moviePoster.src = savedMovies[i].poster;
+//   }
+// }
+
+// regenerate måste vara en GET istället för att den bara kör samma funktioner nu. då kanske jag kan få det att funka. 
