@@ -29,13 +29,11 @@ async function renderMain(parentID, instanceData) {
     for (let i = 0; i < randomIndexes.length; i++) {
 
 
-        let posterId = i + 1;
+
 
         let posterDivs = document.querySelectorAll(".posterDiv")
 
-        // let poster = posterContainer.querySelector(".poster");
 
-        // posterContainer.style.backgroundImage = `url(${instanceData[randomIndexArray[i]].poster})`;
 
         let p = document.createElement("p")
 
@@ -46,6 +44,8 @@ async function renderMain(parentID, instanceData) {
 
 
         posterDivs[i].appendChild(p)
+
+
 
 
 
