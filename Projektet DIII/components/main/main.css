@@ -46,78 +46,29 @@ body {
 }
 
 .posterDiv {
-    position: relative;
-}
-
-.poster {
-    height: 260px;
-    width: 230px;
+    height: 330px;
+    width: 220px;
     margin: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: 2px solid #F6F4F4;
     border-radius: 5px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
 
 }
 
-.poster:hover {
-    cursor: pointer;
-    filter: brightness(50%);
-
-}
-
-.poster:hover~span {
-    opacity: 1;
-}
-
-.posterDiv:active {
-
-    padding: 1px 1px 1px 4px;
-    overflow: hidden;
-}
-
-.posterDiv>.poster:active {
-    box-shadow: 1px 1px 20px #F6F4F4;
-    width: 220px;
-    height: 250px;
-
-}
-
-.posterDiv>span {
-    font-size: 20px;
-    position: relative;
-    top: -261px;
-    bottom: 0px;
-    left: 100px;
-    right: 0px;
+.posterDiv>p {
     opacity: 0;
-    color: #F6F4F4;
-    margin: 0;
-    padding: 0;
-    line-height: 0;
-    box-sizing: content-box;
+}
 
-} 
+.posterDiv:hover {
+    filter: brightness(50%);
+}
 
-
-
-
-  /* .posterDiv>p {
-    font-size: 20px;
-    position: absolute;
-    top: 11px;
-    bottom: 11px;
-    left: 11px;
-    right: 11px;
-    display: none;
-    color: #F6F4F4;
-    margin: 0;
-    padding: 0;
-
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-} */
+.posterDiv:hover p {
+    opacity: 1;
+    filter: brightness(200%);
+}
