@@ -24,6 +24,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
     margin-top: 50px;
+    padding: 10px;
 }
 
 #infoText {
@@ -72,8 +73,8 @@ body {
 
 .posterDiv:active {
 
-    /* padding: 1px 1px 1px 4px; */
-    /* overflow: hidden; */
+    padding: 1px 1px 1px 4px; 
+    overflow: hidden;
 }
 
 .posterDiv>.poster:active {
@@ -83,7 +84,7 @@ body {
 
 }
 
-.posterDiv>p {
+/* .posterDiv>p {
     font-size: 20px;
     position: relative;
     top: -261px;
@@ -94,5 +95,27 @@ body {
     color: #F6F4F4;
     margin: 0;
     padding: 0;
+
+} */
+
+
+
+
+  .posterDiv>p {
+    font-size: 20px;
+    position: absolute;
+    top: 11px;
+    bottom: 11px;
+    left: 11px;
+    right: 11px;
+    display: none;
+    color: #F6F4F4;
+    margin: 0;
+    padding: 0;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
