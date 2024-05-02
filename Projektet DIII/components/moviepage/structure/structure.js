@@ -1,10 +1,8 @@
 
 function renderMoviesPage(parentID, instanceData) {
-
-    console.log(instanceData);
+    let similarMoviesArray = similarMovies(STATE.movies, instanceData)
     let wrapper = document.getElementById(parentID);
-    let moviesContainer = document.createElement("main");
-    moviesContainer.id = "moviesContainer";
+    let moviesContainer = document.getElementById("mainPage");
     wrapper.append(moviesContainer);
 
     moviesContainer.innerHTML = `
@@ -20,13 +18,13 @@ function renderMoviesPage(parentID, instanceData) {
             <p id="aboutMovie">${instanceData.info}</p>
         </div> 
         <div id="bottomRight">
-            <p id="info">Similar Movies</p>
+            <p id="info">Movies within 10 years</p>
             <p id="info">Reviews</p>
             <div id="simularMovies">
-                <div id="smallPoster"></div>
-                <div id="smallPoster"></div>
-                <div id="smallPoster"></div>
-                <div id="smallPoster"></div>
+                <div class="smallPosters" id="smallPoster0"></div>
+                <div class="smallPosters" id="smallPoster1"></div>
+                <div class="smallPosters" id="smallPoster2"></div>
+                <div class="smallPosters" id="smallPoster3"></div>
             </div>
             <div id="addReview">
                 <div id="review"> <!-- Notera ändringen från id till class här -->
@@ -50,10 +48,25 @@ function renderMoviesPage(parentID, instanceData) {
         </div>
     </div>`;
     let bigPoster = document.getElementById("bigPoster");
-    console.log(instanceData.poster)
+
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
-    similarMovies(STATE.movies, instanceData)
+
+    for (let i = 0; i < 4; i++) {
+
+        let poster = document.getElementById("smallPoster" + i)
+
+        poster.id = similarMoviesArray[i].id
+
+
+        poster.style.backgroundImage = `url('${similarMoviesArray[i].poster}')`
+
+        poster.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
+
+
+
+    }
 }
+
 
 // renderMoviesPage("wrapper");
 

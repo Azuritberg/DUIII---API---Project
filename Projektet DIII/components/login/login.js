@@ -1,6 +1,6 @@
 
 function renderHeaderLogin(parentID, instanceData) {
-  console.log(instanceData);
+  //console.log(instanceData);
 
   let overlay = document.createElement("div");
   overlay.id = "overlay";

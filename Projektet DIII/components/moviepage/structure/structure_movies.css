@@ -12,7 +12,7 @@
 
 /* main */
 
-#moviesContainer {
+#mainPage {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -86,20 +86,23 @@
     margin: 0px 30px 30px 0;
 }
 
-#smallPoster:hover {
-    opacity: 0.5;
+.smallPosters:hover {
+    box-shadow: 1px 1px 20px white;
     cursor: pointer;
 }
 
 
-#smallPoster {
+.smallPosters {
     border: 2px solid #F6F4F4;
     border-radius: 5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 150px;
+
 }
+
+
 
 
 #title {
