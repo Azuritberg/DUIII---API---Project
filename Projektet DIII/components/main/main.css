@@ -24,6 +24,7 @@ body {
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
     margin-top: 50px;
+    padding: 10px;
 }
 
 #infoText {

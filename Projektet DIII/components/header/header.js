@@ -21,10 +21,22 @@ function renderHeader(parentID) {
     clearContent(mainContainer);
   });
 
+  // let loginButton = document.getElementById("login");
+  // loginButton.addEventListener("click", function () {
+  //   renderHeaderLogin(parentID);
+  // });
+
   let loginButton = document.getElementById("login");
-  loginButton.addEventListener("click", function () {
+  //console.log("Login button:", loginButton);
+  if (!loginButton.classList.contains('listener-added')) {
+    loginButton.addEventListener("click", function () {
+      console.log("parentID:", parentID); 
     renderHeaderLogin(parentID);
   });
+  loginButton.classList.add('listener-added');
+  //console.log("Listener already added or button not found");
+}
+
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
@@ -39,3 +51,4 @@ function clearContent(parentID, instanceData) {
 function getHome(event) {
   renderApp();
 }
+
