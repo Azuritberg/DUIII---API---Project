@@ -27,12 +27,19 @@ function renderHeader(parentID) {
   // });
 
   let loginButton = document.getElementById("login");
+
   if (!loginButton.classList.contains('listener-added')) {
+    loginButton.classList.contains('listener-added');
+    
     loginButton.addEventListener("click", function () {
       console.log("parentID:", parentID); 
-    renderHeaderLogin(parentID);
+    //renderHeaderLogin(parentID);
+    // här bara läggs bara klassen till som finns i logoin.js
+    openModal(true);
   });
-  loginButton.classList.add('listener-added');
+  //loginButton.classList.add('listener-added');
+  renderHeaderLogin();
+  // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
 }
 
 
