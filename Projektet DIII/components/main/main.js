@@ -21,7 +21,6 @@ async function renderMain(parentID, instanceData) {
         let poster = document.createElement("img");
         poster.classList.add("poster");
         photoDiv.append(poster);
-
         mainBox.append(photoDiv);
     }
 
@@ -38,9 +37,11 @@ async function renderMain(parentID, instanceData) {
 
         poster.src = instanceData[randomIndexes[i]].poster;
 
-        let p = document.createElement("p")
+        let p = document.createElement("span")
 
-        p.textContent = "tjena";
+        p.textContent += "tjena";
+
+
 
         posterContainer.appendChild(p)
 
@@ -56,10 +57,7 @@ async function renderMain(parentID, instanceData) {
             p.style.display = "none";
         })
 
-        poster.addEventListener("mouseup", function () {
-            poster.style.filter = 'brightness(50%)';
-            p.style.display = "inline";
-        })
+
 
 
     }

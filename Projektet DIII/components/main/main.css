@@ -66,8 +66,8 @@ body {
 
 }
 
-.poster:hover~p {
-    display: inline;
+.poster:hover~span {
+    opacity: 1;
 }
 
 .posterDiv:active {
@@ -83,16 +83,18 @@ body {
 
 }
 
-.posterDiv>p {
+.posterDiv>span {
     font-size: 20px;
     position: relative;
     top: -261px;
     bottom: 0px;
     left: 100px;
     right: 0px;
-    display: none;
+    opacity: 0;
     color: #F6F4F4;
     margin: 0;
     padding: 0;
+    line-height: 0;
+    box-sizing: content-box;
 
 }
