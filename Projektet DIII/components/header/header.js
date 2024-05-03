@@ -18,7 +18,7 @@ function renderHeader(parentID) {
 
   let userName = document.getElementById("userName");
   userName.addEventListener("click", function () {
-    clearContent(mainContainer);
+    clearContent("mainPage");
   });
 
   // let loginButton = document.getElementById("login");
@@ -27,26 +27,32 @@ function renderHeader(parentID) {
   // });
 
   let loginButton = document.getElementById("login");
-    loginButton.addEventListener("click", function () {
-      console.log("parentID:", parentID); 
-    openModal(loginModal);
+  loginButton.addEventListener("click", function () {
+    console.log("parentID:", parentID);
+    // här bara läggs bara klassen till som finns i logoin.js
+    openModal(true);
   });
   renderHeaderLogin();
   // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
-}
-
-
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
-
+}
 
 function clearContent(parentID, instanceData) {
-  parentID.innerHTML = "";
-  renderUserPage("mainContainer", instanceData);
+  document.getElementById(parentID).innerHTML = "";
+  renderUserPage("mainPage", instanceData);
 }
 
 
 function getHome(event) {
-  renderApp();
+  if (!document.querySelector("#mainBox")) {
+    if (document.getElementById("mainMovieBox")) {
+      document.getElementById("mainMovieBox").remove();
+      renderMain(document.querySelector("main"), savedMovies);
+    } else {
+      document.getElementById("userContainer").remove();
+      renderMain(document.querySelector("main"), savedMovies);
+    }
+  }
 }
 
