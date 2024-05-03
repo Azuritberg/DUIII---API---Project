@@ -29,7 +29,6 @@ function renderHeader(parentID) {
   let loginButton = document.getElementById("login");
     loginButton.addEventListener("click", function () {
       console.log("parentID:", parentID); 
-    // här bara läggs bara klassen till som finns i logoin.js
     openModal(loginModal);
   });
   renderHeaderLogin();
