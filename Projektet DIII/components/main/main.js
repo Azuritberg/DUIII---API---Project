@@ -2,8 +2,6 @@ let savedMovies = [];
 
 async function renderMain(parentID, sameMovies = []) {
 
-    console.log(sameMovies);
-
     let movies = State.GET("movies");
     let mainContainer = document.createElement("div");
     mainContainer.id = "mainContainer";
@@ -58,7 +56,6 @@ async function renderMain(parentID, sameMovies = []) {
         for (let i = 0; i < sameMovies.length; i++) {
             let posterContainer = posterDivs[i];
             posterContainer.setAttribute("id", sameMovies[i].id);
-            console.log(sameMovies[i].id);
             posterContainer.style.backgroundImage = `url(${sameMovies[i].poster})`;
         }
     }
@@ -80,9 +77,7 @@ async function renderMain(parentID, sameMovies = []) {
 
 function clearHtml(event, instanceData) {
 
-    console.log(instanceData);
     let clickedMovie = event.target.id;
-    console.log(clickedMovie)
     for (let i = 0; i < instanceData.length; i++) {
         if (clickedMovie == instanceData[i].id) {
             let mainPage = document.getElementById("mainPage");
@@ -126,7 +121,6 @@ function getRandomNumber(max, min = 0) {
 function regeneratePosters() {
 
     let newMovies = State.GET("movies");
-    console.log(newMovies);
     let randomIndexes = getRandomPoster(newMovies);
 
     savedMovies = [];

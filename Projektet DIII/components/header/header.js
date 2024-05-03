@@ -35,7 +35,6 @@ function renderHeader(parentID) {
   renderHeaderLogin();
   // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
   let homeButton = document.getElementById("logo");
-  console.log(homeButton);
   homeButton.addEventListener("click", getHome);
 }
 
@@ -46,7 +45,6 @@ function clearContent(parentID, instanceData) {
 
 
 function getHome(event) {
-  console.log("hej");
   if (!document.querySelector("#mainBox")) {
     if (document.getElementById("mainMovieBox")) {
       document.getElementById("mainMovieBox").remove();
