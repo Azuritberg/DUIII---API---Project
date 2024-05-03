@@ -35,15 +35,11 @@ async function renderMain(parentID, instanceData) {
 
 
 
-        let p = document.createElement("p")
 
 
 
-        p.textContent += "tjena";
 
 
-
-        posterDivs[i].appendChild(p)
 
 
 
