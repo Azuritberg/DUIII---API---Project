@@ -30,7 +30,7 @@ function renderHeader(parentID) {
     loginButton.addEventListener("click", function () {
       console.log("parentID:", parentID); 
     // här bara läggs bara klassen till som finns i logoin.js
-    openModal(true);
+    openModal(loginModal);
   });
   renderHeaderLogin();
   // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
