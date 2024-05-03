@@ -57,18 +57,18 @@ body {
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    transition: filter 0.9s;
 
 }
 
 .posterDiv>p {
     opacity: 0;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
 }
 
 .posterDiv:hover {
-    filter: brightness(50%);
-}
 
-.posterDiv:hover p {
-    opacity: 1;
-    filter: brightness(200%);
+    cursor: pointer;
+    box-shadow: 1px 1px 20px white;
 }
