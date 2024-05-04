@@ -39,9 +39,6 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
-    z-index: 1;
 }
 
 /* LIKES */
@@ -49,10 +46,9 @@ body {
 #userNamePage {
     display: flex;
     justify-content: center;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-family: MT-black;
-    
-    /* flex-direction: column; */
+    margin: 40px 0 40px 0;
 }
 
 #mainLikeReviweBox {
@@ -65,7 +61,10 @@ body {
 #likeContainer {
     background-color: #51545899;
     border: 2px solid #F6F4F4;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    overflow-y: auto;
+    height: 500px;
+    border-top: none;
 }
 #likeMain {
     display: flex;
@@ -101,6 +100,13 @@ body {
     font-family: MT-black;
 }
 
+#likedTop {
+display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: #1d2f47;
+}
 
 
 /* REVEWES */
@@ -108,13 +114,18 @@ body {
 #reviewContainer {
     border: 2px solid #F6F4F4;
     background-color: #51545899;;
-    border-radius: 10px;
-
+    border-radius: 0 0 10px 10px;
+    overflow-y: auto;
+    height: 500px;
+    border-top: none;
 }
 
 #reviewTop {
   display: flex;
   flex-direction: column;
+  position: sticky;
+  top: 0;
+  background-color: #1d2f47;
 }
 
 .reviewTitle {
@@ -142,4 +153,28 @@ body {
 
 .userSpan {
     font-family: MT-extrabold;
+}
+
+#topText {
+    display: grid;
+    justify-content: space-around;
+    width: 1110px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0;
+    
+}
+
+#likes,
+#reviews {
+    border: 2px solid white;
+    border-radius: 10px 10px 0 0;
+    background-color: #51545899;
+}
+
+#likes {
+    margin: 0 25px 0px 0px;
+}
+
+#reviews {
+    margin: 0 10px 0 15px;
 }
