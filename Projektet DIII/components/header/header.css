@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 10vh;
+    height: 12vh;
 }
 
 #headerMiddle p {
@@ -18,13 +18,14 @@ header {
     justify-content: center;
     align-items: center;
     margin: 15px;
-    margin-left: 80px;
+    margin-left: 204px;
 }
 
 #logo {
-    height: 70px;
+    height: 64px;
     margin: 15px;
     cursor: pointer;
+    margin-left: 25px;
 }
 
 /* img {
@@ -44,17 +45,19 @@ header {
 #login {
     height: 35px;
     width: 85px;
-    border-radius: 10px;
+    border-radius: 18px;
     border: none;
     cursor: pointer;
-    font-size: 20px;
+    margin-right: 11px;
+    font-size: 18px;
     font-family: MT-bold-italic;
 }
 
 #userName {
     color: #F6F4F4;
-    font-size: 12px;
+    font-size: 21px;
     margin-right: 30px;
     cursor: pointer;
+    font-family: MT-bold-italic;;
 }
 

@@ -20,10 +20,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 30%;
-    min-height: 40%;
+    width: 35%;
+    height: 325px;
+    /* min-height: 40%; */
     padding: 50px;
-    background: #F6F4F4;
+    background: #515458;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     opacity: 0;
@@ -60,26 +61,32 @@
 
 .modal-content h1 {
     font-family: MT-bold-italic;
-    color: black;
+    color: #F6F4F4;
 }
 
 
 #logInButton,
 #registerButton  {
-    width: 300px;
-    height: 30px;
-    border: 1px solid grey;
+    width: 313px;
+    height: 35px;
+    border: 2px solid #F6F4F4;
     border-radius: 20px;
-    font-family: MT-bold-italic;;
+    font-family: MT-semibold;
     cursor: pointer;
+    font-size: 15px;
+    /* background-color: #515458; */
 }
 
 #username, 
 #password {
     height: 30px;
     width: 300px;
-    border: 1px solid grey;
     border-radius: 20px;
+    padding-left: 14px;
+    color: #F6F4F4;
+    font-size: 15px;
+    border: 2px solid #F6F4F4;
+    background-color: #515458;
 }
 
 
@@ -93,15 +100,16 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    font-family: MT-bold-italic;;
+    font-family: MT-semibold;
     font-size: 13px;
-    color: black;
+    color: #F6F4F4;
 }
 
 #logIn,
 #register {
     border: none;
-    background-color: white ;
+    background-color: #515458;
     cursor: pointer;
-    font-family: MT-bold-italic;;
+    font-family: MT-semibold;
+    color: #F6F4F4;
 }
