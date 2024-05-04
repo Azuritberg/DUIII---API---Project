@@ -6,12 +6,12 @@ function renderUserPage(parentID, instanceData) {
     wrapper.append(userContainer);
 
     userContainer.innerHTML = `
-        <h1 id="userNamePage">DemonHunter1337</h1>
+        <h1 id="userNamePage">SpaceFan01</h1>
         <div id="topText">
-            <div id"likedText">
+            <div id="likes">
                 <h2 class="likeTitle">Likes</h2>
             </div>
-            <div id"reviewText">
+            <div id="reviews">
                 <h2 class="reviewTitle">Reviews</h2>
             </div>
         </div>
@@ -22,8 +22,12 @@ function renderUserPage(parentID, instanceData) {
                     <div id="likedMovie"></div>
                     <div id="likedMovie"></div>
                     <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
+                    <div id="likedMovie"></div>
                 </div>
-                </div>
+            </div>
             
             <div id="reviewContainer">
                 <div id="reviewBottom">
@@ -33,6 +37,20 @@ function renderUserPage(parentID, instanceData) {
                             <h3>/ DUNE Part II /</h3>
                         </div>
                         <p>Yeah the film bros are right…you need to see this...</p>
+                    </div>
+                    <div id="reviewHeader"> 
+                        <div class="reviewText">
+                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                            <h3>/ DUNE Part II /</h3>
+                        </div>
+                        <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+                    </div>
+                    <div id="reviewHeader"> 
+                        <div class="reviewText">
+                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                            <h3>/ DUNE Part II /</h3>
+                        </div>
+                        <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
                     </div>
                     <div id="reviewHeader"> 
                         <div class="reviewText">
