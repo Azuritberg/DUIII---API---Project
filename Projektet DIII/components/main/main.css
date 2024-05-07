@@ -58,6 +58,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     transition: filter 0.9s;
+    text-align: center;
 
 }
 

@@ -98,13 +98,14 @@
     background-position: center;
     height: 150px;
     display: flex;
+    text-align: center;
 
 }
 
 .smallPosters>p {
     display: none;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     background: rgb(40, 66, 99, 0.8);
     margin: 0;
     width: 100%;
