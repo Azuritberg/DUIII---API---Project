@@ -22,10 +22,15 @@ function renderHeaderLogin(parentID, instanceData) {
   document.querySelector('#loginModal').addEventListener('click', event => {
     if (event.target.id === 'register') {
       changeModalContent(modal, 'registerButton');
+      let registerButton = document.getElementById("registerButton");
+      console.log(registerButton);
+      registerButton.addEventListener("click", createNewUser);
     } else if (event.target.id === 'logIn') {
       changeModalContent(modal, 'logInButton');
     }
   });
+  let loginButton = document.querySelector("#logInButton");
+  loginButton.addEventListener("click", loginUser);
 }
 
 function loginModalContent() {
@@ -50,8 +55,8 @@ function registerModalContent() {
       <div class="modal-content">
           <h1>Register</h1>
           <form>
-              <input type="text" placeholder="Create username" id="username"><br><br>
-              <input type="text" placeholder="Create password" id="password"><br><br>
+              <input type="text" placeholder="Create username" id="newUsername"><br><br>
+              <input type="text" placeholder="Create password" id="newPassword"><br><br>
               <button id="registerButton" type="submit">Register</button>
               <div id="noAccount">
                 <p>Already have an account?</p>
@@ -64,7 +69,7 @@ function registerModalContent() {
 
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {
-    modal.innerHTML = loginModalContent(); 
+    modal.innerHTML = loginModalContent();
   } else if (type === 'registerButton') {
     modal.innerHTML = registerModalContent();
   }
@@ -82,7 +87,43 @@ function closeModal(modal) {
   document.getElementById('overlay').classList.remove('active');
 }
 
+function createNewUser(event) {
 
+  event.preventDefault();
+
+  let newUsername = document.getElementById("newUsername").value;
+  let newPassword = document.getElementById("newPassword").value;
+
+  let newUser = {
+    entity: "sign_up",
+    row: {
+      username: newUsername,
+      password: newPassword,
+    }
+  }
+  State.POST(newUser);
+}
+
+function loginUser(event) {
+
+  console.log("Hej");
+  event.preventDefault();
+
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  console.log(username);
+  console.log(password);
+  let user = {
+    entity: "login",
+    row: {
+      username: username,
+      password: password,
+    }
+  }
+  console.log(user);
+  State.POST(user);
+}
 
 
 
