@@ -104,6 +104,7 @@ function createNewUser(event) {
   State.POST(newUser);
 }
 
+
 async function loginUser(event) {
   try {
       event.preventDefault();
@@ -118,16 +119,19 @@ async function loginUser(event) {
           password: password,
         }
       }
-    //console.log(State.POST);
-    //console.log(await State.POST(user));
       const loginUserObject = await State.POST(user); // returnera user objektet och sparar det i constanten loginUserObject
 
       if (loginUserObject.ok){
-        localStorage.setItem(loginUserObject);
+        localStorage.setItem("user", JSON.stringify(loginUserObject.id));
+        
+        document.getElementById('overlay').classList.remove('active');
+        document.getElementById("loginModal").classList.remove("active");
+        console.log(loginUserObject);
+        renderRedirectUserPage("mainPage", loginUserObject);
+
         console.log("Login successful");
 
       } else {
-        //alert("Invalid username or password")
         console.error("Error logging in");
       }
   } catch (error){

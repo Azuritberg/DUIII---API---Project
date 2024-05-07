@@ -38,7 +38,7 @@ if ($requestMethod == "POST") {  // Login (username + password)
         abort(400, "Bad Request (invalid password)");
     }
 
-    send(200, ["username" => $username, "id" => $user["user_id"]]);
+    send(200, ["username" => $username, "id" => $user["user_id"], "ok" => true]);
 
 } else {
     abort(405, "Method Not Allowed");

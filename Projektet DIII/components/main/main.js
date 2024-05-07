@@ -37,8 +37,6 @@ async function renderMain(parentID, sameMovies = []) {
         p.classList.add("movieTitleText")
 
 
-
-
         mainBox.children[i].addEventListener("mouseover", function (event) {
 
             let hoverId = event.target.id;
