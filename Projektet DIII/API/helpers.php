@@ -29,11 +29,11 @@ function getRequestData() {
 
 function getDatabase() {
     // Incase the database does not exist, or is empty, we'll default to this
-    // $emptyDatabaseTemplate = json_encode([
-    //     "owners" => [],
-    //     "dogs" => [],
-    //     "cats" => []
-    // ], JSON_PRETTY_PRINT);
+    $emptyDatabaseTemplate = json_encode([
+        "movies" => [],
+        "reviews" => [],
+        "users" => []
+    ], JSON_PRETTY_PRINT);
 
     if (file_exists("database.json") == false) {
         file_put_contents("database.json", $emptyDatabaseTemplate);
