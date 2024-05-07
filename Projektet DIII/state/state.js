@@ -31,6 +31,10 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
+                let string = "HEHHEHEHE";
+                let jsonstring = JSON.stringify(string);
+                let parsedstring = JSON.parse(jsonstring);
+                console.log(parsedstring);
                 console.log(data.row);
                 console.log(JSON.stringify(data.row));
                 console.log(JSON.parse(data.row));
