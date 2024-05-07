@@ -1,5 +1,5 @@
 function renderUserPage(parentID, instanceData) {
-
+    console.log(instanceData);
     let wrapper = document.getElementById(parentID);
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";

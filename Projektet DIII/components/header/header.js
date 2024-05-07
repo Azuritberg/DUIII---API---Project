@@ -1,5 +1,6 @@
 
 function renderHeader(parentID, instanceData) {
+  //console.log(instanceData);
   //Sconsole.log(parentID);
   let header = document.createElement("div");
   parentID.append(header);
@@ -23,7 +24,7 @@ function renderHeader(parentID, instanceData) {
   });
 
 
-// login modal   Vi kanske borde byta namn på denna?
+// login modal  
   renderHeaderLogin();
 
 
