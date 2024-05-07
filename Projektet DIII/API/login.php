@@ -28,7 +28,7 @@ if ($requestMethod == "POST") {  // Login (username + password)
 
     $username = $requestData["username"];
     $password = $requestData["password"];
-    $user = findItemByKey("USERS", "username", $username);
+    $user = findItemByKey("users", "username", $username);
 
     if ($user == false) {
         abort(404, "User Not Found");

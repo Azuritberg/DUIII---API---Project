@@ -194,16 +194,16 @@ function removeUserAndLikes($userId, $usersFilename, $moviesFilename) {
     $movies = getDatabase($moviesFilename);
 
     // Find and remove the user
-    foreach ($users['USERS'] as $userIndex => $user) {
+    foreach ($users['users'] as $userIndex => $user) {  //USERS = users
         if ($user['user_id'] == $userId) {
             // Remove user's likes from movies if necessary (decrementing likes counts or removing from liked lists)
             foreach ($user['liked_movies'] as $likedMovieId) {
                 // Remove the user's like from the movie's 'likes' array or decrement a 'like_count'
-                foreach ($movies['MOVIES'] as $movieIndex => $movie) {
+                foreach ($movies['movies'] as $movieIndex => $movie) {  // MOVIES = movies
                     if ($movie['id'] == $likedMovieId) {
                         // This assumes each movie has a 'like_count' or similar structure you can adjust
                         // If using a like array, you would remove the userId from that array
-                        $movies['MOVIES'][$movieIndex]['like_count'] = isset($movie['like_count']) ? max(0, $movie['like_count'] - 1) : 0;
+                        $movies['movies'][$movieIndex]['like_count'] = isset($movie['like_count']) ? max(0, $movie['like_count'] - 1) : 0;
                     }
                 }
             }
