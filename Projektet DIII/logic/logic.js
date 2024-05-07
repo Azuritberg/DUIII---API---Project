@@ -1,10 +1,11 @@
-function similarMovies(MOVIES, movie) {
+function similarMovies(movie) {
+    let movie_copy = State.GET("movies")
     let new_arr = [];
 
     // Filtering movies with similar release date
-    for (let i = 0; i < MOVIES.length; i++) {
-        if (Math.abs(MOVIES[i].year - movie.year) <= 10) {
-            new_arr.push(MOVIES[i]);
+    for (let i = 0; i < movie_copy.length; i++) {
+        if (Math.abs(movie_copy[i].year - movie.year) <= 10) {
+            new_arr.push(movie_copy[i]);
 
 
         }
