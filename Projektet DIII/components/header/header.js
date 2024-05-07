@@ -62,8 +62,8 @@ function getHome(event) {
   // });
 
   // let loginButton = document.getElementById("login");
-  // //   loginButton.addEventListener("click", function () {
-  // //     console.log("parentID:", parentID); 
-  // //   openModal(loginModal);
-  // // });
+  //   loginButton.addEventListener("click", function () {
+  //     console.log("parentID:", parentID); 
+  //   openModal(loginModal);
+  // });
   // renderHeaderLogin();
