@@ -15,7 +15,12 @@ function renderMoviesPage(parentID, instanceData) {
                 <h1 id="title">${instanceData.title}</h1>
                 <img id="heart" src="../icons/white-heart.png"alt="">
             </div>
-            <p id="aboutMovie">${instanceData.info}</p>
+            <div id="secondbox">
+                <h2 id="year">(${instanceData.year}) ${instanceData.director}</h2>
+            </div>
+            <div id="thirdbox">
+                <p id="aboutMovie">${instanceData.info}</p>
+            </div>
         </div> 
         <div id="bottomRight">
             <p id="info">Movies within 10 years</p>
@@ -74,12 +79,14 @@ function renderMoviesPage(parentID, instanceData) {
 
     const heart = document.getElementById("heart");
     console.log(heart);
-        heart.addEventListener("click", function() {
+    heart.addEventListener("click", function () {
         if (heart.getAttribute("src") != "../icons/white-heart.png") {
-            heart.setAttribute("src", "../icons/white-heart.png" )
+            heart.setAttribute("src", "../icons/white-heart.png")
         } else {
-            heart.setAttribute("src", "../icons/white-heart-fill.png")}});
-            
+            heart.setAttribute("src", "../icons/white-heart-fill.png")
+        }
+    });
+
 }
 
 

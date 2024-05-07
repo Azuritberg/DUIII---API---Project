@@ -63,9 +63,10 @@ body {
 
 .posterDiv>p {
     display: none;
-    color: #F6F4F4;;
+    color: #F6F4F4;
+    ;
     font-size: 20px;
-    background: rgb(40, 66, 99, 0.7);
+    background: rgb(40, 66, 99, 0.8);
     margin: 0;
     width: 100%;
     font-family: MT-semibold;
