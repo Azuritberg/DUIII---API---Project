@@ -1,6 +1,10 @@
 <?php
 
-require_once("helpers.php");
+// $requestMethod = $_SERVER["REQUEST_METHOD"];
+// $data = file_get_contents("database.json");
+// $json = 
+
+require_once ("helpers.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
     header("Access-Control-Allow-Headers: *");
@@ -28,7 +32,7 @@ if ($requestMethod == "POST") {  // Login (username + password)
 
     $username = $requestData["username"];
     $password = $requestData["password"];
-    $user = findItemByKey("USERS", "username", $username);
+    $user = findItemByKey("users", "username", $username);
 
     if ($user == false) {
         abort(404, "User Not Found");
