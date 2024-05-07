@@ -10,10 +10,10 @@ const STATE = {
 }
 
 async function renderApp() {
-    const movie_request = new Request("/databas/movies.json");
+    const movie_request = new Request("/API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
-    STATE.movies = movie_resource.MOVIES;
+    STATE.movies = movie_resource;
 
 
     let movies = State.GET("movies");
