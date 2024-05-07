@@ -5,6 +5,7 @@ body {
 
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 #mainContainer {
@@ -24,8 +25,8 @@ body {
     margin-bottom: 20px;
     margin-top: 50px;
     padding: 10px;
-    height: 54vh;
-    width: 60vw;
+    height: 530px;
+    width: 950px;
 }
 
 #infoText {
@@ -47,11 +48,10 @@ body {
 }
 
 .posterDiv {
-    height: 90%;
+    height: 240px;
+
     margin: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
     border: 2px solid #F6F4F4;
     border-radius: 5px;
     background-position: center;
@@ -62,13 +62,28 @@ body {
 }
 
 .posterDiv>p {
-    opacity: 0;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
+    display: none;
+    color: white;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 0;
+    width: 100%;
+
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
 }
 
 .posterDiv:hover {
 
     cursor: pointer;
     box-shadow: 1px 1px 20px white;
+
+}
+
+
+.posterDiv:hover>p {
+
+    display: flex;
+
 }
