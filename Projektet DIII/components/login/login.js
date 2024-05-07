@@ -104,26 +104,38 @@ function createNewUser(event) {
   State.POST(newUser);
 }
 
-function loginUser(event) {
+async function loginUser(event) {
+  try {
+      event.preventDefault();
+  
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+  
+      let user = {
+        entity: "login",
+        row: {
+          username: username,
+          password: password,
+        }
+      }
+    //console.log(State.POST);
+    //console.log(await State.POST(user));
+      const loginUserObject = await State.POST(user); // returnera user objektet och sparar det i constanten loginUserObject
 
-  console.log("Hej");
-  event.preventDefault();
+      if (loginUserObject.ok){
+        localStorage.setItem(loginUserObject);
+        console.log("Login successful");
 
-  let username = document.getElementById("username").value;
-  let password = document.getElementById("password").value;
-
-  console.log(username);
-  console.log(password);
-  let user = {
-    entity: "login",
-    row: {
-      username: username,
-      password: password,
-    }
-  }
-  console.log(user);
-  State.POST(user);
+      } else {
+        //alert("Invalid username or password")
+        console.error("Error logging in");
+      }
+  } catch (error){
+    console.error("Error logging in", error);
+  } 
 }
+
+
 
 
 
