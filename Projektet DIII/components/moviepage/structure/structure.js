@@ -83,5 +83,3 @@ function renderMoviesPage(parentID, instanceData) {
 
 // renderMoviesPage("wrapper");
 
-
-/* <img id="heartfill" src="../icons/white-heart-fill.png"alt=""></img> */
