@@ -10,10 +10,11 @@ const STATE = {
 }
 
 async function renderApp() {
-    const movie_request = new Request("/databas/movies.json");
+    const movie_request = new Request("/API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
-    STATE.movies = movie_resource.MOVIES;
+    console.log(movie_resource);
+    STATE.movies = movie_resource;
 
 
     let movies = State.GET("movies");
@@ -88,6 +89,92 @@ const State = {
     },
 }
 
+
+async function fetcher(request) {
+
+    try {
+        let response = await fetch(request);
+        let resource = await response.json();
+        return resource;
+    } catch (error) {
+        console.warn(error);
+    }
+}
+
+
+
+
+// LOGIN & REGISTER
+
+async function loginUser(username, password) {
+    const data = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            username: username,
+            password: password
+        })
+    }
+    const request = new Request("/API/login.php", data);
+
+    try {
+        const result = await fetcher(request);
+        if (result.ok && result.data) {
+
+            console.log(result.data);
+            console.log("Login successful", result.data);
+        } else {
+            alert("Invalid username or password")
+            console.error("Error logging in", result.error);
+        }
+    } catch (error) {
+        console.error("Error logging in", error);
+    }
+}
+
+async function registerUser(username, password) {
+    const data = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            username: username, 
+            password: password
+        })
+    }
+    const request = new Request("/API/users.php", data);
+
+    try {
+        const result = await fetcher(request);
+        if (result.ok) {
+            console.log("User registered successfully", result);
+        } else {
+            console.error("Error registering user", result.error);
+        }
+    } catch (error) {
+        console.error("Error registering user", error);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // const State = {
 
 //     GET(entity) {  // Get state denna gör enbart en kopia av STATE inte en request förfrågan.
@@ -144,15 +231,3 @@ const State = {
 //         }
 //     }
 // };
-
-
-async function fetcher(request) {
-
-    try {
-        let response = await fetch(request);
-        let resource = await response.json();
-        return resource;
-    } catch (error) {
-        console.warn(error);
-    }
-}

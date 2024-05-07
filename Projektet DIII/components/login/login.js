@@ -64,7 +64,7 @@ function registerModalContent() {
 
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {
-    modal.innerHTML = loginModalContent();
+    modal.innerHTML = loginModalContent(); 
   } else if (type === 'registerButton') {
     modal.innerHTML = registerModalContent();
   }
