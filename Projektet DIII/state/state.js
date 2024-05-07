@@ -31,8 +31,10 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
+                console.log(data.row);
                 console.log(JSON.stringify(data.row));
-                const loginRequest = new Request("../API/users.php", {
+                console.log(JSON.parse(data.row));
+                const loginRequest = new Request("../API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
