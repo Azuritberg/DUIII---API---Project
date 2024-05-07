@@ -29,12 +29,12 @@ switch ($requestMethod) {
         }
         
         $username = $requestData["username"];
-        $existingUser = findItemByKey("USERS", "username", $username);
+        $existingUser = findItemByKey("users", "username", $username);
         if ($existingUser) {
             abort(400, "Bad Request (user already exists)");
         }
         
-        $newUser = insertItemByType("USERS", $userKeys, $requestData);
+        $newUser = insertItemByType("users", $userKeys, $requestData);
         unset($newUser["password"]); // Remove password from response for security
         send(201, $newUser);
         break;
@@ -45,19 +45,22 @@ switch ($requestMethod) {
             abort(400, "Bad Request (missing user ID)");
         }
         
-        $user = findItemByKey("USERS", "user_id", $requestData["user_id"]);
+        $user = findItemByKey("users", "user_id", $requestData["user_id"]);
         if (!$user) {
             abort(404, "User Not Found");
         }
 
         // Assuming removeUserAndLikes() cleans up related data
         removeUserAndLikes($user["user_id"]);
-        $deletedUser = deleteItemByType("USERS", $user);
+        $deletedUser = deleteItemByType("users", $user);
         send(200, ["message" => "User deleted successfully", "user_id" => $user["user_id"]]);
         break;
     default:
         abort(405, "Method Not Allowed");
 }
+
+
+// USERS = users
 
 ?>
 

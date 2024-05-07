@@ -40,11 +40,12 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                console.log(loginResource);
+                return loginResource
+                //console.log(loginResource);
                 break;
             case "sign_up":
                 console.log(data);
-                const signUpRequest = new Request("", {
+                const signUpRequest = new Request("../API/users.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }

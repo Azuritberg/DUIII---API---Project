@@ -1,9 +1,5 @@
 <?php
 
-// $requestMethod = $_SERVER["REQUEST_METHOD"];
-// $data = file_get_contents("database.json");
-// $json = 
-
 require_once ("helpers.php");
 
 if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
@@ -19,13 +15,13 @@ $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestData = getRequestData();
 
 if ($requestMethod == "POST") {  // Login (username + password)
-
+    
     if (empty($requestData)) {
         abort(400, "Bad Request (empty request)");
     }
 
     $loginKeys = ["username", "password"];
-
+    
     if (requestContainsAllKeys($requestData, $loginKeys) == false) {
         abort(400, "Bad Request (missing keys)");
     }
@@ -41,6 +37,8 @@ if ($requestMethod == "POST") {  // Login (username + password)
     if ($user["password"] != $password) {
         abort(400, "Bad Request (invalid password)");
     }
+
+    send(200, ["username" => $username, "id" => $user["user_id"]]);
 
 } else {
     abort(405, "Method Not Allowed");
