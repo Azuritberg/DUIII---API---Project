@@ -169,7 +169,7 @@ display: flex;
 
 #likes,
 #reviews {
-    border: 2px solid white;
+    border: 2px solid #F6F4F4;;
     border-radius: 10px 10px 0 0;
     background-color: #51545899;
 }

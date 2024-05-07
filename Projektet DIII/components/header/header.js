@@ -21,18 +21,11 @@ function renderHeader(parentID) {
     clearContent("mainPage");
   });
 
-  // let loginButton = document.getElementById("login");
-  // loginButton.addEventListener("click", function () {
-  //   renderHeaderLogin(parentID);
-  // });
 
-  let loginButton = document.getElementById("login");
-    loginButton.addEventListener("click", function () {
-      console.log("parentID:", parentID); 
-    openModal(loginModal);
-  });
+// login modal   Vi kanske borde byta namn på denna?
   renderHeaderLogin();
-  // detta ska inte ligga här men den ligger ingen annanstans så jag fick skriva den här => renderHeaderLogin();
+
+
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
 }
@@ -55,3 +48,22 @@ function getHome(event) {
   }
 }
 
+
+
+
+
+
+
+
+
+  // let loginButton = document.getElementById("login");
+  // loginButton.addEventListener("click", function () {
+  //   renderHeaderLogin(parentID);
+  // });
+
+  // let loginButton = document.getElementById("login");
+  // //   loginButton.addEventListener("click", function () {
+  // //     console.log("parentID:", parentID); 
+  // //   openModal(loginModal);
+  // // });
+  // renderHeaderLogin();
