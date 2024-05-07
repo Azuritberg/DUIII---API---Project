@@ -37,21 +37,15 @@ function similarMovies(movie) {
     return selectedMovies
 }
 
+
+
 // Rederaction of pages
-
-
-// function clearContent(parentID, instanceData) {
-//     document.getElementById(parentID).innerHTML = "";
-//     renderUserPage("mainPage", instanceData);
-// }
-
-
 
 function renderRedirectUserPage(parentID, instanceData) {
     // steg 1 :: TÖM FÖRÄLDERN (<HEADER>) DÄR HEADER SKA FINNAS
     // STEG 2 :: RE RENDER HEADER
-    document.querySelector("header").innerHTML = "";
-    renderUserPage("wrapper", instanceData);
+    document.querySelector("#userName").innerHTML = instanceData.username;
+    renderUserPage(parentID, instanceData);
 
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
@@ -59,3 +53,13 @@ function renderRedirectUserPage(parentID, instanceData) {
     // STEG 3 :: RE RENDER MAIN PAGE AS USERPAGE
 }
 
+
+
+
+
+
+
+// function clearContent(parentID, instanceData) {
+//     document.getElementById(parentID).innerHTML = "";
+//     renderUserPage("mainPage", instanceData);
+// }

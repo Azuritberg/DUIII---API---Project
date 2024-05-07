@@ -47,6 +47,8 @@ function renderMoviesPage(parentID, instanceData) {
             <input type="text" placeholder="Add Review" id="userTextInput">
         </div>
     </div>`;
+
+    
     let bigPoster = document.getElementById("bigPoster");
 
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
