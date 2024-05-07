@@ -22,7 +22,7 @@ function renderHeader(parentID) {
   });
 
 
-// login modal   Vi kanske borde byta namn på denna?
+  // login modal   Vi kanske borde byta namn på denna?
   renderHeaderLogin();
 
 
@@ -48,14 +48,6 @@ function getHome(event) {
   }
 }
 
-
-
-
-
-
-
-
-
   // let loginButton = document.getElementById("login");
   // loginButton.addEventListener("click", function () {
   //   renderHeaderLogin(parentID);
@@ -63,7 +55,7 @@ function getHome(event) {
 
   // let loginButton = document.getElementById("login");
   // //   loginButton.addEventListener("click", function () {
-  // //     console.log("parentID:", parentID); 
+  // //     console.log("parentID:", parentID);
   // //   openModal(loginModal);
   // // });
   // renderHeaderLogin();
