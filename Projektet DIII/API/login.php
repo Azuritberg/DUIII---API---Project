@@ -14,21 +14,21 @@ if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $requestData = getRequestData();
 
-if ($requestMethod == "POST") // Login (name + password)
-{
+if ($requestMethod == "POST") {  // Login (username + password)
+
     if (empty($requestData)) {
         abort(400, "Bad Request (empty request)");
     }
 
-    $loginKeys = ["name", "password"];
+    $loginKeys = ["username", "password"];
 
     if (requestContainsAllKeys($requestData, $loginKeys) == false) {
         abort(400, "Bad Request (missing keys)");
     }
 
-    $name = $requestData["name"];
+    $username = $requestData["username"];
     $password = $requestData["password"];
-    $user = findItemByKey("users", "name", $name);
+    $user = findItemByKey("USERS", "username", $username);
 
     if ($user == false) {
         abort(404, "User Not Found");
@@ -38,12 +38,7 @@ if ($requestMethod == "POST") // Login (name + password)
         abort(400, "Bad Request (invalid password)");
     }
 
-    // This token is used to authenticate future requests
-    // $token = ["token" => sha1("$name$password")];
-    // send(200, $token);
-}
-else
-{
+} else {
     abort(405, "Method Not Allowed");
 }
 

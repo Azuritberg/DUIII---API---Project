@@ -1,20 +1,19 @@
 <?php
 
-function send($status = 200, $data = [])
-{
+function send($status = 200, $data = []) {
     header("Content-Type: application/json");
     http_response_code($status);
     echo json_encode($data);
     exit();
 }
 
-function abort($status = 400, $message = "")
-{
+
+function abort($status = 400, $message = "") {
     send($status, ["error" => $message]);
 }
 
-function getRequestData()
-{
+
+function getRequestData() {
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         return $_GET;
     }
@@ -27,8 +26,8 @@ function getRequestData()
     return json_decode($json, true);
 }
 
-function getDatabase()
-{
+
+function getDatabase() {
     // Incase the database does not exist, or is empty, we'll default to this
     // $emptyDatabaseTemplate = json_encode([
     //     "owners" => [],
@@ -56,8 +55,8 @@ function getDatabase()
     return $databaseData;
 }
 
-function getDatabaseByType($type)
-{
+
+function getDatabaseByType($type) {
     $database = getDatabase();
 
     if (isset($database[$type]) == false) {
@@ -67,8 +66,8 @@ function getDatabaseByType($type)
     return $database[$type];
 }
 
-function requestContainsAllKeys($data, $keys)
-{
+
+function requestContainsAllKeys($data, $keys) {
     foreach ($keys as $key) {
         if (isset($data[$key]) == false) {
             return false;
@@ -78,8 +77,8 @@ function requestContainsAllKeys($data, $keys)
     return true;
 }
 
-function requestContainsSomeKey($data, $keys)
-{
+
+function requestContainsSomeKey($data, $keys) {
     foreach ($keys as $key) {
         if (isset($data[$key])) {
             return true;
@@ -88,8 +87,8 @@ function requestContainsSomeKey($data, $keys)
     return false;
 }
 
-function findItemByKey($type, $key, $value)
-{
+
+function findItemByKey($type, $key, $value) {
     $database = getDatabase();
     
     if (isset($database[$type]) == false) {
@@ -107,8 +106,9 @@ function findItemByKey($type, $key, $value)
     return false;
 }
 
-function insertItemByType($type, $keys, $data)
-{
+
+function insertItemByType($type, $keys, $data) {
+
     $database = getDatabase();
     
     if (isset($database[$type]) == false) {
@@ -120,7 +120,7 @@ function insertItemByType($type, $keys, $data)
     $newItem = [];
 
     foreach ($keys as $key) {
-        if ($key == "token") {
+        if ($key == "token") {    // token?
             continue;
         }
         $newItem[$key] = $data[$key];
@@ -142,8 +142,8 @@ function insertItemByType($type, $keys, $data)
     return $newItem;
 }
 
-function updateItemByType($type, $updatedItem)
-{
+
+function updateItemByType($type, $updatedItem) {
     $database = getDatabase();
     
     if (isset($database[$type]) == false) {
@@ -164,8 +164,9 @@ function updateItemByType($type, $updatedItem)
     return $updatedItem;
 }
 
-function deleteItemByType($type, $itemToDelete)
-{
+
+function deleteItemByType($type, $itemToDelete) {
+
     $database = getDatabase();
     
     if (isset($database[$type]) == false) {
@@ -185,6 +186,62 @@ function deleteItemByType($type, $itemToDelete)
     file_put_contents("database.json", $json);
     return $itemToDelete;
 }
+
+
+function removeUserAndLikes($userId, $usersFilename, $moviesFilename) {
+    // Load the users and movies databases
+    $users = getDatabase($usersFilename);
+    $movies = getDatabase($moviesFilename);
+
+    // Find and remove the user
+    foreach ($users['USERS'] as $userIndex => $user) {
+        if ($user['user_id'] == $userId) {
+            // Remove user's likes from movies if necessary (decrementing likes counts or removing from liked lists)
+            foreach ($user['liked_movies'] as $likedMovieId) {
+                // Remove the user's like from the movie's 'likes' array or decrement a 'like_count'
+                foreach ($movies['MOVIES'] as $movieIndex => $movie) {
+                    if ($movie['id'] == $likedMovieId) {
+                        // This assumes each movie has a 'like_count' or similar structure you can adjust
+                        // If using a like array, you would remove the userId from that array
+                        $movies['MOVIES'][$movieIndex]['like_count'] = isset($movie['like_count']) ? max(0, $movie['like_count'] - 1) : 0;
+                    }
+                }
+            }
+
+            // Finally, remove the user from the users array
+            array_splice($users['USERS'], $userIndex, 1);
+            break;
+        }
+    }
+
+    // Save the updated data back to the files
+    updateDatabase($usersFilename, $users);
+    updateDatabase($moviesFilename, $movies);
+}
+
+// Helper function to fetch data from a JSON file
+// function getDatabase($filename) {
+
+//     if (file_exists($filename)) {
+//         return json_decode(file_get_contents($filename), true);
+//     }
+//     //return false;  // Return false or handle error as needed
+// }
+
+function updateDatabase($filename, $data) {
+    file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT));
+}
+
+
+
+
+
+
+
+
+
+
+
 
 // function getUserFromToken($requestToken)
 // {
@@ -212,52 +269,6 @@ function deleteItemByType($type, $itemToDelete)
 
 //     return false;
 // }
-
-function removeUserAndLikes($userId, $usersFilename, $moviesFilename) {
-    // Load the users and movies databases
-    $users = getDatabase($usersFilename);
-    $movies = getDatabase($moviesFilename);
-
-    // Find and remove the user
-    foreach ($users['USERS'] as $userIndex => $user) {
-        if ($user['user_id'] == $userId) {
-            // Remove user's likes from movies if necessary (e.g., decrementing likes counts or removing from liked lists)
-            foreach ($user['liked_movies'] as $likedMovieId) {
-                // Remove the user's like from the movie's 'likes' array or decrement a 'like_count'
-                foreach ($movies['MOVIES'] as $movieIndex => $movie) {
-                    if ($movie['id'] == $likedMovieId) {
-                        // This assumes each movie has a 'like_count' or similar structure you can adjust
-                        // If using a like array, you would remove the userId from that array
-                        $movies['MOVIES'][$movieIndex]['like_count'] = isset($movie['like_count']) ? max(0, $movie['like_count'] - 1) : 0;
-                    }
-                }
-            }
-
-            // Finally, remove the user from the users array
-            array_splice($users['USERS'], $userIndex, 1);
-            break;
-        }
-    }
-
-    // Save the updated data back to the files
-    updateDatabase($usersFilename, $users);
-    updateDatabase($moviesFilename, $movies);
-}
-
-// Helper function to fetch data from a JSON file
-// function getDatabase($filename) {
-//     if (file_exists($filename)) {
-//         return json_decode(file_get_contents($filename), true);
-//     }
-//     //return false;  // Return false or handle error as needed
-// }
-
-function updateDatabase($filename, $data) {
-    file_put_contents($filename, json_encode($data, JSON_PRETTY_PRINT));
-}
-
-
-
 
 
 // function removeUserAndReviews($userId, $usersFilename, $reviewsFilename)

@@ -29,12 +29,12 @@ switch ($requestMethod) {
         }
         
         $username = $requestData["username"];
-        $existingUser = findItemByKey("users", "username", $username);
+        $existingUser = findItemByKey("USERS", "username", $username);
         if ($existingUser) {
             abort(400, "Bad Request (user already exists)");
         }
         
-        $newUser = insertItemByType("users", $userKeys, $requestData);
+        $newUser = insertItemByType("USERS", $userKeys, $requestData);
         unset($newUser["password"]); // Remove password from response for security
         send(201, $newUser);
         break;
@@ -45,14 +45,14 @@ switch ($requestMethod) {
             abort(400, "Bad Request (missing user ID)");
         }
         
-        $user = findItemByKey("users", "user_id", $requestData["user_id"]);
+        $user = findItemByKey("USERS", "user_id", $requestData["user_id"]);
         if (!$user) {
             abort(404, "User Not Found");
         }
 
-        // Assuming removeUserGamesCharactersAndLikes() cleans up related data
+        // Assuming removeUserAndLikes() cleans up related data
         removeUserAndLikes($user["user_id"]);
-        $deletedUser = deleteItemByType("users", $user);
+        $deletedUser = deleteItemByType("USERS", $user);
         send(200, ["message" => "User deleted successfully", "user_id" => $user["user_id"]]);
         break;
     default:
