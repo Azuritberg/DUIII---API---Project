@@ -1,6 +1,7 @@
+
 <?php
 
-require_once ("helpers.php");
+require_once("helpers.php");
 
 // Enable CORS for all origins
 
@@ -26,14 +27,14 @@ switch ($requestMethod) {
         if (!requestContainsAllKeys($requestData, $userKeys)) {
             abort(400, "Bad Request (missing keys)");
         }
-
+        
         $username = $requestData["username"];
         $existingUser = findItemByKey("USERS", "username", $username);
         if ($existingUser) {
             abort(400, "Bad Request (user already exists)");
         }
-
-        $newUser = insertItemByType("users", $userKeys, $requestData);
+        
+        $newUser = insertItemByType("USERS", $userKeys, $requestData);
         unset($newUser["password"]); // Remove password from response for security
         send(201, $newUser);
         break;
@@ -43,7 +44,7 @@ switch ($requestMethod) {
         if (empty($requestData) || !isset($requestData["user_id"])) {
             abort(400, "Bad Request (missing user ID)");
         }
-
+        
         $user = findItemByKey("USERS", "user_id", $requestData["user_id"]);
         if (!$user) {
             abort(404, "User Not Found");
@@ -59,3 +60,10 @@ switch ($requestMethod) {
 }
 
 ?>
+
+
+
+
+
+
+

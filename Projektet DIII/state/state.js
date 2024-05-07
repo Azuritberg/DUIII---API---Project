@@ -32,30 +32,20 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
-                let string = "HEHHEHEHE";
-                let jsonstring = JSON.stringify(string);
-                let parsedstring = JSON.parse(jsonstring);
-                console.log(parsedstring);
-                console.log(data.row);
-                console.log(JSON.stringify(data.row));
-                console.log(JSON.parse(data.row));
-                const loginRequest = new Request("../API/login.php", {
+                const loginRequest = new Request("", {
                     method: "POST",
-                    body: JSON.stringify(data.row),
+                    body: data.row,
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                console.log(loginResource);
                 break;
             case "sign_up":
-                console.log(data.row);
-                const signUpRequest = new Request("../API/users.php", {
+                const signUpRequest = new Request("", {
                     method: "POST",
-                    body: JSON.stringify(data.row),
+                    body: data.row,
                     headers: { "Content-Type": "application/json" }
                 })
                 let signUpResource = await fetcher(signUpRequest);
-                console.log(signUpResource);
                 break;
             case "reviews":
                 const reviewRequest = new Request("", {
