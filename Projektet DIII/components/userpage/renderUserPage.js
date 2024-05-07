@@ -6,7 +6,7 @@ function renderUserPage(parentID, instanceData) {
     wrapper.append(userContainer);
 
     userContainer.innerHTML = `
-        <h1 id="userNamePage">SpaceFan01</h1>
+        <h1 id="userNamePage">${instanceData.username}</h1>
         <div id="topText">
             <div id="likes">
                 <h2 class="likeTitle">Likes</h2>

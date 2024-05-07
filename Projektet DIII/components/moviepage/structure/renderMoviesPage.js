@@ -68,7 +68,6 @@ function renderMoviesPage(parentID, instanceData) {
 
         poster.appendChild(p)
 
-
         poster.style.backgroundImage = `url('${similarMoviesArray[i].poster}')`
 
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
@@ -77,6 +76,7 @@ function renderMoviesPage(parentID, instanceData) {
 
     }
 
+    // HEART FILL
     const heart = document.getElementById("heart");
     console.log(heart);
     heart.addEventListener("click", function () {

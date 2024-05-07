@@ -6,8 +6,6 @@ function similarMovies(movie) {
     for (let i = 0; i < movie_copy.length; i++) {
         if (Math.abs(movie_copy[i].year - movie.year) <= 10) {
             new_arr.push(movie_copy[i]);
-
-
         }
     }
 
@@ -15,13 +13,7 @@ function similarMovies(movie) {
         if (new_arr[i].id === movie.id) {
             new_arr.splice(i, 1);
         }
-
     }
-
-
-
-
-
 
     // Selecting 4 random values from new_arr
     let selectedMovies = [];
@@ -45,4 +37,25 @@ function similarMovies(movie) {
     return selectedMovies
 }
 
+// Rederaction of pages
+
+
+// function clearContent(parentID, instanceData) {
+//     document.getElementById(parentID).innerHTML = "";
+//     renderUserPage("mainPage", instanceData);
+// }
+
+
+
+function renderRedirectUserPage(parentID, instanceData) {
+    // steg 1 :: TÖM FÖRÄLDERN (<HEADER>) DÄR HEADER SKA FINNAS
+    // STEG 2 :: RE RENDER HEADER
+    document.querySelector("header").innerHTML = "";
+    renderUserPage("wrapper", instanceData);
+
+    document.getElementById(parentID).innerHTML = "";
+    renderUserPage("mainPage", instanceData);
+
+    // STEG 3 :: RE RENDER MAIN PAGE AS USERPAGE
+}
 
