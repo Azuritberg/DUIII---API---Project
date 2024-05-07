@@ -31,17 +31,22 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
-                const loginRequest = new Request("", {
+                // console.log(data);
+                // console.log(JSON.stringify(data.row));
+                // console.log(JSON.parse(data.row));
+                const loginRequest = new Request("../API/login.php", {
                     method: "POST",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
+                console.log(loginResource);
                 break;
             case "sign_up":
+                console.log(data);
                 const signUpRequest = new Request("", {
                     method: "POST",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 })
                 let signUpResource = await fetcher(signUpRequest);
@@ -87,63 +92,6 @@ const State = {
         }
     },
 }
-
-// const State = {
-
-//     GET(entity) {  // Get state denna gör enbart en kopia av STATE inte en request förfrågan.
-//         const stateClone = JSON.parse(JSON.stringify(STATE[entity]));
-//         return stateClone;
-//     },
-
-//     POST: async function (data) {
-//         const { entity, row } = data;
-//         const response = await fetcher(new Request(`api/${data.entity}.php`, {
-//             headers: { "Content-Type": "application/json" },
-//             method: 'POST',
-//             body: JSON.stringify(data.row),
-//         }));
-
-//         if (response.ok) {
-//             STATE[entity].push(response.data);
-
-//             postInstanceListnings(entity, response.data);
-//         }
-//     },
-
-
-//     PATCH: async function (data) {
-//         const { entity, id, fields, values } = data;
-//         const response = await fetcher(new Request(`api/${data.entity}.php`, {
-//             headers: { "Content-Type": "application/json" },
-//             method: 'PATCH',
-//             body: JSON.stringify({ id: id, favorite: values }),
-//         }));
-//         if (response.ok) {
-//             console.log(response);
-//             const index = STATE[entity].findIndex(d => d.id === data.id);
-//             if (index !== -1) {
-//                 STATE[entity][index][fields] = values;
-//             }
-//         }
-//     },
-
-
-//     DELETE: async function (data) {
-//         const { entity, id } = data;
-//         const response = await fetcher(new Request(`api/${entity}.php`, {
-//             headers: { "Content-Type": "application/json" },
-//             method: 'DELETE',
-//             body: JSON.stringify({ id: id }),
-//         }));
-//         if (response.ok) {
-//             const index = STATE[entity].findIndex(d => d.id === data.id);
-//             if (index !== -1) {
-//                 STATE[entity].splice(index, 1);
-//             }
-//             deleteInstanceListnings(entity, id);
-//         }
-//     }
-// };
 
 
 async function fetcher(request) {
