@@ -1,3 +1,6 @@
+"use strict"; 
+
+
 function similarMovies(movie) {
     let movie_copy = State.GET("movies")
     let new_arr = [];
@@ -16,6 +19,7 @@ function similarMovies(movie) {
             new_arr.splice(i, 1);
         }
     }
+
 
     // Selecting 4 random values from new_arr
     let selectedMovies = [];
@@ -38,14 +42,12 @@ function similarMovies(movie) {
     for (let i = 0; i < numSelections; i++) {
         selectedMovies.push(new_arr[randomIndices[i]]);
     }
-
-
     return selectedMovies
 }
 
 
-// Rederaction of pages
 
+// Rederaction of pages
 function renderRedirectUserPage(parentID, instanceData) {
 
     // document.querySelector("#usernametext").innerHTML = instanceData.username;

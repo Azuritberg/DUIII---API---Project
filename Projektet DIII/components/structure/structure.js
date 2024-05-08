@@ -1,3 +1,5 @@
+"use strict";
+
 async function renderStructure(movies) {
 
     // fetch(movie_request)

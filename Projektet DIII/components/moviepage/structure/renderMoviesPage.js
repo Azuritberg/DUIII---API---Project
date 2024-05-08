@@ -1,3 +1,4 @@
+"use strict";
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)

@@ -1,3 +1,5 @@
+"use strict";
+
 let savedMovies = [];
 
 async function renderMain(parentID, sameMovies = []) {
@@ -35,7 +37,6 @@ async function renderMain(parentID, sameMovies = []) {
         let p = document.createElement("p")
 
         p.classList.add("movieTitleText")
-
 
         mainBox.children[i].addEventListener("mouseover", function (event) {
 

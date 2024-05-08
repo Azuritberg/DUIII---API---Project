@@ -1,10 +1,12 @@
+"use strict";
+
+
 function renderHeader(parentID, instanceData) {
   
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
   //console.log(instanceData.username);
-  //console.log(parentID);
   header.innerHTML = `
     <div id="headerLeft">
       <img id="logo" src="./icons/rocket-vit.png" alt="">
@@ -21,9 +23,10 @@ function renderHeader(parentID, instanceData) {
     
   `;
 
-  let userbtn = document.getElementById("userbtn");
-  userbtn.addEventListener("click", function () {
-    const instanceData = {username: localStorage.getItem("username")};
+  // USER BUTTON and Redirect user to userpage
+  let userButton = document.getElementById("userbtn");
+  userButton.addEventListener("click", function () {
+    const instanceData = {username: localStorage.getItem("username")};  // Get username from localStorage
     renderRedirectUserPage("mainPage", instanceData);
   });
 
@@ -42,17 +45,15 @@ function renderHeader(parentID, instanceData) {
     }
   });
 
+  let homeButton = document.getElementById("logo");
+  homeButton.addEventListener("click", getHome);
 
 
 // login modal  
   renderHeaderLogin();
-
-
-  let homeButton = document.getElementById("logo");
-  homeButton.addEventListener("click", getHome);
 }
 
-
+// LOGOUT USER AND REDIRECT TO INDEX PAGE 
 function logoutUser() {
   localStorage.removeItem("user");
   console.log("Logout successful");
@@ -60,7 +61,7 @@ function logoutUser() {
   window.location.href = 'index.html';
 }
 
-
+// GET HOME PAGE  
 function getHome(event) {
   if (!document.querySelector("#mainBox")) {
     if (document.getElementById("mainMovieBox")) {
@@ -90,84 +91,11 @@ function getHome(event) {
 
 
 
-
-
-
-
-
-  //console.log(instanceData);
-  //Sconsole.log(parentID);
-
-
-
-
-
-
   // ${instanceData && instanceData.userName ? instanceData.userName : ""}
   
   // ${instanceData ? instanceData.userName : ""}
 
   // ${instanceData ? "Logout" : "Login"}
-
-
-
-
-// function renderHeader(parentID, instanceData) {
-//   //console.log(instanceData);
-//   //Sconsole.log(parentID);
-//   let header = document.createElement("div");
-//   parentID.append(header);
-//   header.id = "header";
-//   header.innerHTML = `
-//     <div id="headerLeft">
-//       <img id="logo" src="./icons/rocket-vit.png" alt="">
-//     </div>
-//     <div id="headerMiddle">
-//       <p>The Random Universe.</p>
-//     </div>
-//     <div id="headerRight">
-//       <div id="userName">${instanceData ? instanceData.userName : ""}</div>
-//       <button id="login">Login</button>
-//     </div>
-//   `;
-
-//   let userName = document.getElementById("userName");
-//   userName.addEventListener("click", function () {
-//     renderRedirectUserPage("mainPage");
-//   });
-
-
-// // login modal  
-//   renderHeaderLogin();
-
-
-//   let homeButton = document.getElementById("logo");
-//   homeButton.addEventListener("click", getHome);
-// }
-
-// // function clearContent(parentID, instanceData) {
-// //   document.getElementById(parentID).innerHTML = "";
-// //   renderUserPage("mainPage", instanceData);
-// // }
-
-
-// function getHome(event) {
-//   if (!document.querySelector("#mainBox")) {
-//     if (document.getElementById("mainMovieBox")) {
-//       document.getElementById("mainMovieBox").remove();
-//       renderMain(document.querySelector("main"), savedMovies);
-//     } else {
-//       document.getElementById("userContainer").remove();
-//       renderMain(document.querySelector("main"), savedMovies);
-//     }
-//   }
-// }
-
-
-
-
-
-
 
 
 

@@ -1,3 +1,5 @@
+"use strict";
+
 function renderUserPage(parentID, instanceData) {
     console.log(instanceData);
     let wrapper = document.getElementById(parentID);
