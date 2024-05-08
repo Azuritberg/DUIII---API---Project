@@ -44,7 +44,7 @@ function similarMovies(movie) {
 
 function renderRedirectUserPage(parentID, instanceData) {
 
-    // document.querySelector("#usernametext").innerHTML = instanceData.username;
+    //document.querySelector("#usernametext").innerHTML = instanceData.username;
     renderUserPage(parentID, instanceData);
 
     document.getElementById(parentID).innerHTML = "";
