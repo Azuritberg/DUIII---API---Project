@@ -40,7 +40,7 @@ function renderHeader(parentID, instanceData) {
   // ${instanceData ? "Logout" : "Login"}
 
 // login modal  
-  renderHeaderLogin(insanceData, parentID);
+  renderHeaderLogin(instanceData);
 
 
   let homeButton = document.getElementById("logo");
