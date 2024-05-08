@@ -60,7 +60,8 @@
 }
 
 
-#info {
+#info,
+#similarmoviesinfo {
     color: #F6F4F4;
     font-family: LM-medium;
     font-size: 15px;
@@ -204,9 +205,11 @@
 #heart {
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
 
 #heartfill {
     height: 50px;
     width: 50px;
+    cursor: pointer;
 }
