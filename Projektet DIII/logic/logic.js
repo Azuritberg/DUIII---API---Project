@@ -42,15 +42,16 @@ function similarMovies(movie) {
 // Rederaction of pages
 
 function renderRedirectUserPage(parentID, instanceData) {
-    // steg 1 :: TÖM FÖRÄLDERN (<HEADER>) DÄR HEADER SKA FINNAS
-    // STEG 2 :: RE RENDER HEADER
+
+    //console.log("Redirecting to user page for", instanceData.userName);
+
     document.querySelector("#userName").innerHTML = instanceData.username;
     renderUserPage(parentID, instanceData);
 
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
 
-    // STEG 3 :: RE RENDER MAIN PAGE AS USERPAGE
+
 }
 
 

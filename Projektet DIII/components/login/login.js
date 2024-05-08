@@ -92,7 +92,7 @@ function closeModal(modal) {
   document.getElementById('overlay').classList.remove('active');
 }
 
-
+// REGISTER USER
 function createNewUser(event) {
 
   event.preventDefault();
@@ -147,10 +147,13 @@ async function loginUser(event) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id));
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
+      //renderHeader(parentID, loginUserObject);
       updateLoginLogoutButton();
       console.log("Login successful");
+
+      window.location.replace('index.html');
     } else {
-      console.error("Error logging in");
+      console.error("Error logging in", loginUserObject);
     }
   } catch (error) {
     console.error("Error logging in", error);
@@ -162,6 +165,7 @@ async function loginUser(event) {
 function logoutUser() {
   localStorage.removeItem("user");
   updateLoginLogoutButton();
+  //renderHeader(parentID, null);
   console.log("Logout successful");
 
   window.location.replace('index.html'); // Go to main'index.html' 
