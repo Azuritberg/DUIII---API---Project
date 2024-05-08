@@ -44,7 +44,9 @@ function loginModalContent() {
           <h1>Login</h1>
           <form>
               <input type="text" placeholder="Username" id="username"><br><br>
-              <input type="text" placeholder="Password" id="password"><br><br>
+              <input type="password" placeholder="Password" id="password">
+              <input type="checkbox" id="eye">
+              <br><br>
               <button id="logInButton" type="submit">Login</button>
               <div id="noAccount">
                 <p>Don't have an account?</p>
@@ -61,7 +63,7 @@ function registerModalContent() {
           <h1>Register</h1>
           <form>
               <input type="text" placeholder="Create username" id="newUsername"><br><br>
-              <input type="text" placeholder="Create password" id="newPassword"><br><br>
+              <input type="password" placeholder="Create password" id="newPassword"><br><br>
               <button id="registerButton" type="submit">Register</button>
               <div id="noAccount">
                 <p>Already have an account?</p>
