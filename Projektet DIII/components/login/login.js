@@ -121,7 +121,7 @@ function updateLoginLogoutButton() {
   } else {
     loginButton.textContent = 'Login';
     loginButton.removeEventListener('click', logoutUser);
-    loginButton.addEventListener('click', () => openModal(document.getElementById('loginModal')));
+    loginButton.addEventListener('click', () => openModal(document.getElementById('openmodal')));
   }
 }
 
@@ -149,6 +149,7 @@ async function loginUser(event) {
       renderRedirectUserPage("mainPage", loginUserObject);
       updateLoginLogoutButton();
       console.log("Login successful");
+      window.location.replace('index.html'); // Go to main'index.html' 
     } else {
       console.error("Error logging in");
     }
@@ -163,9 +164,10 @@ function logoutUser() {
   localStorage.removeItem("user");
   updateLoginLogoutButton();
   console.log("Logout successful");
-
   window.location.replace('index.html'); // Go to main'index.html' 
 }
+
+
 
 
 

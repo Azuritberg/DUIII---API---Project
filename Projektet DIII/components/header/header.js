@@ -1,10 +1,10 @@
-
 function renderHeader(parentID, instanceData) {
-  //console.log(instanceData);
-  //Sconsole.log(parentID);
+
+  // Skapar ett header-element
   let header = document.createElement("div");
-  parentID.append(header);
+  parentID.appendChild(header);
   header.id = "header";
+
   header.innerHTML = `
     <div id="headerLeft">
       <img id="logo" src="./icons/rocket-vit.png" alt="">
@@ -13,29 +13,22 @@ function renderHeader(parentID, instanceData) {
       <p>The Random Universe.</p>
     </div>
     <div id="headerRight">
-      <div id="userName">${instanceData ? instanceData.userName : ""}</div>
-      <button id="login">Login</button>
+    <div id="userName">${instanceData ? instanceData.name: ""}</div>
+    <button id="login">Login</button>
     </div>
   `;
 
+  // Lägg till event listeners
   let userName = document.getElementById("userName");
   userName.addEventListener("click", function () {
     renderRedirectUserPage("mainPage");
   });
 
-
-// login modal  
   renderHeaderLogin();
-
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
 }
-
-// function clearContent(parentID, instanceData) {
-//   document.getElementById(parentID).innerHTML = "";
-//   renderUserPage("mainPage", instanceData);
-// }
 
 
 function getHome(event) {
@@ -52,6 +45,17 @@ function getHome(event) {
 
 
 
+
+// document.addEventListener("DOMContentLoaded", () => {
+//   let parentElement = document.getElementById('headerContainer'); // Anta att detta är ID för elementet där headern ska läggas
+//   renderHeader(parentElement);
+// });
+
+
+// function clearContent(parentID, instanceData) {
+//   document.getElementById(parentID).innerHTML = "";
+//   renderUserPage("mainPage", instanceData);
+// }
 
 
 
