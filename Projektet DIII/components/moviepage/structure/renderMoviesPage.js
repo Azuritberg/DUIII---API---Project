@@ -1,6 +1,7 @@
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
+
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.getElementById("mainPage");
     wrapper.append(moviesContainer);
@@ -23,7 +24,7 @@ function renderMoviesPage(parentID, instanceData) {
             </div>
         </div> 
         <div id="bottomRight">
-            <p id="info">Movies within 10 years</p>
+            <p id="similarmoviesinfo">Movies with similar runtime</p>
             <p id="info">Reviews</p>
             <div id="simularMovies">
                 <div class="smallPosters" id="smallPoster0"></div>
@@ -53,12 +54,16 @@ function renderMoviesPage(parentID, instanceData) {
         </div>
     </div>`;
 
-    
+
     let bigPoster = document.getElementById("bigPoster");
 
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
 
+
+
     for (let i = 0; i < 4; i++) {
+
+        console.log(similarMoviesArray)
 
         let p = document.createElement("p")
 
@@ -78,9 +83,11 @@ function renderMoviesPage(parentID, instanceData) {
 
     }
 
+
+
+
     // HEART FILL
     const heart = document.getElementById("heart");
-    console.log(heart);
     heart.addEventListener("click", function () {
         if (heart.getAttribute("src") != "../icons/white-heart.png") {
             heart.setAttribute("src", "../icons/white-heart.png")
