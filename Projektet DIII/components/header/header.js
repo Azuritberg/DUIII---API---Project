@@ -1,5 +1,7 @@
 
-function renderHeader(parentID) {
+function renderHeader(parentID, instanceData) {
+  //console.log(instanceData);
+  //Sconsole.log(parentID);
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
@@ -11,18 +13,18 @@ function renderHeader(parentID) {
       <p>The Random Universe.</p>
     </div>
     <div id="headerRight">
-      <div id="userName">Username</div>
+      <div id="userName">${instanceData ? instanceData.userName : ""}</div>
       <button id="login">Login</button>
     </div>
   `;
 
   let userName = document.getElementById("userName");
   userName.addEventListener("click", function () {
-    clearContent("mainPage");
+    renderRedirectUserPage("mainPage");
   });
 
 
-// login modal   Vi kanske borde byta namn på denna?
+// login modal  
   renderHeaderLogin();
 
 
@@ -30,10 +32,10 @@ function renderHeader(parentID) {
   homeButton.addEventListener("click", getHome);
 }
 
-function clearContent(parentID, instanceData) {
-  document.getElementById(parentID).innerHTML = "";
-  renderUserPage("mainPage", instanceData);
-}
+// function clearContent(parentID, instanceData) {
+//   document.getElementById(parentID).innerHTML = "";
+//   renderUserPage("mainPage", instanceData);
+// }
 
 
 function getHome(event) {

@@ -18,7 +18,7 @@ header {
     justify-content: center;
     align-items: center;
     margin: 15px;
-    margin-left: 204px;
+    /* margin-left: 204px; */
 }
 
 #logo {
@@ -52,6 +52,17 @@ header {
     font-size: 18px;
     font-family: MT-bold-italic;
 }
+
+/* #logout {
+    height: 35px;
+    width: 85px;
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    margin-right: 11px;
+    font-size: 18px;
+    font-family: MT-bold-italic;
+} */
 
 #userName {
     color: #F6F4F4;
