@@ -37,7 +37,6 @@ function renderHeaderLogin(parentID, instanceData) {
 }
 
 
-
 function loginModalContent() {
   return `
       <div class="modal-content">
@@ -73,6 +72,7 @@ function registerModalContent() {
       </div>
   `;
 }
+
 
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {

@@ -209,7 +209,7 @@ function removeUserAndLikes($userId, $usersFilename, $moviesFilename) {
             }
 
             // Finally, remove the user from the users array
-            array_splice($users['USERS'], $userIndex, 1);
+            array_splice($users['users'], $userIndex, 1);
             break;
         }
     }
