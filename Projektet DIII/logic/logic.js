@@ -39,13 +39,12 @@ function similarMovies(movie) {
 
 
 
+
 // Rederaction of pages
 
 function renderRedirectUserPage(parentID, instanceData) {
 
-    //console.log("Redirecting to user page for", instanceData.userName);
-
-    document.querySelector("#userName").innerHTML = instanceData.username;
+    // document.querySelector("#usernametext").innerHTML = instanceData.username;
     renderUserPage(parentID, instanceData);
 
     document.getElementById(parentID).innerHTML = "";
