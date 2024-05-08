@@ -10,7 +10,7 @@ const STATE = {
 }
 
 async function renderApp() {
-    const movie_request = new Request("/API/movies.php");
+    const movie_request = new Request("/real_api/real_movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
     STATE.movies = movie_resource;
@@ -34,7 +34,7 @@ const State = {
                 // console.log(data);
                 // console.log(JSON.stringify(data.row));
                 // console.log(JSON.parse(data.row));
-                const loginRequest = new Request("../API/login.php", {
+                const loginRequest = new Request("../real_api/reallogin.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
