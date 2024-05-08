@@ -2,9 +2,11 @@ function similarMovies(movie) {
     let movie_copy = State.GET("movies")
     let new_arr = [];
 
+
+
     // Filtering movies with similar release date
     for (let i = 0; i < movie_copy.length; i++) {
-        if (Math.abs(movie_copy[i].year - movie.year) <= 10) {
+        if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 10) {
             new_arr.push(movie_copy[i]);
         }
     }
@@ -17,12 +19,15 @@ function similarMovies(movie) {
 
     // Selecting 4 random values from new_arr
     let selectedMovies = [];
+
     const length = new_arr.length;
+
     const numSelections = Math.min(length, 4); // Ensure not to select more than available movies
 
     // Generate unique random indices
     const randomIndices = [];
     while (randomIndices.length < numSelections) {
+        
         const randomIndex = Math.floor(Math.random() * length);
         if (!randomIndices.includes(randomIndex)) {
             randomIndices.push(randomIndex);
@@ -34,10 +39,9 @@ function similarMovies(movie) {
         selectedMovies.push(new_arr[randomIndices[i]]);
     }
 
+
     return selectedMovies
 }
-
-
 
 
 // Rederaction of pages
@@ -49,8 +53,6 @@ function renderRedirectUserPage(parentID, instanceData) {
 
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
-
-
 }
 
 

@@ -23,8 +23,10 @@ function renderHeader(parentID, instanceData) {
 
   let userbtn = document.getElementById("userbtn");
   userbtn.addEventListener("click", function () {
-    renderRedirectUserPage("mainPage");
+    const instanceData = {username: localStorage.getItem("username")};
+    renderRedirectUserPage("mainPage", instanceData);
   });
+
   
   if (instanceData) {
     document.getElementById("userName").addEventListener("click", function () {
@@ -41,14 +43,9 @@ function renderHeader(parentID, instanceData) {
   });
 
 
-  // ${instanceData && instanceData.userName ? instanceData.userName : ""}
-  
-  // ${instanceData ? instanceData.userName : ""}
-
-  // ${instanceData ? "Logout" : "Login"}
 
 // login modal  
-  renderHeaderLogin(instanceData);
+  renderHeaderLogin();
 
 
   let homeButton = document.getElementById("logo");
@@ -79,6 +76,25 @@ function getHome(event) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   //console.log(instanceData);
   //Sconsole.log(parentID);
 
@@ -87,6 +103,11 @@ function getHome(event) {
 
 
 
+  // ${instanceData && instanceData.userName ? instanceData.userName : ""}
+  
+  // ${instanceData ? instanceData.userName : ""}
+
+  // ${instanceData ? "Logout" : "Login"}
 
 
 

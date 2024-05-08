@@ -94,6 +94,19 @@ function clearHtml(event, instanceData) {
     }
 }
 
+function generateMovierray() {
+    let movie_copy = State.GET("movies")
+    let new_arr = [];
+    let rndm = getRandomPoster(movie_copy)
+
+
+    for (let i = 0; i < rndm.length; i++) {
+        new_arr.push(movie_copy[rndm[i]])
+
+    }
+    return (new_arr)
+}
+
 function generatePosters(randomIndexArray, instanceData) {
 
     let posterDivs = document.querySelectorAll(".posterDiv")
@@ -109,6 +122,7 @@ function generatePosters(randomIndexArray, instanceData) {
         // posterContainer.setAttribute("id", randomIndexArray[i] + 1);
         p.setAttribute("id", randomIndexArray[i] + 1);
         posterContainer.style.backgroundImage = `url(${instanceData[randomIndexArray[i]].poster})`;
+
         // "url('path/to/your/image.jpg')"
         savedMovies.push(instanceData[randomIndexArray[i]]);
     }
