@@ -1,10 +1,10 @@
 function renderHeader(parentID, instanceData) {
-
-  // Skapar ett header-element
+  
   let header = document.createElement("div");
-  parentID.appendChild(header);
+  parentID.append(header);
   header.id = "header";
-
+  //console.log(instanceData.username);
+  //console.log(parentID);
   header.innerHTML = `
     <div id="headerLeft">
       <img id="logo" src="./icons/rocket-vit.png" alt="">
@@ -12,22 +12,55 @@ function renderHeader(parentID, instanceData) {
     <div id="headerMiddle">
       <p>The Random Universe.</p>
     </div>
-    <div id="headerRight">
-    <div id="userName">${instanceData ? instanceData.name: ""}</div>
-    <button id="login">Login</button>
-    </div>
+      <div id="headerRight">
+        <img id="userbtn" src="./icons/user.png" alt=""> 
+        <div id="logincont">
+         <button id="login">Login</button>
+        </div>
+      </div>
+    
   `;
 
-  // Lägg till event listeners
-  let userName = document.getElementById("userName");
-  userName.addEventListener("click", function () {
+  let userbtn = document.getElementById("userbtn");
+  userbtn.addEventListener("click", function () {
     renderRedirectUserPage("mainPage");
   });
+  
+  if (instanceData) {
+    document.getElementById("userName").addEventListener("click", function () {
+      renderRedirectUserPage("mainPage", instanceData);
+    });
+  }
 
-  renderHeaderLogin();
+  document.getElementById("login").addEventListener("click", function () {
+    if (instanceData) {
+      logoutUser();
+    } else {
+      openModal(document.getElementById("loginModal"));
+    }
+  });
+
+
+  // ${instanceData && instanceData.userName ? instanceData.userName : ""}
+  
+  // ${instanceData ? instanceData.userName : ""}
+
+  // ${instanceData ? "Logout" : "Login"}
+
+// login modal  
+  renderHeaderLogin(instanceData);
+
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
+}
+
+
+function logoutUser() {
+  localStorage.removeItem("user");
+  console.log("Logout successful");
+  //window.location.reload(); // Laddar om sidan för att återställa UI
+  window.location.href = 'index.html';
 }
 
 
@@ -46,16 +79,71 @@ function getHome(event) {
 
 
 
-// document.addEventListener("DOMContentLoaded", () => {
-//   let parentElement = document.getElementById('headerContainer'); // Anta att detta är ID för elementet där headern ska läggas
-//   renderHeader(parentElement);
-// });
+  //console.log(instanceData);
+  //Sconsole.log(parentID);
 
 
-// function clearContent(parentID, instanceData) {
-//   document.getElementById(parentID).innerHTML = "";
-//   renderUserPage("mainPage", instanceData);
+
+
+
+
+
+
+
+
+// function renderHeader(parentID, instanceData) {
+//   //console.log(instanceData);
+//   //Sconsole.log(parentID);
+//   let header = document.createElement("div");
+//   parentID.append(header);
+//   header.id = "header";
+//   header.innerHTML = `
+//     <div id="headerLeft">
+//       <img id="logo" src="./icons/rocket-vit.png" alt="">
+//     </div>
+//     <div id="headerMiddle">
+//       <p>The Random Universe.</p>
+//     </div>
+//     <div id="headerRight">
+//       <div id="userName">${instanceData ? instanceData.userName : ""}</div>
+//       <button id="login">Login</button>
+//     </div>
+//   `;
+
+//   let userName = document.getElementById("userName");
+//   userName.addEventListener("click", function () {
+//     renderRedirectUserPage("mainPage");
+//   });
+
+
+// // login modal  
+//   renderHeaderLogin();
+
+
+//   let homeButton = document.getElementById("logo");
+//   homeButton.addEventListener("click", getHome);
 // }
+
+// // function clearContent(parentID, instanceData) {
+// //   document.getElementById(parentID).innerHTML = "";
+// //   renderUserPage("mainPage", instanceData);
+// // }
+
+
+// function getHome(event) {
+//   if (!document.querySelector("#mainBox")) {
+//     if (document.getElementById("mainMovieBox")) {
+//       document.getElementById("mainMovieBox").remove();
+//       renderMain(document.querySelector("main"), savedMovies);
+//     } else {
+//       document.getElementById("userContainer").remove();
+//       renderMain(document.querySelector("main"), savedMovies);
+//     }
+//   }
+// }
+
+
+
 
 
 

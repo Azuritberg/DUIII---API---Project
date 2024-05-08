@@ -6,7 +6,7 @@ header {
 
 #header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 10vh;
 }
@@ -19,6 +19,11 @@ header {
     align-items: center;
     margin: 15px;
     /* margin-left: 204px; */
+}
+
+#headerLeft {
+    position: absolute;
+    left: 0px;
 }
 
 #logo {
@@ -35,11 +40,14 @@ header {
 } */
 
 #headerRight {
-    margin: 15px;
+
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
+    width: 200px;
+    position: absolute;
+    right: 0px;
 }
 
 #login {
@@ -48,7 +56,6 @@ header {
     border-radius: 18px;
     border: none;
     cursor: pointer;
-    margin-right: 11px;
     font-size: 18px;
     font-family: MT-bold-italic;
 }
@@ -64,11 +71,18 @@ header {
     font-family: MT-bold-italic;
 } */
 
-#userName {
-    color: #F6F4F4;
-    font-size: 21px;
-    margin-right: 30px;
-    cursor: pointer;
-    font-family: MT-bold-italic;;
+
+
+
+
+#logincont {
+    margin-right: 20px;
 }
 
+#userbtn {
+    background-image: url("../../icons/user.png");
+
+    height: 60px;
+    cursor: pointer;
+    /* display: none; */
+}

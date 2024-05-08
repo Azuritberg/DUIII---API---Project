@@ -43,7 +43,14 @@ function loginModalContent() {
           <h1>Login</h1>
           <form>
               <input type="text" placeholder="Username" id="username"><br><br>
-              <input type="text" placeholder="Password" id="password"><br><br>
+              <input type="password" placeholder="Password" id="password">
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="eye">
+                  <label for="eye"></label>
+              </div>
+
+              
+              <br><br>
               <button id="logInButton" type="submit">Login</button>
               <div id="noAccount">
                 <p>Don't have an account?</p>
@@ -60,7 +67,7 @@ function registerModalContent() {
           <h1>Register</h1>
           <form>
               <input type="text" placeholder="Create username" id="newUsername"><br><br>
-              <input type="text" placeholder="Create password" id="newPassword"><br><br>
+              <input type="password" placeholder="Create password" id="newPassword"><br><br>
               <button id="registerButton" type="submit">Register</button>
               <div id="noAccount">
                 <p>Already have an account?</p>
@@ -70,6 +77,8 @@ function registerModalContent() {
       </div>
   `;
 }
+
+
 
 
 function changeModalContent(modal, type) {
@@ -92,7 +101,7 @@ function closeModal(modal) {
   document.getElementById('overlay').classList.remove('active');
 }
 
-
+// REGISTER USER
 function createNewUser(event) {
 
   event.preventDefault();
@@ -121,7 +130,7 @@ function updateLoginLogoutButton() {
   } else {
     loginButton.textContent = 'Login';
     loginButton.removeEventListener('click', logoutUser);
-    loginButton.addEventListener('click', () => openModal(document.getElementById('openmodal')));
+    loginButton.addEventListener('click', () => openModal(document.getElementById('loginModal')));
   }
 }
 
@@ -147,11 +156,13 @@ async function loginUser(event) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id));
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
+      //renderHeader(parentID, loginUserObject);
       updateLoginLogoutButton();
       console.log("Login successful");
-      window.location.replace('index.html'); // Go to main'index.html' 
+
+      window.location.replace('index.html');
     } else {
-      console.error("Error logging in");
+      console.error("Error logging in", loginUserObject);
     }
   } catch (error) {
     console.error("Error logging in", error);
@@ -163,9 +174,15 @@ async function loginUser(event) {
 function logoutUser() {
   localStorage.removeItem("user");
   updateLoginLogoutButton();
+  //renderHeader(parentID, null);
   console.log("Logout successful");
+
   window.location.replace('index.html'); // Go to main'index.html' 
 }
+
+
+
+
 
 
 
