@@ -115,15 +115,34 @@
 }
 
 #eye {
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-    display: inline;
-    position: absolute;
-    top: 147px;
-    bottom: 0px;
-    left: 500px;
-    right: 0px;
 
+    display: none;
+
+
+}
+
+.custom-checkbox {
+    width: 10px;
+
+
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox label {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('../../icons/hidden.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"]:checked+label {
+    background-image: url('../../icons/eye.png');
 }

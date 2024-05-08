@@ -44,7 +44,12 @@ function loginModalContent() {
           <form>
               <input type="text" placeholder="Username" id="username"><br><br>
               <input type="password" placeholder="Password" id="password">
-              <input type="checkbox" id="eye">
+              <div class="custom-checkbox">
+                  <input type="checkbox" id="eye">
+                  <label for="eye"></label>
+              </div>
+
+              
               <br><br>
               <button id="logInButton" type="submit">Login</button>
               <div id="noAccount">
@@ -72,6 +77,8 @@ function registerModalContent() {
       </div>
   `;
 }
+
+
 
 
 function changeModalContent(modal, type) {
