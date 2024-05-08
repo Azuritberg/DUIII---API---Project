@@ -154,6 +154,9 @@ async function loginUser(event) {
     const loginUserObject = await State.POST(user);  // returnera user objektet och sparar det i constanten loginUserObject
     if (loginUserObject.ok) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id));
+      
+      localStorage.setItem("username", loginUserObject.username);
+
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
       //renderHeader(parentID, loginUserObject);

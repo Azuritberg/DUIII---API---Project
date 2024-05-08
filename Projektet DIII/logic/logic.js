@@ -23,6 +23,7 @@ function similarMovies(movie) {
     // Generate unique random indices
     const randomIndices = [];
     while (randomIndices.length < numSelections) {
+        
         const randomIndex = Math.floor(Math.random() * length);
         if (!randomIndices.includes(randomIndex)) {
             randomIndices.push(randomIndex);
@@ -38,8 +39,6 @@ function similarMovies(movie) {
 }
 
 
-
-
 // Rederaction of pages
 
 function renderRedirectUserPage(parentID, instanceData) {
@@ -49,8 +48,6 @@ function renderRedirectUserPage(parentID, instanceData) {
 
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
-
-
 }
 
 
