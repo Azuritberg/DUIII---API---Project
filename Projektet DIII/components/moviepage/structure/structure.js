@@ -1,6 +1,6 @@
 
 function renderMoviesPage(parentID, instanceData) {
-    let similarMoviesArray = similarMovies(STATE.movies, instanceData)
+    let similarMoviesArray = similarMovies(instanceData)
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.getElementById("mainPage");
     wrapper.append(moviesContainer);
@@ -53,14 +53,20 @@ function renderMoviesPage(parentID, instanceData) {
 
     for (let i = 0; i < 4; i++) {
 
+        let p = document.createElement("p")
+
+        p.textContent = similarMoviesArray[i].title
+
         let poster = document.getElementById("smallPoster" + i)
 
-        poster.id = similarMoviesArray[i].id
+        p.id = similarMoviesArray[i].id
+
+        poster.appendChild(p)
 
 
         poster.style.backgroundImage = `url('${similarMoviesArray[i].poster}')`
 
-        poster.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
+        p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
 
 
 
