@@ -39,12 +39,13 @@ function similarMovies(movie) {
 
 
 
+
 // Rederaction of pages
 
 function renderRedirectUserPage(parentID, instanceData) {
     // steg 1 :: TÖM FÖRÄLDERN (<HEADER>) DÄR HEADER SKA FINNAS
     // STEG 2 :: RE RENDER HEADER
-    document.querySelector("#userName").innerHTML = instanceData.username;
+    // document.querySelector("#usernametext").innerHTML = instanceData.username;
     renderUserPage(parentID, instanceData);
 
     document.getElementById(parentID).innerHTML = "";

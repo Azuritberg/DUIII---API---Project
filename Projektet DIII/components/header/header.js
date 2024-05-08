@@ -12,14 +12,17 @@ function renderHeader(parentID, instanceData) {
     <div id="headerMiddle">
       <p>The Random Universe.</p>
     </div>
-    <div id="headerRight">
-      <div id="userName">${instanceData ? instanceData.userName : ""}</div>
-      <button id="login">Login</button>
-    </div>
+      <div id="headerRight">
+        <img id="userbtn" src="./icons/user.png" alt=""> 
+        <div id="logincont">
+         <button id="login">Login</button>
+        </div>
+      </div>
+    
   `;
 
-  let userName = document.getElementById("userName");
-  userName.addEventListener("click", function () {
+  let userbtn = document.getElementById("userbtn");
+  userbtn.addEventListener("click", function () {
     renderRedirectUserPage("mainPage");
   });
 

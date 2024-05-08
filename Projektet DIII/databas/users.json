@@ -1,15 +1,15 @@
 {
-    "USERS": [ 
+    "USERS": [
         {
             "user_id": 1,
-            "username": "hampus",
+            "username": "hampushampus",
             "password": "bkfries",
             "liked_movies": []
         },
         {
             "user_id": 2,
             "username": "johannes",
-            "password": "trumppinne",
+            "password": "trumpinne",
             "liked_movies": []
         },
         {
@@ -23,6 +23,6 @@
             "username": "bojana",
             "password": "bell",
             "liked_movies": []
-        }  
+        }
     ]
 }
