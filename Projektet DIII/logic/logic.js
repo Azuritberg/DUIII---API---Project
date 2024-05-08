@@ -51,7 +51,7 @@ function renderRedirectUserPage(parentID, instanceData) {
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
 
-    // STEG 3 :: RE RENDER MAIN PAGE AS USERPAGE
+
 }
 
 
