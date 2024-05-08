@@ -33,19 +33,19 @@ function renderMoviesPage(parentID, instanceData) {
                 <div class="smallPosters" id="smallPoster3"></div>
             </div>
             <div id="addReview">
-                <div id="review"> <!-- Notera ändringen från id till class här -->
+                <div id="review"> 
                     <h3>Review by: SpaceFan01</h3>
                     <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> <!-- Notera ändringen från id till class här -->
+                <div id="review"> 
                 <h3>Review by: SpaceFan01</h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> <!-- Notera ändringen från id till class här -->
+                <div id="review"> 
                 <h3>Review by: SpaceFan01</h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> <!-- Notera ändringen från id till class här -->
+                <div id="review"> 
                 <h3>Review by: SpaceFan01</h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
