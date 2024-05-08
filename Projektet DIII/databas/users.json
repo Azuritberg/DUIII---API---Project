@@ -1,5 +1,5 @@
 {
-    "USERS": [ 
+    "USERS": [
         {
             "user_id": 1,
             "username": "hampus",
@@ -23,6 +23,6 @@
             "username": "bojana",
             "password": "bell",
             "liked_movies": []
-        }  
+        }
     ]
 }
