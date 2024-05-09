@@ -107,14 +107,13 @@ function openModal(modal) {
   let eyeCheckbox = document.getElementById('eye');
   let passwordInput = document.getElementById('password');
 
-  eyeCheckbox.addEventListener('change', function () {
+  eyeCheckbox.addEventListener('change', function () {  // Toggle password visibility when checkbox is clicked
     if (this.checked) {
       passwordInput.type = 'text';
     } else {
       passwordInput.type = 'password';
     }
   });
-
 }
 
 // Close modal
