@@ -38,7 +38,12 @@ if ($requestMethod == "POST") {
                 $password = $user["password"];
 
                 if ($request_username === $username && $request_password === $password) {
-                    $found_user = [$user["user_id"], $user["username"], $user["liked_movies"]];
+                    // $found_user = [$user["user_id"], $user["username"], $user["liked_movies"]];
+                    $found_user = [
+                        "user_id" => $user["user_id"],
+                        "username" => $user["username"],
+                        "liked_movies" => $user["liked_movies"],
+                    ];
                     send_json($found_user);
                     break;
                 }
