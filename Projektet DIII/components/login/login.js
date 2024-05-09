@@ -43,12 +43,14 @@ function loginModalContent() {
   return `
       <div class="modal-content">
           <h1>Login</h1>
-          <form>
+          <form id="loginForm">
               <input type="text" placeholder="Username" id="username"><br><br>
-              <input type="password" placeholder="Password" id="password">
-              <div class="custom-checkbox">
-                  <input type="checkbox" id="eye">
-                  <label for="eye"></label>
+              <div id="passwordHolder">
+                <input type="password" placeholder="Password" id="password">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="eye">
+                    <label for="eye"></label>
+                </div>
               </div>
 
               

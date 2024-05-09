@@ -64,6 +64,17 @@
     color: #F6F4F4;
 }
 
+#loginForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#passwordHolder {
+    width: 329px;
+    position: relative;
+}
 
 #logInButton,
 #registerButton {
@@ -133,10 +144,11 @@
 
 .custom-checkbox {
     width: 10px;
-
     margin-left: auto;
     margin-right: auto;
-
+    position: absolute;
+    bottom: 8%;
+    right: 30px;
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -158,8 +170,8 @@
 
 
 label[for="eye"] {
-    position: absolute;
+    /* position: absolute;
 
     right: 109px;
-    bottom: 121px;
+    bottom: 121px; */
 }
