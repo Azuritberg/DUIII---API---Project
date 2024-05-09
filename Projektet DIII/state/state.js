@@ -40,7 +40,12 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                return loginResource
+                if (loginResource != undefined) {
+                    console.log(loginResource);
+                    // // STATE.user.push(loginResource);
+                    // console.log(STATE.user);
+                    return loginResource;
+                }
                 //console.log(loginResource);
                 break;
             case "register":
