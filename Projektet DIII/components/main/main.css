@@ -14,7 +14,7 @@ body {
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 95%;
+    height: 80%;
 }
 
 #mainBox {
@@ -27,7 +27,8 @@ body {
     margin-top: 30px;
     padding: 10px;
     height: 530px;
-    width: 950px;
+    /* width: 950px; */
+    width: 1100px;
 }
 
 #infoText {
