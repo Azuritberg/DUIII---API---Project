@@ -43,14 +43,15 @@ const State = {
                 return loginResource
                 //console.log(loginResource);
                 break;
-            case "sign_up":
+            case "register":
                 console.log(data);
-                const signUpRequest = new Request("../API/users.php", {
+                const registerRequest = new Request("../API/users.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 })
-                let signUpResource = await fetcher(signUpRequest);
+                let registerResource = await fetcher(registerRequest);
+                return registerRequest
                 break;
             case "reviews":
                 const reviewRequest = new Request("", {

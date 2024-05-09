@@ -4,34 +4,34 @@
             "id": 1,
             "title": "Back to the Future",
             "year": 1985,
-            "poster": "../images/posters/back-to-the-future.jpeg",
+            "poster": "..\/images\/posters\/back-to-the-future.jpeg",
             "run_time": 116,
             "director": "Robert Zemeckis",
-            "info": "He’s the only kid ever to get into trouble before he was born. Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents’ first meeting and attracting his mother’s romantic interest. Marty must repair the damage to history by rekindling his parents’ romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985."
+            "info": "He\u2019s the only kid ever to get into trouble before he was born. Eighties teenager Marty McFly is accidentally sent back in time to 1955, inadvertently disrupting his parents\u2019 first meeting and attracting his mother\u2019s romantic interest. Marty must repair the damage to history by rekindling his parents\u2019 romance and - with the help of his eccentric inventor friend Doc Brown - return to 1985."
         },
         {
             "id": 2,
             "title": "Back to the Future Part II",
             "year": 1989,
-            "poster": "../images/posters/back-to-the-future-part2.jpeg",
+            "poster": "..\/images\/posters\/back-to-the-future-part2.jpeg",
             "run_time": 108,
             "director": "Robert Zemeckis",
-            "info": "Roads? Where we’re going, we don’t need roads! Marty and Doc are at it again in this wacky sequel to the 1985 blockbuster as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditch attempt to set things straight, Marty finds himself bound for 1955 and face to face with his teenage parents – again."
+            "info": "Roads? Where we\u2019re going, we don\u2019t need roads! Marty and Doc are at it again in this wacky sequel to the 1985 blockbuster as the time-traveling duo head to 2015 to nip some McFly family woes in the bud. But things go awry thanks to bully Biff Tannen and a pesky sports almanac. In a last-ditch attempt to set things straight, Marty finds himself bound for 1955 and face to face with his teenage parents \u2013 again."
         },
         {
             "id": 3,
             "title": "Back to the Future Part III",
             "year": 1990,
-            "poster": "../images/posters/back-to-the-future-part3.jpeg",
+            "poster": "..\/images\/posters\/back-to-the-future-part3.jpeg",
             "run_time": 119,
             "director": "Robert Zemeckis",
-            "info": "They’ve saved the best trip for last… But this time they may have gone too far. The final installment of the Back to the Future trilogy finds Marty digging the trusty DeLorean out of a mineshaft and looking for Doc in the Wild West of 1885. But when their time machine breaks down, the travelers are stranded in a land of spurs. More problems arise when Doc falls for pretty schoolteacher Clara Clayton, and Marty tangles with Buford Tannen."
+            "info": "They\u2019ve saved the best trip for last\u2026 But this time they may have gone too far. The final installment of the Back to the Future trilogy finds Marty digging the trusty DeLorean out of a mineshaft and looking for Doc in the Wild West of 1885. But when their time machine breaks down, the travelers are stranded in a land of spurs. More problems arise when Doc falls for pretty schoolteacher Clara Clayton, and Marty tangles with Buford Tannen."
         },
         {
             "id": 4,
             "title": "Interstellar",
             "year": 2014,
-            "poster": "../images/posters/interstellar.jpeg",
+            "poster": "..\/images\/posters\/interstellar.jpeg",
             "run_time": 169,
             "director": "Christopher Nolan",
             "info": "Mankind was born on Earth. It was never meant to die here. The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances involved in an interstellar voyage."
@@ -40,34 +40,34 @@
             "id": 5,
             "title": "A Clockwork Orange",
             "year": 1971,
-            "poster": "../images/posters/a-clockwork-orange.jpeg",
+            "poster": "..\/images\/posters\/a-clockwork-orange.jpeg",
             "run_time": 137,
             "director": "Stanley Kubrick",
-            "info": "Being the adventures of a young man whose principal interests are rape, ultra-violence and Beethoven. In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that’ll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?"
+            "info": "Being the adventures of a young man whose principal interests are rape, ultra-violence and Beethoven. In a near-future Britain, young Alexander DeLarge and his pals get their kicks beating and raping anyone they please. When not destroying the lives of others, Alex swoons to the music of Beethoven. The state, eager to crack down on juvenile crime, gives an incarcerated Alex the option to undergo an invasive procedure that\u2019ll rob him of all personal agency. In a time when conscience is a commodity, can Alex change his tune?"
         },
         {
             "id": 6,
             "title": "Inception",
             "year": 2010,
-            "poster": "../images/posters/inception.jpeg",
+            "poster": "..\/images\/posters\/inception.jpeg",
             "run_time": 148,
             "director": "Christopher Nolan",
-            "info": "Your mind is the scene of the crime. Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: “inception”, the implantation of another person’s idea into a target’s subconscious."
+            "info": "Your mind is the scene of the crime. Cobb, a skilled thief who commits corporate espionage by infiltrating the subconscious of his targets is offered a chance to regain his old life as payment for a task considered to be impossible: \u201cinception\u201d, the implantation of another person\u2019s idea into a target\u2019s subconscious."
         },
         {
             "id": 7,
             "title": "Godzilla Minus One",
             "year": 2023,
-            "poster": "../images/posters/godzilla-minus-one.jpeg",
+            "poster": "..\/images\/posters\/godzilla-minus-one.jpeg",
             "run_time": 125,
             "director": "Takashi Yamazaki",
-            "info": "Postwar Japan. From zero to minus. In postwar Japan, a new terror rises. Will the devastated people be able to survive… let alone fight back?"
+            "info": "Postwar Japan. From zero to minus. In postwar Japan, a new terror rises. Will the devastated people be able to survive\u2026 let alone fight back?"
         },
         {
             "id": 8,
             "title": "Solo: A Star Wars Story",
             "year": 2018,
-            "poster": "../images/posters/solo.jpg",
+            "poster": "..\/images\/posters\/solo.jpg",
             "run_time": 96,
             "director": "Ron Howard",
             "info": "Never tell him the odds. Through a series of daring escapades deep within a dark and dangerous criminal underworld, Han Solo meets his mighty future copilot Chewbacca and encounters the notorious gambler Lando Calrissian. "
@@ -76,97 +76,97 @@
             "id": 9,
             "title": "Shin Godzilla",
             "year": 2016,
-            "poster": "../images/posters/shin-godzilla.jpeg",
+            "poster": "..\/images\/posters\/shin-godzilla.jpeg",
             "run_time": 120,
             "director": "Hideaki Anno, Shinji Higuchi",
-            "info": "A god incarnate. A city Doomed. When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens. A rag-tag team of volunteers cuts through a web of red tape to uncover the monster’s weakness and its mysterious ties to a foreign superpower. But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes."
+            "info": "A god incarnate. A city Doomed. When a massive, gilled monster emerges from the deep and tears through the city, the government scrambles to save its citizens. A rag-tag team of volunteers cuts through a web of red tape to uncover the monster\u2019s weakness and its mysterious ties to a foreign superpower. But time is not on their side - the greatest catastrophe to ever befall the world is about to evolve right before their very eyes."
         },
         {
             "id": 10,
             "title": "Eternal Sunshine of the Spotless Mind",
             "year": 2004,
-            "poster": "../images/posters/eternal-sunshine.jpeg",
+            "poster": "..\/images\/posters\/eternal-sunshine.jpeg",
             "run_time": 108,
             "director": "Michel Gondry",
             "info": "You can erase someone from your mind. Getting them out of your heart is another story. Joel Barish, heartbroken that his girlfriend underwent a procedure to erase him from her memory, decides to do the same. However, as he watches his memories of her fade away, he realises that he still loves her, and may be too late to correct his mistake."
         },
         {
             "id": 11,
-            "title": "Star Wars: Episode I – The Phantom Menace",
+            "title": "Star Wars: Episode I \u2013 The Phantom Menace",
             "year": 1999,
-            "poster": "../images/posters/star-wars-episode-1.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-1.jpeg",
             "run_time": 133,
             "director": "George Lucas",
             "info": "Every generation has a legend. Every journey has a first step. Every saga has a beginning. Anakin Skywalker, a young slave strong with the Force, is discovered on Tatooine. Meanwhile, the evil Sith have returned, enacting their plot for revenge against the Jedi."
         },
         {
             "id": 12,
-            "title": "Star Wars: Episode II – Attack of the Clones",
+            "title": "Star Wars: Episode II \u2013 Attack of the Clones",
             "year": 2002,
-            "poster": "../images/posters/star-wars-episode-2.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-2.jpeg",
             "run_time": 142,
             "director": "George Lucas",
-            "info": "A Jedi Shall Not Know Anger. Nor Hatred. Nor Love. Following an assassination attempt on Senator Padmé Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot that could change the galaxy forever."
+            "info": "A Jedi Shall Not Know Anger. Nor Hatred. Nor Love. Following an assassination attempt on Senator Padm\u00e9 Amidala, Jedi Knights Anakin Skywalker and Obi-Wan Kenobi investigate a mysterious plot that could change the galaxy forever."
         },
         {
             "id": 13,
-            "title": "Star Wars: Episode III – Revenge of the Sith",
+            "title": "Star Wars: Episode III \u2013 Revenge of the Sith",
             "year": 2005,
-            "poster": "../images/posters/star-wars-episode-3.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-3.jpeg",
             "run_time": 140,
             "director": "George Lucas",
-            "info": "The saga is complete. The evil Darth Sidious enacts his final plan for unlimited power – and the heroic Jedi Anakin Skywalker must choose a side."
+            "info": "The saga is complete. The evil Darth Sidious enacts his final plan for unlimited power \u2013 and the heroic Jedi Anakin Skywalker must choose a side."
         },
         {
             "id": 14,
-            "title": "Star Wars: Episode IV – A New Hope",
+            "title": "Star Wars: Episode IV \u2013 A New Hope",
             "year": 1977,
-            "poster": "../images/posters/star-wars-episode-4.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-4.jpeg",
             "run_time": 121,
             "director": "George Lucas",
-            "info": "A long time ago in a galaxy far, far away… Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
+            "info": "A long time ago in a galaxy far, far away\u2026 Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire."
         },
         {
             "id": 15,
-            "title": "Star Wars: Episode V – The Empire Strikes Back",
+            "title": "Star Wars: Episode V \u2013 The Empire Strikes Back",
             "year": 1980,
-            "poster": "../images/posters/star-wars-episode-5.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-5.jpeg",
             "run_time": 124,
             "director": "Irvin Kershner",
-            "info": "The Adventure Continues… The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair."
+            "info": "The Adventure Continues\u2026 The epic saga continues as Luke Skywalker, in hopes of defeating the evil Galactic Empire, learns the ways of the Jedi from aging master Yoda. But Darth Vader is more determined than ever to capture Luke. Meanwhile, rebel leader Princess Leia, cocky Han Solo, Chewbacca, and droids C-3PO and R2-D2 are thrown into various stages of capture, betrayal and despair."
         },
         {
             "id": 16,
-            "title": "Star Wars: Episode VI – Return of the Jedi",
+            "title": "Star Wars: Episode VI \u2013 Return of the Jedi",
             "year": 1983,
-            "poster": "../images/posters/star-wars-episode-6.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-6.jpeg",
             "run_time": 132,
             "director": "Richard Marquand",
-            "info": "The Empire Falls… Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, while the Emperor seeks to destroy the Rebellion once and for all with a second dreaded Death Star."
+            "info": "The Empire Falls\u2026 Luke Skywalker leads a mission to rescue his friend Han Solo from the clutches of Jabba the Hutt, while the Emperor seeks to destroy the Rebellion once and for all with a second dreaded Death Star."
         },
         {
             "id": 17,
-            "title": "Star Wars: Episode VII – The Force Awakens",
+            "title": "Star Wars: Episode VII \u2013 The Force Awakens",
             "year": 2015,
-            "poster": "../images/posters/star-wars-episode-7.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-7.jpeg",
             "run_time": 138,
             "director": "J. J. Abrams",
             "info": "Every generation has a story. Thirty years after defeating the Galactic Empire, Han Solo and his allies face a new threat from the evil Kylo Ren and his army of Stormtroopers."
         },
         {
             "id": 18,
-            "title": "Star Wars: Episode VIII – The Last Jedi",
+            "title": "Star Wars: Episode VIII \u2013 The Last Jedi",
             "year": 2017,
-            "poster": "../images/posters/star-wars-episode-8.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-8.jpeg",
             "run_time": 152,
             "director": "Rian Johnson",
-            "info": "Darkness rises… and light to meet it. Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
+            "info": "Darkness rises\u2026 and light to meet it. Rey develops her newly discovered abilities with the guidance of Luke Skywalker, who is unsettled by the strength of her powers. Meanwhile, the Resistance prepares to do battle with the First Order."
         },
         {
             "id": 19,
-            "title": "Star Wars: Episode IX – The Rise of Skywalker",
+            "title": "Star Wars: Episode IX \u2013 The Rise of Skywalker",
             "year": 2019,
-            "poster": "../images/posters/star-wars-episode-9.jpeg",
+            "poster": "..\/images\/posters\/star-wars-episode-9.jpeg",
             "run_time": 142,
             "director": "J. J. Abrams",
             "info": "Every generation has a legend. The surviving Resistance faces the First Order once again as the journey of Rey, Finn and Poe Dameron continues. With the power and knowledge of generations behind them, the final battle begins."
@@ -175,7 +175,7 @@
             "id": 20,
             "title": "Rogue One: A Star Wars Story",
             "year": 2016,
-            "poster": "../images/posters/rogue-one.jpeg",
+            "poster": "..\/images\/posters\/rogue-one.jpeg",
             "run_time": 134,
             "director": "Gareth Edwards",
             "info": "A Rebellion Built on Hope A rogue band of resistance fighters unite for a mission to steal the Death Star plans and bring a new hope to the galaxy."
@@ -184,7 +184,7 @@
             "id": 21,
             "title": "Star Trek Into Darkness",
             "year": 2013,
-            "poster": "../images/posters/start-trek.jpeg",
+            "poster": "..\/images\/posters\/start-trek.jpeg",
             "run_time": 132,
             "director": "J.J. Abrams",
             "info": "When the crew of the Enterprise is called back home, they find an unstoppable force of terror from within their own organization has detonated the fleet and everything it stands for, leaving our world in a state of crisis. With a personal score to settle, Captain Kirk leads a manhunt to a war-zone world to capture a one man weapon of mass destruction. As our heroes are propelled into an epic chess game of life and death, love will be challenged, friendships will be torn apart, and sacrifices must be made for the only family Kirk has left: his crew."
@@ -193,7 +193,7 @@
             "id": 22,
             "title": "Terminator: Dark Fate",
             "year": 2019,
-            "poster": "../images/posters/terminator-dark-fate.jpeg",
+            "poster": "..\/images\/posters\/terminator-dark-fate.jpeg",
             "run_time": 128,
             "director": "Tim Miller",
             "info": "Decades after Sarah Connor prevented Judgment Day, a lethal new Terminator is sent to eliminate the future leader of the resistance. In a fight to save mankind, battle-hardened Sarah Connor teams up with an unexpected ally and an enhanced super soldier to stop the deadliest Terminator yet."
@@ -202,7 +202,7 @@
             "id": 23,
             "title": "Alien: Romulus",
             "year": 2024,
-            "poster": "../images/posters/alien4.jpeg",
+            "poster": "..\/images\/posters\/alien4.jpeg",
             "run_time": 120,
             "director": "Fede Alvarez",
             "info": "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe."
@@ -211,7 +211,7 @@
             "id": 24,
             "title": "Jurassic World",
             "year": 2025,
-            "poster": "../images/posters/jurassic-world.jpeg",
+            "poster": "..\/images\/posters\/jurassic-world.jpeg",
             "run_time": 120,
             "director": "Gareth Edwards",
             "info": "Twenty-two years after the events of Jurassic Park, Isla Nublar now features a fully functioning dinosaur theme park, Jurassic World, as originally envisioned by John Hammond."
@@ -220,7 +220,7 @@
             "id": 25,
             "title": "The Matrix",
             "year": 1999,
-            "poster": "../images/posters/matrix.jpeg",
+            "poster": "..\/images\/posters\/matrix.jpeg",
             "run_time": 136,
             "director": "Lilly Wachowski & Lana Wachowski",
             "info": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth."
@@ -229,7 +229,7 @@
             "id": 26,
             "title": "Mad Max: Fury Road",
             "year": 2015,
-            "poster": "../images/posters/mad-max-fury-road.jpeg",
+            "poster": "..\/images\/posters\/mad-max-fury-road.jpeg",
             "run_time": 121,
             "director": "George Miller",
             "info": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life. Within this world exist two rebels on the run who just might be able to restore order."
@@ -238,34 +238,34 @@
             "id": 27,
             "title": "Tron",
             "year": 1982,
-            "poster": "../images/posters/tron-1982.jpeg",
+            "poster": "..\/images\/posters\/tron-1982.jpeg",
             "run_time": 96,
             "director": "Steven Lisberger",
-            "info": "As Kevin Flynn searches for proof that he invented a hit video game, he is ‘digitalized’ by a laser and finds himself inside ‘The Grid’, where programs suffer under the tyrannical rule of the Master Control Program (MCP). With the help of a security program called ’TRON”, Flynn seeks to free The Grid from the MCP."
+            "info": "As Kevin Flynn searches for proof that he invented a hit video game, he is \u2018digitalized\u2019 by a laser and finds himself inside \u2018The Grid\u2019, where programs suffer under the tyrannical rule of the Master Control Program (MCP). With the help of a security program called \u2019TRON\u201d, Flynn seeks to free The Grid from the MCP."
         },
         {
             "id": 28,
             "title": "Blade Runner 2049",
             "year": 2017,
-            "poster": "../images/posters/blade-runner-2049.jpeg",
+            "poster": "..\/images\/posters\/blade-runner-2049.jpeg",
             "run_time": 164,
             "director": "Denis Villeneuve",
-            "info": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what’s left of society into chaos. K’s discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years."
+            "info": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K, unearths a long-buried secret that has the potential to plunge what\u2019s left of society into chaos. K\u2019s discovery leads him on a quest to find Rick Deckard, a former LAPD blade runner who has been missing for 30 years."
         },
         {
             "id": 29,
             "title": "Tron: Legacy",
             "year": 2010,
-            "poster": "../images/posters/tron-legacy.jpeg",
+            "poster": "..\/images\/posters\/tron-legacy.jpeg",
             "run_time": 125,
             "director": "Joseph Kosinski",
-            "info": "Sam Flynn, the tech-savvy and daring son of Kevin Flynn, investigates his father’s disappearance and is pulled into The Grid. With the help of a mysterious program named Quorra, Sam quests to stop evil dictator Clu from crossing into the real world."
+            "info": "Sam Flynn, the tech-savvy and daring son of Kevin Flynn, investigates his father\u2019s disappearance and is pulled into The Grid. With the help of a mysterious program named Quorra, Sam quests to stop evil dictator Clu from crossing into the real world."
         },
         {
             "id": 30,
             "title": "RoboCop",
             "year": 1987,
-            "poster": "../images/posters/robocop.jpeg",
+            "poster": "..\/images\/posters\/robocop.jpeg",
             "run_time": 102,
             "director": "Paul Verhoeven",
             "info": "In a dystopic and crime-ridden Detroit, a terminally wounded cop returns to the force as a powerful cyborg haunted by submerged memories."
@@ -274,7 +274,7 @@
             "id": 31,
             "title": "Alien",
             "year": 1979,
-            "poster": "../images/posters/alien.jpeg",
+            "poster": "..\/images\/posters\/alien.jpeg",
             "run_time": 117,
             "director": "Ridley Scott",
             "info": "During its return to the earth, commercial spaceship Nostromo intercepts a distress signal from a distant planet. When a three-member team of the crew discovers a chamber containing thousands of eggs on the planet, a creature inside one of the eggs attacks an explorer. The entire crew is unaware of the impending nightmare set to descend upon them when the alien parasite planted inside its unfortunate host is birthed."
@@ -283,25 +283,25 @@
             "id": 32,
             "title": "2001: a space odyssey",
             "year": 1968,
-            "poster": "../images/posters/2001-a-space-odyssey.jpeg",
+            "poster": "..\/images\/posters\/2001-a-space-odyssey.jpeg",
             "run_time": 129,
             "director": "Stanley Kubrick",
-            "info": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world’s most advanced super computer."
+            "info": "Humanity finds a mysterious object buried beneath the lunar surface and sets off to find its origins with the help of HAL 9000, the world\u2019s most advanced super computer."
         },
         {
             "id": 33,
             "title": "Dune",
             "year": 2021,
-            "poster": "../images/posters/dune.jpeg",
+            "poster": "..\/images\/posters\/dune.jpeg",
             "run_time": 155,
             "director": "Denis Villeneuve",
-            "info": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet’s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity’s greatest potential-only those who can conquer their fear will survive."
+            "info": "Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet\u2019s exclusive supply of the most precious resource in existence-a commodity capable of unlocking humanity\u2019s greatest potential-only those who can conquer their fear will survive."
         },
         {
             "id": 34,
             "title": "Alien 3",
             "year": 1992,
-            "poster": "../images/posters/alien-3.jpeg",
+            "poster": "..\/images\/posters\/alien-3.jpeg",
             "run_time": 114,
             "director": "David Fincher",
             "info": "After escaping with Newt and Hicks from the alien planet, Ripley crash lands on Fiorina 161, a prison planet and host to a correctional facility. Unfortunately, although Newt and Hicks do not survive the crash, a more unwelcome visitor does. The prison does not allow weapons of any kind, and with aid being a long time away, the prisoners must simply survive in any way they can."
@@ -310,16 +310,16 @@
             "id": 35,
             "title": "Everything Everywhere All at Once",
             "year": 2022,
-            "poster": "../images/posters/everything-everywhere-all-at-once.jpeg",
+            "poster": "..\/images\/posters\/everything-everywhere-all-at-once.jpeg",
             "run_time": 140,
             "director": "Daniel Scheinert, Daniel Kwan",
-            "info": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what’s important to her by connecting with the lives she could have led in other universes."
+            "info": "An aging Chinese immigrant is swept up in an insane adventure, where she alone can save what\u2019s important to her by connecting with the lives she could have led in other universes."
         },
         {
             "id": 36,
             "title": "Furiosa: A Mad Max Saga",
             "year": 2024,
-            "poster": "../images/posters/furiosa-a-mad-max-saga.jpeg",
+            "poster": "..\/images\/posters\/furiosa-a-mad-max-saga.jpeg",
             "run_time": 140,
             "director": "George Miller",
             "info": "As the world falls, young Furiosa is snatched from the Green Place of Many Mothers into the hands of a great biker horde led by the warlord Dementus. Sweeping through the wasteland, they encounter the citadel presided over by Immortan Joe. The two tyrants wage war for dominance, and Furiosa must survive many trials as she puts together the means to find her way home."
@@ -328,25 +328,25 @@
             "id": 37,
             "title": "Kingdom of the Planet of the Apes",
             "year": 2024,
-            "poster": "../images/posters/kingdom-of-the-planet-of-the-apes.jpeg",
+            "poster": "..\/images\/posters\/kingdom-of-the-planet-of-the-apes.jpeg",
             "run_time": 145,
             "director": "Wes Ball",
-            "info": "Several generations in the future following Caesar’s reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike."
+            "info": "Several generations in the future following Caesar\u2019s reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike."
         },
         {
             "id": 38,
             "title": "Godzilla x Kong: The New Empire",
             "year": 2024,
-            "poster": "../images/posters/godzilla-x-kong-the-new-empire.jpeg",
+            "poster": "..\/images\/posters\/godzilla-x-kong-the-new-empire.jpeg",
             "run_time": 115,
             "director": "Adam Wingard",
-            "info": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence – and our own."
+            "info": "Following their explosive showdown, Godzilla and Kong must reunite against a colossal undiscovered threat hidden within our world, challenging their very existence \u2013 and our own."
         },
         {
             "id": 39,
             "title": "Dune: Part II",
             "year": 2024,
-            "poster": "../images/posters/dune-part-two.jpeg",
+            "poster": "..\/images\/posters\/dune-part-two.jpeg",
             "run_time": 167,
             "director": "Denis Villeneuve",
             "info": "Follow the mythic journey of Paul Atreides as he unites with Chani and the Fremen while on a path of revenge against the conspirators who destroyed his family. Facing a choice between the love of his life and the fate of the known universe, Paul endeavors to prevent a terrible future only he can foresee."
@@ -355,7 +355,7 @@
             "id": 40,
             "title": "Avatar: The Way of Water",
             "year": 2022,
-            "poster": "../images/posters/avatar-the-way-of-water.jpeg",
+            "poster": "..\/images\/posters\/avatar-the-way-of-water.jpeg",
             "run_time": 192,
             "director": "James Cameron",
             "info": "Set more than a decade after the events of the first film, learn the story of the Sully family (Jake, Neytiri, and their kids), the trouble that follows them, the lengths they go to keep each other safe, the battles they fight to stay alive, and the tragedies they endure."
@@ -390,7 +390,7 @@
         {
             "movie_id": 14,
             "user_id": 4,
-            "review": "All I can say is that this is without doubt one of the boldest, most courageous things I’ve ever seen. Brutally honest and empathetic. Staggering level of vulnerability."
+            "review": "All I can say is that this is without doubt one of the boldest, most courageous things I\u2019ve ever seen. Brutally honest and empathetic. Staggering level of vulnerability."
         },
         {
             "movie_id": 24,
@@ -415,7 +415,7 @@
         {
             "movie_id": 13,
             "user_id": 2,
-            "review": "Can be a bit all over the place. Lots of fun to be had, some cool shit here and there. A bit messy and I don’t just mean the blood lololololololololololol.Enjoyable tho"
+            "review": "Can be a bit all over the place. Lots of fun to be had, some cool shit here and there. A bit messy and I don\u2019t just mean the blood lololololololololololol.Enjoyable tho"
         },
         {
             "movie_id": 10,
@@ -425,32 +425,32 @@
         {
             "movie_id": 35,
             "user_id": 3,
-            "review": "It’s very rare that i see sexual violence against men / male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
         },
         {
             "movie_id": 5,
             "user_id": 3,
-            "review": "That’s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
         },
         {
             "movie_id": 8,
             "user_id": 1,
-            "review": "I’m very conflicted on this movie because it’s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
         },
         {
             "movie_id": 27,
             "user_id": 1,
-            "review": "tem um filme chamado 127 horas que o cara tá com a mão na pedra. se eu tivesse agarrada com você, não seriam 127 horas… eu ia arrebentar minha mão em 5 segundos ✨"
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
             "movie_id": 30,
             "user_id": 2,
-            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it’s only inevitable that they’ll soon occupy the same frame."
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
         },
         {
             "movie_id": 23,
             "user_id": 4,
-            "review": "Fourth big screen viewing—it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "movie_id": 16,
@@ -460,7 +460,7 @@
         {
             "movie_id": 18,
             "user_id": 3,
-            "review": "No I’m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, “PIZZA TIME!” I love movies."
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
         }
     ],
     "users": [
@@ -487,6 +487,11 @@
             "username": "bojana",
             "password": "bell",
             "liked_movies": []
+        },
+        {
+            "username": "test",
+            "password": "test",
+            "id": 1
         }
     ]
 }

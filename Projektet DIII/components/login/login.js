@@ -165,24 +165,27 @@ async function createNewUser(event) {
   let newPassword = document.getElementById("newPassword").value;
 
   let newUser = {
-    entity: "sign_up",
-    row: { username: newUsername, password: newPassword}
+    entity: "register",
+    row: { username: newUsername, password: newPassword }
   };
 
   try {
     const registerUserObject = await State.POST(newUser);
 
     if (registerUserObject.ok) {
+      console.log("User registered successfully", registerUserObject);
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
+
+      window.location.replace(`${window.location.origin}/login`);
 
       // koden är inte klar.....
 
-      console.log("Registration successful");
+      console.log("User registered successfully");
     } else {
-      console.error("Error creating user", registerUserObject);
+      console.error("Error registering user", registerUserObject);
     }
   } catch (error) {
-    console.error("Error creating user", error);
+    console.error("Error registering user", error);
   }
 }
 
@@ -197,3 +200,8 @@ function logoutUser() {
   window.location.replace('index.html'); // Go to main'index.html' 
 }
 
+
+
+
+// localStorage.removeItem("");
+// location.reload();
