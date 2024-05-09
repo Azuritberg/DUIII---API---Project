@@ -44,7 +44,7 @@ async function renderMain(parentID, sameMovies = []) {
             let hoverMoviePoster = document.querySelectorAll(".poster");
             for (let i = 0; i < movies.length; i++) {
                 if (hoverId == movies[i].id) {
-                    text = movies[i].title;
+                    let text = movies[i].title;
                     p.textContent = text;
                 }
             }
