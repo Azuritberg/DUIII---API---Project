@@ -1,13 +1,13 @@
 <?php
 
+ini_set("display_errors", 0);
+
 require_once ("./functions.php");
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 $content_type = $_SERVER["CONTENT_TYPE"];
 $request_json = file_get_contents("php://input");
 $request_data = json_decode($request_json, true);
-
-// ska bara kolla om anavändaren stämmer överens med en användare som finnns i databasen
 
 if ($requestMethod !== "POST") {
     send_json("Method not allowed", 405);
@@ -29,7 +29,7 @@ if ($requestMethod == "POST") {
             send_json("Bad request, missing parameters", 400);
         }
 
-        //find user in database
+        //hitta användaren i databasen
 
         if (!empty($users)) {
             foreach ($users as $user) {
@@ -44,7 +44,7 @@ if ($requestMethod == "POST") {
                 }
             }
             send_json("user not found", 404);
-
         }
     }
+    send_json("Bad request, only json allowed", 400);
 }

@@ -28,11 +28,11 @@ function check_content_type($type)
     }
 }
 
-function request_data()
-{
-    $json = file_get_contents("php://input");
-    $data = json_decode($json, true);
-    // if ($data === null) {
-    // }
-    return $data;
-}
+// function request_data()
+// {
+//     $json = file_get_contents("php://input");
+//     $data = json_decode($json, true);
+//     // if ($data === null) {
+//     // }
+//     return $data;
+// }
