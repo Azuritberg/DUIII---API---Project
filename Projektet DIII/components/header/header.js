@@ -26,8 +26,8 @@ function renderHeader(parentID) {
   // USER BUTTON and Redirect user to userpage
   let userButton = document.getElementById("userbtn");
   userButton.addEventListener("click", function () {
-    const instanceData = {username: localStorage.getItem("username")};  // Get username from localStorage
-    renderRedirectUserPage("mainPage", instanceData);
+    const getUserName = {username: localStorage.getItem("username")};  // Get username from localStorage
+    renderRedirectUserPage("mainPage", getUserName);
   });
 
   
