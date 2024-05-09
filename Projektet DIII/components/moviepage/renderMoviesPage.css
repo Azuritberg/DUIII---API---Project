@@ -14,7 +14,7 @@
     width: 1300px;
     background-color: #51545899;
     border: 2px solid #F6F4F4;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 30px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -183,8 +183,8 @@
 }
 
 #review > p {
-    font-family: MT-bold-italic;
-    font-size: 12px;
+    font-family: MT-medium-italic;
+    font-size: 13px;
     color: #F6F4F4;
 }
 
