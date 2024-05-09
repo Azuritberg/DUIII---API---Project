@@ -38,10 +38,11 @@ function renderHeader(parentID, instanceData) {
   renderHeaderLogin();
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
+
 }
 
 
-  // login modal  
+    // login modal  
   renderHeaderLogin();
 
 
