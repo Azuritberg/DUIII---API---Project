@@ -173,16 +173,6 @@ async function loginUser(event) {
 }
 
 
-// Logout user and go to mainPage 'index.html'
-function logoutUser() {
-  localStorage.removeItem("user");
-  updateLoginLogoutButton();
-  //renderHeader(parentID, null);
-  console.log("Logout successful");
-
-  window.location.replace('index.html'); // Go to main'index.html' 
-}
-
 
 
 

@@ -1,10 +1,8 @@
 function renderHeader(parentID, instanceData) {
-  
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
-  //console.log(instanceData.username);
-  //console.log(parentID);
+  
   header.innerHTML = `
     <div id="headerLeft">
       <img id="logo" src="./icons/rocket-vit.png" alt="">
@@ -12,13 +10,12 @@ function renderHeader(parentID, instanceData) {
     <div id="headerMiddle">
       <p>The Random Universe.</p>
     </div>
-      <div id="headerRight">
-        <img id="userbtn" src="./icons/user.png" alt=""> 
-        <div id="logincont">
-         <button id="login">Login</button>
-        </div>
+    <div id="headerRight">
+      <img id="userbtn" src="./icons/user.png" alt="" style="display: none;"> 
+      <div id="logincont">
+       <button id="login">Login</button>
       </div>
-    
+    </div>
   `;
 
   let userbtn = document.getElementById("userbtn");
@@ -27,38 +24,40 @@ function renderHeader(parentID, instanceData) {
     renderRedirectUserPage("mainPage", instanceData);
   });
 
-  
-  if (instanceData) {
-    document.getElementById("userName").addEventListener("click", function () {
-      renderRedirectUserPage("mainPage", instanceData);
-    });
-  }
+  // Visa eller dölj userbtn baserat på om användaren är inloggad
+  userbtn.style.display = isLoggedIn() ? 'block' : 'none';
 
   document.getElementById("login").addEventListener("click", function () {
-    if (instanceData) {
+    if (instanceData && isLoggedIn()) {
       logoutUser();
     } else {
       openModal(document.getElementById("loginModal"));
     }
   });
 
-
-
-// login modal  
   renderHeaderLogin();
-
-
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
 }
 
 
+  // login modal  
+  renderHeaderLogin();
+
+
+
 function logoutUser() {
   localStorage.removeItem("user");
   console.log("Logout successful");
-  //window.location.reload(); // Laddar om sidan för att återställa UI
+
+  // Gör usrbtn osynlig
+  const userButton = document.getElementById("userbtn");
+  userButton.style.display = 'none';
+
+  // Omdirigera till startsidan eller uppdatera sidan
   window.location.href = 'index.html';
 }
+
 
 
 function getHome(event) {
