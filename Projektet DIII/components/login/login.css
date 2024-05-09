@@ -128,6 +128,7 @@
 
 #eye {
     display: none;
+
 }
 
 .custom-checkbox {
@@ -135,6 +136,7 @@
 
     margin-left: auto;
     margin-right: auto;
+
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -152,4 +154,12 @@
 
 .custom-checkbox input[type="checkbox"]:checked+label {
     background-image: url('../../icons/eye.png');
+}
+
+
+label[for="eye"] {
+    position: absolute;
+
+    right: 109px;
+    bottom: 121px;
 }
