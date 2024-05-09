@@ -1,4 +1,4 @@
-function renderHeader(parentID) {
+function renderHeader(parentID, instanceData) {
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
@@ -18,18 +18,17 @@ function renderHeader(parentID) {
     </div>
   `;
 
-  
   let userButton = document.getElementById("userbtn");
   userButton.addEventListener("click", function () {
-    const getUserName = {username: localStorage.getItem("username")}; // Get username from localStorage
-    renderRedirectUserPage("mainPage", getUserName);
+    const instanceData = {username: localStorage.getItem("username")}; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
+    renderRedirectUserPage("mainPage", instanceData);
   });
 
   // Visa eller dölj userbtn baserat på om användaren är inloggad
   userButton.style.display = isLoggedIn() ? 'block' : 'none';
 
   document.getElementById("login").addEventListener("click", function () {
-    if (getUserName && isLoggedIn()) {
+    if (instanceData && isLoggedIn()) {
       logoutUser();
     } else {
       openModal(document.getElementById("loginModal"));
@@ -41,7 +40,8 @@ function renderHeader(parentID) {
   homeButton.addEventListener("click", getHome);
 
 }
-// Update BUTTON from Login to Logout
+
+
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
