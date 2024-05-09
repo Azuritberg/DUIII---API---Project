@@ -11,7 +11,7 @@ function send_json($data, $status = 200)
 
 function get_database()
 {
-    $database_json = file_get_contents("database_clone.json");
+    $database_json = file_get_contents("database.json");
     $database = json_decode($database_json, true);
     if (isset($database) == false) {
         send_json("the database does not exist", 500);
