@@ -31,13 +31,13 @@
 #bigPoster {
     height: 100%;
     width: 400px;
-    background-image: url(../../../images/posters/a-clockwork-orange.jpeg);
+    background-image: url(./images/posters/a-clockwork-orange.jpeg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px solid #F6F4F4;
     border-radius: 5px;
-    background-image: url(../../../images/posters/2001-a-space-odyssey.jpeg);
+    background-image: url(./images/posters/2001-a-space-odyssey.jpeg);
 }
 
 #topRight {
