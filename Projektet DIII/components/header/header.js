@@ -24,7 +24,7 @@ function renderHeader(parentID, instanceData) {
     renderRedirectUserPage("mainPage", instanceData);
   });
 
-  // Visa eller dölj userbtn baserat på om användaren är inloggad
+  // Visa eller dölj userButton beroende baserat på om användaren är inloggad
   userButton.style.display = isLoggedIn() ? 'block' : 'none';
 
   document.getElementById("login").addEventListener("click", function () {
