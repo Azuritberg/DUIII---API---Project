@@ -1,7 +1,7 @@
 "use strict";
 
 
-function renderHeader(parentID, instanceData) {
+function renderHeader(parentID) {
   
   let header = document.createElement("div");
   parentID.append(header);
@@ -31,19 +31,19 @@ function renderHeader(parentID, instanceData) {
   });
 
   
-  if (instanceData) {
-    document.getElementById("userName").addEventListener("click", function () {
-      renderRedirectUserPage("mainPage", instanceData);
-    });
-  }
+  // if (instanceData) {
+  //   document.getElementById("userName").addEventListener("click", function () {
+  //     renderRedirectUserPage("mainPage", instanceData);
+  //   });
+  // }
 
-  document.getElementById("login").addEventListener("click", function () {
-    if (instanceData) {
-      logoutUser();
-    } else {
-      openModal(document.getElementById("loginModal"));
-    }
-  });
+  // document.getElementById("login").addEventListener("click", function () {
+  //   if (instanceData) {
+  //     logoutUser();
+  //   } else {
+  //     openModal(document.getElementById("loginModal"));
+  //   }
+  // });
 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
