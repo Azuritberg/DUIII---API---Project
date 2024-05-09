@@ -42,11 +42,6 @@ function renderHeader(parentID, instanceData) {
 }
 
 
-    // login modal  
-  renderHeaderLogin();
-
-
-
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
