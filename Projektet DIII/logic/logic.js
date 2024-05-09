@@ -1,4 +1,4 @@
-"use strict"; 
+"use strict";
 
 
 function similarMovies(movie) {
@@ -9,7 +9,7 @@ function similarMovies(movie) {
 
     // Filtering movies with similar release date
     for (let i = 0; i < movie_copy.length; i++) {
-        if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 10) {
+        if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 15 || Math.abs(movie_copy[i].year - movie.year) <= 10) {
             new_arr.push(movie_copy[i]);
         }
     }
@@ -31,7 +31,7 @@ function similarMovies(movie) {
     // Generate unique random indices
     const randomIndices = [];
     while (randomIndices.length < numSelections) {
-        
+
         const randomIndex = Math.floor(Math.random() * length);
         if (!randomIndices.includes(randomIndex)) {
             randomIndices.push(randomIndex);
