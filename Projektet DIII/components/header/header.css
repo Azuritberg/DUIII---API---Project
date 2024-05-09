@@ -8,7 +8,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 12vh;
+    height: 10vh;
 }
 
 #headerMiddle p {
@@ -40,10 +40,9 @@ header {
 } */
 
 #headerRight {
-
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: end;
     gap: 10px;
     width: 200px;
     position: absolute;
@@ -60,30 +59,13 @@ header {
     font-family: MT-bold-italic;
 }
 
-/* #logout {
-    height: 35px;
-    width: 85px;
-    border-radius: 18px;
-    border: none;
-    cursor: pointer;
-    margin-right: 11px;
-    font-size: 18px;
-    font-family: MT-bold-italic;
-} */
-
-
-
-
-
 #logincont {
     margin-right: 20px;
 }
 
 #userbtn {
     background-image: url("../../icons/user.png");
-
     height: 48px;
     cursor: pointer;
     margin-right: 20px;
-    /* display: none; */
 }

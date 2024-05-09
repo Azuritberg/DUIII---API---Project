@@ -1,12 +1,8 @@
-"use strict";
-
-
-function renderHeader(parentID) {
-  
+function renderHeader(parentID, instanceData) {
   let header = document.createElement("div");
   parentID.append(header);
   header.id = "header";
-  //console.log(instanceData.username);
+  
   header.innerHTML = `
     <div id="headerLeft">
       <img id="logo" src="./icons/rocket-vit.png" alt="">
@@ -14,41 +10,58 @@ function renderHeader(parentID) {
     <div id="headerMiddle">
       <p>The Random Universe.</p>
     </div>
-      <div id="headerRight">
-        <img id="userbtn" src="./icons/user.png" alt=""> 
-        <div id="logincont">
-         <button id="login">Login</button>
-        </div>
+    <div id="headerRight">
+      <img id="userbtn" src="./icons/user.png" alt="" style="display: none;"> 
+      <div id="logincont">
+       <button id="login">Login</button>
       </div>
-    
+    </div>
   `;
 
-  // USER BUTTON and Redirect user to userpage
-  let userButton = document.getElementById("userbtn");
-  userButton.addEventListener("click", function () {
-    const getUserName = {username: localStorage.getItem("username")};  // Get username from localStorage
-    renderRedirectUserPage("mainPage", getUserName);
+  let userbtn = document.getElementById("userbtn");
+  userbtn.addEventListener("click", function () {
+    const instanceData = {username: localStorage.getItem("username")};
+    renderRedirectUserPage("mainPage", instanceData);
   });
 
-  // HOME BUTTON 
+  // Visa eller dölj userbtn baserat på om användaren är inloggad
+  userbtn.style.display = isLoggedIn() ? 'block' : 'none';
+
+  document.getElementById("login").addEventListener("click", function () {
+    if (instanceData && isLoggedIn()) {
+      logoutUser();
+    } else {
+      openModal(document.getElementById("loginModal"));
+    }
+  });
+
+  renderHeaderLogin();
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
 
-
-// login modal  
-  renderHeaderLogin();
 }
 
-// LOGOUT USER AND REDIRECT TO INDEX PAGE 
+
+    // login modal  
+  renderHeaderLogin();
+
+
+
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
   console.log("Logout successful");
-  //window.location.reload(); // Laddar om sidan för att återställa UI
+
+  // Gör usrbtn osynlig
+  const userButton = document.getElementById("userbtn");
+  userButton.style.display = 'none';
+
+  // Omdirigera till startsidan eller uppdatera sidan
   window.location.href = 'index.html';
 }
 
-// GET HOME PAGE  
+
+
 function getHome(event) {
   if (!document.querySelector("#mainBox")) {
     if (document.getElementById("mainMovieBox")) {
