@@ -30,21 +30,7 @@ function renderHeader(parentID) {
     renderRedirectUserPage("mainPage", getUserName);
   });
 
-  
-  // if (instanceData) {
-  //   document.getElementById("userName").addEventListener("click", function () {
-  //     renderRedirectUserPage("mainPage", instanceData);
-  //   });
-  // }
-
-  // document.getElementById("login").addEventListener("click", function () {
-  //   if (instanceData) {
-  //     logoutUser();
-  //   } else {
-  //     openModal(document.getElementById("loginModal"));
-  //   }
-  // });
-
+  // HOME BUTTON 
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
 
@@ -110,3 +96,18 @@ function getHome(event) {
   //   openModal(loginModal);
   // });
   // renderHeaderLogin();
+
+
+    // if (instanceData) {
+  //   document.getElementById("userName").addEventListener("click", function () {
+  //     renderRedirectUserPage("mainPage", instanceData);
+  //   });
+  // }
+
+  // document.getElementById("login").addEventListener("click", function () {
+  //   if (instanceData) {
+  //     logoutUser();
+  //   } else {
+  //     openModal(document.getElementById("loginModal"));
+  //   }
+  // });
