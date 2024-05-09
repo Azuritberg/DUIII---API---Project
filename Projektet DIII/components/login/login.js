@@ -85,6 +85,7 @@ function registerModalContent() {
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {
     modal.innerHTML = loginModalContent();
+
   } else if (type === 'registerButton') {
     modal.innerHTML = registerModalContent();
   }
@@ -95,6 +96,17 @@ function openModal(modal) {
   if (modal == null) return;
   modal.classList.add('active');
   document.getElementById('overlay').classList.add('active');
+  let eyeCheckbox = document.getElementById('eye');
+  let passwordInput = document.getElementById('password');
+
+  eyeCheckbox.addEventListener('change', function () {
+    if (this.checked) {
+      passwordInput.type = 'text';
+    } else {
+      passwordInput.type = 'password';
+    }
+  });
+
 }
 
 // Close modal
@@ -102,6 +114,8 @@ function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove('active');
   document.getElementById('overlay').classList.remove('active');
+  let passwordInput = document.getElementById('password')
+  passwordInput.type = "password"
 }
 
 
@@ -143,8 +157,8 @@ async function loginUser(event) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id)); // Sparar user i localStorage
 
       localStorage.setItem("username", loginUserObject.username); // Sparar username i localStorage
-      closeModal(document.getElementById("loginModal")); 
-      renderRedirectUserPage("mainPage", loginUserObject); 
+      closeModal(document.getElementById("loginModal"));
+      renderRedirectUserPage("mainPage", loginUserObject);
       updateLoginLogoutButton();
       console.log("Login successful");
 
@@ -174,7 +188,7 @@ async function createNewUser(event) {
     const registerUserObject = await State.POST(newUser);
 
     if (registerUserObject != undefined) {
-      
+
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
       changeModalContent(document.getElementById("loginModal"), "logInButton");
 
