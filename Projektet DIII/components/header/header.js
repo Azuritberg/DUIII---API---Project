@@ -41,8 +41,8 @@ function renderHeader(parentID) {
 
 // LOGOUT USER AND REDIRECT TO INDEX PAGE 
 function logoutUser() {
-  localStorage.removeItem("user");
-  localStorage.removeItem("username");
+  localStorage.removeItem("user");  // Remove user from localStorage
+  localStorage.removeItem("username"); // Remove username from localStorage
   console.log("Logout successful");
   //window.location.reload(); // Laddar om sidan för att återställa UI
   window.location.href = 'index.html';
