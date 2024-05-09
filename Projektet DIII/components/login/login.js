@@ -143,8 +143,8 @@ async function loginUser(event) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id)); // Sparar user i localStorage
 
       localStorage.setItem("username", loginUserObject.username); // Sparar username i localStorage
-      closeModal(document.getElementById("loginModal"));
-      renderRedirectUserPage("mainPage", loginUserObject);
+      closeModal(document.getElementById("loginModal")); 
+      renderRedirectUserPage("mainPage", loginUserObject); 
       updateLoginLogoutButton();
       console.log("Login successful");
 
@@ -174,14 +174,14 @@ async function createNewUser(event) {
     const registerUserObject = await State.POST(newUser);
 
     if (registerUserObject != undefined) {
-      console.log("User registered successfully", registerUserObject);
+      
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
+      changeModalContent(document.getElementById("loginModal"), "logInButton");
 
-      window.location.replace(`${window.location.origin}/login`);
+      //window.location.replace(`${window.location.origin}/login`);
 
       // koden är inte klar.....
-
-      console.log("User registered successfully");
+      console.log("User registered successfully", registerUserObject);
     } else {
       console.error("Error registering user", registerUserObject);
     }

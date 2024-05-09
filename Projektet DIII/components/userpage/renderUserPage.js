@@ -1,7 +1,7 @@
 "use strict";
 
 function renderUserPage(parentID, instanceData) {
-    console.log(instanceData);
+    console.log(instanceData.username);
     let wrapper = document.getElementById(parentID);
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";
