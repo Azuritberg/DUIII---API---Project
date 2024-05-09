@@ -173,7 +173,7 @@ async function createNewUser(event) {
   try {
     const registerUserObject = await State.POST(newUser);
 
-    if (registerUserObject.ok) {
+    if (registerUserObject != undefined) {
       console.log("User registered successfully", registerUserObject);
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
 
