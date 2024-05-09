@@ -1,72 +1,131 @@
-
 <?php
 
-require_once("helpers.php");
+require_once ("./functions.php");
 
-// Enable CORS for all origins
+$request_method = $_SERVER["REQUEST_METHOD"];
+$content_type = $_SERVER["CONTENT_TYPE"];
+$request_json = file_get_contents("php://input");
+$request_data = json_decode($request_json, true);
+$filename = "database.json";
 
-if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
-    header("Access-Control-Allow-Headers: *");
-    header("Access-Control-Allow-Methods: *");
-    header("Access-Control-Allow-Origin: *");
-    exit();
+// if ($request_method != "POST") {
+//     send_json("Method not allowed", 405);
+//     require_once ("./functions.php");
+
+//     $request_method = $_SERVER["REQUEST_METHOD"];
+//     $content_type = $_SERVER["CONTENT_TYPE"];
+//     $request_json = file_get_contents("php://input");
+//     $request_data = json_decode($request_json, true);
+//     $filename = "database_clone.json";
+
+//     if ($request_method != "POST") {
+//         send_json("Method not allowed", 405);
+//     }
+
+//     if ($request_method === "POST") {
+//         $database = get_database();
+//         $users = $database["users"];
+
+//         if (check_content_type($content_type)) {
+
+//             if (empty($request_data)) {
+//                 send_json("Empty request", 400);
+//             }
+
+//             $new_username = $request_data["username"];
+//             $new_password = $request_data["password"];
+
+//             if (!isset($new_username, $new_password)) {
+//                 send_json("Bad request, missing parameters", 400);
+//             }
+
+//             // kolla om användarnamnet eller lösenordet inte är tomt
+//             if (empty(trim($new_username)) || empty(trim($new_password))) {
+//                 if (empty(trim($new_username))) {
+//                     send_json("Username can't be empty", 400);
+//                 } elseif (empty(trim($new_username))) {
+//                     send_json("Password can't be empty", 400);
+//                 }
+//             }
+//             // kolla id och ge den nya anävndaren det högsta id:t
+//             $highest_id = 0;
+//             foreach ($users as $user) {
+//                 if ($highest_id < $user["user_id"]) {
+//                     $highest_id = $user["user_id"];
+//                 }
+//             }
+
+//             $new_user_id = $highest_id + 1;
+//             $new_user = ["user_id" => $new_user_id, "username" => $new_username, "password" => $new_password, "liked_movies" => []];
+//             foreach ($users as $user) {
+//                 if ($new_user["username"] === $user["username"]) {
+//                     send_json("Username already exists", 400);
+//                 }
+//             }
+//             $users[] = $new_user;
+
+//             $database["users"] = $users;
+//             file_put_contents($filename, json_encode($database, JSON_PRETTY_PRINT));
+
+//             unset($new_user["password"]);
+//             send_json($new_user, 201);
+//         } else {
+//             send_json("Bad request, only json allowed", 400);
+//         }
+//     }
+// }
+if ($request_method != "POST") {
+    send_json("Method not allowed", 405);
 }
 
-$requestMethod = $_SERVER["REQUEST_METHOD"];
-$requestData = getRequestData();
+if ($request_method === "POST") {
+    $database = get_database();
+    $users = $database["users"];
 
-switch ($requestMethod) {
-    case "POST":
-        // Register a new user
-        $userKeys = ["username", "password"];
+    if (check_content_type($content_type)) {
 
-        if (empty($requestData)) {
-            abort(400, "Bad Request (empty request)");
+        if (empty($request_data)) {
+            send_json("Empty request", 400);
         }
 
-        if (!requestContainsAllKeys($requestData, $userKeys)) {
-            abort(400, "Bad Request (missing keys)");
-        }
-        
-        $username = $requestData["username"];
-        $existingUser = findItemByKey("users", "username", $username);
-        if ($existingUser) {
-            abort(400, "Bad Request (user already exists)");
-        }
-        
-        $newUser = insertItemByType("users", $userKeys, $requestData);
-        unset($newUser["password"]); // Remove password from response for security
-        send(201, $newUser);
-        break;
+        $new_username = $request_data["username"];
+        $new_password = $request_data["password"];
 
-    case "DELETE":
-        // Delete a user account
-        if (empty($requestData) || !isset($requestData["user_id"])) {
-            abort(400, "Bad Request (missing user ID)");
-        }
-        
-        $user = findItemByKey("users", "user_id", $requestData["user_id"]);
-        if (!$user) {
-            abort(404, "User Not Found");
+        if (!isset($new_username, $new_password)) {
+            send_json("Bad request, missing parameters", 400);
         }
 
-        // Assuming removeUserAndLikes() cleans up related data
-        removeUserAndLikes($user["user_id"]);
-        $deletedUser = deleteItemByType("users", $user);
-        send(200, ["message" => "User deleted successfully", "user_id" => $user["user_id"]]);
-        break;
-    default:
-        abort(405, "Method Not Allowed");
+        // kolla om användarnamnet eller lösenordet inte är tomt
+        if (empty(trim($new_username)) || empty(trim($new_password))) {
+            if (empty(trim($new_username))) {
+                send_json("Username can't be empty", 400);
+            } elseif (empty(trim($new_password))) {
+                send_json("Password can't be empty", 400);
+            }
+        }
+        // kolla id och ge den nya anävndaren det högsta id:t
+        $highest_id = 0;
+        foreach ($users as $user) {
+            if ($highest_id < $user["user_id"]) {
+                $highest_id = $user["user_id"];
+            }
+        }
+
+        $new_user_id = $highest_id + 1;
+        $new_user = ["user_id" => $new_user_id, "username" => $new_username, "password" => $new_password, "liked_movies" => []];
+        foreach ($users as $user) {
+            if ($new_user["username"] === $user["username"]) {
+                send_json("Username already exists", 400);
+            }
+        }
+        $users[] = $new_user;
+
+        $database["users"] = $users;
+        file_put_contents($filename, json_encode($database, JSON_PRETTY_PRINT));
+
+        unset($new_user["password"]);
+        send_json($new_user, 201);
+    } else {
+        send_json("Bad request, only json allowed", 400);
+    }
 }
-
-
-// USERS = users
-
-?>
-
-
-
-
-
-
-

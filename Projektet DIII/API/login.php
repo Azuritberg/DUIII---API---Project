@@ -1,47 +1,50 @@
 <?php
 
-require_once ("helpers.php");
+ini_set("display_errors", 0);
 
-if ($_SERVER["REQUEST_METHOD"] == "OPTIONS") {
-    header("Access-Control-Allow-Headers: *");
-    header("Access-Control-Allow-Methods: *");
-    header("Access-Control-Allow-Origin: *");
-    exit();
-} else {
-    header("Access-Control-Allow-Origin: *");
-}
+require_once ("./functions.php");
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
-$requestData = getRequestData();
+$content_type = $_SERVER["CONTENT_TYPE"];
+$request_json = file_get_contents("php://input");
+$request_data = json_decode($request_json, true);
 
-if ($requestMethod == "POST") {  // Login (username + password)
-    
-    if (empty($requestData)) {
-        abort(400, "Bad Request (empty request)");
-    }
-
-    $loginKeys = ["username", "password"];
-    
-    if (requestContainsAllKeys($requestData, $loginKeys) == false) {
-        abort(400, "Bad Request (missing keys)");
-    }
-
-    $username = $requestData["username"];
-    $password = $requestData["password"];
-    $user = findItemByKey("users", "username", $username);
-
-    if ($user == false) {
-        abort(404, "User Not Found");
-    }
-
-    if ($user["password"] != $password) {
-        abort(400, "Bad Request (invalid password)");
-    }
-
-    send(200, ["username" => $username, "id" => $user["user_id"], "ok" => true]);
-
-} else {
-    abort(405, "Method Not Allowed");
+if ($requestMethod !== "POST") {
+    send_json("Method not allowed", 405);
 }
 
-?>
+if ($requestMethod == "POST") {
+    $database = get_database();
+    $users = $database["users"];
+    if (check_content_type($content_type)) {
+
+        if (empty($request_data)) {
+            send_json("Empty request", 400);
+        }
+
+        $request_username = $request_data["username"];
+        $request_password = $request_data["password"];
+
+        if (!isset($request_username, $request_password)) {
+            send_json("Bad request, missing parameters", 400);
+        }
+
+        //hitta användaren i databasen
+
+        if (!empty($users)) {
+            foreach ($users as $user) {
+                // vill kolla om användaren finns genom att kolla användarnamn och password stämmer överens, eventuellt ge tillbaka id på användaren
+                $username = $user["username"];
+                $password = $user["password"];
+
+                if ($request_username === $username && $request_password === $password) {
+                    $found_user = [$user["user_id"], $user["username"], $user["liked_movies"]];
+                    send_json($found_user);
+                    break;
+                }
+            }
+            send_json("user not found", 404);
+        }
+    }
+    send_json("Bad request, only json allowed", 400);
+}
