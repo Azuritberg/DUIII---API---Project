@@ -165,11 +165,28 @@
 }
 
 #review {
+    margin: 5px 20px 5px 20px;
+    border-bottom: 1.5px solid #F6F4F4;
+    padding-bottom: 12px;
+    color: #F6F4F4;
+}
+
+#review > h3 {
+    font-family: MT-medium;
+    font-size: 15px;
+    color: #F6F4F4;
+}
+
+.reviewSpan {
+    font-family: MT-extrabold;
+    font-size: 15px;
+    color: #F6F4F4;
+}
+
+#review > p {
     font-family: MT-bold-italic;
     font-size: 12px;
-    margin: 5px 20px 5px 20px;
-    border-bottom: 1px solid #F6F4F4;
-    color: whitesmoke;
+    color: #F6F4F4;
 }
 
 
