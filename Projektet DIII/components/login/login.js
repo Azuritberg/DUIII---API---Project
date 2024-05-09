@@ -137,10 +137,11 @@ async function loginUser(event) {
   };
 
   try {
-    const loginUserObject = await State.POST(user);  // returnera user objektet och sparar det i constanten loginUserObject
-    if (loginUserObject.ok) {
+    const loginUserObject = await State.POST(user);
+    // returnera user objektet och sparar det i constanten loginUserObject
+    if (loginUserObject != undefined) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id)); // Sparar user i localStorage
-      
+
       localStorage.setItem("username", loginUserObject.username); // Sparar username i localStorage
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
