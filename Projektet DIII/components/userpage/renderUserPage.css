@@ -134,15 +134,16 @@
     padding: 40px;
 }
 
-#reviewHeader {
+#reviewHeader  {
     border-bottom: 2px solid #F6F4F4;
     font-family: MT-medium;
     color: #F6F4F4;
 }
 
+
 .reviewText {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
 }
 
 .userSpan {
@@ -171,3 +172,4 @@
 #reviews {
     margin: 0 10px 0 15px;
 }
+

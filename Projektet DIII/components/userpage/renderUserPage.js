@@ -37,52 +37,38 @@ function renderUserPage(parentID, instanceData) {
                 <div id="reviewBottom">
                     <div id="reviewHeader"> 
                         <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                        <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
                             <h3>/ DUNE Part II /</h3>
                         </div>
                         <p>Yeah the film bros are right…you need to see this...</p>
                     </div>
                     <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+                    <div class="reviewText">
+                        <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                        <h3>/ DUNE Part II /</h3>
+                    </div>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                     </div>
                     <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+                    <div class="reviewText">
+                        <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                        <h3>/ DUNE Part II /</h3>
+                    </div>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                     </div>
                     <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+                    <div class="reviewText">
+                        <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                        <h3>/ DUNE Part II /</h3>
+                    </div>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                     </div>
                     <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...</p>
+                    <div class="reviewText">
+                        <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
+                        <h3>/ DUNE Part II /</h3>
                     </div>
-                    <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...</p>
-                    </div>
-                    <div id="reviewHeader"> 
-                        <div class="reviewText">
-                            <h3>Review by: <span class="userSpan">SpaceFan01</span></h3>
-                            <h3>/ DUNE Part II /</h3>
-                        </div>
-                        <p>Yeah the film bros are right…you need to see this...</p>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                     </div>
                 </div>
             </div>
