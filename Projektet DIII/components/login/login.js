@@ -137,13 +137,14 @@ async function loginUser(event) {
   };
 
   try {
-    const loginUserObject = await State.POST(user);  // returnera user objektet och sparar det i constanten loginUserObject
-    if (loginUserObject.ok) {
+    const loginUserObject = await State.POST(user);
+    // returnera user objektet och sparar det i constanten loginUserObject
+    if (loginUserObject != undefined) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id)); // Sparar user i localStorage
-      
+
       localStorage.setItem("username", loginUserObject.username); // Sparar username i localStorage
-      closeModal(document.getElementById("loginModal"));
-      renderRedirectUserPage("mainPage", loginUserObject);
+      closeModal(document.getElementById("loginModal")); 
+      renderRedirectUserPage("mainPage", loginUserObject); 
       updateLoginLogoutButton();
       console.log("Login successful");
 
@@ -172,15 +173,15 @@ async function createNewUser(event) {
   try {
     const registerUserObject = await State.POST(newUser);
 
-    if (registerUserObject.ok) {
-      console.log("User registered successfully", registerUserObject);
+    if (registerUserObject != undefined) {
+      
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
+      changeModalContent(document.getElementById("loginModal"), "logInButton");
 
-      window.location.replace(`${window.location.origin}/login`);
+      //window.location.replace(`${window.location.origin}/login`);
 
       // koden är inte klar.....
-
-      console.log("User registered successfully");
+      console.log("User registered successfully", registerUserObject);
     } else {
       console.error("Error registering user", registerUserObject);
     }
