@@ -10,7 +10,7 @@ const STATE = {
 }
 
 async function renderApp() {
-    const movie_request = new Request("/API/movies.php");
+    const movie_request = new Request("API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
     STATE.movies = movie_resource;
@@ -36,23 +36,29 @@ const State = {
                 // console.log(data);
                 // console.log(JSON.stringify(data.row));
                 // console.log(JSON.parse(data.row));
-                const loginRequest = new Request("../API/login.php", {
+                const loginRequest = new Request("API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                return loginResource
+                if (loginResource != undefined) {
+                    console.log(loginResource);
+                    // // STATE.user.push(loginResource);
+                    // console.log(STATE.user);
+                    return loginResource;
+                }
                 //console.log(loginResource);
                 break;
-            case "sign_up":
+            case "register":
                 console.log(data);
-                const signUpRequest = new Request("../API/users.php", {
+                const registerRequest = new Request("../API/users.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 })
-                let signUpResource = await fetcher(signUpRequest);
+                let registerResource = await fetcher(registerRequest);
+                return registerRequest
                 break;
             case "reviews":
                 const reviewRequest = new Request("", {

@@ -1,3 +1,4 @@
+"use strict";
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
@@ -24,7 +25,7 @@ function renderMoviesPage(parentID, instanceData) {
             </div>
         </div> 
         <div id="bottomRight">
-            <p id="similarmoviesinfo">Movies with similar runtime</p>
+            <p id="similarmoviesinfo">SIMILAR MOVIES</p>
             <p id="info">Reviews</p>
             <div id="simularMovies">
                 <div class="smallPosters" id="smallPoster0"></div>

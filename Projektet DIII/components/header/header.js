@@ -48,7 +48,8 @@ function renderHeader(parentID, instanceData) {
 
 
 function logoutUser() {
-  localStorage.removeItem("user");
+  localStorage.removeItem("user");  // Remove user from localStorage
+  localStorage.removeItem("username"); // Remove username from localStorage
   console.log("Logout successful");
 
   // Gör usrbtn osynlig
@@ -90,84 +91,11 @@ function getHome(event) {
 
 
 
-
-
-
-
-
-  //console.log(instanceData);
-  //Sconsole.log(parentID);
-
-
-
-
-
-
   // ${instanceData && instanceData.userName ? instanceData.userName : ""}
   
   // ${instanceData ? instanceData.userName : ""}
 
   // ${instanceData ? "Logout" : "Login"}
-
-
-
-
-// function renderHeader(parentID, instanceData) {
-//   //console.log(instanceData);
-//   //Sconsole.log(parentID);
-//   let header = document.createElement("div");
-//   parentID.append(header);
-//   header.id = "header";
-//   header.innerHTML = `
-//     <div id="headerLeft">
-//       <img id="logo" src="./icons/rocket-vit.png" alt="">
-//     </div>
-//     <div id="headerMiddle">
-//       <p>The Random Universe.</p>
-//     </div>
-//     <div id="headerRight">
-//       <div id="userName">${instanceData ? instanceData.userName : ""}</div>
-//       <button id="login">Login</button>
-//     </div>
-//   `;
-
-//   let userName = document.getElementById("userName");
-//   userName.addEventListener("click", function () {
-//     renderRedirectUserPage("mainPage");
-//   });
-
-
-// // login modal  
-//   renderHeaderLogin();
-
-
-//   let homeButton = document.getElementById("logo");
-//   homeButton.addEventListener("click", getHome);
-// }
-
-// // function clearContent(parentID, instanceData) {
-// //   document.getElementById(parentID).innerHTML = "";
-// //   renderUserPage("mainPage", instanceData);
-// // }
-
-
-// function getHome(event) {
-//   if (!document.querySelector("#mainBox")) {
-//     if (document.getElementById("mainMovieBox")) {
-//       document.getElementById("mainMovieBox").remove();
-//       renderMain(document.querySelector("main"), savedMovies);
-//     } else {
-//       document.getElementById("userContainer").remove();
-//       renderMain(document.querySelector("main"), savedMovies);
-//     }
-//   }
-// }
-
-
-
-
-
-
 
 
 
@@ -182,3 +110,18 @@ function getHome(event) {
   //   openModal(loginModal);
   // });
   // renderHeaderLogin();
+
+
+    // if (instanceData) {
+  //   document.getElementById("userName").addEventListener("click", function () {
+  //     renderRedirectUserPage("mainPage", instanceData);
+  //   });
+  // }
+
+  // document.getElementById("login").addEventListener("click", function () {
+  //   if (instanceData) {
+  //     logoutUser();
+  //   } else {
+  //     openModal(document.getElementById("loginModal"));
+  //   }
+  // });

@@ -1,3 +1,6 @@
+"use strict";
+
+
 function similarMovies(movie) {
     let movie_copy = State.GET("movies")
     let new_arr = [];
@@ -6,7 +9,7 @@ function similarMovies(movie) {
 
     // Filtering movies with similar release date
     for (let i = 0; i < movie_copy.length; i++) {
-        if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 10) {
+        if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 15 || Math.abs(movie_copy[i].year - movie.year) <= 10) {
             new_arr.push(movie_copy[i]);
         }
     }
@@ -16,6 +19,7 @@ function similarMovies(movie) {
             new_arr.splice(i, 1);
         }
     }
+
 
     // Selecting 4 random values from new_arr
     let selectedMovies = [];
@@ -27,7 +31,7 @@ function similarMovies(movie) {
     // Generate unique random indices
     const randomIndices = [];
     while (randomIndices.length < numSelections) {
-        
+
         const randomIndex = Math.floor(Math.random() * length);
         if (!randomIndices.includes(randomIndex)) {
             randomIndices.push(randomIndex);
@@ -38,14 +42,12 @@ function similarMovies(movie) {
     for (let i = 0; i < numSelections; i++) {
         selectedMovies.push(new_arr[randomIndices[i]]);
     }
-
-
     return selectedMovies
 }
 
 
-// Rederaction of pages
 
+// Rederaction of pages
 function renderRedirectUserPage(parentID, instanceData) {
 
     // document.querySelector("#usernametext").innerHTML = instanceData.username;

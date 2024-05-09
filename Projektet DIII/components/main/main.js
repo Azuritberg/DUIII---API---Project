@@ -1,3 +1,5 @@
+"use strict";
+
 let savedMovies = [];
 
 async function renderMain(parentID, sameMovies = []) {
@@ -36,14 +38,13 @@ async function renderMain(parentID, sameMovies = []) {
 
         p.classList.add("movieTitleText")
 
-
         mainBox.children[i].addEventListener("mouseover", function (event) {
 
             let hoverId = event.target.id;
             let hoverMoviePoster = document.querySelectorAll(".poster");
             for (let i = 0; i < movies.length; i++) {
                 if (hoverId == movies[i].id) {
-                    text = movies[i].title;
+                    let text = movies[i].title;
                     p.textContent = text;
                 }
             }

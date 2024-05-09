@@ -473,7 +473,7 @@
         {
             "user_id": 2,
             "username": "johannes",
-            "password": "trumppinne",
+            "password": "trumpinne",
             "liked_movies": []
         },
         {
@@ -486,12 +486,6 @@
             "user_id": 4,
             "username": "bojana",
             "password": "bell",
-            "liked_movies": []
-        },
-        {
-            "user_id": 5,
-            "username": "test",
-            "password": "test",
             "liked_movies": []
         }
     ]

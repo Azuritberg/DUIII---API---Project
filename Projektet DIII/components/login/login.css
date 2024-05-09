@@ -89,6 +89,18 @@
     background-color: #515458;
 }
 
+#newUsername,
+#newPassword {
+    height: 30px;
+    width: 300px;
+    border-radius: 20px;
+    padding-left: 14px;
+    color: #F6F4F4;
+    font-size: 15px;
+    border: 2px solid #F6F4F4;
+    background-color: #515458;
+}
+
 
 #register:hover,
 #logIn:hover {
@@ -115,16 +127,11 @@
 }
 
 #eye {
-
     display: none;
-
-
 }
 
 .custom-checkbox {
     width: 10px;
-
-
 
     margin-left: auto;
     margin-right: auto;
