@@ -186,19 +186,28 @@ async function createNewUser(event) {
 
   try {
     const registerUserObject = await State.POST(newUser);
-
     if (registerUserObject != undefined) {
-
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
-      changeModalContent(document.getElementById("loginModal"), "logInButton");
-      
-      // koden är inte klar.....
       console.log("User registered successfully", registerUserObject);
+      // Ändra modalens innehåll till login och öppna den
+      changeModalContent(document.getElementById("loginModal"), "logInButton");
+      openModal(document.getElementById("loginModal"));
     } else {
       console.error("Error registering user", registerUserObject);
     }
   } catch (error) {
     console.error("Error registering user", error);
+  }
+}
+
+// Change modal content and open login modal
+function changeModalContent(modal, type) {
+  if (type === 'logInButton') {
+    modal.innerHTML = loginModalContent();
+    // Add event listeners to the new login form
+    document.getElementById('logInButton').addEventListener('click', loginUser);
+  } else if (type === 'registerButton') {
+    modal.innerHTML = registerModalContent();
   }
 }
 
@@ -212,7 +221,6 @@ function logoutUser() {
 
   window.location.replace('index.html'); // Go to main'index.html' 
 }
-
 
 
 
