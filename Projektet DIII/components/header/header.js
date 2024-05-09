@@ -45,7 +45,6 @@ function renderHeader(parentID, instanceData) {
 
 }
 
-// Visa eller dölj userButton beroende baserat på om någon är inloggad
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
