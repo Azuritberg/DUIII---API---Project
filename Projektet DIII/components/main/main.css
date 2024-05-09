@@ -50,7 +50,6 @@ body {
 
 .posterDiv {
     height: 240px;
-
     margin: 10px;
     display: flex;
     border: 2px solid #F6F4F4;
@@ -66,13 +65,11 @@ body {
 .posterDiv>p {
     display: none;
     color: #F6F4F4;
-    ;
     font-size: 16px;
     background: rgb(40, 66, 99, 0.8);
     margin: 0;
     width: 100%;
     font-family: MT-semibold;
-
     align-items: center;
     justify-content: center;
     padding: 10px;
@@ -81,12 +78,9 @@ body {
 .posterDiv:hover {
     cursor: pointer;
     box-shadow: 1px 1px 20px #F6F4F4;
-
 }
 
 
 .posterDiv:hover>p {
-
     display: flex;
-
 }

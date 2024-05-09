@@ -18,6 +18,7 @@ function renderHeader(parentID, instanceData) {
     </div>
   `;
 
+  // Klicka på userButton om användaren är inloggad
   let userButton = document.getElementById("userbtn");
   userButton.addEventListener("click", function () {
     const instanceData = {username: localStorage.getItem("username")}; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
@@ -41,13 +42,13 @@ function renderHeader(parentID, instanceData) {
 
 }
 
-
+// Visa eller dölj userButton beroende baserat på om någon är inloggad
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
   console.log("Logout successful");
 
-  // Gör usrbtn osynlig
+  // Gör userButton osynlig
   const userButton = document.getElementById("userbtn");
   userButton.style.display = 'none';
 

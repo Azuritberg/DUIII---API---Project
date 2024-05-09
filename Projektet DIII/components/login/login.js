@@ -191,9 +191,7 @@ async function createNewUser(event) {
 
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
       changeModalContent(document.getElementById("loginModal"), "logInButton");
-
-      //window.location.replace(`${window.location.origin}/login`);
-
+      
       // koden är inte klar.....
       console.log("User registered successfully", registerUserObject);
     } else {

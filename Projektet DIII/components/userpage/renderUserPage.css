@@ -24,17 +24,6 @@
 }
 
 
-/* 
-body {
-    background-image: url(../../images/background/space-7709489_1920.jpg);
-    color: whitesmoke;
-
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-    
-} */
-
 #userContainer {
     display: flex;
     justify-content: center;
@@ -166,7 +155,6 @@ body {
     width: 1110px;
     grid-template-columns: repeat(2, 1fr);
     margin: 0 0;
-    
 }
 
 #likes,

@@ -100,7 +100,6 @@ function generateMovierray() {
     let new_arr = [];
     let rndm = getRandomPoster(movie_copy)
 
-
     for (let i = 0; i < rndm.length; i++) {
         new_arr.push(movie_copy[rndm[i]])
 
@@ -127,8 +126,8 @@ function generatePosters(randomIndexArray, instanceData) {
         // "url('path/to/your/image.jpg')"
         savedMovies.push(instanceData[randomIndexArray[i]]);
     }
-
 }
+
 
 function getRandomPoster(movies) {
     let randomNumbers = new Set();
