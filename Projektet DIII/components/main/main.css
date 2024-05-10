@@ -14,20 +14,21 @@ body {
     align-items: center;
     width: 100%;
     justify-content: center;
-    height: 95%;
+    height: 80%;
 }
 
 #mainBox {
     background-color: rgba(178, 178, 178, 0.408);
     border: 2px solid #F6F4F4;
-    border-radius: 10px;
+    border-radius: 8px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     margin-bottom: 20px;
     margin-top: 30px;
     padding: 10px;
     height: 530px;
-    width: 950px;
+    /* width: 950px; */
+    width: 1100px;
 }
 
 #infoText {
@@ -52,7 +53,7 @@ body {
     height: 240px;
     margin: 10px;
     display: flex;
-    border: 2px solid #F6F4F4;
+    border: 1.5px solid #F6F4F4;
     border-radius: 5px;
     background-position: center;
     background-size: cover;
@@ -67,6 +68,7 @@ body {
     color: #F6F4F4;
     font-size: 16px;
     background: rgb(40, 66, 99, 0.8);
+    border-radius: 3px;
     margin: 0;
     width: 100%;
     font-family: MT-semibold;

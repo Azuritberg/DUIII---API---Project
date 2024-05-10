@@ -35,19 +35,19 @@ function renderMoviesPage(parentID, instanceData) {
             </div>
             <div id="addReview">
                 <div id="review"> 
-                    <h3>Review by: SpaceFan01</h3>
+                    <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
                     <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
                 <div id="review"> 
-                <h3>Review by: SpaceFan01</h3>
+                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
                 <div id="review"> 
-                <h3>Review by: SpaceFan01</h3>
+                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
                 <div id="review"> 
-                <h3>Review by: SpaceFan01</h3>
+                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
                 <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
             </div>
@@ -96,7 +96,6 @@ function renderMoviesPage(parentID, instanceData) {
             heart.setAttribute("src", "./icons/white-heart-fill.png")
         }
     });
-
 }
 
 

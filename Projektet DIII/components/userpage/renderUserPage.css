@@ -37,7 +37,7 @@
     justify-content: center;
     font-size: 2.5rem;
     font-family: MT-black;
-    margin: 40px 0 40px 0;
+    margin: 70px 0 50px 0;
     color: whitesmoke;
 }
 
@@ -73,8 +73,8 @@
 }
 
 #likedMovie {
-  border: 2px solid #F6F4F4;
-  border-radius: 5px;
+  border: 1.3px solid #F6F4F4;
+  border-radius: 2.5px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -134,34 +134,44 @@
     padding: 40px;
 }
 
-#reviewHeader  {
-    border-bottom: 2px solid #F6F4F4;
+#reviewHeader {
+    border-bottom: 1.5px solid #F6F4F4;
     font-family: MT-medium;
+    padding-bottom: 12px;
+    font-size: 14px;
     color: #F6F4F4;
 }
 
 
 .reviewText {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    font-family: MT-medium;
+    font-size: 14px;
 }
 
 .userSpan {
     font-family: MT-extrabold;
+    font-size: 20px;
+}
+
+.reviewMovie {
+    font-family: MT-medium;
+    font-size: 14px;
 }
 
 #topText {
     display: grid;
     justify-content: space-around;
-    width: 1110px;
     grid-template-columns: repeat(2, 1fr);
+    width: 1110px;
     margin: 0 0;
 }
 
 #likes,
 #reviews {
     border: 2px solid #F6F4F4;;
-    border-radius: 10px 10px 0 0;
+    border-radius: 8px 8px 0 0;
     background-color: #51545899;
 }
 

@@ -23,13 +23,14 @@
     height: 325px;
     /* min-height: 40%; */
     padding: 50px;
-    background: #515458;
+    background: #515458b5;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s, visibility 0.3s;
     transition: ease-in-out;
+    backdrop-filter: blur(10px);
 }
 
 .modal-content {
@@ -53,9 +54,8 @@
     opacity: 1;
     visibility: visible;
     padding: 0;
-    opacity: 0.9;
+    /* opacity: 0.9; */
     border-radius: 10px;
-
 }
 
 .modal-content h1 {
@@ -63,6 +63,18 @@
     color: #F6F4F4;
 }
 
+#loginForm,
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#passwordHolder {
+    width: 329px;
+    position: relative;
+}
 
 #logInButton,
 #registerButton {
@@ -104,7 +116,6 @@
 #register:hover,
 #logIn:hover {
     transform: scale(1.07);
-    background: none;
 }
 
 #noAccount {
@@ -119,7 +130,7 @@
 #logIn,
 #register {
     border: none;
-    background-color: #515458;
+    background: none;
     cursor: pointer;
     font-family: MT-semibold;
     color: #F6F4F4;
@@ -132,10 +143,11 @@
 
 .custom-checkbox {
     width: 10px;
-
     margin-left: auto;
     margin-right: auto;
-
+    position: absolute;
+    bottom: 8%;
+    right: 30px;
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -157,8 +169,8 @@
 
 
 label[for="eye"] {
-    position: absolute;
+    /* position: absolute;
 
     right: 109px;
-    bottom: 121px;
+    bottom: 121px; */
 }

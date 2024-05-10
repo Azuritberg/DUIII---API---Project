@@ -1,3 +1,6 @@
+"use strict";
+
+
 function renderHeader(parentID, instanceData) {
   let header = document.createElement("div");
   parentID.append(header);

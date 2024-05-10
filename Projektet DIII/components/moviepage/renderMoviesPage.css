@@ -14,12 +14,12 @@
     width: 1300px;
     background-color: #51545899;
     border: 2px solid #F6F4F4;
-    border-radius: 10px;
+    border-radius: 8px;
     margin: 30px;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr 2fr;
-    margin-top: 50px;
+    margin-top: 150px;
 }
 
 #mainLeft {
@@ -35,7 +35,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    border: 2px solid #F6F4F4;
+    border: 1.5px solid #F6F4F4;
     border-radius: 5px;
     background-image: url(./images/posters/2001-a-space-odyssey.jpeg);
 }
@@ -46,7 +46,8 @@
     flex-direction: column;
     margin-right: 30px;
     color: #F6F4F4;
-    border-bottom: 2px solid #F6F4F4;
+    border-bottom: 1.5px solid #F6F4F4;
+    margin-bottom: 10px;
     height: 200px;
     margin-top: 50px;
 }
@@ -84,15 +85,13 @@
 }
 
 .smallPosters:hover>p {
-
     display: flex;
-
 }
 
 
 .smallPosters {
-    border: 2px solid #F6F4F4;
-    border-radius: 5px;
+    border: 1.3px solid #F6F4F4;
+    border-radius: 3.5px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -107,6 +106,7 @@
     color: white;
     font-size: 13px;
     background: rgb(40, 66, 99, 0.8);
+    border-radius: 2.5px;
     margin: 0;
     width: 100%;
     font-family: MT-semibold;
@@ -164,11 +164,28 @@
 }
 
 #review {
-    font-family: MT-bold-italic;
-    font-size: 12px;
     margin: 5px 20px 5px 20px;
-    border-bottom: 1px solid #F6F4F4;
-    color: whitesmoke;
+    border-bottom: 1.5px solid #F6F4F4;
+    padding-bottom: 12px;
+    color: #F6F4F4;
+}
+
+#review > h3 {
+    font-family: MT-medium;
+    font-size: 15px;
+    color: #F6F4F4;
+}
+
+.reviewSpan {
+    font-family: MT-extrabold;
+    font-size: 15px;
+    color: #F6F4F4;
+}
+
+#review > p {
+    font-family: MT-medium-italic;
+    font-size: 13px;
+    color: #F6F4F4;
 }
 
 
