@@ -1,3 +1,6 @@
+
+
+
 header {
     background-color: rgba(0, 2, 20, 0.7);
     /*0.779 */
@@ -12,11 +15,11 @@ header {
 }
 
 #headerMiddle p {
-    font-size: 50px;
-    color: #F6F4F4;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
+    color: #F6F4F4;
     margin: 15px;
     /* margin-left: 204px; */
 }
@@ -43,30 +46,23 @@ header {
     /* filter: drop-shadow(0 5mm 3mm rgb(246, 231, 8)); */   
 }
 
-
-/* img {
-    height: 70px;
-    margin: 15px;
-    cursor: pointer;
-} */
-
 #headerRight {
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 10px;
-    width: 200px;
     position: absolute;
+    width: 200px;
     right: 0px;
+    gap: 10px;
 }
 
 #login {
     height: 35px;
     width: 85px;
-    border-radius: 18px;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 18px;
     font-family: MT-bold-italic;
 }
 

@@ -1,7 +1,6 @@
-/* #000214 */
-/* #284263 */
-/* #515458 */
-/* #F6F4F4 */
+
+
+/* FONTS */
 
 @font-face {
     font-family: LM-medium;
@@ -37,7 +36,17 @@
     font-family: MT-medium-italic;
     src: url(../../fonts/Montserrat/static/Montserrat-MediumItalic.ttf);
 }
+
+
 body {
     margin: 0;
 }
+
+
+/* COLORS  */
+
+/* #000214 */
+/* #284263 */
+/* #515458 */
+/* #F6F4F4 */
 
