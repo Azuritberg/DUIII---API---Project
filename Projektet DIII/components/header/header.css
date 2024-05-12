@@ -34,7 +34,7 @@ header {
     margin: 15px;
     cursor: pointer;
     margin-left: 25px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
 }
 
 #logo:hover {
