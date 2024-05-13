@@ -1,7 +1,6 @@
 <?php
-//ta emot anävndar id:t och film id:t och texten som skrivits
-//sedan skapa fixa ett nytt review_id så att den går att radera sen.
-//sedan skapa ett nytt reveiwobjekt med review_id, user_id, movie_id och review.
+//tar emot anävndar id:t och film id:t och texten som skrivits
+
 ini_set("display_errors", 0);
 
 require_once ("./functions.php");
@@ -43,6 +42,7 @@ if ($request_method == "POST") {
             send_json("Review can't be empty", 400);
         }
 
+        //kollar att user id och movie id är siffror
         if (!is_numeric($user_id) || !is_numeric($movie_id)) {
             if (!is_numeric($reveiw_id)) {
                 send_json("user_id has to be a number", 400);
@@ -51,6 +51,7 @@ if ($request_method == "POST") {
             }
         }
 
+        //ger varje review ett unikt id.
         $highest_review_id = 0;
         foreach ($reviews as $review) {
             if ($highest_review_id < $review["review_id"]) {
@@ -73,9 +74,7 @@ if ($request_method == "POST") {
 }
 
 if ($request_method == "DELETE") {
-    // ska ta bort en review
-    // tar emot review_id:t loopar genom alla reviews och hittar reviewn med det id:t
-    // tar bort reviewn från databasen och uppdaterar databasen med reviewn borttagen.
+    //tar emot ett "review_id"
 
     $database = get_database();
     $reviews = $database["reviews"];
@@ -100,20 +99,16 @@ if ($request_method == "DELETE") {
             send_json("review_id has to be a number", 400);
         }
 
-        // $review_found = false;
+        //loopar genom alla reviews och splicear reviewn man vill ta bort från arrayen
         $deleted_review = null;
         foreach ($reviews as $index => $review) {
             if ($review_id == $review["review_id"]) {
                 $deleted_review = $review;
-                // $review_found = true;
                 array_splice($reviews, $index, 1);
             }
         }
 
-        // if (!$review_found) {
-        //     send_json("Review not found", 404);
-        // }
-
+        //kollar att reviewn man vill ta bort inte är null och uppdaterar databasen
         if ($deleted_review != null) {
             $database["reviews"] = $reviews;
             file_put_contents($filename, json_encode($database, JSON_PRETTY_PRINT));

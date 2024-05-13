@@ -1,4 +1,5 @@
 <?php
+// tar emot "username": och "password":
 
 require_once ("./functions.php");
 

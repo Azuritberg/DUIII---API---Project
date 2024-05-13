@@ -1,4 +1,5 @@
 <?php
+//tar emot användar id:t och ett film id.
 
 ini_set("display_errors", 0);
 
