@@ -7,7 +7,7 @@ $request_method = $_SERVER["REQUEST_METHOD"];
 $content_type = $_SERVER["CONTENT_TYPE"];
 $request_json = file_get_contents("php://input");
 $request_data = json_decode($request_json, true);
-$filename = "database_clone.json";
+$filename = "database.json";
 
 if ($request_method != "PATCH") {
     send_json("Method not allwoed", 405);
