@@ -15,7 +15,6 @@ async function renderApp() {
     const movie_resource = await movie_response.json();
     STATE.movies = movie_resource;
 
-
     let movies = State.GET("movies");
     renderStructure();
 }
@@ -40,10 +39,9 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                if (loginResource != undefined) {
-                    console.log(loginResource);
-                    // // STATE.user.push(loginResource);
-                    // console.log(STATE.user);
+                if (loginResource !== undefined) {
+                    // console.log(loginResource);
+                    STATE.user.push(loginResource);
                     return loginResource;
                 }
                 //console.log(loginResource);
@@ -105,6 +103,9 @@ async function fetcher(request) {
 
     try {
         let response = await fetch(request);
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
         let resource = await response.json();
         return resource;
     } catch (error) {

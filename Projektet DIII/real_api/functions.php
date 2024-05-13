@@ -11,7 +11,7 @@ function send_json($data, $status = 200)
 
 function get_database()
 {
-    $database_json = file_get_contents("database.json");
+    $database_json = file_get_contents("database_clone.json");
     $database = json_decode($database_json, true);
     if (isset($database) == false) {
         send_json("the database does not exist", 500);
@@ -21,7 +21,8 @@ function get_database()
 
 function check_content_type($type)
 {
-    if ($type !== "application/json") {
+    if ($type != "application/json") {
+        // return false;
         send_json("Wrong content type", 400);
     } else {
         return true;
