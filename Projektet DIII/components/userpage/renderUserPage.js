@@ -71,12 +71,13 @@ function renderUserPage(parentID, instanceData) {
     }
 
 
+    // DELETE BUTTON REVIEWS
     const deleteLikeButton = document.getElementById("deleteButton");
     deleteLikeButton.addEventListener("click", (event) => {
         
     });
 
-
+    
     const likedMovieUserPage = document.getElementById("likedMovie");
     likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
 
