@@ -77,18 +77,6 @@ function getHome(event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
   // ${instanceData && instanceData.userName ? instanceData.userName : ""}
   
   // ${instanceData ? instanceData.userName : ""}
