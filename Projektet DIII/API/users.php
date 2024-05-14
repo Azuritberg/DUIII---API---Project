@@ -1,6 +1,7 @@
 <?php
 // tar emot "username": och "password":
 
+ini_set("display_errors", 0);
 require_once ("./functions.php");
 
 $request_method = $_SERVER["REQUEST_METHOD"];
@@ -9,10 +10,6 @@ $request_json = file_get_contents("php://input");
 $request_data = json_decode($request_json, true);
 $filename = "database.json";
 $allowed_methods = ["GET", "POST"];
-
-// if ($request_method != "POST") {
-//     send_json("Method not allowed", 405);
-// }
 
 if (!in_array($request_method, $allowed_methods)) {
     send_json("Method not allowed", 405);

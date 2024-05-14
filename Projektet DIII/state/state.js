@@ -13,9 +13,16 @@ async function renderApp() {
     const movie_request = new Request("./API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
-    STATE.movies = movie_resource;
+    STATE.movies = movie_resource
+
+    const user_request = new Request("./API/users.php");
+    const user_response = await fetch(user_request);
+    const user_resource = await user_response.json();
+    STATE.user = user_resource;
+
 
     let movies = State.GET("movies");
+    let users = State.GET("user");
     renderStructure();
 }
 renderApp();
@@ -59,12 +66,13 @@ const State = {
                 return registerRequest
                 break;
             case "reviews":
-                const reviewRequest = new Request("", {
+                const reviewRequest = new Request("./API/reviews.php", {
                     method: "POST",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 })
                 let reviewResource = await fetcher(reviewRequest);
+                console.log(reviewResource)
                 break;
             default:
                 break;
