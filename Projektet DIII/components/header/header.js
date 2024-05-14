@@ -24,8 +24,16 @@ function renderHeader(parentID, instanceData) {
   // Klicka på userButton om användaren är inloggad
   let userButton = document.getElementById("userbtn");
   userButton.addEventListener("click", function () {
-    const instanceData = {username: localStorage.getItem("username")}; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
-    renderRedirectUserPage("mainPage", instanceData);
+    let usernameStorage=localStorage.getItem("username")
+    let users_copy=State.GET("user")
+    for (let i = 0; i < users_copy.length; i++) {
+      if (users_copy[i].username===usernameStorage) {
+        const instanceData =  users_copy[i]; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
+        renderRedirectUserPage("mainPage", instanceData);
+      }
+      
+    }
+    
   });
 
   // Visa eller dölj userButton beroende baserat på om användaren är inloggad
