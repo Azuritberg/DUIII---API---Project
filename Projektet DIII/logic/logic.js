@@ -7,7 +7,7 @@ function similarMovies(movie) {
 
 
 
-    // Filtering movies with similar release date
+    // Filtering movies with similar release date and year
     for (let i = 0; i < movie_copy.length; i++) {
         if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 10 || Math.abs(movie_copy[i].year - movie.year) <= 2) {
             new_arr.push(movie_copy[i]);
@@ -57,6 +57,11 @@ function renderRedirectUserPage(parentID, instanceData) {
     renderUserPage("mainPage", instanceData);
 }
 
+// function addReview(user) {
+
+
+//     console.log(user)
+// }
 
 
 
