@@ -151,7 +151,7 @@ if (heart) {
 
     let addReview = document.getElementById("addReview");
     if (!isLoggedIn()) {
-        addReview.style.height = '300px';  // Ändra höjden när användaren inte är inloggad
+        addReview.style.height = '300px';
     }
 }
 
