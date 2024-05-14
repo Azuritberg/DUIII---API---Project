@@ -71,6 +71,7 @@ function renderMoviesPage(parentID, instanceData) {
                 div.append(h3);
 
                 let p = document.createElement("p");
+                p.classList.add("reviewInfo")
                 p.textContent = reviews_copy[i].review;
                 div.append(p);
 
