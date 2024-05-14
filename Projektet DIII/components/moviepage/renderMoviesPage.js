@@ -34,21 +34,21 @@ function renderMoviesPage(parentID, instanceData) {
                 <div class="smallPosters" id="smallPoster3"></div>
             </div>
             <div id="addReview">
-                <div id="review"> 
-                    <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
+                <div class="review"> 
+                    <h3>Review by: SpaceFan01</h3>
                     <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> 
-                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
-                <p>Yeah the film bros are right…you need to see this...</p>
+                <div class="review"> 
+                    <h3>Review by: SpaceFan01</h3>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> 
-                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
-                <p>Yeah the film bros are right…you need to see this...</p>
+                <div class="review"> 
+                    <h3>Review by: SpaceFan01</h3>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
-                <div id="review"> 
-                <h3>Review by<span class="reviewSpan"> SpaceFan01<span></h3>
-                <p>Yeah the film bros are right…you need to see this...</p>
+                <div class="review"> 
+                    <h3>Review by: SpaceFan01</h3>
+                    <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
             </div>
             <input type="text" placeholder="Add Review" id="userTextInput">
@@ -64,7 +64,7 @@ function renderMoviesPage(parentID, instanceData) {
 
     for (let i = 0; i < 4; i++) {
 
-        console.log(similarMoviesArray)
+
 
         let p = document.createElement("p")
 
@@ -83,6 +83,18 @@ function renderMoviesPage(parentID, instanceData) {
 
 
     }
+
+    let reviewInput = document.getElementById("userTextInput")
+
+    console.log(STATE)
+
+    reviewInput.addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+            let username = localStorage.username
+            let users_copy = State.GET("user")
+            console.log(users_copy)
+        }
+    })
 
 
 

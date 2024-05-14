@@ -1,3 +1,6 @@
+
+
+
 header {
     background-color: rgba(0, 2, 20, 0.7);
     /*0.779 */
@@ -12,11 +15,11 @@ header {
 }
 
 #headerMiddle p {
-    font-size: 50px;
-    color: #F6F4F4;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 50px;
+    color: #F6F4F4;
     margin: 15px;
     /* margin-left: 204px; */
 }
@@ -31,31 +34,35 @@ header {
     margin: 15px;
     cursor: pointer;
     margin-left: 25px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* img {
-    height: 70px;
-    margin: 15px;
-    cursor: pointer;
-} */
+#logo:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0 9px 6px rgb(246, 231, 8));
+
+    /* filter: drop-shadow(-1px 11px 8px rgb(251, 255, 38)); */
+    /* filter: drop-shadow(0 15px 8px rgb(246, 231, 8)); */
+    /* filter: drop-shadow(0 5mm 3mm rgb(246, 231, 8)); */   
+}
 
 #headerRight {
     display: flex;
     align-items: center;
     justify-content: end;
-    gap: 10px;
-    width: 200px;
     position: absolute;
+    width: 200px;
     right: 0px;
+    gap: 10px;
 }
 
 #login {
     height: 35px;
     width: 85px;
-    border-radius: 18px;
     border: none;
     cursor: pointer;
     font-size: 18px;
+    border-radius: 18px;
     font-family: MT-bold-italic;
 }
 
