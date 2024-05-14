@@ -231,6 +231,7 @@ function changeModalContent(modal, type) {
 // Logout user and go to mainPage 'index.html'
 function logoutUser() {
   localStorage.removeItem("user");
+  localStorage.removeItem("username");
   updateLoginLogoutButton();
   //renderHeader(parentID, null);
   console.log("Logout successful");

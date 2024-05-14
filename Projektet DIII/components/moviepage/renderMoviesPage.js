@@ -193,18 +193,37 @@ function checkLikedMovies() {
 
     let isLiked = false
 
+    //hittar rätt användare
     for (let i = 0; i < usersCopy.length; i++) {
         if (usersCopy[i].username === username) {
             let likedMovies = usersCopy[i].liked_movies;
 
+            //loopar genom användarens gillade filmer och kollar om de har samma id som hjärtat
             for (let j = 0; j < likedMovies.length; j++) {
                 if (heartId === likedMovies[j]) {
-                    console.log(heartId);
+                    //har de samma id uppdateras isLiked
                     isLiked = true;
-                    console.log(isLiked);
                 }
             }
         }
+    }
+
+    //hittar hjärtat från filmen man klickat på
+    let target_movie = document.getElementById(heartId);
+    //är isLiked true (finns med i liked_movies arrayen) läggs klassen liked till finns den inte med tas klassen bort
+    if (isLiked) {
+        target_movie.classList.add("liked");
+        console.log(target_movie);
+    } else {
+        target_movie.classList.remove("liked");
+        console.log(target_movie);
+    }
+
+    //hjärtat uppdateras baserat på klassen liked
+    if (target_movie.classList.contains("liked")) {
+        target_movie.setAttribute("src", "./icons/white-heart-fill.png");
+    } else {
+        target_movie.setAttribute("src", "./icons/white-heart.png");
     }
 }
 

@@ -91,7 +91,6 @@ const State = {
                         let username = localStorage.username;
                         if (likedMovieResource.username === username) {
                             STATE.user[i] = likedMovieResource;
-                            updateLikedMovies(likedMovieResource);
                             checkLikedMovies();
                             break;
                         }
