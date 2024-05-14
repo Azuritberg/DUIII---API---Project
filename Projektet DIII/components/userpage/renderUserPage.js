@@ -77,6 +77,8 @@ function renderUserPage(parentID, instanceData) {
     });
 
 
+    const likedMovieUserPage = document.getElementById("likedMovie");
+    likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
 
 
 
