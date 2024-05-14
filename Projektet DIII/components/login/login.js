@@ -177,7 +177,7 @@ async function loginUser(event) {
       console.log("Login successful");
     } else {
       console.error("Error logging in", loginUserObject);
-      alert("Login failed. Please check your credentials."); // Informera användaren om felaktig inloggning
+      alert("Wrong username or password, try again"); // Informera användaren om felaktig inloggning
     }
   } catch (error) {
     console.error("Error logging in", error);
