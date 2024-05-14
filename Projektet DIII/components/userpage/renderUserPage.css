@@ -1,3 +1,6 @@
+
+
+
 @font-face {
     font-family: MT-medium;
     src: url(../../fonts/Montserrat/static/Montserrat-Medium.ttf);
@@ -24,17 +27,6 @@
 }
 
 
-/* 
-body {
-    background-image: url(../../images/background/space-7709489_1920.jpg);
-    color: whitesmoke;
-
-    object-fit: cover;
-    background-size: cover;
-    background-position: center;
-    
-} */
-
 #userContainer {
     display: flex;
     justify-content: center;
@@ -46,16 +38,18 @@ body {
 #userNamePage {
     display: flex;
     justify-content: center;
-    font-size: 2.5rem;
     font-family: MT-black;
     margin: 40px 0 40px 0;
-    color: whitesmoke;
+    font-size: 2.5rem;
+    color: #F6F4F4;
+
+    /* margin: 70px 0 50px 0; */
 }
 
 #mainLikeReviweBox {
-  width: 1100px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  width: 1100px;
   gap: 40px;
 }
 
@@ -64,8 +58,8 @@ body {
     border: 2px solid #F6F4F4;
     border-radius: 0 0 10px 10px;
     overflow-y: auto;
-    height: 500px;
     border-top: none;
+    height: 500px;
 }
 #likeMain {
     display: flex;
@@ -75,40 +69,38 @@ body {
 }
 
 #likeMovieBox {
-    /* background-image: url(../../images/posters/2001-a-space-odyssey.jpeg); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 1fr;
-    gap: 20px;
     padding: 40px;
+    gap: 20px;
 }
 
 #likedMovie {
-  border: 2px solid #F6F4F4;
-  border-radius: 5px;
-  background-size: cover;
+  border: 1.3px solid #F6F4F4;
   background-repeat: no-repeat;
-  background-position: center;
-  height: 250px;
-  width: 200px;
+  background-size: cover;
+  border-radius: 2.5px;
   justify-self: center;
   place-self: center;
+  height: 250px;
+  width: 200px;
 }
 
 .likeTitle {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
     font-family: MT-black;
     color: #F6F4F4;
+    font-size: 2rem;
 }
 
 #likedTop {
   display: flex;
   flex-direction: column;
+  background-color: #1d2f47;
   position: sticky;
   top: 0;
-  background-color: #1d2f47;
 }
 
 
@@ -116,27 +108,27 @@ body {
 
 #reviewContainer {
     border: 2px solid #F6F4F4;
-    background-color: #51545899;;
+    background-color: #51545899;
     border-radius: 0 0 10px 10px;
     overflow-y: auto;
-    height: 500px;
     border-top: none;
+    height: 500px;
 }
 
 #reviewTop {
   display: flex;
   flex-direction: column;
+  background-color: #1d2f47;
   position: sticky;
   top: 0;
-  background-color: #1d2f47;
 }
 
 .reviewTitle {
     display: flex;
     justify-content: center;
-    font-size: 2rem;
     font-family: MT-black;
     color: #F6F4F4;
+    font-size: 2rem;
 }
 
 #reviewBottom {
@@ -146,34 +138,43 @@ body {
 }
 
 #reviewHeader {
-    border-bottom: 2px solid #F6F4F4;
+    border-bottom: 1.5px solid #F6F4F4;
     font-family: MT-medium;
+    padding-bottom: 12px;
     color: #F6F4F4;
+    font-size: 14px;
 }
 
 .reviewText {
     display: flex;
     justify-content: space-between;
+    font-family: MT-medium;
+    font-size: 14px;
 }
 
 .userSpan {
     font-family: MT-extrabold;
+    font-size: 20px;
+}
+
+.reviewMovie {
+    font-family: MT-medium;
+    font-size: 14px;
 }
 
 #topText {
     display: grid;
     justify-content: space-around;
-    width: 1110px;
     grid-template-columns: repeat(2, 1fr);
+    width: 1110px;
     margin: 0 0;
-    
 }
 
 #likes,
 #reviews {
-    border: 2px solid #F6F4F4;;
-    border-radius: 10px 10px 0 0;
+    border: 2px solid #F6F4F4;
     background-color: #51545899;
+    border-radius: 8px 8px 0 0;
 }
 
 #likes {
@@ -183,3 +184,4 @@ body {
 #reviews {
     margin: 0 10px 0 15px;
 }
+

@@ -1,36 +1,40 @@
+
+/* LOGIN */
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
+    opacity: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
     visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
     transition: opacity 0.3s, visibility 0.3s;
 }
 
 .modal {
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-
+    align-items: center;
     position: fixed;
+    
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    opacity: 0;
     width: 35%;
     height: 325px;
-    /* min-height: 40%; */
     padding: 50px;
-    background: #515458;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s, visibility 0.3s;
 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s, visibility 0.3s;
+    transform: translate(-50%, -50%);
+    backdrop-filter: blur(10px);
+    background: #515458b5;
+    transition: ease-in-out;
+    visibility: hidden;
 }
 
 .modal-content {
@@ -51,12 +55,11 @@
 
 .modal.active,
 .overlay.active {
-    opacity: 1;
     visibility: visible;
-    padding: 0;
-    opacity: 0.9;
     border-radius: 10px;
-
+    opacity: 1;
+    padding: 0;
+    /* opacity: 0.9; */
 }
 
 .modal-content h1 {
@@ -64,48 +67,59 @@
     color: #F6F4F4;
 }
 
+#loginForm,
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#passwordHolder {
+    position: relative;
+    width: 329px;
+}
 
 #logInButton,
 #registerButton {
-    width: 313px;
-    height: 35px;
     border: 2px solid #F6F4F4;
-    border-radius: 20px;
     font-family: MT-semibold;
+    border-radius: 20px;
     cursor: pointer;
     font-size: 15px;
+    width: 313px;
+    height: 35px;
     /* background-color: #515458; */
 }
 
 #username,
 #password {
-    height: 30px;
-    width: 300px;
+    border: 2px solid #F6F4F4;
+    background-color: #515458;
     border-radius: 20px;
     padding-left: 14px;
     color: #F6F4F4;
     font-size: 15px;
-    border: 2px solid #F6F4F4;
-    background-color: #515458;
+    height: 30px;
+    width: 300px;
 }
 
 #newUsername,
 #newPassword {
-    height: 30px;
-    width: 300px;
+    border: 2px solid #F6F4F4;
+    background-color: #515458;
     border-radius: 20px;
     padding-left: 14px;
     color: #F6F4F4;
     font-size: 15px;
-    border: 2px solid #F6F4F4;
-    background-color: #515458;
+    height: 30px;
+    width: 300px;
 }
 
 
 #register:hover,
 #logIn:hover {
     transform: scale(1.07);
-    background: none;
 }
 
 #noAccount {
@@ -119,24 +133,24 @@
 
 #logIn,
 #register {
-    border: none;
-    background-color: #515458;
-    cursor: pointer;
     font-family: MT-semibold;
     color: #F6F4F4;
+    cursor: pointer;
+    background: none;
+    border: none;
 }
 
 #eye {
     display: none;
-
 }
 
 .custom-checkbox {
-    width: 10px;
-
+    position: absolute;
     margin-left: auto;
     margin-right: auto;
-
+    bottom: 8%;
+    right: 30px;
+    width: 10px;
 }
 
 .custom-checkbox input[type="checkbox"] {
@@ -144,12 +158,13 @@
 }
 
 .custom-checkbox label {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
     background-image: url('../../icons/hidden.png');
     background-size: cover;
+    display: inline-block;
     cursor: pointer;
+
+    width: 20px;
+    height: 20px;
 }
 
 .custom-checkbox input[type="checkbox"]:checked+label {
@@ -158,8 +173,8 @@
 
 
 label[for="eye"] {
-    position: absolute;
+    /* position: absolute;
 
     right: 109px;
-    bottom: 121px;
+    bottom: 121px; */
 }

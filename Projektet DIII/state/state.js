@@ -10,11 +10,10 @@ const STATE = {
 }
 
 async function renderApp() {
-    const movie_request = new Request("API/movies.php");
+    const movie_request = new Request("./API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
     STATE.movies = movie_resource;
-
 
     let movies = State.GET("movies");
     renderStructure();
@@ -36,23 +35,22 @@ const State = {
                 // console.log(data);
                 // console.log(JSON.stringify(data.row));
                 // console.log(JSON.parse(data.row));
-                const loginRequest = new Request("API/login.php", {
+                const loginRequest = new Request("./API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 });
                 let loginResource = await fetcher(loginRequest);
-                if (loginResource != undefined) {
-                    console.log(loginResource);
-                    // // STATE.user.push(loginResource);
-                    // console.log(STATE.user);
+                if (loginResource !== undefined) {
+                    // console.log(loginResource);
+                    STATE.user.push(loginResource);
                     return loginResource;
                 }
                 //console.log(loginResource);
                 break;
             case "register":
                 console.log(data);
-                const registerRequest = new Request("../API/users.php", {
+                const registerRequest = new Request("./API/users.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
@@ -107,6 +105,9 @@ async function fetcher(request) {
 
     try {
         let response = await fetch(request);
+        if (!response.ok) {
+            throw new Error(response.statusText);
+        }
         let resource = await response.json();
         return resource;
     } catch (error) {

@@ -15,7 +15,7 @@ function renderMoviesPage(parentID, instanceData) {
         <div id="topRight">
             <div id="firstBox">
                 <h1 id="title">${instanceData.title}</h1>
-                <img id="heart" src="../icons/white-heart.png"alt="">
+                <img id="heart" src="./icons/white-heart.png"alt="">
             </div>
             <div id="secondbox">
                 <h2 id="year">(${instanceData.year}) ${instanceData.director}</h2>
@@ -102,13 +102,12 @@ function renderMoviesPage(parentID, instanceData) {
     // HEART FILL
     const heart = document.getElementById("heart");
     heart.addEventListener("click", function () {
-        if (heart.getAttribute("src") != "../icons/white-heart.png") {
-            heart.setAttribute("src", "../icons/white-heart.png")
+        if (heart.getAttribute("src") != "./icons/white-heart.png") {
+            heart.setAttribute("src", "./icons/white-heart.png")
         } else {
-            heart.setAttribute("src", "../icons/white-heart-fill.png")
+            heart.setAttribute("src", "./icons/white-heart-fill.png")
         }
     });
-
 }
 
 

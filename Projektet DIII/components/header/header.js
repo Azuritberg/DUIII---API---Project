@@ -1,3 +1,6 @@
+"use strict";
+
+
 function renderHeader(parentID, instanceData) {
   let header = document.createElement("div");
   parentID.append(header);
@@ -18,14 +21,15 @@ function renderHeader(parentID, instanceData) {
     </div>
   `;
 
-  let userbtn = document.getElementById("userbtn");
-  userbtn.addEventListener("click", function () {
-    const instanceData = {username: localStorage.getItem("username")};
+  // Klicka på userButton om användaren är inloggad
+  let userButton = document.getElementById("userbtn");
+  userButton.addEventListener("click", function () {
+    const instanceData = {username: localStorage.getItem("username")}; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
     renderRedirectUserPage("mainPage", instanceData);
   });
 
-  // Visa eller dölj userbtn baserat på om användaren är inloggad
-  userbtn.style.display = isLoggedIn() ? 'block' : 'none';
+  // Visa eller dölj userButton beroende baserat på om användaren är inloggad
+  userButton.style.display = isLoggedIn() ? 'block' : 'none';
 
   document.getElementById("login").addEventListener("click", function () {
     if (instanceData && isLoggedIn()) {
@@ -41,18 +45,12 @@ function renderHeader(parentID, instanceData) {
 
 }
 
-
-    // login modal  
-  renderHeaderLogin();
-
-
-
 function logoutUser() {
   localStorage.removeItem("user");  // Remove user from localStorage
   localStorage.removeItem("username"); // Remove username from localStorage
   console.log("Logout successful");
 
-  // Gör usrbtn osynlig
+  // Gör userButton osynlig
   const userButton = document.getElementById("userbtn");
   userButton.style.display = 'none';
 

@@ -43,15 +43,16 @@ function loginModalContent() {
   return `
       <div class="modal-content">
           <h1>Login</h1>
-          <form>
-              <input type="text" placeholder="Username" id="username"><br><br>
-              <input type="password" placeholder="Password" id="password">
-              <div class="custom-checkbox">
-                  <input type="checkbox" id="eye">
-                  <label for="eye"></label>
+          <form id="loginForm">
+              <input type="text" placeholder="Username" id="username"><br>
+              <div id="passwordHolder">
+                <input type="password" placeholder="Password" id="password">
+                <div class="custom-checkbox">
+                    <input type="checkbox" id="eye">
+                    <label for="eye"></label>
+                </div>
               </div>
 
-              
               <br><br>
               <button id="logInButton" type="submit">Login</button>
               <div id="noAccount">
@@ -67,9 +68,16 @@ function registerModalContent() {
   return `
       <div class="modal-content">
           <h1>Register</h1>
-          <form>
-              <input type="text" placeholder="Create username" id="newUsername"><br><br>
-              <input type="password" placeholder="Create password" id="newPassword"><br><br>
+          <form id="registerForm">
+              <input type="text" placeholder="Create username" id="newUsername"><br>
+              <div id="passwordHolder">
+                <input type="password" placeholder="Create password" id="newPassword"><br>
+                <div class="custom-checkbox">
+                      <input type="checkbox" id="eye">
+                      <label for="eye"></label>
+                  </div>
+                </div>
+              <br><br>
               <button id="registerButton" type="submit">Register</button>
               <div id="noAccount">
                 <p>Already have an account?</p>
@@ -99,14 +107,13 @@ function openModal(modal) {
   let eyeCheckbox = document.getElementById('eye');
   let passwordInput = document.getElementById('password');
 
-  eyeCheckbox.addEventListener('change', function () {
+  eyeCheckbox.addEventListener('change', function () {  // Toggle password visibility when checkbox is clicked
     if (this.checked) {
       passwordInput.type = 'text';
     } else {
       passwordInput.type = 'password';
     }
   });
-
 }
 
 // Close modal
@@ -186,21 +193,28 @@ async function createNewUser(event) {
 
   try {
     const registerUserObject = await State.POST(newUser);
-
     if (registerUserObject != undefined) {
-
       localStorage.setItem("newUser", JSON.stringify(registerUserObject.id));
-      changeModalContent(document.getElementById("loginModal"), "logInButton");
-
-      //window.location.replace(`${window.location.origin}/login`);
-
-      // koden är inte klar.....
       console.log("User registered successfully", registerUserObject);
+      // Ändra modalens innehåll till login och öppna den
+      changeModalContent(document.getElementById("loginModal"), "logInButton");
+      openModal(document.getElementById("loginModal"));
     } else {
       console.error("Error registering user", registerUserObject);
     }
   } catch (error) {
     console.error("Error registering user", error);
+  }
+}
+
+// Change modal content and open login modal
+function changeModalContent(modal, type) {
+  if (type === 'logInButton') {
+    modal.innerHTML = loginModalContent();
+    // Add event listeners to the new login form
+    document.getElementById('logInButton').addEventListener('click', loginUser);
+  } else if (type === 'registerButton') {
+    modal.innerHTML = registerModalContent();
   }
 }
 
@@ -214,7 +228,6 @@ function logoutUser() {
 
   window.location.replace('index.html'); // Go to main'index.html' 
 }
-
 
 
 
