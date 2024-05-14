@@ -99,39 +99,3 @@ if ($request_method === "PATCH") {
 
 
 
-// $movie_found = false;
-// $found_user = null;
-// foreach ($users as $user) {
-//     if ($user["user_id"] === $current_user) {
-//         $found_user = &$user;
-//         break;
-//     }
-// }
-// if ($found_user === null) {
-//     send_json("user not found", 404);
-// }
-// $users_liked_movies = $found_user["liked_movies"];
-// foreach ($users_liked_movies as $movie_id) {
-//     if ($movie_id === $liked_movie) {
-//         $index = array_search($movie_id, $users_liked_movies);
-//         if ($index !== false) {
-//             unset($users_liked_movies[$index]);
-//             $found_user["liked_movies"] = $users_liked_movies;
-//             break;
-//         }
-//     }
-// }
-// if (!in_array($liked_movie, $found_user["liked_movies"])) {
-//     $found_user["liked_movies"][] = $liked_movie;
-// }
-
-// foreach ($users as $user_to_update) {
-//     if ($user_to_update["user_id"] === $current_user) {
-//         $user_to_update["liked_movies"] = $found_user["liked_movies"];
-//         $users[] = $user_to_update;
-//         $database["users"] = $users;
-//         break;
-//     }
-// }
-// file_put_contents($filename, json_encode($database, JSON_PRETTY_PRINT));
-// send_json($user_to_update, 201);
