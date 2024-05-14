@@ -1,4 +1,5 @@
 <?php
+//tar emot "username": "password":
 
 ini_set("display_errors", 0);
 
