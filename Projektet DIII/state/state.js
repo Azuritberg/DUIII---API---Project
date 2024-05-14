@@ -20,7 +20,6 @@ async function renderApp() {
     const user_resource = await user_response.json();
     STATE.user = user_resource;
 
-
     let movies = State.GET("movies");
     let users = State.GET("user");
     renderStructure();
