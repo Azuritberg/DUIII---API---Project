@@ -149,21 +149,21 @@
 .reviewText {
     display: flex;
     justify-content: space-between;
-    font-family: MT-medium;
+    font-family: MT-extrabold;;
     font-size: 14px;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 
 .userSpan {
-    font-family: MT-extrabold;
-    font-size: 20px;
-}
-
-.reviewMovie {
     font-family: MT-medium;
     font-size: 14px;
-    margin-top: 0;
 }
+
+/* .reviewMovie {
+    font-family: MT-medium;
+    font-size: 14px;
+    margin-top: 20px;
+} */
 
 #topText {
     display: grid;
@@ -190,10 +190,10 @@
 
 
 #deleteButton {
-    width: 50px;
-    background-color: #51545899;
+    width: 18px;
+    height: 20px;
+    /* background-color: #51545899; */
+    margin-top: 16px;
     cursor: pointer;
     border-radius: 5px;
-    color: white;
-    height: 25px;
 }

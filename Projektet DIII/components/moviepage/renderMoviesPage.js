@@ -51,7 +51,7 @@ function renderMoviesPage(parentID, instanceData) {
                     <p>Yeah the film bros are right…you need to see this...</p>
                 </div>
             </div>
-            <input type="text" placeholder="Add Review" id="userTextInput">
+            <input type="text" placeholder="Add Review and Press Enter" id="userTextInput">
         </div>
     </div>`;
 
