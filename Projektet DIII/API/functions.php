@@ -21,7 +21,8 @@ function get_database()
 
 function check_content_type($type)
 {
-    if ($type !== "application/json") {
+    if ($type != "application/json") {
+        // return false;
         send_json("Wrong content type", 400);
     } else {
         return true;
