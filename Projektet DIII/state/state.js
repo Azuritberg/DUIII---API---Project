@@ -20,9 +20,15 @@ async function renderApp() {
     const user_resource = await user_response.json();
     STATE.user = user_resource;
 
+    const reviews_request = new Request("./API/reviews.php");
+    const reviews_response = await fetch(reviews_request);
+    const reviews_resource = await reviews_response.json();
+    STATE.reviews = reviews_resource;
+
 
     let movies = State.GET("movies");
     let users = State.GET("user");
+    let reviews = State.GET("reviews");
     renderStructure();
 }
 renderApp();
@@ -72,7 +78,9 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 })
                 let reviewResource = await fetcher(reviewRequest);
-                console.log(reviewResource)
+                if (reviewResource != undefined) {
+
+                }
                 break;
             default:
                 break;

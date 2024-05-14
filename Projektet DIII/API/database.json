@@ -487,6 +487,42 @@
             "movie_id": 11,
             "user_id": 1,
             "review": "bra"
+        },
+        {
+            "review_id": 22,
+            "movie_id": 8,
+            "user_id": 1,
+            "review": "bra"
+        },
+        {
+            "review_id": 23,
+            "movie_id": 25,
+            "user_id": 1,
+            "review": "yo"
+        },
+        {
+            "review_id": 24,
+            "movie_id": 37,
+            "user_id": 1,
+            "review": "bra film"
+        },
+        {
+            "review_id": 25,
+            "movie_id": 34,
+            "user_id": 1,
+            "review": "cool"
+        },
+        {
+            "review_id": 26,
+            "movie_id": 34,
+            "user_id": 1,
+            "review": "awesome"
+        },
+        {
+            "review_id": 27,
+            "movie_id": 34,
+            "user_id": 2,
+            "review": "d\u00e5lig"
         }
     ],
     "users": [
