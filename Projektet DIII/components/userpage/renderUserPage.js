@@ -1,13 +1,15 @@
 "use strict";
 
+
 function renderUserPage(parentID, instanceData) {
-    // let username = localstorage.getItem("username");
-    // console.log(username);
-    console.log(instanceData);
+    // Spara sidinformation i localStorage
+    localStorage.setItem('currentPage', JSON.stringify(instanceData));
+
     let wrapper = document.getElementById(parentID);
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";
     wrapper.append(userContainer);
+
 
     userContainer.innerHTML = `
         <h1 id="userNamePage">${instanceData.username}</h1>
@@ -69,6 +71,8 @@ function renderUserPage(parentID, instanceData) {
             </div>
         </div>`;
     }
+
+    
 
 
 
