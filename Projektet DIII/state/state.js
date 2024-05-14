@@ -66,7 +66,6 @@ const State = {
                 return registerRequest
                 break;
             case "reviews":
-                console.log(JSON.stringify(data.row));
                 const reviewRequest = new Request("./API/reviews.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
