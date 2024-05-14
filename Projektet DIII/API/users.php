@@ -8,8 +8,13 @@ $content_type = $_SERVER["CONTENT_TYPE"];
 $request_json = file_get_contents("php://input");
 $request_data = json_decode($request_json, true);
 $filename = "database.json";
+$allowed_methods = ["GET", "POST"];
 
-if ($request_method != "POST") {
+// if ($request_method != "POST") {
+//     send_json("Method not allowed", 405);
+// }
+
+if (!in_array($request_method, $allowed_methods)) {
     send_json("Method not allowed", 405);
 }
 
@@ -63,4 +68,15 @@ if ($request_method === "POST") {
     } else {
         send_json("Bad request, only json allowed", 400);
     }
+}
+
+if ($request_method === "GET") {
+
+    $database = get_database();
+
+    $users = $database["users"];
+    if (empty($users)) {
+        send_json("Not found", 404);
+    }
+    send_json($users);
 }
