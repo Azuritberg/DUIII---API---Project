@@ -13,9 +13,22 @@ async function renderApp() {
     const movie_request = new Request("./API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
-    STATE.movies = movie_resource;
+    STATE.movies = movie_resource
+
+    const user_request = new Request("./API/users.php");
+    const user_response = await fetch(user_request);
+    const user_resource = await user_response.json();
+    STATE.user = user_resource;
+
+    const reviews_request = new Request("./API/reviews.php");
+    const reviews_response = await fetch(reviews_request);
+    const reviews_resource = await reviews_response.json();
+    STATE.reviews = reviews_resource;
+
 
     let movies = State.GET("movies");
+    let users = State.GET("user");
+    let reviews = State.GET("reviews");
     renderStructure();
 }
 renderApp();
@@ -61,10 +74,13 @@ const State = {
             case "reviews":
                 const reviewRequest = new Request("./API/reviews.php", {
                     method: "POST",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" }
                 })
                 let reviewResource = await fetcher(reviewRequest);
+                if (reviewResource != undefined) {
+
+                }
                 break;
             default:
                 break;

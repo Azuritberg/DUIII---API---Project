@@ -8,8 +8,8 @@ require_once ("./functions.php");
 
 if ($requestMethod == "GET") {
     $database = get_database();
-
     $movies = $database["movies"];
+
     if (empty($movies)) {
         send_json("Not found", 404);
     }
