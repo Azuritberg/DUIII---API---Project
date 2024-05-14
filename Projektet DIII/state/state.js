@@ -89,7 +89,7 @@ const State = {
     PATCH: async function (data) {
         switch (data.entity) {
             case "users":
-                const likedMovieRequest = new Request("", {
+                const likedMovieRequest = new Request("./API/like_movie.php", {
                     method: "PATCH",
                     body: data.row,
                     headers: { "Content-Type": "application/json" },
@@ -103,7 +103,7 @@ const State = {
     DELETE: async function (data) {
         switch (data.entity) {
             case "users":
-                const removeLikedMovieRequest = new Request("", {
+                const removeLikedMovieRequest = new Request("./API/reviews.php", {
                     method: "DELETE",
                     body: data.row,
                     headers: { "Content-Type": "application/json" },

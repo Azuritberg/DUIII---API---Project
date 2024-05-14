@@ -72,7 +72,7 @@ header {
 
 #userbtn {
     background-image: url("./icons/user.png");
-    height: 48px;
+    height: 44px;
     cursor: pointer;
     margin-right: 20px;
 }

@@ -39,6 +39,8 @@ function renderMoviesPage(parentID, instanceData) {
             <input type="text" placeholder="Add Review and Press Enter" id="userTextInput">
         </div>
     </div>`;
+
+
     renderReviews(instanceData)
     function renderReviews(instanceData) {
         let reviews_copy = State.GET("reviews");
@@ -77,7 +79,7 @@ function renderMoviesPage(parentID, instanceData) {
         }
     }
 
-
+    // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
 
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
@@ -101,13 +103,11 @@ function renderMoviesPage(parentID, instanceData) {
         poster.style.backgroundImage = `url('${similarMoviesArray[i].poster}')`
 
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
-
-
-
     }
 
+    // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
-
+    reviewInput.style.display = isLoggedIn() ? 'block' : 'none';
     console.log(STATE)
 
     reviewInput.addEventListener("keypress", function (event) {
@@ -132,26 +132,28 @@ function renderMoviesPage(parentID, instanceData) {
                     State.POST(data);
                     reviewInput.value = ""
                     renderReviews(instanceData)
-
-
                 }
-
             }
         }
     })
 
 
+    let heart = document.getElementById("heart");
+    if (heart) {
+        heart.style.display = isLoggedIn() ? 'block' : 'none';
+        heart.addEventListener("click", function () {
+            if (heart.getAttribute("src") !== "./icons/white-heart.png") {
+                heart.setAttribute("src", "./icons/white-heart.png");
+            } else {
+                heart.setAttribute("src", "./icons/white-heart-fill.png");
+            }
+        });
+    }
 
-
-    // HEART FILL
-    const heart = document.getElementById("heart");
-    heart.addEventListener("click", function () {
-        if (heart.getAttribute("src") != "./icons/white-heart.png") {
-            heart.setAttribute("src", "./icons/white-heart.png")
-        } else {
-            heart.setAttribute("src", "./icons/white-heart-fill.png")
-        }
-    });
+    let addReview = document.getElementById("addReview");
+    if (!isLoggedIn()) {
+        addReview.style.height = '300px';
+    }
 }
 
 

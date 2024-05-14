@@ -370,19 +370,19 @@
         },
         {
             "review_id": 2,
-            "movie_id": 2,
+            "movie_id": 1,
             "user_id": 3,
             "review": "COME ON"
         },
         {
             "review_id": 3,
             "movie_id": 1,
-            "user_id": 1,
+            "user_id": 4,
             "review": "This is the greatest movie ever made"
         },
         {
             "review_id": 4,
-            "movie_id": 25,
+            "movie_id": 2,
             "user_id": 2,
             "review": "do they need a fourth"
         },
@@ -394,49 +394,49 @@
         },
         {
             "review_id": 6,
-            "movie_id": 14,
+            "movie_id": 2,
             "user_id": 4,
             "review": "All I can say is that this is without doubt one of the boldest, most courageous things I\u2019ve ever seen. Brutally honest and empathetic. Staggering level of vulnerability."
         },
         {
             "review_id": 7,
-            "movie_id": 24,
-            "user_id": 1,
+            "movie_id": 3,
+            "user_id": 3,
             "reviews": "I was like - Yeah this is fine I suppose at first and then the climax ended up being one of the most insane things I've ever witnessed. This guy's very good at pool!"
         },
         {
             "review_id": 8,
-            "movie_id": 23,
+            "movie_id": 3,
             "user_id": 2,
             "review": "Impressive that a movie in 2024 can still have a shot that makes me go oh wow damn how'd they get away with that?"
         },
         {
             "review_id": 9,
-            "movie_id": 33,
+            "movie_id": 3,
             "user_id": 4,
             "review": "Even more fucking perfect.Arguably, the best superhero sequel of all time because it scales down and goes even more human. Debatably, the best directed high budget sequel of all time."
         },
         {
             "review_id": 10,
-            "movie_id": 18,
+            "movie_id": 4,
             "user_id": 2,
             "review": "It's astounding how little promotion this has received. Raw, honesth umorous, and, above all, so important. An exceptionally nuanced look at confronting past traumas and dealing with the worst of the worst. Written and acted by the man whose true story it is, reliving the most unbelievably trying times of his life. Beautifully devastating show, which I simply couldn't recommend more."
         },
         {
             "review_id": 11,
-            "movie_id": 13,
+            "movie_id": 4,
             "user_id": 2,
             "review": "Can be a bit all over the place. Lots of fun to be had, some cool shit here and there. A bit messy and I don\u2019t just mean the blood lololololololololololol.Enjoyable tho"
         },
         {
             "review_id": 12,
-            "movie_id": 10,
+            "movie_id": 4,
             "user_id": 1,
             "review": "A true motion picture. Undeniable comic book excellence. Previous review HERE! Thoughts still hold true, but amplified even more after seeing it on the big screen."
         },
         {
             "review_id": 13,
-            "movie_id": 35,
+            "movie_id": 5,
             "user_id": 3,
             "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
         },
@@ -448,43 +448,43 @@
         },
         {
             "review_id": 15,
-            "movie_id": 8,
+            "movie_id": 6,
             "user_id": 1,
             "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
         },
         {
             "review_id": 16,
-            "movie_id": 27,
+            "movie_id": 6,
             "user_id": 1,
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
             "review_id": 17,
-            "movie_id": 30,
+            "movie_id": 6,
             "user_id": 2,
             "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
         },
         {
             "review_id": 18,
-            "movie_id": 23,
+            "movie_id": 7,
             "user_id": 4,
             "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 19,
-            "movie_id": 16,
+            "movie_id": 7,
             "user_id": 2,
             "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
         },
         {
             "review_id": 20,
-            "movie_id": 18,
+            "movie_id": 7,
             "user_id": 3,
             "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
         },
         {
             "review_id": 21,
-            "movie_id": 11,
+            "movie_id": 8,
             "user_id": 1,
             "review": "bra"
         },
@@ -496,33 +496,585 @@
         },
         {
             "review_id": 23,
-            "movie_id": 25,
+            "movie_id": 8,
             "user_id": 1,
             "review": "yo"
         },
         {
             "review_id": 24,
-            "movie_id": 37,
+            "movie_id": 9,
             "user_id": 1,
             "review": "bra film"
         },
         {
             "review_id": 25,
-            "movie_id": 34,
+            "movie_id": 9,
             "user_id": 1,
             "review": "cool"
         },
         {
             "review_id": 26,
-            "movie_id": 34,
+            "movie_id": 9,
             "user_id": 1,
             "review": "awesome"
         },
         {
             "review_id": 27,
-            "movie_id": 34,
+            "movie_id": 10,
             "user_id": 2,
             "review": "d\u00e5lig"
+        },
+        {
+            "review_id": 28,
+            "movie_id": 10,
+            "user_id": 4,
+            "review": "jhdf"
+        },
+        {
+            "review_id": 29,
+            "movie_id": 10,
+            "user_id": 1,
+            "review": "bra"
+        },
+        {
+            "review_id": 30,
+            "movie_id": 11,
+            "user_id": 1,
+            "review": "bra"
+        },
+        {
+            "review_id": 31,
+            "movie_id": 11,
+            "user_id": 1,
+            "review": "yo"
+        },
+        {
+            "review_id": 32,
+            "movie_id": 11,
+            "user_id": 1,
+            "review": "bra film"
+        },
+        {
+            "review_id": 33,
+            "movie_id": 12,
+            "user_id": 1,
+            "review": "cool"
+        },
+        {
+            "review_id": 34,
+            "movie_id": 12,
+            "user_id": 1,
+            "review": "awesome"
+        },
+        {
+            "review_id": 35,
+            "movie_id": 12,
+            "user_id": 2,
+            "review": "d\u00e5lig"
+        },
+        {
+            "review_id": 36,
+            "movie_id": 13,
+            "user_id": 4,
+            "review": "jhdf"
+        },
+        {
+            "review_id": 37,
+            "movie_id": 13,
+            "user_id": 1,
+            "review": "bra"
+        },
+        {
+            "review_id": 38,
+            "movie_id": 13,
+            "user_id": 1,
+            "review": "bra"
+        },
+        {
+            "review_id": 39,
+            "movie_id": 14,
+            "user_id": 1,
+            "review": "yo"
+        },
+        {
+            "review_id": 40,
+            "movie_id": 14,
+            "user_id": 1,
+            "review": "bra film"
+        },
+        {
+            "review_id": 41,
+            "movie_id": 14,
+            "user_id": 1,
+            "review": "cool"
+        },
+        {
+            "review_id": 42,
+            "movie_id": 15,
+            "user_id": 1,
+            "review": "awesome"
+        },
+        {
+            "review_id": 43,
+            "movie_id": 15,
+            "user_id": 2,
+            "review": "d\u00e5lig"
+        },
+        {
+            "review_id": 44,
+            "movie_id": 15,
+            "user_id": 4,
+            "review": "jhdf"
+        },
+        {
+            "review_id": 45,
+            "movie_id": 16,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 46,
+            "movie_id": 16,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 47,
+            "movie_id": 16,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 48,
+            "movie_id": 17,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 49,
+            "movie_id": 17,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 50,
+            "movie_id": 17,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 51,
+            "movie_id": 18,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 52,
+            "movie_id": 18,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 53,
+            "movie_id": 18,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 54,
+            "movie_id": 19,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 55,
+            "movie_id": 19,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 56,
+            "movie_id": 19,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 57,
+            "movie_id": 20,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 58,
+            "movie_id": 20,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 59,
+            "movie_id": 20,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 60,
+            "movie_id": 21,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 61,
+            "movie_id": 21,
+            "user_id": 1,
+            "review": "awesome"
+        },
+        {
+            "review_id": 62,
+            "movie_id": 21,
+            "user_id": 2,
+            "review": "d\u00e5lig"
+        },
+        {
+            "review_id": 63,
+            "movie_id": 22,
+            "user_id": 4,
+            "review": "jhdf"
+        },
+        {
+            "review_id": 63,
+            "movie_id": 22,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 64,
+            "movie_id": 22,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 65,
+            "movie_id": 23,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 66,
+            "movie_id": 23,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 67,
+            "movie_id": 23,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 68,
+            "movie_id": 24,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 69,
+            "movie_id": 24,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 70,
+            "movie_id": 24,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 71,
+            "movie_id": 25,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 72,
+            "movie_id": 25,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 73,
+            "movie_id": 25,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 74,
+            "movie_id": 26,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 75,
+            "movie_id": 26,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 76,
+            "movie_id": 26,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 77,
+            "movie_id": 27,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 78,
+            "movie_id": 27,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 79,
+            "movie_id": 27,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 80,
+            "movie_id": 28,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 81,
+            "movie_id": 28,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 82,
+            "movie_id": 28,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 83,
+            "movie_id": 29,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 84,
+            "movie_id": 29,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 85,
+            "movie_id": 29,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 86,
+            "movie_id": 30,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 87,
+            "movie_id": 30,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 88,
+            "movie_id": 30,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 89,
+            "movie_id": 31,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 90,
+            "movie_id": 31,
+            "user_id": 1,
+            "review": "awesome"
+        },
+        {
+            "review_id": 91,
+            "movie_id": 31,
+            "user_id": 2,
+            "review": "d\u00e5lig"
+        },
+        {
+            "review_id": 92,
+            "movie_id": 32,
+            "user_id": 4,
+            "review": "jhdf"
+        },
+        {
+            "review_id": 93,
+            "movie_id": 32,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 94,
+            "movie_id": 32,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 95,
+            "movie_id": 33,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 96,
+            "movie_id": 33,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 97,
+            "movie_id": 33,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 98,
+            "movie_id": 34,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 99,
+            "movie_id": 34,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 100,
+            "movie_id": 34,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 101,
+            "movie_id": 35,
+            "user_id": 3,
+            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
+        },
+        {
+            "review_id": 102,
+            "movie_id": 35,
+            "user_id": 3,
+            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
+        },
+        {
+            "review_id": 103,
+            "movie_id": 35,
+            "user_id": 1,
+            "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
+        },
+        {
+            "review_id": 104,
+            "movie_id": 36,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 105,
+            "movie_id": 36,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 106,
+            "movie_id": 26,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 107,
+            "movie_id": 37,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 108,
+            "movie_id": 37,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 109,
+            "movie_id": 37,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 110,
+            "movie_id": 38,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 111,
+            "movie_id": 38,
+            "user_id": 1,
+            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
+        },
+        {
+            "review_id": 112,
+            "movie_id": 38,
+            "user_id": 2,
+            "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
+        },
+        {
+            "review_id": 113,
+            "movie_id": 39,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 114,
+            "movie_id": 39,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 115,
+            "movie_id": 39,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
+        },
+        {
+            "review_id": 116,
+            "movie_id": 40,
+            "user_id": 4,
+            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
+        },
+        {
+            "review_id": 117,
+            "movie_id": 40,
+            "user_id": 2,
+            "review": "There is literally nothing here. Derivative, low-quality, empty rubbish easily buried as a half-hearted explanation by the filmmaker and team, who say that the, better, film is yet to come, which is a deeply anti-art outlook in and of itself. Snyder also needs to go back to working with an actual cinematographer."
+        },
+        {
+            "review_id": 118,
+            "movie_id": 40,
+            "user_id": 3,
+            "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
         }
     ],
     "users": [
@@ -540,20 +1092,14 @@
         },
         {
             "user_id": 3,
-            "username": "lucas",
-            "password": "waterloo",
+            "username": "Lucas",
+            "password": "hej",
             "liked_movies": []
         },
         {
             "user_id": 4,
             "username": "bojana",
             "password": "bell",
-            "liked_movies": []
-        },
-        {
-            "user_id": 5,
-            "username": "test",
-            "password": "test",
             "liked_movies": []
         }
     ]
