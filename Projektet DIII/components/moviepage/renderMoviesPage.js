@@ -92,7 +92,23 @@ function renderMoviesPage(parentID, instanceData) {
         if (event.key === "Enter") {
             let username = localStorage.username
             let users_copy = State.GET("user")
-            console.log(users_copy)
+            let content = reviewInput.value
+            for (let i = 0; i < users_copy.length; i++) {
+                if (users_copy[i].username === username) {
+
+                    let data = {
+                        entity: "reviews",
+                        row: {
+                            movie_id: instanceData.id,
+                            user_id: users_copy[i].user_id,
+                            review: content
+                        }
+                    }
+
+                    State.POST(data);
+                }
+
+            }
         }
     })
 
