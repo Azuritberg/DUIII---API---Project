@@ -218,7 +218,7 @@
     margin: 0;
 }
 
-#heart {
+.heart {
     height: 50px;
     width: 50px;
     cursor: pointer;
@@ -229,3 +229,5 @@
     width: 50px;
     cursor: pointer;
 }
+
+.liked {}

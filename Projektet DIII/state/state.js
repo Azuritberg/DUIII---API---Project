@@ -79,13 +79,24 @@ const State = {
     },
     PATCH: async function (data) {
         switch (data.entity) {
-            case "users":
-                const likedMovieRequest = new Request("", {
+            case "likes":
+                const likedMovieRequest = new Request("./API/like_movie.php", {
                     method: "PATCH",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" },
                 })
-                let likedMovieResource = fetcher(likedMovieRequest);
+                let likedMovieResource = await fetcher(likedMovieRequest);
+                if (likedMovieResource !== undefined) {
+                    for (let i = 0; i < STATE.user.length; i++) {
+                        let username = localStorage.username;
+                        if (likedMovieResource.username === username) {
+                            STATE.user[i] = likedMovieResource;
+                            updateLikedMovies(likedMovieResource);
+                            checkLikedMovies();
+                            break;
+                        }
+                    }
+                }
                 break;
             default:
                 break;
