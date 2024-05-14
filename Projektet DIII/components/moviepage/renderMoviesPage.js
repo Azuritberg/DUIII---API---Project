@@ -111,19 +111,19 @@ function renderMoviesPage(parentID, instanceData) {
             }
         }
     })
+    
 
-
-
-
-    // HEART FILL
-    const heart = document.getElementById("heart");
+let heart = document.getElementById("heart");
+if (heart) {
+    heart.style.display = isLoggedIn() ? 'block' : 'none';
     heart.addEventListener("click", function () {
-        if (heart.getAttribute("src") != "./icons/white-heart.png") {
-            heart.setAttribute("src", "./icons/white-heart.png")
+        if (heart.getAttribute("src") !== "./icons/white-heart.png") {
+            heart.setAttribute("src", "./icons/white-heart.png");
         } else {
-            heart.setAttribute("src", "./icons/white-heart-fill.png")
+            heart.setAttribute("src", "./icons/white-heart-fill.png");
         }
     });
+}
 }
 
 
