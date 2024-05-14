@@ -39,10 +39,10 @@ function renderUserPage(parentID, instanceData) {
                 <div id="reviewBottom">
                     <div id="reviewHeader"> 
                         <div class="reviewText">
-                            <h3>SpaceFan01 <span class="userSpan">/ DUNE Part II /</span></h3> 
+                            <h3>${instanceData.username} <span class="userSpan">/ ${instanceData.title} /</span></h3> 
                             <img id="deleteButton" src="./icons/delete.png"alt="">
                             </div>
-                            <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+                            <p>${instanceData.info}</p>
                         </div>
                         <div id="reviewHeader"> 
                             <div class="reviewText">
@@ -73,6 +73,18 @@ function renderUserPage(parentID, instanceData) {
     }
 
     
+
+
+    // DELETE BUTTON REVIEWS
+    const deleteLikeButton = document.getElementById("deleteButton");
+    deleteLikeButton.addEventListener("click", (event) => {
+        
+    });
+
+    
+    const likedMovieUserPage = document.getElementById("likedMovie");
+    likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
+
 
 
 

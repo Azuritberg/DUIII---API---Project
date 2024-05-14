@@ -75,5 +75,12 @@ if ($request_method === "GET") {
     if (empty($users)) {
         send_json("Not found", 404);
     }
-    send_json($users);
+
+    $users_without_passwords = [];
+    foreach ($users as $user) {
+        unset($user["password"]);
+        $users_without_passwords[] = $user;
+    }
+
+    send_json($users_without_passwords);
 }
