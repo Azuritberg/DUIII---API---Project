@@ -166,7 +166,7 @@ async function loginUser(event) {
   };
 
   try {
-    const loginUserObject = await State.POST(user);
+    const loginUserObject = await State.POST(user); 
     if (loginUserObject != undefined) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id));
       localStorage.setItem("username", loginUserObject.username);
