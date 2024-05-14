@@ -85,7 +85,7 @@ function renderMoviesPage(parentID, instanceData) {
     }
 
     let reviewInput = document.getElementById("userTextInput")
-
+    reviewInput.style.display = isLoggedIn() ? 'block' : 'none';
     console.log(STATE)
 
     reviewInput.addEventListener("keypress", function (event) {
@@ -123,7 +123,11 @@ if (heart) {
             heart.setAttribute("src", "./icons/white-heart-fill.png");
         }
     });
-}
+} 
+    let addReview = document.getElementById("addReview");
+    if (!isLoggedIn()) {
+        addReview.style.height = '300px';  // Ändra höjden när användaren inte är inloggad
+    }
 }
 
 
