@@ -37,6 +37,11 @@
     src: url(../../fonts/Montserrat/static/Montserrat-MediumItalic.ttf);
 }
 
+@font-face {
+    font-family: MT-italic;
+    src: url(../../fonts/Montserrat/static/Montserrat-Italic.ttf);
+}
+
 
 body {
     margin: 0;
