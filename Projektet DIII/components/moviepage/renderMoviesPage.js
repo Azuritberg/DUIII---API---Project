@@ -39,6 +39,8 @@ function renderMoviesPage(parentID, instanceData) {
             <input type="text" placeholder="Add Review and Press Enter" id="userTextInput">
         </div>
     </div>`;
+
+
     renderReviews(instanceData)
     function renderReviews(instanceData) {
         let reviews_copy = State.GET("reviews");
@@ -61,7 +63,7 @@ function renderMoviesPage(parentID, instanceData) {
                 div.classList.add("review");
 
                 let h3 = document.createElement("h3");
-                h3.textContent = "Review by: " + username;
+                h3.textContent = "Review by " + username;
                 div.append(h3);
 
                 let p = document.createElement("p");
@@ -73,7 +75,7 @@ function renderMoviesPage(parentID, instanceData) {
         }
     }
 
-
+    // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
 
     bigPoster.style.backgroundImage = `url(${instanceData.poster})`;
@@ -97,11 +99,9 @@ function renderMoviesPage(parentID, instanceData) {
         poster.style.backgroundImage = `url('${similarMoviesArray[i].poster}')`
 
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
-
-
-
     }
 
+    // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
 
     console.log(STATE)
@@ -128,10 +128,7 @@ function renderMoviesPage(parentID, instanceData) {
                     State.POST(data);
                     reviewInput.value = ""
                     renderReviews(instanceData)
-
-
                 }
-
             }
         }
     })
