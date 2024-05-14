@@ -143,7 +143,6 @@
     font-size: 14px;
 }
 
-
 .reviewText {
     display: flex;
     justify-content: space-between;
@@ -156,6 +155,12 @@
 .userSpan {
     font-family: MT-medium;
     font-size: 14px;
+}
+
+.reviewInfo {
+    font-family: MT-medium-italic;
+    font-size: 13px;
+    color: #F6F4F4;
 }
 
 /* .reviewMovie {
@@ -202,8 +207,3 @@
     filter: drop-shadow(0 1px 6px #F6F4F4);
 }
 
-.reviewInfo {
-    font-family: MT-medium;
-    color: #F6F4F4;
-    font-size: 14px;
-}

@@ -40,13 +40,8 @@ function renderUserPage(parentID, instanceData) {
                 <div id="reviewBottom">
                     
                     
-                      
-
-                        
-                       
                     </div>
                 </div>
-            
         </div>`;
 
         renderUserReviews(instanceData)
@@ -113,7 +108,7 @@ function renderUserPage(parentID, instanceData) {
             text.append(h3);
     
             let span = document.createElement("span");
-            span.classList.add("userspan");
+            span.classList.add("userSpan");
             span.textContent = " / " + reviewed_movies[m].title + " /";
             h3.append(span);
     

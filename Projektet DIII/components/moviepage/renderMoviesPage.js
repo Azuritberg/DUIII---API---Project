@@ -65,7 +65,7 @@ function renderMoviesPage(parentID, instanceData) {
                 let h3 = document.createElement("h3");
                 let span = document.createElement("span")
                 span.classList.add("reviewSpan")
-                h3.textContent = "Review by: "
+                h3.textContent = "Review by "
                 span.textContent = username
                 h3.append(span)
                 div.append(h3);
