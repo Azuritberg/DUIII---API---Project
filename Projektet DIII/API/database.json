@@ -513,12 +513,6 @@
             "username": "test",
             "password": "test",
             "liked_movies": []
-        },
-        {
-            "user_id": 6,
-            "username": "test1",
-            "password": "test1",
-            "liked_movies": []
         }
     ]
 }

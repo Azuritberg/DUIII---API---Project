@@ -140,10 +140,13 @@ function updateLoginLogoutButton() {
   }
 }
 
+
 // Check if user is logged in or not in localStorage, return true or false
 function isLoggedIn() {
-  return localStorage.getItem("user") !== null;
+  const user = localStorage.getItem("user");
+  return user !== null && user !== ""; // Kontrollerar att det finns ett giltigt värde, inte bara null
 }
+
 
 
 // Login User and set user object to localStorage
@@ -152,31 +155,35 @@ async function loginUser(event) {
   let username = document.getElementById("username").value;
   let password = document.getElementById("password").value;
 
+  if (!username || !password) {
+    alert("Please enter both username and password");
+    return; 
+  }
+
   let user = {
     entity: "login",
     row: { username: username, password: password }
   };
 
   try {
-    const loginUserObject = await State.POST(user);
-    // returnera user objektet och sparar det i constanten loginUserObject
+    const loginUserObject = await State.POST(user); 
     if (loginUserObject != undefined) {
-      localStorage.setItem("user", JSON.stringify(loginUserObject.id)); // Sparar user i localStorage
-
-      localStorage.setItem("username", loginUserObject.username); // Sparar username i localStorage
+      localStorage.setItem("user", JSON.stringify(loginUserObject.id));
+      localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
       updateLoginLogoutButton();
-      console.log("Login successful");
-
       window.location.replace('index.html');
+      console.log("Login successful");
     } else {
       console.error("Error logging in", loginUserObject);
+      alert("Wrong username or password, try again"); // Informera användaren om felaktig inloggning
     }
   } catch (error) {
     console.error("Error logging in", error);
   }
 }
+
 
 
 // REGISTER USER and set user object to localStorage
@@ -206,6 +213,8 @@ async function createNewUser(event) {
     console.error("Error registering user", error);
   }
 }
+
+
 
 // Change modal content and open login modal
 function changeModalContent(modal, type) {

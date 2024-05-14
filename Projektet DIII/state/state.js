@@ -42,7 +42,7 @@ const State = {
                 });
                 let loginResource = await fetcher(loginRequest);
                 if (loginResource !== undefined) {
-                    // console.log(loginResource);
+                    console.log(loginResource);
                     STATE.user.push(loginResource);
                     return loginResource;
                 }
