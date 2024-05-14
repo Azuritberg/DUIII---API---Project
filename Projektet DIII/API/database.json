@@ -487,6 +487,12 @@
             "movie_id": 11,
             "user_id": 1,
             "review": "bra"
+        },
+        {
+            "review_id": 22,
+            "movie_id": 26,
+            "user_id": 1,
+            "review": "bra"
         }
     ],
     "users": [
