@@ -45,9 +45,6 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
-                // console.log(data);
-                // console.log(JSON.stringify(data.row));
-                // console.log(JSON.parse(data.row));
                 const loginRequest = new Request("./API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
@@ -59,7 +56,6 @@ const State = {
                     STATE.user.push(loginResource);
                     return loginResource;
                 }
-                //console.log(loginResource);
                 break;
             case "register":
                 console.log(data);
@@ -101,6 +97,7 @@ const State = {
                         if (likedMovieResource.username === username) {
                             STATE.user[i] = likedMovieResource;
                             checkLikedMovies();
+                            checkUserLikes();
                             break;
                         }
                     }
