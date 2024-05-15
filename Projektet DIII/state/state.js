@@ -75,7 +75,8 @@ const State = {
                 })
                 let reviewResource = await fetcher(reviewRequest);
                 if (reviewResource != undefined) {
-
+                    STATE.reviews.push(reviewResource);
+                    // renderUserReviews(reviewResource.movie_id);
                 }
                 break;
             default:
