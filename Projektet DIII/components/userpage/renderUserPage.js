@@ -10,7 +10,7 @@ function renderUserPage(parentID, instanceData) {
     userContainer.id = "userContainer";
     wrapper.append(userContainer);
 
-    console.log(instanceData);
+
 
     userContainer.innerHTML = `
         <h1 id="userNamePage">${instanceData.username}</h1>
@@ -77,8 +77,7 @@ function renderUserReviews(instanceData) {
         }
     }
 
-    console.log(user_reviews);
-    console.log(reviewed_movies);
+
 
     let parent = document.getElementById("reviewBottom");
 
