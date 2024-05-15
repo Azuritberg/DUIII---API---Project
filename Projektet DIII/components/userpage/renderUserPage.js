@@ -47,14 +47,17 @@ function renderUserPage(parentID, instanceData) {
     // likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
 
     checkUserLikes();
+    renderUserReviews(instanceData);
 }
 
 
 
 function renderUserReviews(instanceData) {
+
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
 
+    console.log(reviews_copy);
     let user_reviews = [];
     let reviewed_movies = [];
 
