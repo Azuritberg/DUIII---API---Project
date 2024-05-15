@@ -45,9 +45,6 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
-                // console.log(data);
-                // console.log(JSON.stringify(data.row));
-                // console.log(JSON.parse(data.row));
                 const loginRequest = new Request("./API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
@@ -59,7 +56,6 @@ const State = {
                     STATE.user.push(loginResource);
                     return loginResource;
                 }
-                //console.log(loginResource);
                 break;
             case "register":
                 console.log(data);
@@ -112,13 +108,13 @@ const State = {
     },
     DELETE: async function (data) {
         switch (data.entity) {
-            case "users":
+            case "reviews":
                 const removeLikedMovieRequest = new Request("./API/reviews.php", {
                     method: "DELETE",
                     body: data.row,
                     headers: { "Content-Type": "application/json" },
                 })
-                let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+                let removeReviewResource = fetcher(removeLikedMovieRequest);
                 break;
             default:
                 break;

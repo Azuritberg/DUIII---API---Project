@@ -139,7 +139,7 @@ function renderMoviesPage(parentID, instanceData) {
     })
 
 
-    let heart = document.getElementById(".heart");
+    let heart = document.querySelector(".heart");
     if (heart) {
         heart.style.display = isLoggedIn() ? 'block' : 'none';
         heart.addEventListener("click", function () {
@@ -186,41 +186,6 @@ function renderMoviesPage(parentID, instanceData) {
 
     //check if a movie is liked.
     checkLikedMovies();
-}
-
-async function updateLikedMovies(likedMoviesUser) {
-
-
-    // let moviesCopy = State.GET("movies");
-    // let likedMovies = likedMoviesUser.liked_movies;
-    // console.log(likedMovies)
-
-    // let heart = document.querySelector(".heart");
-    // let heart_id = parseInt(heart.id);
-
-    // let isLiked = false;
-    // for (let i = 0; i < liked_movies.length; i++) {
-    //     console.log(liked_movies[i]);
-    //     if (heart_id === liked_movies[i]) {
-    //         isLiked = true;
-    //         break;
-    //     }
-    //     if (isLiked) {
-    //         break;
-    //     }
-    // }
-
-    // if (isLiked) {
-    //     heart.classList.add("liked");
-    // } else {
-    //     heart.classList.remove("liked");
-    // }
-
-    // if (heart.classList.contains("liked")) {
-    //     heart.setAttribute("src", "./icons/white-heart-fill.png");
-    // } else {
-    //     heart.setAttribute("src", "./icons/white-heart.png");
-    // }
 }
 
 function checkLikedMovies() {
