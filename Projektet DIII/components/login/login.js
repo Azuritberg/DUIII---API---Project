@@ -1,6 +1,5 @@
 "use strict";
 
-
 function renderHeaderLogin(parentID, instanceData) {
 
   let overlay = document.createElement("div");
@@ -25,7 +24,6 @@ function renderHeaderLogin(parentID, instanceData) {
     if (event.target.id === 'register') {
       changeModalContent(modal, 'registerButton');
       let registerButton = document.getElementById("registerButton");
-      //console.log(registerButton);
       document.getElementById("registerButton").addEventListener("click", createNewUser);
     } else if (event.target.id === 'logIn') {
       changeModalContent(modal, 'logInButton');
@@ -37,7 +35,6 @@ function renderHeaderLogin(parentID, instanceData) {
     loginButton.addEventListener("click", loginUser);
   }
 }
-
 
 function loginModalContent() {
   return `
@@ -88,15 +85,18 @@ function registerModalContent() {
   `;
 }
 
-
 // Change modal content
 function changeModalContent(modal, type) {
   if (type === 'logInButton') {
     modal.innerHTML = loginModalContent();
-
+    // Add event listeners to the new login form
+    document.getElementById('logInButton').addEventListener('click', loginUser);
   } else if (type === 'registerButton') {
     modal.innerHTML = registerModalContent();
+    // Add event listeners to the new register form
+    document.getElementById("registerButton").addEventListener("click", createNewUser);
   }
+  setupPasswordVisibilityToggle();
 }
 
 // Open and close modal
@@ -104,27 +104,33 @@ function openModal(modal) {
   if (modal == null) return;
   modal.classList.add('active');
   document.getElementById('overlay').classList.add('active');
-  let eyeCheckbox = document.getElementById('eye');
-  let passwordInput = document.getElementById('password');
+  setupPasswordVisibilityToggle();
+}
 
-  eyeCheckbox.addEventListener('change', function () {  // Toggle password visibility when checkbox is clicked
-    if (this.checked) {
+function closeModal(modal) {
+  if (modal == null) return;
+  modal.classList.remove('active');
+  document.getElementById('overlay').classList.remove('active');
+  let passwordInput = document.getElementById('password');
+  if (passwordInput) {
+    passwordInput.type = "password";
+  }
+}
+
+function setupPasswordVisibilityToggle() {
+  let eyeCheckbox = document.getElementById('eye');
+  if (!eyeCheckbox) return;
+
+  let passwordInput = eyeCheckbox.closest('#passwordHolder').querySelector('input[type="password"]');
+
+  eyeCheckbox.addEventListener('change', function () {
+    if (eyeCheckbox.checked) {
       passwordInput.type = 'text';
     } else {
       passwordInput.type = 'password';
     }
   });
 }
-
-// Close modal
-function closeModal(modal) {
-  if (modal == null) return;
-  modal.classList.remove('active');
-  document.getElementById('overlay').classList.remove('active');
-  let passwordInput = document.getElementById('password')
-  passwordInput.type = "password"
-}
-
 
 // Update BUTTON from Login to Logout
 function updateLoginLogoutButton() {
@@ -140,14 +146,11 @@ function updateLoginLogoutButton() {
   }
 }
 
-
 // Check if user is logged in or not in localStorage, return true or false
 function isLoggedIn() {
   const user = localStorage.getItem("user");
   return user !== null && user !== ""; // Kontrollerar att det finns ett giltigt värde, inte bara null
 }
-
-
 
 // Login User and set user object to localStorage
 async function loginUser(event) {
@@ -184,8 +187,6 @@ async function loginUser(event) {
   }
 }
 
-
-
 // REGISTER USER and set user object to localStorage
 async function createNewUser(event) {
   event.preventDefault();
@@ -214,32 +215,12 @@ async function createNewUser(event) {
   }
 }
 
-
-
-// Change modal content and open login modal
-function changeModalContent(modal, type) {
-  if (type === 'logInButton') {
-    modal.innerHTML = loginModalContent();
-    // Add event listeners to the new login form
-    document.getElementById('logInButton').addEventListener('click', loginUser);
-  } else if (type === 'registerButton') {
-    modal.innerHTML = registerModalContent();
-  }
-}
-
-
 // Logout user and go to mainPage 'index.html'
 function logoutUser() {
   localStorage.removeItem("user");
   localStorage.removeItem("username");
   updateLoginLogoutButton();
-  //renderHeader(parentID, null);
   console.log("Logout successful");
 
   window.location.replace('index.html'); // Go to main'index.html' 
 }
-
-
-
-// localStorage.removeItem("");
-// location.reload();

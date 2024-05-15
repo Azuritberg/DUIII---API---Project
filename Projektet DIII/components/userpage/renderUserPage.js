@@ -44,11 +44,11 @@ function renderUserPage(parentID, instanceData) {
                 </div>
         </div>`;
 
-        renderUserReviews(instanceData)
-        const deleteLikeButton = document.getElementById("deleteButton");
-        deleteLikeButton.addEventListener("click", (event) => {
-            console.log("hej")
-        });
+        // renderUserReviews(instanceData)
+        // const deleteLikeButton = document.getElementById("deleteButton");
+        // deleteLikeButton.addEventListener("click", (event) => {
+        //     console.log("hej")
+        // });
     }
 
     
