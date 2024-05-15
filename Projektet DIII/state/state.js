@@ -110,12 +110,18 @@ const State = {
     DELETE: async function (data) {
         switch (data.entity) {
             case "reviews":
-                const removeLikedMovieRequest = new Request("./API/reviews.php", {
+                const removeLikedReviewRequest = new Request("./API/reviews.php", {
                     method: "DELETE",
-                    body: JSON.stringify({ id: data.row }),
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" },
                 })
-                let removeLikedMovieResource = await fetcher(removeLikedMovieRequest);
+                //console.log({ id: data.row });
+                let removeLikedReviewResource = await fetcher(removeLikedReviewRequest);
+
+                if (removeLikedReviewResource !== undefined) {
+                    // Remove review from STATE
+                    STATE.reviews = STATE.reviews.filter(review => review.review_id !== data.row);
+                }
                 break;
             default:
                 break;

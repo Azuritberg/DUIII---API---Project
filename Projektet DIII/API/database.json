@@ -375,12 +375,6 @@
             "review": "COME ON"
         },
         {
-            "review_id": 3,
-            "movie_id": 1,
-            "user_id": 4,
-            "review": "This is the greatest movie ever made"
-        },
-        {
             "review_id": 4,
             "movie_id": 2,
             "user_id": 2,
@@ -393,12 +387,6 @@
             "review": "the song with the monkeys was my favorite part"
         },
         {
-            "review_id": 6,
-            "movie_id": 2,
-            "user_id": 4,
-            "review": "All I can say is that this is without doubt one of the boldest, most courageous things I\u2019ve ever seen. Brutally honest and empathetic. Staggering level of vulnerability."
-        },
-        {
             "review_id": 7,
             "movie_id": 3,
             "user_id": 3,
@@ -409,12 +397,6 @@
             "movie_id": 3,
             "user_id": 2,
             "review": "Impressive that a movie in 2024 can still have a shot that makes me go oh wow damn how'd they get away with that?"
-        },
-        {
-            "review_id": 9,
-            "movie_id": 3,
-            "user_id": 4,
-            "review": "Even more fucking perfect.Arguably, the best superhero sequel of all time because it scales down and goes even more human. Debatably, the best directed high budget sequel of all time."
         },
         {
             "review_id": 10,
@@ -573,12 +555,6 @@
             "review": "d\u00e5lig"
         },
         {
-            "review_id": 36,
-            "movie_id": 13,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
             "review_id": 37,
             "movie_id": 13,
             "user_id": 1,
@@ -619,12 +595,6 @@
             "movie_id": 15,
             "user_id": 2,
             "review": "d\u00e5lig"
-        },
-        {
-            "review_id": 44,
-            "movie_id": 15,
-            "user_id": 4,
-            "review": "jhdf"
         },
         {
             "review_id": 45,
@@ -819,12 +789,6 @@
             "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
         },
         {
-            "review_id": 76,
-            "movie_id": 26,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
-        },
-        {
             "review_id": 77,
             "movie_id": 27,
             "user_id": 2,
@@ -835,12 +799,6 @@
             "movie_id": 27,
             "user_id": 3,
             "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
-        },
-        {
-            "review_id": 79,
-            "movie_id": 27,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 80,
@@ -915,12 +873,6 @@
             "review": "d\u00e5lig"
         },
         {
-            "review_id": 92,
-            "movie_id": 32,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
             "review_id": 93,
             "movie_id": 32,
             "user_id": 3,
@@ -949,12 +901,6 @@
             "movie_id": 33,
             "user_id": 2,
             "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
-        },
-        {
-            "review_id": 98,
-            "movie_id": 34,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 99,
@@ -997,12 +943,6 @@
             "movie_id": 36,
             "user_id": 2,
             "review": "i love the symmetry. i love the contrast in pace. i love that every interaction has the tension of an elastic band stretching out and snapping back into place. the camera cuts between the three of them in whatever configuration, but it\u2019s only inevitable that they\u2019ll soon occupy the same frame."
-        },
-        {
-            "review_id": 106,
-            "movie_id": 26,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 107,

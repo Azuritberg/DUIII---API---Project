@@ -36,22 +36,12 @@ function renderUserPage(parentID, instanceData) {
                 </div>
         </div>`;
 
-    // renderUserReviews(instanceData)
-    // const deleteLikeButton = document.getElementById("deleteButton");
-    // deleteLikeButton.addEventListener("click", (event) => {
-    //     console.log("hej")
-    // });
-
-
-    // const likedMovieUserPage = document.getElementById("likedMovie");
-    // likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
-
     checkUserLikes();
     renderUserReviews(instanceData);
 }
 
 
-
+// Render user reviews
 function renderUserReviews(instanceData) {
 
     let reviews_copy = State.GET("reviews");
@@ -77,15 +67,14 @@ function renderUserReviews(instanceData) {
         }
     }
 
-
-
+    // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
     for (let m = 0; m < reviewed_movies.length; m++) {
         let review = "";
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
-                review = user_reviews[a].review;
+                review = user_reviews[a];
                 break; // Once found, break the inner loop
             }
         }
@@ -115,9 +104,29 @@ function renderUserReviews(instanceData) {
 
         let p = document.createElement("p");
         p.classList.add("reviewInfo")
-        p.textContent = review;
+        p.textContent = review.review;
         parent.append(p);
+
+        // Add event listener to delete button
+        img.addEventListener("click", (event) => {
+        deleteReview(review.review_id);
+        console.log("Hej DeleteButton")
+        });
     }
+}
+
+async function deleteReview(instanceData) {
+    console.log(instanceData);
+    await State.DELETE({ entity: "reviews", row: {review_id: instanceData} });
+
+    let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
+    let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
+    if (reviewHeaderElement) reviewHeaderElement.remove();
+    if (reviewInfoElement) reviewInfoElement.remove();
+
+    // Remove review from STATE
+    //let instanceData = JSON.parse(localStorage.getItem('')); // Get instance data from localStorage
+    renderUserReviews(instanceData);
 }
 
 function checkUserLikes() {
