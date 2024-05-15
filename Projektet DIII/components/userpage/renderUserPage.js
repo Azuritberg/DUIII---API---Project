@@ -24,16 +24,12 @@ function renderUserPage(parentID, instanceData) {
         </div>
         <div id="mainLikeReviweBox">
             <div id="likeContainer">
-                <div id="likeMovieBox">
-                </div>
+                <div id="likeMovieBox"></div>
             </div>
             
             <div id="reviewContainer">
-                <div id="reviewBottom">
-                    
-                    
-                    </div>
-                </div>
+                <div id="reviewBottom"></div>
+            </div>
         </div>`;
 
     checkUserLikes();
@@ -237,3 +233,10 @@ function checkUserLikes() {
 // <div id="likedMovie"></div>
 // <div id="likedMovie"></div>
 // <div id="likedMovie"></div>
+
+
+
+
+for (let i = 0; i < movies.length; i++) {
+console.log("hej")
+}

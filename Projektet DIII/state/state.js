@@ -116,9 +116,7 @@ const State = {
                     body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" },
                 })
-                //console.log({ id: data.row });
                 let removeLikedReviewResource = await fetcher(removeLikedReviewRequest);
-
                 if (removeLikedReviewResource !== undefined) {
                     // Remove review from STATE
                     STATE.reviews = STATE.reviews.filter(review => review.review_id !== data.row);
@@ -146,28 +144,3 @@ async function fetcher(request) {
 }
 
 
-
-
-                // if (removeLikedMovieResource !== undefined) {
-                //     // Ta bort review från state och rendera om
-                //     const result = await removeLikedMovieResource.json();
-                //     console.log(result);
-
-                //     const index = STATE.review_id.indexOf(data.row);
-                //     if (index > -1) {
-                //         STATE.review_id.splice(index, 1);
-                //         renderUserReviews(STATE.user[0]);
-                //     }
-                // } 
-
-
-// let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
-// if (removeLikedMovieResource !== undefined) {
-//     for (let i = 0; i < STATE.review_id.length; i++) {
-//         if (STATE.review_id[i] === data.row) {
-//             STATE.review_id.splice(i, 1);
-//             renderUserReviews(STATE.user[0]);
-//             break;
-//         }
-//     }
-// }

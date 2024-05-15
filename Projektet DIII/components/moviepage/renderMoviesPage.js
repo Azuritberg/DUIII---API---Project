@@ -153,7 +153,7 @@ function renderMoviesPage(parentID, instanceData) {
 }
 
 function renderReviews(instanceData) {
-    console.log(instanceData);
+    //console.log(instanceData);
 
     let users_copy = State.GET("user");
     let parent = document.querySelector("#addReview");
