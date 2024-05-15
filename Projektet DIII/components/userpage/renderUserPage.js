@@ -85,15 +85,16 @@ function renderUserPage(parentID, instanceData) {
         console.log(reviewed_movies);
     
         let parent = document.getElementById("reviewBottom");
-    
-        for (let m = 0; m < reviewed_movies.length; m++) {
-            let review = "";
-            for (let a = 0; a < user_reviews.length; a++) {
-                if (reviewed_movies[m].id === user_reviews[a].movie_id) {
-                    review = user_reviews[a].review;
-                    break; // Once found, break the inner loop
+        let movie_title = ""
+        for (let m = 0; m < user_reviews.length; m++) {
+            let review = user_reviews[m].review;
+            for (let a = 0; a < reviewed_movies.length; a++) {
+                if (user_reviews[m].movie_id===reviewed_movies[a].id) {
+                     movie_title = reviewed_movies[a].title
                 }
+                
             }
+          
     
             let header = document.createElement("div");
             header.classList.add("reviewHeader");
@@ -109,7 +110,7 @@ function renderUserPage(parentID, instanceData) {
     
             let span = document.createElement("span");
             span.classList.add("userSpan");
-            span.textContent = " / " + reviewed_movies[m].title + " /";
+            span.textContent = " / " + movie_title + " /";
             h3.append(span);
     
             let img = document.createElement("img");

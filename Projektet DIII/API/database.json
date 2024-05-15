@@ -1081,6 +1081,24 @@
             "movie_id": 29,
             "user_id": 4,
             "review": "lalalalalalaalalalalalalala"
+        },
+        {
+            "review_id": 120,
+            "movie_id": 2,
+            "user_id": 2,
+            "review": "sick"
+        },
+        {
+            "review_id": 121,
+            "movie_id": 24,
+            "user_id": 2,
+            "review": "epic"
+        },
+        {
+            "review_id": 122,
+            "movie_id": 24,
+            "user_id": 2,
+            "review": "cool af"
         }
     ],
     "users": [
