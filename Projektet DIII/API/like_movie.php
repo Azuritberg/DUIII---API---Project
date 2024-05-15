@@ -66,7 +66,8 @@ if ($request_method === "PATCH") {
     $index = array_search($liked_movie, $found_user["liked_movies"]);
     if (in_array($liked_movie, $found_user["liked_movies"])) {
         if ($index !== false) {
-            unset($found_user["liked_movies"][$index]);
+            // unset($found_user["liked_movies"][$index]);
+            array_splice($found_user["liked_movies"], $index, 1);
         }
     } elseif (!in_array($liked_movie, $found_user["liked_movies"])) {
         $found_user["liked_movies"][] = $liked_movie;
@@ -84,7 +85,7 @@ if ($request_method === "PATCH") {
     $database["users"] = $users;
     file_put_contents($filename, json_encode($database, JSON_PRETTY_PRINT));
     unset($found_user["password"]);
-    send_json($found_user, );
+    send_json($found_user);
 }
 
 

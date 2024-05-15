@@ -16,7 +16,7 @@ function renderMoviesPage(parentID, instanceData) {
         <div id="topRight">
             <div id="firstBox">
                 <h1 id="title">${instanceData.title}</h1>
-                <img id="heart" src="./icons/white-heart.png"alt="">
+                <img class="heart" id="${instanceData.id}" src="./icons/white-heart.png"alt="">
             </div>
             <div id="secondbox">
                 <h2 id="year">(${instanceData.year}) ${instanceData.director}</h2>
@@ -139,7 +139,7 @@ function renderMoviesPage(parentID, instanceData) {
     })
 
 
-    let heart = document.getElementById("heart");
+    let heart = document.getElementById(".heart");
     if (heart) {
         heart.style.display = isLoggedIn() ? 'block' : 'none';
         heart.addEventListener("click", function () {
@@ -155,8 +155,118 @@ function renderMoviesPage(parentID, instanceData) {
     if (!isLoggedIn()) {
         addReview.style.height = '300px';
     }
+
+    // HEART FILL
+    // let heart = document.querySelector(".heart");
+    heart.addEventListener("click", function () {
+
+        let users_copy = State.GET("user");
+        let username = localStorage.username;
+        for (let i = 0; i < users_copy.length; i++) {
+            if (users_copy[i].username === username) {
+
+                let data = {
+                    entity: "likes",
+                    row: {
+                        user_id: users_copy[i].user_id,
+                        id: instanceData.id,
+                    }
+                }
+                // console.log(instanceData);
+                State.PATCH(data);
+                break;
+            }
+        }
+        // if (heart.getAttribute("src") != "./icons/white-heart.png") {
+        //     heart.setAttribute("src", "./icons/white-heart.png")
+        // } else {
+        //     heart.setAttribute("src", "./icons/white-heart-fill.png")
+        // }
+    });
+
+    //check if a movie is liked.
+    checkLikedMovies();
 }
 
+async function updateLikedMovies(likedMoviesUser) {
+
+
+    // let moviesCopy = State.GET("movies");
+    // let likedMovies = likedMoviesUser.liked_movies;
+    // console.log(likedMovies)
+
+    // let heart = document.querySelector(".heart");
+    // let heart_id = parseInt(heart.id);
+
+    // let isLiked = false;
+    // for (let i = 0; i < liked_movies.length; i++) {
+    //     console.log(liked_movies[i]);
+    //     if (heart_id === liked_movies[i]) {
+    //         isLiked = true;
+    //         break;
+    //     }
+    //     if (isLiked) {
+    //         break;
+    //     }
+    // }
+
+    // if (isLiked) {
+    //     heart.classList.add("liked");
+    // } else {
+    //     heart.classList.remove("liked");
+    // }
+
+    // if (heart.classList.contains("liked")) {
+    //     heart.setAttribute("src", "./icons/white-heart-fill.png");
+    // } else {
+    //     heart.setAttribute("src", "./icons/white-heart.png");
+    // }
+}
+
+function checkLikedMovies() {
+
+    let moviesCopy = State.GET("movies");
+    let usersCopy = State.GET("user");
+    let username = localStorage.username;
+
+    let heart = document.querySelector(".heart");
+    let heartId = parseInt(heart.id);
+
+    let isLiked = false
+
+    //hittar rätt användare
+    for (let i = 0; i < usersCopy.length; i++) {
+        if (usersCopy[i].username === username) {
+            let likedMovies = usersCopy[i].liked_movies;
+
+            //loopar genom användarens gillade filmer och kollar om de har samma id som hjärtat
+            for (let j = 0; j < likedMovies.length; j++) {
+                if (heartId === likedMovies[j]) {
+                    //har de samma id uppdateras isLiked
+                    isLiked = true;
+                }
+            }
+        }
+    }
+
+    //hittar hjärtat från filmen man klickat på
+    let target_movie = document.getElementById(heartId);
+    //är isLiked true (finns med i liked_movies arrayen) läggs klassen liked till finns den inte med tas klassen bort
+    if (isLiked) {
+        target_movie.classList.add("liked");
+        console.log(target_movie);
+    } else {
+        target_movie.classList.remove("liked");
+        console.log(target_movie);
+    }
+
+    //hjärtat uppdateras baserat på klassen liked
+    if (target_movie.classList.contains("liked")) {
+        target_movie.setAttribute("src", "./icons/white-heart-fill.png");
+    } else {
+        target_movie.setAttribute("src", "./icons/white-heart.png");
+    }
+}
 
 
 

@@ -1106,7 +1106,26 @@
             "user_id": 1,
             "username": "hampus",
             "password": "bkfries",
-            "liked_movies": []
+            "liked_movies": [
+                21,
+                36,
+                23,
+                27,
+                3,
+                15,
+                5,
+                35,
+                34,
+                17,
+                20,
+                25,
+                13,
+                9,
+                10,
+                14,
+                16,
+                7
+            ]
         },
         {
             "user_id": 2,

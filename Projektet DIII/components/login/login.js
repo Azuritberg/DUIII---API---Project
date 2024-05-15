@@ -157,7 +157,7 @@ async function loginUser(event) {
 
   if (!username || !password) {
     alert("Please enter both username and password");
-    return; 
+    return;
   }
 
   let user = {
@@ -166,9 +166,9 @@ async function loginUser(event) {
   };
 
   try {
-    const loginUserObject = await State.POST(user); 
+    const loginUserObject = await State.POST(user);
     if (loginUserObject != undefined) {
-      localStorage.setItem("user", JSON.stringify(loginUserObject.id));
+      localStorage.setItem("user", JSON.stringify(loginUserObject.user_id));
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
       renderRedirectUserPage("mainPage", loginUserObject);
@@ -231,6 +231,7 @@ function changeModalContent(modal, type) {
 // Logout user and go to mainPage 'index.html'
 function logoutUser() {
   localStorage.removeItem("user");
+  localStorage.removeItem("username");
   updateLoginLogoutButton();
   //renderHeader(parentID, null);
   console.log("Logout successful");
