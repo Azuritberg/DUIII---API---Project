@@ -19,9 +19,21 @@ async function renderStructure(movies) {
     `;
 
     renderHeader(document.querySelector("header"));
-    renderMain(document.querySelector("main"), movies);
-    // return {
-    //     header: container.querySelector("header"),
-    //     main: container.querySelector("main")
+
+
+    // if(localStorage.getItem("loadedPage")) {
+    //     window[localStorage.getItem("loadedPage")](...JSON.parse(localStorage.getItem("loadedPage-argumet")));
+    // } else if (!localStorage.getItem("user") && localStorage.getItem("loadedPage") === "renderMoviesPage") {
+    //     window[localStorage.getItem("loadedPage")](...JSON.parse(localStorage.getItem("loadedPage-argumet")));
+    // } else {
+    //     renderMain("mainPage", movies);
     // }
+    
+    if(localStorage.getItem("loadedPage") === "renderUserPage" && !localStorage.getItem("user")) {
+        renderMain("mainPage", movies);
+    } else if (localStorage.getItem("loadedPage")) {
+        window[localStorage.getItem("loadedPage")](...JSON.parse(localStorage.getItem("loadedPage-argumet")));
+    } else {
+        renderMain("mainPage", movies);
+    }
 };

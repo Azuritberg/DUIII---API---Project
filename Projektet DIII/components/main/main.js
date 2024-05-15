@@ -4,10 +4,14 @@ let savedMovies = [];
 
 async function renderMain(parentID, sameMovies = []) {
 
+    console.log(parentID);
+    localStorage.setItem('loadedPage', "renderMain");
+    localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, sameMovies]));
+
     let movies = State.GET("movies");
     let mainContainer = document.createElement("div");
     mainContainer.id = "mainContainer";
-    parentID.append(mainContainer);
+    document.getElementById("mainPage").append(mainContainer);
 
     let pDom = document.createElement("p");
     pDom.id = "infoText";
@@ -81,6 +85,7 @@ async function renderMain(parentID, sameMovies = []) {
         // let id = moviePosters[i].id
         p[i].addEventListener("click", (event) => clearHtml(event, movies));
     }
+    
 }
 
 function clearHtml(event, instanceData) {
@@ -157,3 +162,29 @@ function regeneratePosters() {
 //     let randomIndexes = getRandomPoster(instanceData);
 //     generatePosters(randomIndexes, instanceData);
 // }
+
+
+
+function saveCurrentPage(pageIdentifier, data) {
+    localStorage.setItem("currentPage", pageIdentifier);
+    localStorage.setItem("currentPageData", JSON.stringify(data));
+}
+
+// Funktion för att hämta och rendera aktuell sida från localStorage vid laddning/uppdatering av sidan
+function loadCurrentPage() {
+    let pageIdentifier = localStorage.getItem("currentPage");
+    let data = JSON.parse(localStorage.getItem("currentPageData"));
+
+    if (pageIdentifier && data) {
+        switch (pageIdentifier) {
+            case "renderMain":
+                renderMain(document.getElementById('mainPage'), data);
+                break;
+            case "renderMoviesPage":
+                renderMoviesPage('wrapper', data);
+                break;
+            default:
+                renderMain(document.getElementById('mainPage'));  // Default till huvudsidan om inget annat är sparat
+        }
+    }
+}

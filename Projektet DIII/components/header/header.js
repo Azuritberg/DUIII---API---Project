@@ -72,10 +72,10 @@ function getHome(event) {
   if (!document.querySelector("#mainBox")) {
     if (document.getElementById("mainMovieBox")) {
       document.getElementById("mainMovieBox").remove();
-      renderMain(document.querySelector("main"), savedMovies);
+      renderMain("mainPage", savedMovies);
     } else {
       document.getElementById("userContainer").remove();
-      renderMain(document.querySelector("main"), savedMovies);
+      renderMain("mainPage", savedMovies);
     }
   }
 }

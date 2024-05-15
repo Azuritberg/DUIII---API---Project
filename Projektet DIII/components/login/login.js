@@ -171,7 +171,8 @@ async function loginUser(event) {
       localStorage.setItem("user", JSON.stringify(loginUserObject.id));
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
-      renderRedirectUserPage("mainPage", loginUserObject);
+      // renderRedirectUserPage("mainPage", loginUserObject);
+      window[localStorage.getItem("loadedPage")](...JSON.parse(localStorage.getItem("loadedPage-argumet")));
       updateLoginLogoutButton();
       window.location.replace('index.html');
       console.log("Login successful");
@@ -231,6 +232,7 @@ function changeModalContent(modal, type) {
 // Logout user and go to mainPage 'index.html'
 function logoutUser() {
   localStorage.removeItem("user");
+  localStorage.removeItem("username");
   updateLoginLogoutButton();
   //renderHeader(parentID, null);
   console.log("Logout successful");
@@ -242,3 +244,5 @@ function logoutUser() {
 
 // localStorage.removeItem("");
 // location.reload();
+
+

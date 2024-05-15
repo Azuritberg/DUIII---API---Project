@@ -2,6 +2,8 @@
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
+    localStorage.setItem('loadedPage', "renderMoviesPage");
+    localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
 
 
     let wrapper = document.getElementById(parentID);
@@ -155,6 +157,7 @@ function renderMoviesPage(parentID, instanceData) {
     if (!isLoggedIn()) {
         addReview.style.height = '300px';
     }
+    
 }
 
 
