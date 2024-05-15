@@ -72,50 +72,11 @@ function getHome(event) {
   if (!document.querySelector("#mainBox")) {
     if (document.getElementById("mainMovieBox")) {
       document.getElementById("mainMovieBox").remove();
-      renderMain(document.querySelector("main"), savedMovies);
+      renderMain("mainPage", savedMovies);
     } else {
       document.getElementById("userContainer").remove();
-      renderMain(document.querySelector("main"), savedMovies);
+      renderMain("mainPage", savedMovies);
     }
   }
 }
 
-
-
-
-
-
-  // ${instanceData && instanceData.userName ? instanceData.userName : ""}
-  
-  // ${instanceData ? instanceData.userName : ""}
-
-  // ${instanceData ? "Logout" : "Login"}
-
-
-
-  // let loginButton = document.getElementById("login");
-  // loginButton.addEventListener("click", function () {
-  //   renderHeaderLogin(parentID);
-  // });
-
-  // let loginButton = document.getElementById("login");
-  //   loginButton.addEventListener("click", function () {
-  //     console.log("parentID:", parentID); 
-  //   openModal(loginModal);
-  // });
-  // renderHeaderLogin();
-
-
-    // if (instanceData) {
-  //   document.getElementById("userName").addEventListener("click", function () {
-  //     renderRedirectUserPage("mainPage", instanceData);
-  //   });
-  // }
-
-  // document.getElementById("login").addEventListener("click", function () {
-  //   if (instanceData) {
-  //     logoutUser();
-  //   } else {
-  //     openModal(document.getElementById("loginModal"));
-  //   }
-  // });

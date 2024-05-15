@@ -3,6 +3,9 @@
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
 
+    // Spara sidinformation i localStorage
+    localStorage.setItem('loadedPage', "renderMoviesPage");
+    localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, instanceData]));
 
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.getElementById("mainPage");
@@ -34,51 +37,17 @@ function renderMoviesPage(parentID, instanceData) {
                 <div class="smallPosters" id="smallPoster2"></div>
                 <div class="smallPosters" id="smallPoster3"></div>
             </div>
-            <div id="addReview">
-            </div>
+            <div id="addReview"></div>
             <input type="text" placeholder="Add Review and Press Enter" id="userTextInput">
         </div>
     </div>`;
 
 
-    renderReviews(instanceData)
-    function renderReviews(instanceData) {
-        let reviews_copy = State.GET("reviews");
-        let users_copy = State.GET("user");
-        let parent = document.querySelector("#addReview");
+    // get review data from movie data
+    let reviewsCopy = State.GET("reviews");
+    const allMatchingReviews = reviewsCopy.filter(review => review.movie_id === instanceData.id);
+    allMatchingReviews.forEach(renderReviews);
 
-
-        for (let i = 0; i < reviews_copy.length; i++) {
-            if (reviews_copy[i].movie_id === instanceData.id) {
-                let username = "Unknown User";
-
-                for (let j = 0; j < users_copy.length; j++) {
-                    if (reviews_copy[i].user_id === users_copy[j].user_id) {
-                        username = users_copy[j].username;
-                        break;
-                    }
-                }
-
-                let div = document.createElement("div");
-                div.classList.add("review");
-
-                let h3 = document.createElement("h3");
-                let span = document.createElement("span")
-                span.classList.add("reviewSpan")
-                h3.textContent = "Review by "
-                span.textContent = username
-                h3.append(span)
-                div.append(h3);
-
-                let p = document.createElement("p");
-                p.classList.add("reviewInfo")
-                p.textContent = reviews_copy[i].review;
-                div.append(p);
-
-                parent.append(div);
-            }
-        }
-    }
 
     // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
@@ -88,8 +57,6 @@ function renderMoviesPage(parentID, instanceData) {
 
 
     for (let i = 0; i < 4; i++) {
-
-
 
         let p = document.createElement("p")
 
@@ -106,6 +73,7 @@ function renderMoviesPage(parentID, instanceData) {
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
     }
 
+
     // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
     reviewInput.style.display = isLoggedIn() ? 'block' : 'none';
@@ -113,7 +81,6 @@ function renderMoviesPage(parentID, instanceData) {
 
     reviewInput.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
-            document.getElementById("addReview").textContent = ""
 
             let username = localStorage.username
             let users_copy = State.GET("user")
@@ -129,10 +96,8 @@ function renderMoviesPage(parentID, instanceData) {
                             review: content
                         }
                     }
-
                     State.POST(data);
                     reviewInput.value = ""
-                    renderReviews(instanceData)
                 }
             }
         }
@@ -172,7 +137,6 @@ function renderMoviesPage(parentID, instanceData) {
                         id: instanceData.id,
                     }
                 }
-                // console.log(instanceData);
                 State.PATCH(data);
                 break;
             }
