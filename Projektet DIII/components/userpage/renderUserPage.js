@@ -238,8 +238,3 @@ function checkUserLikes() {
 // <div id="likedMovie"></div>
 
 
-
-
-for (let i = 0; i < movies.length; i++) {
-console.log("hej")
-}
