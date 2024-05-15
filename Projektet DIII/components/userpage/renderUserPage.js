@@ -100,7 +100,7 @@ function renderUserPage(parentID, instanceData) {
             let img = document.createElement("img");
             img.id = "deleteButton";
             img.src = "./icons/delete.png";
-            img.review_id = user_reviews[m].review_id; // Lägg till reviewens ID direkt som en egenskap  samma sak  // img.setAttribute("data-review-id", user_reviews[m].id); // Lägg till recensionens ID
+            img.review_id = user_reviews[m].review_id; // Lägg till reviewens ID direkt som en egenskap 
             text.append(img);
     
             let p = document.createElement("p"); 
@@ -113,18 +113,18 @@ function renderUserPage(parentID, instanceData) {
                 event.preventDefault();
                 console.log("hej");
 
-                const reviewId = event.target.event.target.review_id; // Hämta recensionens ID direkt från egenskapen getAttribute('data-review-id'); 
+                const reviewId = event.target.review_id; // Hämta recensionens ID direkt från egenskapen 
                 if (reviewId) {
                     const deleteReview = await State.DELETE({ entity: "reviews", row: reviewId });
                     console.log(deleteReview);
 
-                    // Ta bort recension från DOM om den raderas framgångsrikt
-                    if (deleteReview) {
-                        renderUserReviews(instanceData); // Rendera om recensionerna
-                    }
+                    // if (deleteReview) {
+                    //     renderUserReviews(instanceData); 
+                    // }
                 }
             });
         }
+        renderUserReviews(instanceData); 
     }
 
 
