@@ -49,15 +49,15 @@ function renderUserPage(parentID, instanceData) {
         deleteLikeButton.addEventListener("click", (event) => {
             console.log("hej")
         });
-    
-    
-        // const likedMovieUserPage = document.getElementById("likedMovie");
-        // likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
-    
     }
 
     
+    // const likedMovieUserPage = document.getElementById("likedMovie");
+    // likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
 
+
+    
+    // RENDER USER REVIEWS
     function renderUserReviews(instanceData) {
         let reviews_copy = State.GET("reviews");
         let movies_copy = State.GET("movies");
@@ -117,12 +117,19 @@ function renderUserPage(parentID, instanceData) {
             img.src = "./icons/delete.png";
             text.append(img);
     
-            let p = document.createElement("p");
-            p.classList.add("reviewInfo")
+            let p = document.createElement("p");    
             p.textContent = review;
             parent.append(p);
         }
     }
+
+
+
+
+
+
+
+
 
 
 
