@@ -117,7 +117,8 @@ function renderUserPage(parentID, instanceData) {
             img.src = "./icons/delete.png";
             text.append(img);
     
-            let p = document.createElement("p");    
+            let p = document.createElement("p"); 
+            p.classList.add("reviewInfo");   
             p.textContent = review;
             parent.append(p);
         }
