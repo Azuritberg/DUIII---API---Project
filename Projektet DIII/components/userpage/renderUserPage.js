@@ -11,7 +11,6 @@ function renderUserPage(parentID, instanceData) {
     wrapper.append(userContainer);
    
 
-
     userContainer.innerHTML = `
         <h1 id="userNamePage">${instanceData.username}</h1>
         <div id="topText">
@@ -37,25 +36,10 @@ function renderUserPage(parentID, instanceData) {
             </div>
             
             <div id="reviewContainer">
-                <div id="reviewBottom">
-                    
-                    
-                    </div>
+                <div id="reviewBottom"></div>
                 </div>
         </div>`;
-
-        renderUserReviews(instanceData)
-        const deleteLikeButton = document.getElementById("deleteButton");
-        deleteLikeButton.addEventListener("click", (event) => {
-            console.log("hej")
-        });
     }
-
-    
-    // const likedMovieUserPage = document.getElementById("likedMovie");
-    // likedMovieUserPage.style.backgroundImage = `url(${instanceData.poster})`;
-
-
     
     // RENDER USER REVIEWS
     function renderUserReviews(instanceData) {
@@ -116,12 +100,30 @@ function renderUserPage(parentID, instanceData) {
             let img = document.createElement("img");
             img.id = "deleteButton";
             img.src = "./icons/delete.png";
+            img.review_id = user_reviews[m].review_id; // Lägg till reviewens ID direkt som en egenskap  samma sak  // img.setAttribute("data-review-id", user_reviews[m].id); // Lägg till recensionens ID
             text.append(img);
     
             let p = document.createElement("p"); 
             p.classList.add("reviewInfo");   
             p.textContent = review;
             parent.append(p);
+
+             // Lägg till event listener för delete-knappen
+            img.addEventListener("click", async (event) => {
+                event.preventDefault();
+                console.log("hej");
+
+                const reviewId = event.target.event.target.review_id; // Hämta recensionens ID direkt från egenskapen getAttribute('data-review-id'); 
+                if (reviewId) {
+                    const deleteReview = await State.DELETE({ entity: "reviews", row: reviewId });
+                    console.log(deleteReview);
+
+                    // Ta bort recension från DOM om den raderas framgångsrikt
+                    if (deleteReview) {
+                        renderUserReviews(instanceData); // Rendera om recensionerna
+                    }
+                }
+            });
         }
     }
 

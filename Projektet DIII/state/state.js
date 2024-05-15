@@ -112,21 +112,24 @@ const State = {
     },
     DELETE: async function (data) {
         switch (data.entity) {
-            case "users":
+            case "reviews":
                 const removeLikedMovieRequest = new Request("./API/reviews.php", {
                     method: "DELETE",
-                    body: data.row,
+                    body: JSON.stringify({ id: data.row }),
                     headers: { "Content-Type": "application/json" },
                 })
-                let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+                let removeLikedMovieResource = await fetcher(removeLikedMovieRequest);
                 if (removeLikedMovieResource !== undefined) {
-                    for (let i = 0; i < STATE.review_id.length; i++) {
-                        if (STATE.review_id[i] === data.row) {
-                            STATE.review_id.splice(i, 1);
-                            break;
-                        }
+                    // Ta bort review från state och rendera om
+                    const result = await removeLikedMovieResource.json();
+                    console.log(result);
+
+                    const index = STATE.review_id.indexOf(data.row);
+                    if (index > -1) {
+                        STATE.review_id.splice(index, 1);
+                        renderUserReviews(STATE.user[0]);
                     }
-                }
+                } 
                 break;
             default:
                 break;
@@ -148,3 +151,18 @@ async function fetcher(request) {
         console.warn(error);
     }
 }
+
+
+
+
+
+// let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+// if (removeLikedMovieResource !== undefined) {
+//     for (let i = 0; i < STATE.review_id.length; i++) {
+//         if (STATE.review_id[i] === data.row) {
+//             STATE.review_id.splice(i, 1);
+//             renderUserReviews(STATE.user[0]);
+//             break;
+//         }
+//     }
+// }
