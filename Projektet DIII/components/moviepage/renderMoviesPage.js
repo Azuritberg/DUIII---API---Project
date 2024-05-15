@@ -2,6 +2,8 @@
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
+    localStorage.setItem('loadedPage', "renderMoviesPage");
+    localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
 
 
     let wrapper = document.getElementById(parentID);

@@ -30,6 +30,7 @@ async function renderApp() {
     let users = State.GET("user");
     let reviews = State.GET("reviews");
     renderStructure();
+    
 }
 renderApp();
 
