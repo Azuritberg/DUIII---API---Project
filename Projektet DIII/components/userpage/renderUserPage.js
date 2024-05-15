@@ -118,6 +118,7 @@ function renderUserPage(parentID, instanceData) {
         renderUserReviews(instanceData); 
     }
 
+
     // Find reviewed movies
     for (let i = 0; i < user_reviews.length; i++) {
         for (let j = 0; j < movies_copy.length; j++) {
@@ -127,9 +128,11 @@ function renderUserPage(parentID, instanceData) {
         }
     }
 
+
     console.log(user_reviews);
     console.log(reviewed_movies);
 
+    // RENDER USER REVIEWS
     let parent = document.getElementById("reviewBottom");
 
     for (let m = 0; m < reviewed_movies.length; m++) {
@@ -169,7 +172,7 @@ function renderUserPage(parentID, instanceData) {
         p.textContent = review;
         parent.append(p);
     }
-}
+
 
 function checkUserLikes() {
 
