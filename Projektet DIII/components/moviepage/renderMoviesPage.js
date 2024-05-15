@@ -2,9 +2,10 @@
 
 function renderMoviesPage(parentID, instanceData) {
     let similarMoviesArray = similarMovies(instanceData)
+
+    // Spara sidinformation i localStorage
     localStorage.setItem('loadedPage', "renderMoviesPage");
     localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
-
 
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.getElementById("mainPage");
@@ -95,7 +96,6 @@ function renderMoviesPage(parentID, instanceData) {
                             review: content
                         }
                     }
-
                     State.POST(data);
                     reviewInput.value = ""
                 }

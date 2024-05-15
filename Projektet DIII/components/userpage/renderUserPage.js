@@ -2,8 +2,8 @@
 
 
 function renderUserPage(parentID, instanceData) {
+    
     // Spara sidinformation i localStorage
-
     localStorage.setItem('loadedPage', "renderUserPage");
     localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
     localStorage.setItem('currentPage', JSON.stringify(instanceData));
@@ -12,8 +12,6 @@ function renderUserPage(parentID, instanceData) {
     const userContainer = document.createElement("main");
     userContainer.id = "userContainer";
     wrapper.append(userContainer);
-
-
 
     userContainer.innerHTML = `
         <h1 id="userNamePage">${instanceData.username}</h1>
