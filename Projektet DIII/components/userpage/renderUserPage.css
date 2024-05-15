@@ -136,9 +136,7 @@
 }
 
 .reviewHeader {
-    border-bottom: 1.5px solid #F6F4F4;
     font-family: MT-medium;
-    padding-bottom: 12px;
     color: #F6F4F4;
     font-size: 14px;
 }
@@ -153,13 +151,16 @@
 
 .userSpan {
     font-family: MT-medium;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .reviewInfo {
-    font-family: MT-italic;
+    margin: 0;
     font-size: 13px;
     color: #F6F4F4;
+    padding-bottom: 20px;
+    font-family: MT-italic;
+    border-bottom: 1.5px solid #F6F4F4;
 }
 
 /* .reviewMovie {
@@ -204,10 +205,4 @@
 #deleteButton:hover {
     transform: scale(1.07);
     filter: drop-shadow(0 1px 6px #F6F4F4);
-}
-
-.reviewInfo {
-    font-family: MT-medium;
-    color: #F6F4F4;
-    font-size: 14px;
 }

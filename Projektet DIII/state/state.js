@@ -115,7 +115,15 @@ const State = {
                     body: data.row,
                     headers: { "Content-Type": "application/json" },
                 })
-                let removeReviewResource = fetcher(removeLikedMovieRequest);
+                let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+                if (removeLikedMovieResource !== undefined) {
+                    for (let i = 0; i < STATE.review_id.length; i++) {
+                        if (STATE.review_id[i] === data.row) {
+                            STATE.review_id.splice(i, 1);
+                            break;
+                        }
+                    }
+                }
                 break;
             default:
                 break;
