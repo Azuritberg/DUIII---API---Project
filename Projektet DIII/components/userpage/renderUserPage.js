@@ -124,8 +124,6 @@ function checkUserLikes() {
 
     let movies = State.GET("movies");
     let users = State.GET("user");
-    console.log(users);
-    console.log(movies);
 
     let username = localStorage.username;
 
@@ -139,33 +137,26 @@ function checkUserLikes() {
     let likedMovies = currentUser.liked_movies;
 
     let likeMovieBox = document.getElementById("likeMovieBox");
-    console.log(likeMovieBox);
-    for (let i = 0; i < movies.length; i++) {
-        for (let j = 0; j < likedMovies.length; j++) {
-            if (likedMovies[j] === movies[i].id) {
-                let likedMovieDiv = document.createElement("div");
-                likedMovieDiv.setAttribute("id", "likedMovie");
+    if (likeMovieBox !== null) {
+        for (let i = 0; i < movies.length; i++) {
+            for (let j = 0; j < likedMovies.length; j++) {
+                if (likedMovies[j] === movies[i].id) {
+                    let likedMovieDiv = document.createElement("div");
+                    likedMovieDiv.classList.add("likedMovie");
+                    likedMovieDiv.setAttribute("id", movies[i].id)
 
-                likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
-                likeMovieBox.appendChild(likedMovieDiv);
+                    likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
+                    likeMovieBox.appendChild(likedMovieDiv);
+                    likedMovieDiv.addEventListener("click", function (event) {
+                        clearHtml(event, movies);
+                    })
+
+                }
             }
         }
     }
 
-    // let currentUser = null;
-    // for (let i = 0; i < usersCopy.length; i++) {
-
-    //     if (usersCopy[i].username === username) {
-    //         currentUser = usersCopy[i];
-    //     }
-    // }
-
-    // let likedMovies = currentUser.liked_movies;
-    // console.log(likedMovies);
 }
-
-
-
 
 
 

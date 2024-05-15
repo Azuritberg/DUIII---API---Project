@@ -185,10 +185,10 @@ function renderMoviesPage(parentID, instanceData) {
     });
 
     //check if a movie is liked.
-    checkLikedMovies();
+    checkLikedMovies("skickad från 2");
 }
 
-function checkLikedMovies() {
+function checkLikedMovies(string) {
 
     let moviesCopy = State.GET("movies");
     let usersCopy = State.GET("user");
@@ -199,11 +199,13 @@ function checkLikedMovies() {
 
     let isLiked = false
 
+    let userId = parseInt(localStorage.user);
     //hittar rätt användare
     for (let i = 0; i < usersCopy.length; i++) {
-        if (usersCopy[i].username === username) {
+        if (usersCopy[i].user_id === userId) {
             let likedMovies = usersCopy[i].liked_movies;
-
+            console.log(string, likedMovies);
+            console.log(usersCopy[i].liked_movies);
             //loopar genom användarens gillade filmer och kollar om de har samma id som hjärtat
             for (let j = 0; j < likedMovies.length; j++) {
                 if (heartId === likedMovies[j]) {
