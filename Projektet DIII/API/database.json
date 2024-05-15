@@ -931,6 +931,24 @@
             "movie_id": 39,
             "user_id": 3,
             "review": "hejehdjsk"
+        },
+        {
+            "review_id": 126,
+            "movie_id": 29,
+            "user_id": 4,
+            "review": "l\u00e4gger till en ny review :))"
+        },
+        {
+            "review_id": 127,
+            "movie_id": 29,
+            "user_id": 4,
+            "review": "varf\u00f6r syns inte det i userpage"
+        },
+        {
+            "review_id": 128,
+            "movie_id": 29,
+            "user_id": 4,
+            "review": "varf\u00f6r syns inte det i userpage"
         }
     ],
     "users": [
@@ -985,7 +1003,12 @@
             "user_id": 4,
             "username": "bojana",
             "password": "bell",
-            "liked_movies": []
+            "liked_movies": [
+                29,
+                28,
+                17,
+                23
+            ]
         },
         {
             "user_id": 5,

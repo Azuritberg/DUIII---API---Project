@@ -57,18 +57,10 @@ function renderRedirectUserPage(parentID, instanceData) {
     renderUserPage("mainPage", instanceData);
 }
 
-// function addReview(user) {
-
-
-//     console.log(user)
-// }
 
 
 
 
 
 
-// function clearContent(parentID, instanceData) {
-//     document.getElementById(parentID).innerHTML = "";
-//     renderUserPage("mainPage", instanceData);
-// }
+

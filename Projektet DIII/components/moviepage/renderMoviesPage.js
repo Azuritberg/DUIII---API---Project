@@ -43,10 +43,10 @@ function renderMoviesPage(parentID, instanceData) {
 
 
     // get review data from movie data
-    let reviews_copy = State.GET("reviews");
-    const all_matching_reviews = reviews_copy.filter(review => review.movie_id === instanceData.id);
-    all_matching_reviews.forEach(renderReviews);
-    // renderReviews(instanceData);
+    let reviewsCopy = State.GET("reviews");
+    const allMatchingReviews = reviewsCopy.filter(review => review.movie_id === instanceData.id);
+    allMatchingReviews.forEach(renderReviews);
+    
 
     // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
@@ -56,8 +56,6 @@ function renderMoviesPage(parentID, instanceData) {
 
 
     for (let i = 0; i < 4; i++) {
-
-
 
         let p = document.createElement("p")
 
@@ -73,6 +71,7 @@ function renderMoviesPage(parentID, instanceData) {
 
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
     }
+    
 
     // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
@@ -138,7 +137,6 @@ function renderMoviesPage(parentID, instanceData) {
                         id: instanceData.id,
                     }
                 }
-                // console.log(instanceData);
                 State.PATCH(data);
                 break;
             }
@@ -154,8 +152,8 @@ function renderMoviesPage(parentID, instanceData) {
     checkLikedMovies();
 }
 
+// RENDER REVIEWS for each movie on moviepage
 function renderReviews(instanceData) {
-    //console.log(instanceData);
 
     let users_copy = State.GET("user");
     let parent = document.querySelector("#addReview");
@@ -187,6 +185,7 @@ function renderReviews(instanceData) {
     parent.append(div);
 }
 
+// Check if user has liked movies
 function checkLikedMovies() {
 
     let moviesCopy = State.GET("movies");

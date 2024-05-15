@@ -57,7 +57,6 @@ function renderUserReviews(instanceData) {
             user_reviews.push(reviews_copy[i]);
         }
     }
-    console.log(user_reviews);
 
     // Find reviewed movies and store in an object for quick lookup
     for (let i = 0; i < movies_copy.length; i++) {
@@ -76,13 +75,9 @@ function renderUserReviews(instanceData) {
             }
         }
 
+        // Check if review exists
         if ( review === "") continue;
         const movie_title = reviewed_movies[m].title
-    // let parent = document.getElementById("reviewBottom");
-
-    // for (let m = 0; m < user_reviews.length; m++) {
-    //     let review = user_reviews[m].review;
-    //     let movie_title = reviewed_movies[user_reviews[m].movie_id];
 
         // Create and append the review elements
         let header = document.createElement("div");
@@ -123,6 +118,7 @@ function renderUserReviews(instanceData) {
     }
 }
 
+// Delete review and update DOM
 async function deleteReview(instanceData) {
     console.log(instanceData);
     await State.DELETE({ entity: "reviews", row: {review_id: instanceData} });
@@ -132,11 +128,10 @@ async function deleteReview(instanceData) {
     if (reviewHeaderElement) reviewHeaderElement.remove();
     if (reviewInfoElement) reviewInfoElement.remove();
 
-    // Remove review from STATE
-    //let instanceData = JSON.parse(localStorage.getItem('')); // Get instance data from localStorage
     renderUserReviews(instanceData);
 }
 
+//  Check if user has liked movies
 function checkUserLikes() {
 
     let movies = State.GET("movies");
