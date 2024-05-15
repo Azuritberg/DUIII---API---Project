@@ -118,6 +118,7 @@ function renderUserPage(parentID, instanceData) {
             text.append(img);
     
             let p = document.createElement("p");
+            p.classList.add("reviewInfo")
             p.textContent = review;
             parent.append(p);
         }
