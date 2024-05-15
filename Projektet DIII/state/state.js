@@ -116,7 +116,7 @@ const State = {
                     headers: { "Content-Type": "application/json" },
                 })
                 let removeLikedMovieResource = await fetcher(removeLikedMovieRequest);
-                if (removeLikedMovieResource !== undefined) {
+                // if (removeLikedMovieResource !== undefined) {
                 //     // Ta bort review från state och rendera om
                 //     const result = await removeLikedMovieResource.json();
                 //     console.log(result);
