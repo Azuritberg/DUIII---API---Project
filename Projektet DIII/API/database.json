@@ -919,6 +919,18 @@
             "movie_id": 31,
             "user_id": 2,
             "review": "not bad..."
+        },
+        {
+            "review_id": 124,
+            "movie_id": 39,
+            "user_id": 3,
+            "review": "hejhejhhejehej"
+        },
+        {
+            "review_id": 125,
+            "movie_id": 39,
+            "user_id": 3,
+            "review": "hejehdjsk"
         }
     ],
     "users": [
@@ -963,7 +975,11 @@
             "user_id": 3,
             "username": "Lucas",
             "password": "hej",
-            "liked_movies": []
+            "liked_movies": [
+                39,
+                25,
+                8
+            ]
         },
         {
             "user_id": 4,
