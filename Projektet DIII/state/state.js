@@ -46,9 +46,6 @@ const State = {
     POST: async function (data) {
         switch (data.entity) {
             case "login":
-                // console.log(data);
-                // console.log(JSON.stringify(data.row));
-                // console.log(JSON.parse(data.row));
                 const loginRequest = new Request("./API/login.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
@@ -60,7 +57,6 @@ const State = {
                     STATE.user.push(loginResource);
                     return loginResource;
                 }
-                //console.log(loginResource);
                 break;
             case "register":
                 console.log(data);
@@ -89,13 +85,24 @@ const State = {
     },
     PATCH: async function (data) {
         switch (data.entity) {
-            case "users":
+            case "likes":
                 const likedMovieRequest = new Request("./API/like_movie.php", {
                     method: "PATCH",
-                    body: data.row,
+                    body: JSON.stringify(data.row),
                     headers: { "Content-Type": "application/json" },
                 })
-                let likedMovieResource = fetcher(likedMovieRequest);
+                let likedMovieResource = await fetcher(likedMovieRequest);
+                if (likedMovieResource !== undefined) {
+                    for (let i = 0; i < STATE.user.length; i++) {
+                        let username = localStorage.username;
+                        if (likedMovieResource.username === username) {
+                            STATE.user[i] = likedMovieResource;
+                            checkLikedMovies();
+                            checkUserLikes();
+                            break;
+                        }
+                    }
+                }
                 break;
             default:
                 break;
@@ -103,13 +110,13 @@ const State = {
     },
     DELETE: async function (data) {
         switch (data.entity) {
-            case "users":
+            case "reviews":
                 const removeLikedMovieRequest = new Request("./API/reviews.php", {
                     method: "DELETE",
-                    body: data.row,
+                    body: JSON.stringify({ id: data.row }),
                     headers: { "Content-Type": "application/json" },
                 })
-                let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+                let removeLikedMovieResource = await fetcher(removeLikedMovieRequest);
                 break;
             default:
                 break;
@@ -131,3 +138,30 @@ async function fetcher(request) {
         console.warn(error);
     }
 }
+
+
+
+
+                // if (removeLikedMovieResource !== undefined) {
+                //     // Ta bort review från state och rendera om
+                //     const result = await removeLikedMovieResource.json();
+                //     console.log(result);
+
+                //     const index = STATE.review_id.indexOf(data.row);
+                //     if (index > -1) {
+                //         STATE.review_id.splice(index, 1);
+                //         renderUserReviews(STATE.user[0]);
+                //     }
+                // } 
+
+
+// let removeLikedMovieResource = fetcher(removeLikedMovieRequest);
+// if (removeLikedMovieResource !== undefined) {
+//     for (let i = 0; i < STATE.review_id.length; i++) {
+//         if (STATE.review_id[i] === data.row) {
+//             STATE.review_id.splice(i, 1);
+//             renderUserReviews(STATE.user[0]);
+//             break;
+//         }
+//     }
+// }

@@ -167,7 +167,7 @@
     margin: 5px 20px 5px 20px;
     padding-bottom: 12px;
     color: #F6F4F4;
-    border-bottom: 1.5px solid #F6F4F4;
+    /* border-bottom: 1.5px solid #F6F4F4; */
     margin-top: 0;
 }
 
@@ -218,7 +218,7 @@
     margin: 0;
 }
 
-#heart {
+.heart {
     height: 50px;
     width: 50px;
     cursor: pointer;
@@ -229,3 +229,5 @@
     width: 50px;
     cursor: pointer;
 }
+
+.liked {}
