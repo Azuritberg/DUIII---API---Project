@@ -53,13 +53,12 @@ function renderUserPage(parentID, instanceData) {
 
 
 function renderUserReviews(instanceData) {
-
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
 
     console.log(reviews_copy);
     let user_reviews = [];
-    let reviewed_movies = [];
+    let reviewed_movies = {};
 
     // Filter user reviews
     for (let i = 0; i < reviews_copy.length; i++) {
@@ -68,28 +67,18 @@ function renderUserReviews(instanceData) {
         }
     }
 
-    // Find reviewed movies
-    for (let i = 0; i < user_reviews.length; i++) {
-        for (let j = 0; j < movies_copy.length; j++) {
-            if (user_reviews[i].movie_id === movies_copy[j].id) {
-                reviewed_movies.push(movies_copy[j]);
-            }
-        }
+    // Find reviewed movies and store in an object for quick lookup
+    for (let i = 0; i < movies_copy.length; i++) {
+        reviewed_movies[movies_copy[i].id] = movies_copy[i].title;
     }
-
-
 
     let parent = document.getElementById("reviewBottom");
 
-    for (let m = 0; m < reviewed_movies.length; m++) {
-        let review = "";
-        for (let a = 0; a < user_reviews.length; a++) {
-            if (reviewed_movies[m].id === user_reviews[a].movie_id) {
-                review = user_reviews[a].review;
-                break; // Once found, break the inner loop
-            }
-        }
+    for (let m = 0; m < user_reviews.length; m++) {
+        let review = user_reviews[m].review;
+        let movie_title = reviewed_movies[user_reviews[m].movie_id];
 
+        // Create and append the review elements
         let header = document.createElement("div");
         header.classList.add("reviewHeader");
         parent.append(header);
@@ -104,21 +93,22 @@ function renderUserReviews(instanceData) {
 
         let span = document.createElement("span");
         span.classList.add("userSpan");
-        span.textContent = " / " + reviewed_movies[m].title + " /";
+        span.textContent = " / " + movie_title + " /";
         h3.append(span);
 
         let img = document.createElement("img");
         img.id = "deleteButton" + user_reviews[m].review_id;
-        img.classList.add("deleteButton")
+        img.classList.add("deleteButton");
         img.src = "./icons/delete.png";
         text.append(img);
 
         let p = document.createElement("p");
-        p.classList.add("reviewInfo")
+        p.classList.add("reviewInfo");
         p.textContent = review;
         parent.append(p);
     }
 }
+
 
 function checkUserLikes() {
 
