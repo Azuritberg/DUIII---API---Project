@@ -40,7 +40,11 @@ function renderMoviesPage(parentID, instanceData) {
     </div>`;
 
 
-    renderReviews(instanceData)
+    // get review data from movie data
+    let reviews_copy = State.GET("reviews");
+    const all_matching_reviews = reviews_copy.filter(review => review.movie_id === instanceData.id);
+    all_matching_reviews.forEach(renderReviews);
+    // renderReviews(instanceData);
 
     // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
@@ -75,7 +79,6 @@ function renderMoviesPage(parentID, instanceData) {
 
     reviewInput.addEventListener("keypress", function (event) {
         if (event.key === "Enter") {
-            document.getElementById("addReview").textContent = ""
 
             let username = localStorage.username
             let users_copy = State.GET("user")
@@ -94,7 +97,6 @@ function renderMoviesPage(parentID, instanceData) {
 
                     State.POST(data);
                     reviewInput.value = ""
-                    renderReviews(instanceData)
                 }
             }
         }
@@ -151,41 +153,36 @@ function renderMoviesPage(parentID, instanceData) {
 }
 
 function renderReviews(instanceData) {
-    let reviews_copy = State.GET("reviews");
+    console.log(instanceData);
+
     let users_copy = State.GET("user");
     let parent = document.querySelector("#addReview");
 
-
-    for (let i = 0; i < reviews_copy.length; i++) {
-        if (reviews_copy[i].movie_id === instanceData.id) {
-            let username = "Unknown User";
-
-            for (let j = 0; j < users_copy.length; j++) {
-                if (reviews_copy[i].user_id === users_copy[j].user_id) {
-                    username = users_copy[j].username;
-                    break;
-                }
-            }
-
-            let div = document.createElement("div");
-            div.classList.add("review");
-
-            let h3 = document.createElement("h3");
-            let span = document.createElement("span")
-            span.classList.add("reviewSpan")
-            h3.textContent = "Review by "
-            span.textContent = username
-            h3.append(span)
-            div.append(h3);
-
-            let p = document.createElement("p");
-            p.classList.add("reviewInfo")
-            p.textContent = reviews_copy[i].review;
-            div.append(p);
-
-            parent.append(div);
+    let username = "Unknown User";
+    for (let j = 0; j < users_copy.length; j++) {
+        if (instanceData.user_id === users_copy[j].user_id) {
+            username = users_copy[j].username;
+            break;
         }
     }
+
+    let div = document.createElement("div");
+    div.classList.add("review");
+
+    let h3 = document.createElement("h3");
+    let span = document.createElement("span");
+    span.classList.add("reviewSpan");
+    h3.textContent = "Review by ";
+    span.textContent = username;
+    h3.append(span);
+    div.append(h3);
+
+    let p = document.createElement("p");
+    p.classList.add("reviewInfo");
+    p.textContent = instanceData.review;
+    div.append(p);
+
+    parent.append(div);
 }
 
 function checkLikedMovies() {
