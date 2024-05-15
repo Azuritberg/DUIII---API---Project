@@ -3,6 +3,9 @@
 
 function renderUserPage(parentID, instanceData) {
     // Spara sidinformation i localStorage
+
+    localStorage.setItem('loadedPage', "renderUserPage");
+    localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
     localStorage.setItem('currentPage', JSON.stringify(instanceData));
 
     let wrapper = document.getElementById(parentID);
