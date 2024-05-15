@@ -50,7 +50,7 @@ function renderUserReviews(instanceData) {
 
     console.log(reviews_copy);
     let user_reviews = [];
-    let reviewed_movies = {};
+    let reviewed_movies = [];
 
     // Filter user reviews
     for (let i = 0; i < reviews_copy.length; i++) {
@@ -58,23 +58,27 @@ function renderUserReviews(instanceData) {
             user_reviews.push(reviews_copy[i]);
         }
     }
+    console.log(user_reviews);
 
     // Find reviewed movies and store in an object for quick lookup
     for (let i = 0; i < movies_copy.length; i++) {
-        reviewed_movies[movies_copy[i].id] = movies_copy[i].title;
+        reviewed_movies.push(movies_copy[i]);
     }
 
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
-    let review = "";
     for (let m = 0; m < reviewed_movies.length; m++) {
+        let review = "";
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
                 review = user_reviews[a];
                 break; // Once found, break the inner loop
             }
         }
+
+        if ( review === "") continue;
+        const movie_title = reviewed_movies[m].title
     // let parent = document.getElementById("reviewBottom");
 
     // for (let m = 0; m < user_reviews.length; m++) {
@@ -84,6 +88,7 @@ function renderUserReviews(instanceData) {
         // Create and append the review elements
         let header = document.createElement("div");
         header.classList.add("reviewHeader");
+        header.id = "reviewHeader" + review.review_id;
         parent.append(header);
 
         let text = document.createElement("div");
@@ -100,13 +105,14 @@ function renderUserReviews(instanceData) {
         h3.append(span);
 
         let img = document.createElement("img");
-        img.id = "deleteButton" + user_reviews[m].review_id;
+        img.id = "deleteButton" + review.review_id;
         img.classList.add("deleteButton");
         img.src = "./icons/delete.png";
         text.append(img);
 
         let p = document.createElement("p");
         p.classList.add("reviewInfo")
+        p.id = "reviewInfo" + review.review_id;
         p.textContent = review.review;
         parent.append(p);
 
@@ -122,10 +128,10 @@ async function deleteReview(instanceData) {
     console.log(instanceData);
     await State.DELETE({ entity: "reviews", row: {review_id: instanceData} });
 
-    // let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
-    // let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
-    // if (reviewHeaderElement) reviewHeaderElement.remove();
-    // if (reviewInfoElement) reviewInfoElement.remove();
+    let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
+    let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
+    if (reviewHeaderElement) reviewHeaderElement.remove();
+    if (reviewInfoElement) reviewInfoElement.remove();
 
     // Remove review from STATE
     //let instanceData = JSON.parse(localStorage.getItem('')); // Get instance data from localStorage

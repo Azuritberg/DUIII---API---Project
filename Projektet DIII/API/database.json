@@ -441,12 +441,6 @@
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
-            "review_id": 18,
-            "movie_id": 7,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
-        },
-        {
             "review_id": 20,
             "movie_id": 7,
             "user_id": 3,
@@ -487,12 +481,6 @@
             "movie_id": 9,
             "user_id": 1,
             "review": "awesome"
-        },
-        {
-            "review_id": 28,
-            "movie_id": 10,
-            "user_id": 4,
-            "review": "jhdf"
         },
         {
             "review_id": 29,
@@ -603,12 +591,6 @@
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
-            "review_id": 50,
-            "movie_id": 17,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
-        },
-        {
             "review_id": 52,
             "movie_id": 18,
             "user_id": 3,
@@ -639,12 +621,6 @@
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
-            "review_id": 58,
-            "movie_id": 20,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
-        },
-        {
             "review_id": 60,
             "movie_id": 21,
             "user_id": 3,
@@ -659,20 +635,8 @@
         {
             "review_id": 63,
             "movie_id": 22,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
-            "review_id": 63,
-            "movie_id": 22,
             "user_id": 3,
             "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
-        },
-        {
-            "review_id": 64,
-            "movie_id": 22,
-            "user_id": 3,
-            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
         },
         {
             "review_id": 65,
@@ -685,12 +649,6 @@
             "movie_id": 23,
             "user_id": 1,
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
-        },
-        {
-            "review_id": 68,
-            "movie_id": 24,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 70,
@@ -775,12 +733,6 @@
             "movie_id": 29,
             "user_id": 1,
             "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
-        },
-        {
-            "review_id": 87,
-            "movie_id": 30,
-            "user_id": 4,
-            "review": "Fourth big screen viewing\u2014it's fucking astonishing. What an accomplishment! Easily Nolan's greatest and most important work to date."
         },
         {
             "review_id": 89,
@@ -921,12 +873,6 @@
             "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
         },
         {
-            "review_id": 119,
-            "movie_id": 29,
-            "user_id": 4,
-            "review": "lalalalalalaalalalalalalala"
-        },
-        {
             "review_id": 120,
             "movie_id": 20,
             "user_id": 2,
@@ -949,6 +895,48 @@
             "movie_id": 31,
             "user_id": 2,
             "review": "not bad..."
+        },
+        {
+            "review_id": 124,
+            "movie_id": 1,
+            "user_id": 4,
+            "review": "hej hej ge mig en review!!!"
+        },
+        {
+            "review_id": 125,
+            "movie_id": 1,
+            "user_id": 4,
+            "review": "hej hejxcvbnmkl\u00f6"
+        },
+        {
+            "review_id": 126,
+            "movie_id": 1,
+            "user_id": 4,
+            "review": "hej hejxcvbnmkl\u00f6"
+        },
+        {
+            "review_id": 127,
+            "movie_id": 1,
+            "user_id": 4,
+            "review": "fhgjklo\u00f6p\u00e4\u00e5'fuhsufhbojana"
+        },
+        {
+            "review_id": 128,
+            "movie_id": 1,
+            "user_id": 4,
+            "review": "fhgjklo\u00f6p\u00e4\u00e5'fuhsufhbojana"
+        },
+        {
+            "review_id": 129,
+            "movie_id": 7,
+            "user_id": 4,
+            "review": "hj\u00f6hkajhd\u00f6o"
+        },
+        {
+            "review_id": 130,
+            "movie_id": 7,
+            "user_id": 4,
+            "review": "hj\u00f6hkajhd\u00f6o"
         }
     ],
     "users": [
