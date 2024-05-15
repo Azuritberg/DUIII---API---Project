@@ -116,17 +116,6 @@ const State = {
                     headers: { "Content-Type": "application/json" },
                 })
                 let removeLikedMovieResource = await fetcher(removeLikedMovieRequest);
-                // if (removeLikedMovieResource !== undefined) {
-                //     // Ta bort review från state och rendera om
-                //     const result = await removeLikedMovieResource.json();
-                //     console.log(result);
-
-                //     const index = STATE.review_id.indexOf(data.row);
-                //     if (index > -1) {
-                //         STATE.review_id.splice(index, 1);
-                //         renderUserReviews(STATE.user[0]);
-                //     }
-                // } 
                 break;
             default:
                 break;
@@ -151,6 +140,18 @@ async function fetcher(request) {
 
 
 
+
+                // if (removeLikedMovieResource !== undefined) {
+                //     // Ta bort review från state och rendera om
+                //     const result = await removeLikedMovieResource.json();
+                //     console.log(result);
+
+                //     const index = STATE.review_id.indexOf(data.row);
+                //     if (index > -1) {
+                //         STATE.review_id.splice(index, 1);
+                //         renderUserReviews(STATE.user[0]);
+                //     }
+                // } 
 
 
 // let removeLikedMovieResource = fetcher(removeLikedMovieRequest);

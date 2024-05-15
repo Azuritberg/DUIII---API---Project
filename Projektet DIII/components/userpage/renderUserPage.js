@@ -29,7 +29,10 @@ function renderUserPage(parentID, instanceData) {
             </div>
             
             <div id="reviewContainer">
-                <div id="reviewBottom"></div>
+                <div id="reviewBottom">
+                    
+                    
+                    </div>
                 </div>
         </div>`;
 
@@ -74,8 +77,7 @@ function renderUserReviews(instanceData) {
         }
     }
 
-    console.log(user_reviews);
-    console.log(reviewed_movies);
+
 
     let parent = document.getElementById("reviewBottom");
 
@@ -116,7 +118,7 @@ function renderUserReviews(instanceData) {
         p.textContent = review;
         parent.append(p);
     }
-
+}
 
 function checkUserLikes() {
 
