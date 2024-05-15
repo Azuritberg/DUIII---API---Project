@@ -46,6 +46,8 @@ function renderUserReviews(instanceData) {
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
 
+    console.log("hej");
+
     console.log(reviews_copy);
     let user_reviews = [];
     let reviewed_movies = {};
@@ -65,8 +67,8 @@ function renderUserReviews(instanceData) {
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
+    let review = "";
     for (let m = 0; m < reviewed_movies.length; m++) {
-        let review = "";
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
                 review = user_reviews[a];
@@ -120,10 +122,10 @@ async function deleteReview(instanceData) {
     console.log(instanceData);
     await State.DELETE({ entity: "reviews", row: {review_id: instanceData} });
 
-    let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
-    let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
-    if (reviewHeaderElement) reviewHeaderElement.remove();
-    if (reviewInfoElement) reviewInfoElement.remove();
+    // let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
+    // let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
+    // if (reviewHeaderElement) reviewHeaderElement.remove();
+    // if (reviewInfoElement) reviewInfoElement.remove();
 
     // Remove review from STATE
     //let instanceData = JSON.parse(localStorage.getItem('')); // Get instance data from localStorage
