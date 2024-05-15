@@ -97,6 +97,7 @@ const State = {
                         if (likedMovieResource.username === username) {
                             STATE.user[i] = likedMovieResource;
                             checkLikedMovies();
+                            checkUserLikes();
                             break;
                         }
                     }

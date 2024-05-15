@@ -1097,7 +1097,6 @@
                 15,
                 5,
                 35,
-                34,
                 17,
                 20,
                 25,
@@ -1105,7 +1104,9 @@
                 9,
                 10,
                 16,
-                7
+                7,
+                34,
+                40
             ]
         },
         {
@@ -1124,6 +1125,18 @@
             "user_id": 4,
             "username": "bojana",
             "password": "bell",
+            "liked_movies": []
+        },
+        {
+            "user_id": 5,
+            "username": "okej",
+            "password": "okej",
+            "liked_movies": []
+        },
+        {
+            "user_id": 6,
+            "username": "ok",
+            "password": "ok",
             "liked_movies": []
         }
     ]
