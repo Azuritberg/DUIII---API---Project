@@ -170,8 +170,9 @@ async function loginUser(event) {
 
   try {
     const loginUserObject = await State.POST(user);
+    console.log(loginUserObject.user_id);
     if (loginUserObject != undefined) {
-      localStorage.setItem("user", JSON.stringify(loginUserObject.user_id));
+      localStorage.setItem("user", loginUserObject.user_id);
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
       // renderRedirectUserPage("mainPage", loginUserObject);

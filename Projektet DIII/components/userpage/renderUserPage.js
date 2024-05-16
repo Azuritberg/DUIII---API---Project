@@ -2,10 +2,10 @@
 
 
 function renderUserPage(parentID, instanceData) {
-    
+
     // Spara sidinformation i localStorage
     localStorage.setItem('loadedPage', "renderUserPage");
-    localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
+    localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, instanceData]));
     localStorage.setItem('currentPage', JSON.stringify(instanceData));
 
     let wrapper = document.getElementById(parentID);
@@ -74,7 +74,7 @@ function renderUserReviews(instanceData) {
         }
 
         // Check if review exists
-        if ( review === "") continue;
+        if (review === "") continue;
         const movie_title = reviewed_movies[m].title
 
         // Create and append the review elements
@@ -110,8 +110,8 @@ function renderUserReviews(instanceData) {
 
         // Add event listener to delete button
         img.addEventListener("click", (event) => {
-        deleteReview(review.review_id);
-        console.log("Hej DeleteButton")
+            deleteReview(review.review_id);
+            console.log("Hej DeleteButton")
         });
     }
 }
@@ -119,7 +119,7 @@ function renderUserReviews(instanceData) {
 // Delete review and update DOM
 async function deleteReview(instanceData) {
     console.log(instanceData);
-    await State.DELETE({ entity: "reviews", row: {review_id: instanceData} });
+    await State.DELETE({ entity: "reviews", row: { review_id: instanceData } });
 
     let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
     let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
@@ -134,8 +134,6 @@ function checkUserLikes() {
 
     let movies = State.GET("movies");
     let users = State.GET("user");
-    console.log(users);
-    console.log(movies);
 
     let username = localStorage.username;
 
@@ -149,29 +147,25 @@ function checkUserLikes() {
     let likedMovies = currentUser.liked_movies;
 
     let likeMovieBox = document.getElementById("likeMovieBox");
-    console.log(likeMovieBox);
-    for (let i = 0; i < movies.length; i++) {
-        for (let j = 0; j < likedMovies.length; j++) {
-            if (likedMovies[j] === movies[i].id) {
-                let likedMovieDiv = document.createElement("div");
-                likedMovieDiv.setAttribute("id", "likedMovie");
+    if (likeMovieBox !== null) {
+        for (let i = 0; i < movies.length; i++) {
+            for (let j = 0; j < likedMovies.length; j++) {
+                if (likedMovies[j] === movies[i].id) {
+                    let likedMovieDiv = document.createElement("div");
+                    likedMovieDiv.classList.add("likedMovie");
+                    likedMovieDiv.setAttribute("id", movies[i].id)
 
-                likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
-                likeMovieBox.appendChild(likedMovieDiv);
+                    likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
+                    likeMovieBox.appendChild(likedMovieDiv);
+                    likedMovieDiv.addEventListener("click", function (event) {
+                        clearHtml(event, movies);
+                    })
+
+                }
             }
         }
     }
 
-    // let currentUser = null;
-    // for (let i = 0; i < usersCopy.length; i++) {
-
-    //     if (usersCopy[i].username === username) {
-    //         currentUser = usersCopy[i];
-    //     }
-    // }
-
-    // let likedMovies = currentUser.liked_movies;
-    // console.log(likedMovies);
 }
 
 
@@ -179,27 +173,24 @@ function checkUserLikes() {
 
 
 
-
-
-
-// <div id="reviewContainer">
-// <div id="reviewBottom">
-//     <div id="reviewHeader">
-//         <div class="reviewText">
-//             <h3>Review by <span class="userSpan">SpaceFan01</span></h3>
-//             <h3 class="reviewMovie">/ DUNE Part II /</h3>
-//             <img id="deleteButton" src="./icons/delete.png"alt="">
-//             </div>
-//             <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
-//         </div>
-//         <div id="reviewHeader">
-//             <div class="reviewText">
-//                 <h3>Review by <span class="userSpan">SpaceFan01</span></h3>
-//                 <h3 class="reviewMovie">/ DUNE Part II /</h3>
-//                 <img id="deleteButton" src="./icons/delete.png"alt="">
-//             </div>
-//             <p>Yeah the film bros are right…you need to see this...</p>
-//         </div>
+    // <div id="reviewContainer">
+    // <div id="reviewBottom">
+    //     <div id="reviewHeader">
+    //         <div class="reviewText">
+    //             <h3>Review by <span class="userSpan">SpaceFan01</span></h3>
+    //             <h3 class="reviewMovie">/ DUNE Part II /</h3>
+    //             <img id="deleteButton" src="./icons/delete.png"alt="">
+    //             </div>
+    //             <p>Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...Yeah the film bros are right…you need to see this...</p>
+    //         </div>
+    //         <div id="reviewHeader">
+    //             <div class="reviewText">
+    //                 <h3>Review by <span class="userSpan">SpaceFan01</span></h3>
+    //                 <h3 class="reviewMovie">/ DUNE Part II /</h3>
+    //                 <img id="deleteButton" src="./icons/delete.png"alt="">
+    //             </div>
+    //             <p>Yeah the film bros are right…you need to see this...</p>
+    //         </div>
 
 //         <div id="reviewHeader">
 //             <div class="reviewText">

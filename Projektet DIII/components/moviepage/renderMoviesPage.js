@@ -5,7 +5,7 @@ function renderMoviesPage(parentID, instanceData) {
 
     // Spara sidinformation i localStorage
     localStorage.setItem('loadedPage', "renderMoviesPage");
-    localStorage.setItem("loadedPage-argumet", JSON.stringify ([parentID, instanceData]));
+    localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, instanceData]));
 
     let wrapper = document.getElementById(parentID);
     let moviesContainer = document.getElementById("mainPage");
@@ -47,7 +47,7 @@ function renderMoviesPage(parentID, instanceData) {
     let reviewsCopy = State.GET("reviews");
     const allMatchingReviews = reviewsCopy.filter(review => review.movie_id === instanceData.id);
     allMatchingReviews.forEach(renderReviews);
-    
+
 
     // SIMILAR MOVIES  
     let bigPoster = document.getElementById("bigPoster");
@@ -72,7 +72,7 @@ function renderMoviesPage(parentID, instanceData) {
 
         p.addEventListener("click", (event) => clearHtml(event, similarMoviesArray));
     }
-    
+
 
     // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
@@ -149,7 +149,7 @@ function renderMoviesPage(parentID, instanceData) {
     });
 
     //check if a movie is liked.
-    checkLikedMovies();
+    checkLikedMovies("skickad från 2");
 }
 
 // RENDER REVIEWS for each movie on moviepage
@@ -197,11 +197,11 @@ function checkLikedMovies() {
 
     let isLiked = false
 
+    let userId = parseInt(localStorage.user);
     //hittar rätt användare
     for (let i = 0; i < usersCopy.length; i++) {
-        if (usersCopy[i].username === username) {
+        if (usersCopy[i].user_id === userId) {
             let likedMovies = usersCopy[i].liked_movies;
-
             //loopar genom användarens gillade filmer och kollar om de har samma id som hjärtat
             for (let j = 0; j < likedMovies.length; j++) {
                 if (heartId === likedMovies[j]) {
@@ -217,10 +217,8 @@ function checkLikedMovies() {
     //är isLiked true (finns med i liked_movies arrayen) läggs klassen liked till finns den inte med tas klassen bort
     if (isLiked) {
         target_movie.classList.add("liked");
-        console.log(target_movie);
     } else {
         target_movie.classList.remove("liked");
-        console.log(target_movie);
     }
 
     //hjärtat uppdateras baserat på klassen liked

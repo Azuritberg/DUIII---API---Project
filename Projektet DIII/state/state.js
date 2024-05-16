@@ -9,7 +9,7 @@ const STATE = {
     reviews: []
 }
 
-async function renderApp() {
+async function getData() {
     const movie_request = new Request("./API/movies.php");
     const movie_response = await fetch(movie_request);
     const movie_resource = await movie_response.json();
@@ -19,6 +19,7 @@ async function renderApp() {
     const user_response = await fetch(user_request);
     const user_resource = await user_response.json();
     STATE.user = user_resource;
+    console.log(STATE.user);
 
     const reviews_request = new Request("./API/reviews.php");
     const reviews_response = await fetch(reviews_request);
@@ -30,9 +31,9 @@ async function renderApp() {
     let users = State.GET("user");
     let reviews = State.GET("reviews");
     renderStructure();
-    
+
 }
-renderApp();
+// renderApp();
 
 
 
@@ -66,7 +67,9 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 })
                 let registerResource = await fetcher(registerRequest);
-                return registerRequest
+                if (registerRequest !== undefined) {
+                    return registerRequest
+                }
                 break;
             case "reviews":
                 const reviewRequest = new Request("./API/reviews.php", {
@@ -94,12 +97,11 @@ const State = {
                 })
                 let likedMovieResource = await fetcher(likedMovieRequest);
                 if (likedMovieResource !== undefined) {
+                    let userId = parseInt(localStorage.user);
                     for (let i = 0; i < STATE.user.length; i++) {
-                        let username = localStorage.username;
-                        if (likedMovieResource.username === username) {
-                            STATE.user[i] = likedMovieResource;
-                            checkLikedMovies();
-                            checkUserLikes();
+                        if (userId === STATE.user[i].user_id) {
+                            STATE.user[i].liked_movies = likedMovieResource.liked_movies;
+                            checkLikedMovies("skickad från 1");
                             break;
                         }
                     }
@@ -143,5 +145,4 @@ async function fetcher(request) {
         console.warn(error);
     }
 }
-
 
