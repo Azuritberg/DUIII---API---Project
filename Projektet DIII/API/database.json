@@ -561,12 +561,6 @@
             "review": "awesome"
         },
         {
-            "review_id": 44,
-            "movie_id": 15,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
             "review_id": 45,
             "movie_id": 16,
             "user_id": 3,
