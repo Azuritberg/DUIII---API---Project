@@ -67,7 +67,9 @@ const State = {
                     headers: { "Content-Type": "application/json" }
                 })
                 let registerResource = await fetcher(registerRequest);
-                return registerRequest
+                if (registerRequest !== undefined) {
+                    return registerRequest
+                }
                 break;
             case "reviews":
                 const reviewRequest = new Request("./API/reviews.php", {
@@ -102,16 +104,6 @@ const State = {
                             checkLikedMovies("skickad från 1");
                             break;
                         }
-                        //eftersom det loopar genom alla users så kanske det buggar och kallar på funktionen fler gånger om det är en annan användare än första användaren. 
-
-                        // if (likedMovieResource.userna {me === username) {
-                        //     console.log("hej");
-                        //     STATE.user[i].liked_movies = likedMovieResource.liked_movies;
-                        //     console.log(STATE.user[i]);
-                        //     // updateUserLikes(likedMovieResource.liked_movies);
-                        //     // checkUserLikes();
-                        //     break;
-                        // }
                     }
                 }
                 break;
