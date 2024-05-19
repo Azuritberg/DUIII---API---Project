@@ -76,3 +76,8 @@ header {
     cursor: pointer;
     margin-right: 20px;
 }
+
+#userbtn:hover {
+    transform: scale(1.07);
+    filter: drop-shadow(0 1px 6px #F6F4F4);
+}
