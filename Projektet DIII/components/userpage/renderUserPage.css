@@ -85,6 +85,22 @@
     width: 200px;
 }
 
+.likedMovie:hover {
+    box-shadow: 1px 1px 20px #F6F4F4;
+    cursor: pointer;
+    width: 100%;
+    margin: 0;
+    
+    /* background: rgb(40, 66, 99, 0.8); */
+    /* justify-content: center;
+    align-items: center; */
+    /* font-family: MT-semibold; */
+    /* border-radius: 3px;
+    color: #F6F4F4; */
+    /* font-size: 15px; */
+    /* padding: 10px; */
+}
+
 .likeTitle {
     display: flex;
     justify-content: center;
