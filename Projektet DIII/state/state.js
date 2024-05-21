@@ -140,6 +140,7 @@ async function fetcher(request) {
         return resource;
     } catch (error) {
         console.warn(error);
+        return {error: error.message};
     }
 }
 
