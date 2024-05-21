@@ -141,11 +141,7 @@ function renderMoviesPage(parentID, instanceData) {
                 break;
             }
         }
-        // if (heart.getAttribute("src") != "./icons/white-heart.png") {
-        //     heart.setAttribute("src", "./icons/white-heart.png")
-        // } else {
-        //     heart.setAttribute("src", "./icons/white-heart-fill.png")
-        // }
+
     });
 
     //check if a movie is liked.
@@ -233,5 +229,5 @@ function checkLikedMovies() {
 
 
 
-// renderMoviesPage("wrapper");
+
 
