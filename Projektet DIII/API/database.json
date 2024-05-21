@@ -477,12 +477,6 @@
             "review": "awesome"
         },
         {
-            "review_id": 28,
-            "movie_id": 10,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
             "review_id": 29,
             "movie_id": 10,
             "user_id": 1,
@@ -641,20 +635,8 @@
         {
             "review_id": 63,
             "movie_id": 22,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
-            "review_id": 63,
-            "movie_id": 22,
             "user_id": 3,
             "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
-        },
-        {
-            "review_id": 64,
-            "movie_id": 22,
-            "user_id": 3,
-            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
         },
         {
             "review_id": 65,
@@ -769,12 +751,6 @@
             "movie_id": 31,
             "user_id": 1,
             "review": "awesome"
-        },
-        {
-            "review_id": 92,
-            "movie_id": 32,
-            "user_id": 4,
-            "review": "jhdf"
         },
         {
             "review_id": 93,
@@ -943,6 +919,30 @@
             "movie_id": 29,
             "user_id": 4,
             "review": "varf\u00f6r syns inte det i userpage"
+        },
+        {
+            "review_id": 129,
+            "movie_id": 13,
+            "user_id": 4,
+            "review": "hej hej en ny review"
+        },
+        {
+            "review_id": 130,
+            "movie_id": 13,
+            "user_id": 4,
+            "review": "nya  nya nya"
+        },
+        {
+            "review_id": 131,
+            "movie_id": 29,
+            "user_id": 4,
+            "review": "ny ny ny 3456"
+        },
+        {
+            "review_id": 132,
+            "movie_id": 29,
+            "user_id": 4,
+            "review": "78900"
         }
     ],
     "users": [
