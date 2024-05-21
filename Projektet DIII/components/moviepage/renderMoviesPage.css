@@ -18,7 +18,7 @@
     border-radius: 8px;
     margin-top: 50px;
     margin: 30px;
-    height: 670px;
+    height: 677px;
     width: 1300px;
     margin: 50px;
 }
@@ -172,6 +172,7 @@
     font-family: MT-medium;
     font-size: 15px;
     color: #F6F4F4;
+    margin-top: 0;
 }
 
 .reviewSpan {
