@@ -33,7 +33,7 @@ async function getData() {
     renderStructure();
 
 }
-// renderApp();
+
 
 
 
