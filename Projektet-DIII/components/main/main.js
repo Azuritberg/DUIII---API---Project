@@ -4,7 +4,7 @@ let savedMovies = [];
 
 async function renderMain(parentID, sameMovies = []) {
 
-    console.log(parentID);
+   // console.log(parentID);
     localStorage.setItem('loadedPage', "renderMain");
     localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, sameMovies]));
 
