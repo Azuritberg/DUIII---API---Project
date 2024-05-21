@@ -141,7 +141,6 @@ function renderMoviesPage(parentID, instanceData) {
                 break;
             }
         }
-
     });
 
     //check if a movie is liked.

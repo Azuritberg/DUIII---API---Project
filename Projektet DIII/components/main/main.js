@@ -85,6 +85,7 @@ async function renderMain(parentID, sameMovies = []) {
 
 }
 
+//  Clear main page when movie is clicked 
 function clearHtml(event, instanceData) {
 
     let clickedMovie = event.target.id;
@@ -97,6 +98,7 @@ function clearHtml(event, instanceData) {
     }
 }
 
+//  Regenerate posters when button is clicked 
 function generateMovierray() {
     let movie_copy = State.GET("movies")
     let new_arr = [];
@@ -109,6 +111,7 @@ function generateMovierray() {
     return (new_arr)
 }
 
+//  Generate posters with random indexes 
 function generatePosters(randomIndexArray, instanceData) {
 
     let posterDivs = document.querySelectorAll(".posterDiv")
@@ -120,16 +123,14 @@ function generatePosters(randomIndexArray, instanceData) {
         let posterContainer = posterDivs[i]
         let p = ps[i]
 
-
         p.setAttribute("id", randomIndexArray[i] + 1);
         posterContainer.style.backgroundImage = `url(${instanceData[randomIndexArray[i]].poster})`;
-
-
+        
         savedMovies.push(instanceData[randomIndexArray[i]]);
     }
 }
 
-
+// Random poster 
 function getRandomPoster(movies) {
     let randomNumbers = new Set();
 
@@ -140,10 +141,12 @@ function getRandomPoster(movies) {
     return Array.from(randomNumbers);
 }
 
+// Random number between min and max
 function getRandomNumber(max, min = 0) {
     return min + Math.floor(max * Math.random());
 }
 
+// Regenerate posters when button is clicked
 function regeneratePosters() {
 
     let newMovies = State.GET("movies");
@@ -153,10 +156,7 @@ function regeneratePosters() {
     generatePosters(randomIndexes, newMovies);
 }
 
-
-
-
-
+// Spara sidan i localStorage vid laddning/uppdatering av sidan och rendera den i huvudsidan
 function saveCurrentPage(pageIdentifier, data) {
     localStorage.setItem("currentPage", pageIdentifier);
     localStorage.setItem("currentPageData", JSON.stringify(data));

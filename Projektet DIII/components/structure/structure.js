@@ -1,8 +1,7 @@
 "use strict";
 
+//  RENDERSTRUCTURE 
 async function renderStructure(movies) {
-
-
 
     const container = document.querySelector("#wrapper");
     container.innerHTML = `
@@ -12,9 +11,7 @@ async function renderStructure(movies) {
 
     renderHeader(document.querySelector("header"));
 
-
-
-
+    // Klicka på userButton om användaren är inloggad 
     if (localStorage.getItem("loadedPage") === "renderUserPage" && !localStorage.getItem("user")) {
         renderMain("mainPage", movies);
     } else if (localStorage.getItem("loadedPage")) {

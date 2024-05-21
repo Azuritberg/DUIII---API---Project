@@ -31,10 +31,9 @@ function renderHeader(parentID, instanceData) {
         const instanceData =  users_copy[i]; // Get username from localStorage instanceData är ett objekt som skickas med till renderRedirectUserPage om användaren klickar på userbtn
         renderRedirectUserPage("mainPage", instanceData);
       }
-      
     }
-    
   });
+
 
   // Visa eller dölj userButton beroende baserat på om användaren är inloggad
   userButton.style.display = isLoggedIn() ? 'block' : 'none';
@@ -50,7 +49,6 @@ function renderHeader(parentID, instanceData) {
   renderHeaderLogin();
   let homeButton = document.getElementById("logo");
   homeButton.addEventListener("click", getHome);
-
 }
 
 function logoutUser() {
