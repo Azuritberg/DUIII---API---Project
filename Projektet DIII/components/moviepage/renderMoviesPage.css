@@ -20,7 +20,6 @@
     margin: 30px;
     height: 670px;
     width: 1300px;
-    /* margin-top: 150px; */
     margin: 50px;
 }
 
@@ -116,7 +115,6 @@
 }
 
 
-
 #title {
     font-family: LM-medium;
     font-size: 25px;
@@ -167,7 +165,6 @@
     margin: 5px 20px 5px 20px;
     padding-bottom: 12px;
     color: #F6F4F4;
-    /* border-bottom: 1.5px solid #F6F4F4; */
     margin-top: 0;
 }
 
@@ -230,4 +227,4 @@
     cursor: pointer;
 }
 
-.liked {}
+/* .liked {} */

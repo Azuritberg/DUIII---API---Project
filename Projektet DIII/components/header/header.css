@@ -21,7 +21,6 @@ header {
     font-size: 50px;
     color: #F6F4F4;
     margin: 15px;
-    /* margin-left: 204px; */
 }
 
 #headerLeft {
@@ -40,10 +39,6 @@ header {
 #logo:hover {
     transform: scale(1.07);
     filter: drop-shadow(0 9px 6px rgb(246, 231, 8));
-
-    /* filter: drop-shadow(-1px 11px 8px rgb(251, 255, 38)); */
-    /* filter: drop-shadow(0 15px 8px rgb(246, 231, 8)); */
-    /* filter: drop-shadow(0 5mm 3mm rgb(246, 231, 8)); */   
 }
 
 #headerRight {

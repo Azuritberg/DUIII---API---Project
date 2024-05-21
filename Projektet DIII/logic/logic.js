@@ -6,7 +6,6 @@ function similarMovies(movie) {
     let new_arr = [];
 
 
-
     // Filtering movies with similar release date and year
     for (let i = 0; i < movie_copy.length; i++) {
         if (Math.abs(movie_copy[i].run_time - movie.run_time) <= 10 || Math.abs(movie_copy[i].year - movie.year) <= 2) {
@@ -19,7 +18,6 @@ function similarMovies(movie) {
             new_arr.splice(i, 1);
         }
     }
-
 
     // Selecting 4 random values from new_arr
     let selectedMovies = [];
@@ -46,13 +44,9 @@ function similarMovies(movie) {
 }
 
 
-
 // Rederaction of pages
 function renderRedirectUserPage(parentID, instanceData) {
-
-    // document.querySelector("#usernametext").innerHTML = instanceData.username;
     renderUserPage(parentID, instanceData);
-
     document.getElementById(parentID).innerHTML = "";
     renderUserPage("mainPage", instanceData);
 }

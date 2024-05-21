@@ -59,7 +59,6 @@
     border-radius: 10px;
     opacity: 1;
     padding: 0;
-    /* opacity: 0.9; */
 }
 
 .modal-content h1 {
@@ -89,7 +88,6 @@
     font-size: 15px;
     width: 313px;
     height: 35px;
-    /* background-color: #515458; */
 }
 
 #username,
@@ -171,10 +169,10 @@
     background-image: url('../../icons/eye.png');
 }
 
-
+/* 
 label[for="eye"] {
     /* position: absolute;
 
     right: 109px;
-    bottom: 121px; */
-}
+    bottom: 121px; 
+} */

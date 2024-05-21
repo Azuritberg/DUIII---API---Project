@@ -2,7 +2,6 @@
 
 
 // PRIVATE
-
 const STATE = {
     movies: [],
     user: [],
@@ -33,8 +32,6 @@ async function getData() {
     renderStructure();
 
 }
-
-
 
 
 //  PUBLIC CLONE
