@@ -477,10 +477,10 @@
             "review": "awesome"
         },
         {
-            "review_id": 29,
+            "review_id": 28,
             "movie_id": 10,
-            "user_id": 1,
-            "review": "bra"
+            "user_id": 4,
+            "review": "jhdf"
         },
         {
             "review_id": 30,
@@ -910,27 +910,45 @@
         },
         {
             "review_id": 129,
-            "movie_id": 13,
-            "user_id": 4,
-            "review": "hej hej en ny review"
-        },
-        {
-            "review_id": 130,
-            "movie_id": 13,
-            "user_id": 4,
-            "review": "nya  nya nya"
+            "movie_id": 10,
+            "user_id": 1,
+            "review": "den h\u00e4r filmen \u00e4r bra"
         },
         {
             "review_id": 131,
-            "movie_id": 29,
-            "user_id": 4,
-            "review": "ny ny ny 3456"
+            "movie_id": 1,
+            "user_id": 9,
+            "review": "den \u00e4r INTE bra"
         },
         {
             "review_id": 132,
-            "movie_id": 29,
-            "user_id": 4,
-            "review": "78900"
+            "movie_id": 1,
+            "user_id": 9,
+            "review": "\u00e4lskar den"
+        },
+        {
+            "review_id": 133,
+            "movie_id": 1,
+            "user_id": 9,
+            "review": "jag gillar den h\u00e4r filmen"
+        },
+        {
+            "review_id": 134,
+            "movie_id": 1,
+            "user_id": 9,
+            "review": "okej"
+        },
+        {
+            "review_id": 135,
+            "movie_id": 37,
+            "user_id": 9,
+            "review": "helt okej"
+        },
+        {
+            "review_id": 136,
+            "movie_id": 37,
+            "user_id": 9,
+            "review": "ok"
         }
     ],
     "users": [
@@ -1036,6 +1054,15 @@
                 35,
                 18,
                 21
+            ]
+        },
+        {
+            "user_id": 9,
+            "username": "testafilmer",
+            "password": "testafilmer",
+            "liked_movies": [
+                1,
+                37
             ]
         }
     ]

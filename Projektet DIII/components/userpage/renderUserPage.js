@@ -55,64 +55,69 @@ function renderUserReviews(instanceData) {
             user_reviews.push(reviews_copy[i]);
         }
     }
+    console.log(user_reviews);
 
     // Find reviewed movies and store in an object for quick lookup
     for (let i = 0; i < movies_copy.length; i++) {
         reviewed_movies.push(movies_copy[i]);
     }
 
+    console.log(reviewed_movies);
+
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
+
 
     for (let m = 0; m < reviewed_movies.length; m++) {
         let review = "";
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
                 review = user_reviews[a];
-                break; // Once found, break the inner loop
+                console.log(review);
+                // Check if review exists
+                if (review === "") continue;
+                const movie_title = reviewed_movies[m].title
+
+                // Create and append the review elements
+                let header = document.createElement("div");
+                header.classList.add("reviewHeader");
+                header.id = "reviewHeader" + review.review_id;
+                parent.append(header);
+
+                let text = document.createElement("div");
+                text.classList.add("reviewText");
+                header.append(text);
+
+                let h3 = document.createElement("h3");
+                h3.textContent = instanceData.username;
+                text.append(h3);
+
+                let span = document.createElement("span");
+                span.classList.add("userSpan");
+                span.textContent = " / " + movie_title + " /";
+                h3.append(span);
+
+                let img = document.createElement("img");
+                img.id = "deleteButton" + review.review_id;
+                img.classList.add("deleteButton");
+                img.src = "./icons/delete.png";
+                text.append(img);
+
+                let p = document.createElement("p");
+                p.classList.add("reviewInfo")
+                p.id = "reviewInfo" + review.review_id;
+                p.textContent = review.review;
+                parent.append(p);
+
+                // Add event listener to delete button
+                img.addEventListener("click", (event) => {
+                    deleteReview(review.review_id);
+                    console.log("Hej DeleteButton")
+                });
+                // break; // Once found, break the inner loop
             }
         }
 
-        // Check if review exists
-        if (review === "") continue;
-        const movie_title = reviewed_movies[m].title
-
-        // Create and append the review elements
-        let header = document.createElement("div");
-        header.classList.add("reviewHeader");
-        header.id = "reviewHeader" + review.review_id;
-        parent.append(header);
-
-        let text = document.createElement("div");
-        text.classList.add("reviewText");
-        header.append(text);
-
-        let h3 = document.createElement("h3");
-        h3.textContent = instanceData.username;
-        text.append(h3);
-
-        let span = document.createElement("span");
-        span.classList.add("userSpan");
-        span.textContent = " / " + movie_title + " /";
-        h3.append(span);
-
-        let img = document.createElement("img");
-        img.id = "deleteButton" + review.review_id;
-        img.classList.add("deleteButton");
-        img.src = "./icons/delete.png";
-        text.append(img);
-
-        let p = document.createElement("p");
-        p.classList.add("reviewInfo")
-        p.id = "reviewInfo" + review.review_id;
-        p.textContent = review.review;
-        parent.append(p);
-
-        // Add event listener to delete button
-        img.addEventListener("click", (event) => {
-            deleteReview(review.review_id);
-            console.log("Hej DeleteButton")
-        });
     }
 }
 
