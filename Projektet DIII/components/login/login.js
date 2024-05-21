@@ -159,19 +159,26 @@ async function loginUser(event) {
   let password = document.getElementById("password").value;
 
   if (!username || !password) {
-    alert("Please enter both username and password");
-    return;
+      alert("Please enter both username and password");
+      return;
   }
 
   let user = {
-    entity: "login",
-    row: { username: username, password: password }
+      entity: "login",
+      row: { username: username, password: password }
   };
 
   try {
-    const loginUserObject = await State.POST(user);
-    console.log(loginUserObject.user_id);
-    if (loginUserObject != undefined) {
+      const loginUserObject = await State.POST(user);
+
+      // Check if there's an error in the response
+      if (loginUserObject.error) {
+          console.error("Error logging in", loginUserObject.error);
+          alert("Wrong username or password, try again");
+          return;
+      }
+
+      console.log(loginUserObject.user_id);
       localStorage.setItem("user", loginUserObject.user_id);
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
@@ -180,12 +187,9 @@ async function loginUser(event) {
       updateLoginLogoutButton();
       window.location.replace('index.html');
       console.log("Login successful");
-    } else {
-      console.error("Error logging in", loginUserObject);
-      alert("Wrong username or password, try again");
-    }
+
   } catch (error) {
-    console.error("Error logging in", error);
+      console.error("Error logging in", error);
   }
 }
 
