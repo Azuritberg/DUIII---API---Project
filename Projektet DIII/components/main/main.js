@@ -26,9 +26,6 @@ async function renderMain(parentID, sameMovies = []) {
         let photoDiv = document.createElement("div");
         photoDiv.id = "photo" + i
         photoDiv.classList.add("posterDiv")
-        // let poster = document.createElement("img");
-        // poster.classList.add("poster");
-        // photoDiv.append(poster);
         mainBox.append(photoDiv);
     }
 
@@ -82,10 +79,10 @@ async function renderMain(parentID, sameMovies = []) {
     button.addEventListener("click", (event) => regeneratePosters(event, movies));
 
     for (let i = 0; i < posterContainer.length; i++) {
-        // let id = moviePosters[i].id
+
         p[i].addEventListener("click", (event) => clearHtml(event, movies));
     }
-    
+
 }
 
 function clearHtml(event, instanceData) {
@@ -123,12 +120,11 @@ function generatePosters(randomIndexArray, instanceData) {
         let posterContainer = posterDivs[i]
         let p = ps[i]
 
-        // let moviePoster = posterContainer.querySelector(".poster");
-        // posterContainer.setAttribute("id", randomIndexArray[i] + 1);
+
         p.setAttribute("id", randomIndexArray[i] + 1);
         posterContainer.style.backgroundImage = `url(${instanceData[randomIndexArray[i]].poster})`;
 
-        // "url('path/to/your/image.jpg')"
+
         savedMovies.push(instanceData[randomIndexArray[i]]);
     }
 }
@@ -157,11 +153,7 @@ function regeneratePosters() {
     generatePosters(randomIndexes, newMovies);
 }
 
-// function generateNewMovies(event, instanceData) {
 
-//     let randomIndexes = getRandomPoster(instanceData);
-//     generatePosters(randomIndexes, instanceData);
-// }
 
 
 
