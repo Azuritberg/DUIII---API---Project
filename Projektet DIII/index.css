@@ -29,7 +29,7 @@
 
 @font-face {
     font-family: MT-bold-italic;
-    src: url(../../fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+    src: url(./fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
 }
 
 @font-face {
@@ -39,7 +39,7 @@
 
 @font-face {
     font-family: MT-italic;
-    src: url(../../fonts/Montserrat/static/Montserrat-Italic.ttf);
+    src: url(./fonts/Montserrat/static/Montserrat-Italic.ttf);
 }
 
 
