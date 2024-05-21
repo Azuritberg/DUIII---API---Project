@@ -681,18 +681,6 @@
             "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
         },
         {
-            "review_id": 71,
-            "movie_id": 25,
-            "user_id": 3,
-            "review": "It\u2019s very rare that i see sexual violence against men \/ male sexual trauma treated with the seriousness it warrants. Raw, profound, vulnerable, and heartbreaking. Richard Gadd playing himself in this story based on true events from his life makes one of the most devastatingly pure and deep performances I have ever seen."
-        },
-        {
-            "review_id": 72,
-            "movie_id": 25,
-            "user_id": 3,
-            "review": "That\u2019s a big, very large, huge, enormous, massive, immense, colossal, giant, ginormous, astronomical, gigantic, monstrous penis"
-        },
-        {
             "review_id": 73,
             "movie_id": 25,
             "user_id": 1,
@@ -943,6 +931,12 @@
             "movie_id": 29,
             "user_id": 4,
             "review": "varf\u00f6r syns inte det i userpage"
+        },
+        {
+            "review_id": 129,
+            "movie_id": 25,
+            "user_id": 3,
+            "review": "best ever"
         }
     ],
     "users": [
