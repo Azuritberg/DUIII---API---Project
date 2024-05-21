@@ -80,7 +80,7 @@ function renderMoviesPage(parentID, instanceData) {
     console.log(STATE)
 
     reviewInput.addEventListener("keypress", function (event) {
-        if (event.key === "Enter") {
+        if (event.key === "Enter" && reviewInput.value !== "") {
 
             let username = localStorage.username
             let users_copy = State.GET("user")
