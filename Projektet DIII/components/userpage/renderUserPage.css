@@ -83,13 +83,30 @@
     place-self: center;
     height: 250px;
     width: 170px;
+    display: flex;
+}
+
+.likedMovie>p {
+    display: none;
+    background: rgb(40, 66, 99, 0.8);
+    justify-content: center;
+    align-items: center;
+    font-family: MT-semibold;
+    border-radius: 3px;
+    color: #F6F4F4;
+    font-size: 15px;
+    padding: 10px;
+    width: 100%;
+    margin: 0;
+}
+
+.likedMovie:hover>p {
+    display: flex;
 }
 
 .likedMovie:hover {
     box-shadow: 1px 1px 20px #F6F4F4;
     cursor: pointer;
-    width: 180px;
-    margin: 0;
 
     /* background: rgb(40, 66, 99, 0.8); */
     /* justify-content: center;

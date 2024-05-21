@@ -155,6 +155,11 @@ function checkUserLikes() {
                     likedMovieDiv.classList.add("likedMovie");
                     likedMovieDiv.setAttribute("id", movies[i].id)
 
+                    let p = document.createElement("p")
+                    p.textContent = movies[i].title
+                    p.id = movies[i].id
+                    likedMovieDiv.append(p)
+
                     likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
                     likeMovieBox.appendChild(likedMovieDiv);
                     likedMovieDiv.addEventListener("click", function (event) {
