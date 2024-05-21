@@ -43,6 +43,7 @@ function renderUserReviews(instanceData) {
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
 
+    console.log(reviews_copy);
     console.log("hej Render User Reviews");
 
     console.log(reviews_copy);
@@ -55,15 +56,13 @@ function renderUserReviews(instanceData) {
             user_reviews.push(reviews_copy[i]);
         }
     }
-    console.log(user_reviews);
 
     // Find reviewed movies and store in an object for quick lookup
     for (let i = 0; i < movies_copy.length; i++) {
         reviewed_movies.push(movies_copy[i]);
     }
 
-    console.log(reviewed_movies);
-
+    console.log(user_reviews);
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
