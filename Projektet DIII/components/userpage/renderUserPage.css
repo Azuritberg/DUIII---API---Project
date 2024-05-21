@@ -20,7 +20,7 @@
 
 @font-face {
     font-family: MT-bold-italic;
-    src: url(./fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
+    src: url(../../fonts/Montserrat/static/Montserrat-BoldItalic.ttf);
 }
 
 
@@ -82,15 +82,15 @@
     justify-self: center;
     place-self: center;
     height: 250px;
-    width: 200px;
+    width: 170px;
 }
 
 .likedMovie:hover {
     box-shadow: 1px 1px 20px #F6F4F4;
     cursor: pointer;
-    width: 100%;
+    width: 180px;
     margin: 0;
-    
+
     /* background: rgb(40, 66, 99, 0.8); */
     /* justify-content: center;
     align-items: center; */
