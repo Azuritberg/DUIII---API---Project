@@ -44,8 +44,6 @@ function renderUserReviews(instanceData) {
     let movies_copy = State.GET("movies");
 
     console.log(reviews_copy);
-
-    console.log(reviews_copy);
     let user_reviews = [];
     let reviewed_movies = [];
 
