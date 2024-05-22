@@ -18,7 +18,6 @@ async function getData() {
     const user_response = await fetch(user_request);
     const user_resource = await user_response.json();
     STATE.user = user_resource;
-    console.log(STATE.user);
 
     const reviews_request = new Request("./API/reviews.php");
     const reviews_response = await fetch(reviews_request);
@@ -51,13 +50,11 @@ const State = {
                 });
                 let loginResource = await fetcher(loginRequest);
                 if (loginResource !== undefined) {
-                    console.log(loginResource);
                     STATE.user.push(loginResource);
                     return loginResource;
                 }
                 break;
             case "register":
-                console.log(data);
                 const registerRequest = new Request("./API/users.php", {
                     method: "POST",
                     body: JSON.stringify(data.row),
@@ -145,7 +142,7 @@ async function fetcher(request) {
         return resource;
     } catch (error) {
         console.warn(error);
-        return {error: error.message};
+        return { error: error.message };
     }
 }
 

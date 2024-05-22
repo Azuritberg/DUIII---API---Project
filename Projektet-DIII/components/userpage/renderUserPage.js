@@ -39,7 +39,6 @@ function renderUserReviews(instanceData) {
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
 
-    console.log(reviews_copy);
     let user_reviews = [];
     let reviewed_movies = [];
 
@@ -55,7 +54,6 @@ function renderUserReviews(instanceData) {
         reviewed_movies.push(movies_copy[i]);
     }
 
-    console.log(user_reviews);
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
@@ -63,7 +61,6 @@ function renderUserReviews(instanceData) {
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
                 let review = user_reviews[a];
-                console.log(review);
                 // Check if review exists
                 if (!review) continue;
                 const movie_title = reviewed_movies[m].title;
@@ -102,7 +99,6 @@ function renderUserReviews(instanceData) {
                 // Add event listener to delete button
                 img.addEventListener("click", () => {
                     deleteReview(review.review_id);
-                    console.log("Hej DeleteButton");
                 });
             }
         }
@@ -111,7 +107,6 @@ function renderUserReviews(instanceData) {
 
 // Delete review and update DOM
 async function deleteReview(review_id) {
-    console.log(review_id);
     await State.DELETE({ entity: "reviews", row: { review_id } });
 
     let reviewHeaderElement = document.getElementById("reviewHeader" + review_id);

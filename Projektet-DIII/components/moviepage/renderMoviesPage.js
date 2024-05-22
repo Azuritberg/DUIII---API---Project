@@ -77,7 +77,6 @@ function renderMoviesPage(parentID, instanceData) {
     // REVIEW INPUT AND SUBMIT 
     let reviewInput = document.getElementById("userTextInput")
     reviewInput.style.display = isLoggedIn() ? 'block' : 'none';
-    console.log(STATE)
 
     reviewInput.addEventListener("keypress", function (event) {
         if (event.key === "Enter" && reviewInput.value !== "") {
