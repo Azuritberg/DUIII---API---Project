@@ -1,9 +1,7 @@
 "use strict";
 
-
 function renderUserPage(parentID, instanceData) {
-
-    // Spara sidinformation i localStorage
+    // Save page information in localStorage
     localStorage.setItem('loadedPage', "renderUserPage");
     localStorage.setItem("loadedPage-argumet", JSON.stringify([parentID, instanceData]));
     localStorage.setItem('currentPage', JSON.stringify(instanceData));
@@ -37,8 +35,6 @@ function renderUserPage(parentID, instanceData) {
     renderUserReviews(instanceData);
 }
 
-
-// Render user reviews
 function renderUserReviews(instanceData) {
     let reviews_copy = State.GET("reviews");
     let movies_copy = State.GET("movies");
@@ -66,16 +62,14 @@ function renderUserReviews(instanceData) {
     // Render user reviews
     let parent = document.getElementById("reviewBottom");
 
-
     for (let m = 0; m < reviewed_movies.length; m++) {
-        let review = "";
         for (let a = 0; a < user_reviews.length; a++) {
             if (reviewed_movies[m].id === user_reviews[a].movie_id) {
-                review = user_reviews[a];
+                let review = user_reviews[a];
                 console.log(review);
                 // Check if review exists
-                if (review === "") continue;
-                const movie_title = reviewed_movies[m].title
+                if (!review) continue;
+                const movie_title = reviewed_movies[m].title;
 
                 // Create and append the review elements
                 let header = document.createElement("div");
@@ -109,33 +103,28 @@ function renderUserReviews(instanceData) {
                 parent.append(p);
 
                 // Add event listener to delete button
-                img.addEventListener("click", (event) => {
+                img.addEventListener("click", () => {
                     deleteReview(review.review_id);
-                    console.log("Hej DeleteButton")
+                    console.log("Hej DeleteButton");
                 });
-                // break; // Once found, break the inner loop
             }
         }
-
     }
 }
 
 // Delete review and update DOM
-async function deleteReview(instanceData) {
-    console.log(instanceData);
-    await State.DELETE({ entity: "reviews", row: { review_id: instanceData } });
+async function deleteReview(review_id) {
+    console.log(review_id);
+    await State.DELETE({ entity: "reviews", row: { review_id } });
 
-    let reviewHeaderElement = document.getElementById("reviewHeader" + instanceData);
-    let reviewInfoElement = document.getElementById("reviewInfo" + instanceData);
+    let reviewHeaderElement = document.getElementById("reviewHeader" + review_id);
+    let reviewInfoElement = document.getElementById("reviewInfo" + review_id);
     if (reviewHeaderElement) reviewHeaderElement.remove();
     if (reviewInfoElement) reviewInfoElement.remove();
-
-    renderUserReviews(instanceData);
 }
 
 //  Check if user has liked movies
 function checkUserLikes() {
-
     let movies = State.GET("movies");
     let users = State.GET("user");
 
@@ -143,7 +132,6 @@ function checkUserLikes() {
 
     let currentUser = null;
     for (let i = 0; i < users.length; i++) {
-
         if (users[i].username === username) {
             currentUser = users[i];
         }
@@ -157,31 +145,20 @@ function checkUserLikes() {
                 if (likedMovies[j] === movies[i].id) {
                     let likedMovieDiv = document.createElement("div");
                     likedMovieDiv.classList.add("likedMovie");
-                    likedMovieDiv.setAttribute("id", movies[i].id)
+                    likedMovieDiv.setAttribute("id", movies[i].id);
 
-                    let p = document.createElement("p")
-                    p.textContent = movies[i].title
-                    p.id = movies[i].id
-                    likedMovieDiv.append(p)
+                    let p = document.createElement("p");
+                    p.textContent = movies[i].title;
+                    p.id = movies[i].id;
+                    likedMovieDiv.append(p);
 
                     likedMovieDiv.style.backgroundImage = `url(${movies[i].poster})`;
                     likeMovieBox.appendChild(likedMovieDiv);
                     likedMovieDiv.addEventListener("click", function (event) {
                         clearHtml(event, movies);
-                    })
-
+                    });
                 }
             }
         }
     }
-
 }
-
-
-
-
-
-
-
-
-

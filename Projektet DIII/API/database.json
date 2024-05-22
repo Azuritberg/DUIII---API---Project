@@ -855,18 +855,6 @@
             "review": "cool"
         },
         {
-            "review_id": 121,
-            "movie_id": 20,
-            "user_id": 2,
-            "review": "bad"
-        },
-        {
-            "review_id": 122,
-            "movie_id": 31,
-            "user_id": 2,
-            "review": "sick"
-        },
-        {
             "review_id": 123,
             "movie_id": 31,
             "user_id": 2,
@@ -907,6 +895,18 @@
             "movie_id": 10,
             "user_id": 1,
             "review": "den h\u00e4r filmen \u00e4r bra"
+        },
+        {
+            "review_id": 131,
+            "movie_id": 4,
+            "user_id": 2,
+            "review": "bad"
+        },
+        {
+            "review_id": 133,
+            "movie_id": 24,
+            "user_id": 2,
+            "review": "awesome"
         }
     ],
     "users": [
@@ -944,10 +944,10 @@
             "password": "trumppinne",
             "liked_movies": [
                 4,
-                24,
                 40,
                 39,
-                38
+                38,
+                24
             ]
         },
         {
