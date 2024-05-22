@@ -178,7 +178,6 @@ async function loginUser(event) {
           return;
       }
 
-      console.log(loginUserObject.user_id);
       localStorage.setItem("user", loginUserObject.user_id);
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
