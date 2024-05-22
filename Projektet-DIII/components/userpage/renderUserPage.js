@@ -40,7 +40,6 @@ function renderUserReviews(instanceData) {
     let movies_copy = State.GET("movies");
 
     console.log(reviews_copy);
-    console.log("hej Render User Reviews");
 
     console.log(reviews_copy);
     let user_reviews = [];

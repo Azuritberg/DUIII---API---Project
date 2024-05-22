@@ -471,12 +471,6 @@
             "review": "awesome"
         },
         {
-            "review_id": 28,
-            "movie_id": 10,
-            "user_id": 4,
-            "review": "jhdf"
-        },
-        {
             "review_id": 30,
             "movie_id": 11,
             "user_id": 1,
@@ -505,12 +499,6 @@
             "movie_id": 12,
             "user_id": 1,
             "review": "awesome"
-        },
-        {
-            "review_id": 36,
-            "movie_id": 13,
-            "user_id": 4,
-            "review": "jhdf"
         },
         {
             "review_id": 37,
@@ -1024,6 +1012,12 @@
                 1,
                 37
             ]
+        },
+        {
+            "user_id": 10,
+            "username": "kaffe",
+            "password": "kaffe",
+            "liked_movies": []
         }
     ]
 }

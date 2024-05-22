@@ -1,3 +1,0 @@
-function isNumberWithinRange(num) {
-  return Math.abs(num - 100) <= 10;
-}

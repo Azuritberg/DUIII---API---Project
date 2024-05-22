@@ -118,6 +118,7 @@ const State = {
                 })
                 let removeLikedReviewResource = await fetcher(removeLikedReviewRequest);
                 if (removeLikedReviewResource !== undefined) {
+                    //STATE.reviews = STATE.reviews.filter(review => review.review_id !== data.row);
                     // Remove review from STATE
                     for (let i = 0; i < STATE.reviews.length; i++) {
                         if (removeLikedReviewResource.review_id === STATE.reviews[i].review_id) {

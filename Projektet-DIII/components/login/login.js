@@ -170,7 +170,7 @@ async function loginUser(event) {
 
   try {
       const loginUserObject = await State.POST(user);
-
+      //console.log(loginUserObject.user_id);
       // Check if there's an error in the response
       if (loginUserObject.error) {
           console.error("Error logging in", loginUserObject.error);
@@ -178,7 +178,6 @@ async function loginUser(event) {
           return;
       }
 
-      console.log(loginUserObject.user_id);
       localStorage.setItem("user", loginUserObject.user_id);
       localStorage.setItem("username", loginUserObject.username);
       closeModal(document.getElementById("loginModal"));
@@ -187,7 +186,6 @@ async function loginUser(event) {
       updateLoginLogoutButton();
       window.location.replace('index.html');
       console.log("Login successful");
-
   } catch (error) {
       console.error("Error logging in", error);
   }
