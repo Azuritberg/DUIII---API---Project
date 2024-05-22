@@ -897,10 +897,10 @@
             "review": "awesome"
         },
         {
-            "review_id": 135,
-            "movie_id": 25,
-            "user_id": 3,
-            "review": "great film"
+            "review_id": 134,
+            "movie_id": 7,
+            "user_id": 1,
+            "review": "Den absolut b\u00e4sta filmne som sl\u00e4pptes 2023 och har man inte sett den beg\u00e5r man ett stort misstag"
         }
     ],
     "users": [
@@ -911,7 +911,6 @@
             "liked_movies": [
                 21,
                 36,
-                23,
                 27,
                 3,
                 35,
@@ -924,12 +923,15 @@
                 30,
                 18,
                 26,
-                33,
                 20,
                 31,
                 25,
                 15,
-                7
+                7,
+                38,
+                14,
+                1,
+                2
             ]
         },
         {
