@@ -895,6 +895,12 @@
             "movie_id": 24,
             "user_id": 2,
             "review": "awesome"
+        },
+        {
+            "review_id": 135,
+            "movie_id": 25,
+            "user_id": 3,
+            "review": "great film"
         }
     ],
     "users": [
