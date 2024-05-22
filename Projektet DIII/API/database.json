@@ -363,12 +363,6 @@
     ],
     "reviews": [
         {
-            "review_id": 1,
-            "movie_id": 1,
-            "user_id": 1,
-            "review": "all they know is be bisexual, eat hot chip and lie"
-        },
-        {
             "review_id": 2,
             "movie_id": 1,
             "user_id": 3,
@@ -465,18 +459,6 @@
             "review": "bra film"
         },
         {
-            "review_id": 25,
-            "movie_id": 9,
-            "user_id": 1,
-            "review": "cool"
-        },
-        {
-            "review_id": 26,
-            "movie_id": 9,
-            "user_id": 1,
-            "review": "awesome"
-        },
-        {
             "review_id": 28,
             "movie_id": 10,
             "user_id": 4,
@@ -489,28 +471,10 @@
             "review": "bra"
         },
         {
-            "review_id": 31,
-            "movie_id": 11,
-            "user_id": 1,
-            "review": "yo"
-        },
-        {
-            "review_id": 32,
-            "movie_id": 11,
-            "user_id": 1,
-            "review": "bra film"
-        },
-        {
             "review_id": 33,
             "movie_id": 12,
             "user_id": 1,
             "review": "cool"
-        },
-        {
-            "review_id": 34,
-            "movie_id": 12,
-            "user_id": 1,
-            "review": "awesome"
         },
         {
             "review_id": 36,
@@ -525,28 +489,10 @@
             "review": "bra"
         },
         {
-            "review_id": 38,
-            "movie_id": 13,
-            "user_id": 1,
-            "review": "bra"
-        },
-        {
             "review_id": 39,
             "movie_id": 14,
             "user_id": 1,
             "review": "yo"
-        },
-        {
-            "review_id": 40,
-            "movie_id": 14,
-            "user_id": 1,
-            "review": "bra film"
-        },
-        {
-            "review_id": 41,
-            "movie_id": 14,
-            "user_id": 1,
-            "review": "cool"
         },
         {
             "review_id": 42,
@@ -625,12 +571,6 @@
             "movie_id": 21,
             "user_id": 3,
             "review": "No I\u2019m not the same man, I just saw THAT train sequence on the big screen. Crowd ambiance went stupid, everyone collectively cheered once Tobey said, \u201cPIZZA TIME!\u201d I love movies."
-        },
-        {
-            "review_id": 61,
-            "movie_id": 21,
-            "user_id": 1,
-            "review": "awesome"
         },
         {
             "review_id": 63,
@@ -787,12 +727,6 @@
             "movie_id": 33,
             "user_id": 1,
             "review": "I\u2019m very conflicted on this movie because it\u2019s well made with some great moments but I fear that this is the kind of movie that falls apart in your hand the longer you hold onto it But holy moly Jesse Plemons"
-        },
-        {
-            "review_id": 96,
-            "movie_id": 33,
-            "user_id": 1,
-            "review": "tem um filme chamado 127 horas que o cara t\u00e1 com a m\u00e3o na pedra. se eu tivesse agarrada com voc\u00ea, n\u00e3o seriam 127 horas\u2026 eu ia arrebentar minha m\u00e3o em 5 segundos \u2728"
         },
         {
             "review_id": 98,

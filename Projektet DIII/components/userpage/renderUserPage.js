@@ -108,11 +108,15 @@ function renderUserReviews(instanceData) {
                 p.textContent = review.review;
                 parent.append(p);
 
+
+                ((reviewId) => {
+                    img.addEventListener("click", (event) => {
+                        console.log(reviewId);
+                        deleteReview(reviewId);
+                        console.log("Hej DeleteButton")
+                    });
+                })(review.review_id);
                 // Add event listener to delete button
-                img.addEventListener("click", (event) => {
-                    deleteReview(review.review_id);
-                    console.log("Hej DeleteButton")
-                });
                 // break; // Once found, break the inner loop
             }
         }
